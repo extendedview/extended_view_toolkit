@@ -1,0 +1,3 @@
+[submodule "kollabs"]
+	path = kollabs
+	url = git://github.com/m---w/kollabs.git
