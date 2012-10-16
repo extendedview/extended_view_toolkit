@@ -1,0 +1,174 @@
+#N canvas 1 56 874 756 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 34 73 cnv 15 400 400 empty empty gui_controls 5 8 0 12 -233017
+-66577 0;
+#X text 37 93 on/off: toggles projection plane state;
+#X text 37 105 settings: opens settings window;
+#X text 38 155 vertex position parameters: control the x/y position
+of the;
+#X text 38 177 texture position parameters: control the x/y position
+of the;
+#X text 208 188 texture corners \, can be outside the;
+#X text 209 199 visible area;
+#X text 37 211 shade size: set the size of the softedge on the edges
+of the visible area(vertex);
+#X obj 34 35 cnv 15 785 32 empty empty EXTENDED_VIEW_5x5_PROJECTION_MODULE
+20 8 0 14 -233017 -66577 0;
+#X obj 34 480 cnv 15 400 450 empty empty description 5 8 0 12 -233017
+-66577 0;
+#X obj 46 789 cnv 15 150 120 empty empty texture 10 10 0 10 -261234
+-66577 0;
+#X obj 440 551 cnv 15 380 60 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X text 444 587 Inlet 2: texture ID;
+#X text 444 571 Inlet 1: gemlist;
+#X obj 440 483 cnv 15 380 60 empty empty creation_arguments: 3 8 0
+12 -191407 -1 0;
+#X text 445 502 1st: module ID \, needs to be unique \; 2nd: storage
+domain \, see [ev_storage-help] for details;
+#X obj 439 73 cnv 15 380 400 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X obj 451 84 gemhead;
+#X obj 451 372 ev_gemwin;
+#X text 458 454 [ev_gemwin] is needed for cursor interaction support.
+;
+#X text 449 312 [ev_declare] loads all the needed pathes.;
+#X obj 440 619 cnv 15 380 70 empty empty PARAMETER_LIST_for_ev_pro_55
+20 8 0 14 -233017 -66577 0;
+#N canvas 0 22 511 755 paramter-list 0;
+#X obj 4 4 cnv 15 360 975 empty empty PARAMETER_LIST_for_ev_pro_curved
+20 8 0 14 -233017 -66577 0;
+#X text 11 30 \; /ev/pro/\$1/vertex/0/0/x \; /ev/pro/\$1/vertex/0/0/y
+\; /ev/pro/\$1/vertex/0/1/x \; /ev/pro/\$1/vertex/0/1/y \; /ev/pro/\$1/vertex/0/2/x
+\; /ev/pro/\$1/vertex/0/2/y \; /ev/pro/\$1/vertex/0/3/x \; /ev/pro/\$1/vertex/0/3/y
+\; /ev/pro/\$1/vertex/0/4/x \; /ev/pro/\$1/vertex/0/4/y \; /ev/pro/\$1/vertex/1/0/x
+\; /ev/pro/\$1/vertex/1/0/y \; /ev/pro/\$1/vertex/1/1/x \; /ev/pro/\$1/vertex/1/1/y
+\; /ev/pro/\$1/vertex/1/2/x \; /ev/pro/\$1/vertex/1/2/y \; /ev/pro/\$1/vertex/1/3/x
+\; /ev/pro/\$1/vertex/1/3/y \; /ev/pro/\$1/vertex/1/4/x \; /ev/pro/\$1/vertex/1/4/y
+\; /ev/pro/\$1/vertex/2/0/x \; /ev/pro/\$1/vertex/2/0/y \; /ev/pro/\$1/vertex/2/1/x
+\; /ev/pro/\$1/vertex/2/1/y \; /ev/pro/\$1/vertex/2/2/x \; /ev/pro/\$1/vertex/2/2/y
+\; /ev/pro/\$1/vertex/2/3/x \; /ev/pro/\$1/vertex/2/3/y \; /ev/pro/\$1/vertex/2/4/x
+\; /ev/pro/\$1/vertex/2/4/y \; /ev/pro/\$1/vertex/3/0/x \; /ev/pro/\$1/vertex/3/0/y
+\; /ev/pro/\$1/vertex/3/1/x \; /ev/pro/\$1/vertex/3/1/y \; /ev/pro/\$1/vertex/3/2/x
+\; /ev/pro/\$1/vertex/3/2/y \; /ev/pro/\$1/vertex/3/3/x \; /ev/pro/\$1/vertex/3/3/y
+\; /ev/pro/\$1/vertex/3/4/x \; /ev/pro/\$1/vertex/3/4/y \; /ev/pro/\$1/vertex/4/0/x
+\; /ev/pro/\$1/vertex/4/0/y \; /ev/pro/\$1/vertex/4/1/x \; /ev/pro/\$1/vertex/4/1/y
+\; /ev/pro/\$1/vertex/4/2/x \; /ev/pro/\$1/vertex/4/2/y \; /ev/pro/\$1/vertex/4/3/x
+\; /ev/pro/\$1/vertex/4/3/y \; /ev/pro/\$1/vertex/4/4/x \; /ev/pro/\$1/vertex/4/4/y
+\; /ev/pro/\$1/texture/top/left/x \; /ev/pro/\$1/texture/top/left/y
+\; /ev/pro/\$1/texture/top/right/x \; /ev/pro/\$1/texture/top/right/y
+\; /ev/pro/\$1/texture/bottom/left/x \; /ev/pro/\$1/texture/bottom/left/y
+\; /ev/pro/\$1/texture/bottom/right/x \; /ev/pro/\$1/texture/bottom/right/y
+\; /ev/pro/<id>/shade/top --- top softedge amount \; /ev/pro/<id>/shade/right
+--- right softedge amount \; /ev/pro/<id>/shade/bottom --- bottom softedge
+amount \; /ev/pro/<id>/shade/left --- left softedge amount \; /ev/pro/<id>/state
+--- turn module on (1) / off (0) \; /ev/pro/<id>/set_alpha --- set
+alpha to value "1" \; /ev/pro/<id>/grid/tex/state --- grid texture
+state \; /ev/pro/<id>/grid/tex/open --- grid texture open dialog \;
+/ev/pro/<id>/grid/tex/load --- reload grid texture \; /ev/pro/<id>/grid/tex/flip/horizontal
+--- flip grid tex \; /ev/pro/<id>/grid/tex/flip/vertical --- flip grid
+tex \; /ev/pro/<id>/cursor/mode --- mouse interaction mode \; \;;
+#X coords 0 755 1 754 85 60 0;
+#X restore 541 653 pd paramter-list;
+#X text 627 354 click "create" here to start;
+#X obj 453 333 ../ev-main/ev_declare;
+#X text 206 166 25 vertex control points.;
+#X text 69 843 /;
+#X text 51 874 /;
+#X text 181 865 |;
+#X text 63 853 /;
+#X text 181 855 |;
+#X text 67 832 x/y---------------x/y;
+#X text 57 864 /;
+#X text 181 843 |;
+#X text 181 875 |;
+#X text 46 887 x/y------------------x/y;
+#X text 213 851 ==>;
+#X text 471 36 (c)2011 Cyrille Henry \, Marian Weger & Peter Venus
+\; /part of EXTENDED VIEW toolkit/ gpl v3;
+#X text 74 857 Texture positions;
+#X obj 256 789 cnv 15 150 120 empty empty gem_window 10 10 0 10 -191407
+-66577 0;
+#X text 371 830 /;
+#X text 353 861 /;
+#X text 347 872 /;
+#X text 266 872 |;
+#X text 365 840 /;
+#X text 359 851 x/y;
+#X text 267 820 x/y------x/y------x/y;
+#X text 266 882 x/y---x/y---x/y;
+#X text 266 842 |;
+#X text 266 862 |;
+#X text 266 830 | Vertex;
+#X text 313 861 /;
+#X text 307 872 /;
+#X text 325 840 |;
+#X text 325 830 |;
+#X text 319 851 x/y----;
+#X text 266 852 x/y------.;
+#X obj 451 260 ev_pro_55 \$0;
+#X text 37 131 settings:;
+#X text 37 276 grid_texture:;
+#X text 37 279 _____________;
+#X text 37 296 state: turn on grid to replace the texture \; open_new_file:
+load your own grid image \; reload: reload the given image file \;
+flip: flip grid horizontal(<->) or vertical(^v).;
+#X text 37 356 cursor_interaction:;
+#X text 36 359 ___________________;
+#X text 37 377 cursor_mode:;
+#X text 68 394 vertex_mouseover: show vertex control points if hovered
+\; vertex_permanent: show vertex control points permanently \; texture_mouseover:
+show texture control points if hovered \; texture_permanent: show texture
+control points permanently \;;
+#X text 37 242 set_alpha_to_'1': If selected \, alpha channel is set
+to 1 If not selected \, alpha channel remains as it gets in.;
+#X obj 440 696 cnv 15 380 140 empty empty additional_information 5
+8 0 12 -233017 -66577 0;
+#X text 454 714 Can be controlled via OSC \, which uses the same syntax
+as the EV internal send/recieve message system see paramter-list below
+for additional information about the specific parameter-names.;
+#X text 452 779 This Object is connected to the Data Storage System.
+All the vertex and texture coordinates and the softedge settings can
+be morphed between scenes individually.;
+#X obj 581 92 gemhead;
+#X obj 581 152 pix_image;
+#X obj 581 236 pix_texture;
+#X obj 637 92 loadbang;
+#X msg 666 122 open ../media/cam2.jpg;
+#X obj 581 194 pix_flip;
+#X msg 666 152 none;
+#X msg 666 194 rectangle 1;
+#X text 45 501 This abstraction aims on video mapping onto highly distorted
+surfaces. It can map a specified part of a texture onto a square plane
+\, which can then be distorted by a matrix of 5x5=25 control points
+\; The source is specified by a texture id \, and can be a framebuffer
+or any other texture. By 4 independently settable corner points \,
+a polygonal part of this texture is specified \, which is then mapped
+completely onto a square. This square can then be positioned and distorted
+by a matrix of 5x5 vertex points \; It is also possible to blend the
+four sides with a soft edge \, what makes it possible to overlay multiple
+modules to form a bigger \, but still adjustable projection plane.
+This would be useful in multiple projector environment \, where the
+gem window spans over all projectors but aligning them hard-edged is
+not possible or a challenge \; By the settable texture positions \,
+it is possible to display just a portion of the complete content of
+a framebuffer. This is useful if you build a big projection area out
+of multiple [ev_pro_xx] abstractions \, which cut their individual
+part out of the same texture.;
+#X text 37 140 =========;
+#X connect 17 0 57 0;
+#X connect 70 0 71 0;
+#X connect 71 0 75 0;
+#X connect 72 1 57 1;
+#X connect 73 0 74 0;
+#X connect 73 0 76 0;
+#X connect 73 0 77 0;
+#X connect 74 0 71 0;
+#X connect 75 0 72 0;
+#X connect 76 0 75 0;
+#X connect 77 0 72 0;
+#X coords 0 756 1 755 85 60 0;

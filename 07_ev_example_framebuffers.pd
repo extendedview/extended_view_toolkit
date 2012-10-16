@@ -1,0 +1,248 @@
+#N canvas 35 22 1100 747 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 383 698 world_light;
+#X obj 383 671 gemhead;
+#X obj 11 14 cnv 15 910 30 empty empty Example:_multiple_framebuffers
+20 12 0 14 -233017 -66577 0;
+#N canvas 518 150 548 468 init 0;
+#X obj 56 92 loadbang;
+#X obj 94 -23 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 99 -3 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X text 159 170 load the preset file on startup:;
+#X text 66 272 Recall scene '0' from the loaded preset file \, and
+load the still image files.;
+#X obj 18 2 inlet;
+#X msg 56 308 \; /0/ds/scene 0 \;;
+#X obj 56 241 del 3000;
+#X obj 83 168 del 1000;
+#X obj 56 144 t b b;
+#X obj 158 43 ev-main/ev_declare;
+#X msg 83 190 \; /0/ds/loadfile ../../data/ev_example_framebuffers_preset.txt
+;
+#X text 160 226 (pathes relative to "./libs/kollabs");
+#X connect 0 0 9 0;
+#X connect 5 0 9 0;
+#X connect 7 0 6 0;
+#X connect 8 0 11 0;
+#X connect 9 0 7 0;
+#X connect 9 1 8 0;
+#X restore 23 96 pd init;
+#X text 477 14 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X text 826 616 "ev_example_framebuffers_preset.txt";
+#X text 826 605 This example uses scene 0 of;
+#X obj 11 169 cnv 15 450 350 empty empty framebuffer_0 20 12 0 14 -204800
+-66577 0;
+#X obj 471 169 cnv 15 450 350 empty empty framebuffer_1 20 12 0 14
+-204786 -66577 0;
+#X obj 23 194 gemhead 20;
+#X obj 16 326 cnv 15 130 70 empty empty simple_3d-object 20 12 0 10
+-233017 -66577 0;
+#X obj 23 372 teapot;
+#N canvas 0 22 450 300 teapot-movement 0;
+#X obj 25 14 inlet;
+#X obj 19 263 outlet;
+#X obj 41 119 translateXYZ 0 0 0;
+#X obj 41 159 rotateXYZ 0 0 0;
+#X floatatom 158 121 5 0 0 0 - - -;
+#X obj 158 -10 line;
+#X obj 137 -52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 158 -52 metro 10000;
+#X obj 41 181 scaleXYZ 0.6 0.6 0.6;
+#X msg 158 -30 0 \, 1 10000;
+#X obj 158 99 * 360;
+#X obj 160 -149 loadbang;
+#X obj 69 -50 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 91 -52 1;
+#X obj 76 25 *;
+#X obj 76 47 cos;
+#X obj 76 69 * 4;
+#X floatatom 76 93 5 0 0 0 - - -;
+#X obj 91 -30 atan;
+#X obj 91 -10 * 8;
+#X obj 41 203 color 1 1 1;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 4 0 3 2;
+#X connect 4 0 3 1;
+#X connect 4 0 3 3;
+#X connect 5 0 10 0;
+#X connect 5 0 14 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 8 0 20 0;
+#X connect 9 0 5 0;
+#X connect 10 0 4 0;
+#X connect 11 0 13 0;
+#X connect 11 0 7 0;
+#X connect 12 0 13 0;
+#X connect 13 0 18 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 2 1;
+#X connect 18 0 19 0;
+#X connect 19 0 14 1;
+#X connect 20 0 1 0;
+#X restore 23 349 pd teapot-movement;
+#X obj 11 529 cnv 15 350 350 empty empty projection_planes 20 12 0
+14 -262130 -66577 0;
+#X obj 23 628 gemhead 50;
+#X obj 23 660 t a a a;
+#X obj 23 603 tgl 15 1 empty planes toggle_projection_planes 17 7 0
+10 -260097 -1 -1 1 1;
+#X obj 477 329 cnv 15 120 180 empty empty simple_3d-object 20 12 0
+10 -233017 -66577 0;
+#X obj 605 329 cnv 15 220 170 empty empty empty 2 8 0 10 -191407 -66577
+0;
+#X obj 612 452 pix_texture;
+#X obj 612 475 rectangle 3 3;
+#X obj 612 381 tgl 15 0 empty empty show_content_of_frambuffer_1 17
+7 0 10 -260097 -1 -1 1 1;
+#X obj 469 530 cnv 15 350 300 empty empty projection_planes 20 12 0
+14 -262130 -66577 0;
+#X obj 482 609 tgl 15 1 empty empty toggle_projection_planes 17 7 0
+10 -260097 -1 -1 1 1;
+#N canvas 615 136 450 300 cube-movement 0;
+#X obj 18 -37 inlet;
+#X obj 19 263 outlet;
+#X obj 41 159 rotateXYZ 0 0 0;
+#X floatatom 158 121 5 0 0 0 - - -;
+#X obj 158 -10 line;
+#X obj 137 -52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 158 -52 metro 10000;
+#X msg 158 -30 0 \, 1 10000;
+#X obj 158 99 * 360;
+#X obj 160 -149 loadbang;
+#X obj 41 203 color 1 1 1;
+#X obj 41 181 scaleXYZ 1.2 1.2 1.2;
+#X connect 0 0 2 0;
+#X connect 2 0 11 0;
+#X connect 3 0 2 2;
+#X connect 3 0 2 1;
+#X connect 3 0 2 3;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 0;
+#X connect 8 0 3 0;
+#X connect 9 0 6 0;
+#X connect 10 0 1 0;
+#X connect 11 0 10 0;
+#X restore 484 352 pd cube-movement;
+#X obj 484 434 cube 2;
+#X obj 507 383 loadbang;
+#X obj 484 207 gemhead 21;
+#X obj 482 634 gemhead 51;
+#X msg 507 409 draw line;
+#X obj 612 407 gemhead 102;
+#X obj 484 456 cube 1.75;
+#X obj 482 656 t a a;
+#X obj 23 76 bng 15 250 50 0 empty empty reset 17 7 0 10 -262144 -1
+-1;
+#X obj 23 219 ev_buf 0;
+#X obj 23 809 ev_pro_22 l;
+#X obj 42 748 ev_pro_22 c;
+#X obj 62 689 ev_pro_22 r;
+#X obj 482 755 ev_pro_22 w1;
+#X obj 509 694 ev_pro_22 w2;
+#X obj 484 232 ev_buf 1;
+#X obj 837 635 ev_storage;
+#X obj 518 74 ev_gemwin;
+#X obj 23 559 loadbang;
+#X msg 23 581 1;
+#X obj 482 563 loadbang;
+#X msg 482 585 1;
+#X obj 612 335 loadbang;
+#X msg 612 357 0;
+#X obj 155 326 cnv 15 220 170 empty empty empty 2 8 0 10 -191407 -66577
+0;
+#X obj 162 449 pix_texture;
+#X obj 162 472 rectangle 3 3;
+#X obj 162 378 tgl 15 0 empty empty show_content_of_frambuffer_0 17
+7 0 10 -260097 -1 -1 0 1;
+#X obj 162 404 gemhead 102;
+#X obj 162 332 loadbang;
+#X msg 162 354 0;
+#X obj 328 284 s /ev/buf/0/color;
+#X msg 328 259 0.9 0.6 0.1 1;
+#X obj 328 214 loadbang;
+#X obj 328 236 del 3000;
+#X obj 784 293 s /ev/buf/1/color;
+#X msg 784 268 0.2 0.2 0.7 1;
+#X obj 784 223 loadbang;
+#X obj 784 245 del 3000;
+#X text 767 203 Set background color:;
+#X text 370 645 Light source:;
+#X text 719 56 click "create" to start;
+#X text 317 194 set background color:;
+#X obj 216 579 r /ev/buf/0/texture_id;
+#X obj 225 427 r /ev/buf/0/texture_id;
+#X text 833 789 Presets are located in the \; "./data" folder;
+#X obj 675 561 r /ev/buf/1/texture_id;
+#X obj 675 429 r /ev/buf/1/texture_id;
+#X obj 484 478 cube 1.5;
+#X obj 100 68 cnv 15 360 75 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 109 86 This example shows how to project several scenes simultaneously
+\, using multiple framebuffers.;
+#X connect 1 0 0 0;
+#X connect 9 0 34 0;
+#X connect 12 0 11 0;
+#X connect 14 0 15 0;
+#X connect 15 0 35 0;
+#X connect 15 1 36 0;
+#X connect 15 2 37 0;
+#X connect 16 0 14 0;
+#X connect 19 0 20 0;
+#X connect 21 0 30 0;
+#X connect 23 0 28 0;
+#X connect 24 0 25 0;
+#X connect 25 0 31 0;
+#X connect 26 0 29 0;
+#X connect 27 0 40 0;
+#X connect 28 0 32 0;
+#X connect 29 0 25 0;
+#X connect 29 0 31 0;
+#X connect 30 0 19 0;
+#X connect 31 0 73 0;
+#X connect 32 0 38 0;
+#X connect 32 1 39 0;
+#X connect 33 0 3 0;
+#X connect 34 0 12 0;
+#X connect 40 0 24 0;
+#X connect 43 0 44 0;
+#X connect 44 0 16 0;
+#X connect 45 0 46 0;
+#X connect 46 0 23 0;
+#X connect 47 0 48 0;
+#X connect 48 0 21 0;
+#X connect 50 0 51 0;
+#X connect 52 0 53 0;
+#X connect 53 0 50 0;
+#X connect 54 0 55 0;
+#X connect 55 0 52 0;
+#X connect 57 0 56 0;
+#X connect 58 0 59 0;
+#X connect 59 0 57 0;
+#X connect 61 0 60 0;
+#X connect 62 0 63 0;
+#X connect 63 0 61 0;
+#X connect 68 0 35 1;
+#X connect 68 0 36 1;
+#X connect 68 0 37 1;
+#X connect 69 0 50 1;
+#X connect 71 0 38 1;
+#X connect 71 0 39 1;
+#X connect 72 0 19 1;
+#X coords 0 0 1 1 85 60 0;

@@ -1,0 +1,103 @@
+#N canvas 475 133 778 501 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 5 -18 cnv 15 740 16 empty empty EXTENDED_VIEW_360Degree_IMAGE_UNWARPING_MODULE
+2 8 0 14 -128992 -262144 0;
+#X obj 5 223 cnv 15 360 45 empty empty creation_arguments: 3 8 0 12
+-191407 -1 0;
+#X obj 5 272 cnv 15 360 20 empty empty inlets/outlets 3 8 0 12 -233017
+-66577 0;
+#X text 128 272 Inlet 1: GEMlist;
+#X obj 5 10 cnv 15 360 210 empty empty description 5 12 0 12 -233017
+-66577 0;
+#X obj 5 339 cnv 15 740 120 empty empty GUI_controls 5 8 0 12 -204800
+-66577 0;
+#X text 7 180 Contains specific storage_&_osc-subpatch which houses
+abstractions to register parameters for storage and osc communication
+;
+#X obj 5 295 cnv 15 360 40 empty empty PARAMETER_LIST_for_ev_360 3
+8 0 12 -191407 -33289 0;
+#X obj 513 84 gemwin 20;
+#X msg 447 15 create \, 1;
+#X msg 513 15 0 \, destroy;
+#X obj 611 16 loadbang;
+#X msg 531 48 dimen 800 600;
+#X text 376 15 CLICK HERE:;
+#X obj 383 129 gemhead;
+#X msg 632 48 color 0.5 0.5 0.5;
+#N canvas 56 244 480 447 init 0;
+#X obj 66 117 loadbang;
+#X text 120 169 This is only needed for this help file.;
+#X text 114 184 To store your settings \, it is recommended;
+#X text 120 199 to use the integrated data storage system [ev_storage].
+;
+#X obj 66 146 del 1000;
+#X obj 66 168 f \$0;
+#X obj 40 123 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 122 67 ../ev-main/ev_declare;
+#X msg 66 223 \; /ev/360/\$1/state 1 \; /ev/360/\$1/center/x 5 \; /ev/360/\$1/center/y
+8 \; /ev/360/\$1/width 120 \; /ev/360/\$1/min 910 \; /ev/360/\$1/rot
+0 \; /ev/360/\$1/max 240 \; /ev/360/\$1/shift -2 \; /ev/360/\$1/calib
+0 \;;
+#X connect 0 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 8 0;
+#X connect 6 0 5 0;
+#X restore 694 149 pd init;
+#X obj 383 175 pix_image;
+#X obj 435 129 loadbang;
+#X text 8 27 Module to allow unwrapping of imagery taken with a spherical
+360°-camera \, comparable to an extreme fisheye. It basically takes
+the circular input-image and transforms it into a rectangular-shaped
+texture.;
+#X obj 109 100 cnv 15 100 16 empty empty ---> 2 4 0 25 -233017 -66577
+0;
+#X obj 179 98 cnv 15 150 18 empty empty empty 20 12 0 14 -260097 -66577
+0;
+#X text 8 128 Mathematically: the radius of the circular image becomes
+the image height (y) \, the angle becomes the width of the image (x)
+;
+#X text 7 236 1st: module ID \, needs to be unique \; 2nd: storage
+domain \, see [ev_storage-help] for details;
+#X text 255 273 Outlet 1: GEMlist;
+#X text 395 287 (c)2012 Cyrille Henry \, Peter Venus & Marian Weger
+/part of EXTENDED VIEW toolkit/ gpl v3;
+#X text 6 311 open subpatch for list;
+#N canvas 177 355 256 322 parameter_list 0;
+#X text 14 15 parameter_list for [ev_360 <id>] \; \; /ev/360/<id>/state
+\; /ev/360/<id>/center/x \; /ev/360/<id>/center/y \; /ev/360/<id>/stretch/x
+\; /ev/360/<id>/rot \; /ev/360/<id>/shift \; /ev/360/<id>/calib \;
+/ev/360/<id>/min \; /ev/360/<id>/max \; \;;
+#X restore 222 307 pd parameter_list;
+#X text 105 339 on/off: switches module;
+#X text 383 346 rotation: rotate final image;
+#X obj 383 207 ev_360 \$0 \$0;
+#X msg 435 151 open ../media/rotterdam360.jpg;
+#X text 383 358 shift: The input image is cropped to a square. The
+"shift" _______parameter lets you shift the selected square part _______(in
+pixels) \; rot: Shift the output image (rotate image in degrees) \;
+<->: Set visible width of the image in degrees.;
+#X text 9 358 center x/y: moves the point of origin in the image ____________(-1000...1000)
+\; min/max: set lower and upper border of the image _________(swap
+values to flip the image) (0...1000) \; calib: toggle calibration mode.
+This gives you a visual representation of the selected values for quick
+adjustment \; on/off: turn module on/off.;
+#X obj 41 84 cnv 15 64 40 empty empty empty 20 12 0 14 -260097 -66577
+0;
+#X obj 53 84 bng 40 250 50 0 \$0-dummy \$0-dummy empty 17 7 0 10 -260097
+-4034 -1;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 11 0 12 0;
+#X connect 11 0 15 0;
+#X connect 12 0 8 0;
+#X connect 14 0 17 0;
+#X connect 15 0 8 0;
+#X connect 17 0 30 0;
+#X connect 18 0 31 0;
+#X connect 31 0 17 0;
+#X coords 0 501 1 500 85 60 0;

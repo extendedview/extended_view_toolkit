@@ -1,0 +1,136 @@
+#N canvas 240 176 899 717 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 8 205 cnv 15 370 230 empty empty description 5 8 0 12 -233017
+-66577 0;
+#X obj 8 444 cnv 15 370 40 empty empty PARAMETER_LIST_for_ev_texhelper
+20 8 0 14 -233017 -66577 0;
+#X text 15 465 /ev/texhelper/<id>/state --- show/hide texhelper;
+#X obj 8 -32 cnv 15 370 120 empty empty gui_controls 5 8 0 12 -204800
+-66577 0;
+#X text 11 1 settings: opens settings window;
+#X text 11 27 settings window;
+#X text 11 30 _______________;
+#X text 12 53 texture position parameters: control the x/y position
+of the;
+#X obj 8 98 cnv 15 370 30 empty empty creation_arguments 5 8 0 12 -128992
+-1 0;
+#X obj 8 134 cnv 15 370 60 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X text 11 -11 on/off: toggles rendering of the texture helper.;
+#X text 11 112 1st: ID of corresponding projection module;
+#X text 186 65 texture corners;
+#X obj 8 -78 cnv 15 880 16 empty empty EXTENDED_VIEW_TEXTURE_HELPER_MODULE
+20 8 0 14 -233017 -66577 0;
+#X obj 8 -58 cnv 15 880 16 empty empty empty 20 8 0 14 -262130 -66577
+0;
+#X text 10 -59 Gui tool to select texture positions of projection modules
+;
+#X text 365 -59 graphically and intuitive.;
+#X text 13 224 [ev_texhelper] is an intuitive tool to set texture borders
+graphically by drag&drop. It is especially handy for complex mappings
+\, like panoramic video \, when one texture needs to be split to many
+projection modules.;
+#X text 11 394 No parameters of this module are registered for state
+saving.;
+#X text 13 323 Multiple modules can be used simultaneously.;
+#X text 13 354 Can not be controlled via OSC \, as it should be used
+itself for remote purposes.;
+#X text 12 154 Inlet 1: GEMlist;
+#X text 12 169 Outlet 1: GEMlist;
+#X text 444 -78 (c)2011 Marian Weger /part of EXTENDED VIEW toolkit/
+gpl v3;
+#X obj 383 -32 cnv 15 505 650 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#N canvas 280 55 438 723 init 0;
+#X obj 65 135 loadbang;
+#X obj 65 179 f \$0;
+#X obj 39 35 inlet;
+#X obj 122 67 ../ev-main/ev_declare;
+#X msg 65 200 \; /ev/pro/id0/texture/top/left/x 0 \; /ev/pro/id0/texture/top/left/y
+480 \; /ev/pro/id0/texture/top/right/x 330 \; /ev/pro/id0/texture/top/right/y
+480 \; /ev/pro/id0/texture/bottom/left/x 0 \; /ev/pro/id0/texture/bottom/left/y
+0 \; /ev/pro/id0/texture/bottom/right/x 330 \; /ev/pro/id0/texture/bottom/right/y
+0 \; /ev/pro/id1/texture/top/left/x 310 \; /ev/pro/id1/texture/top/left/y
+480 \; /ev/pro/id1/texture/top/right/x 640 \; /ev/pro/id1/texture/top/right/y
+480 \; /ev/pro/id1/texture/bottom/left/x 310 \; /ev/pro/id1/texture/bottom/left/y
+0 \; /ev/pro/id1/texture/bottom/right/x 640 \; /ev/pro/id1/texture/bottom/right/y
+0 \; /ev/pro/id0/vertex/top/left/x -4 \; /ev/pro/id0/vertex/top/left/y
+3 \; /ev/pro/id0/vertex/top/right/x 0.125 \; /ev/pro/id0/vertex/top/right/y
+3 \; /ev/pro/id0/vertex/bottom/left/x -4 \; /ev/pro/id0/vertex/bottom/left/y
+-3 \; /ev/pro/id0/vertex/bottom/right/x 0.125 \; /ev/pro/id0/vertex/bottom/right/y
+-3 \; /ev/pro/id1/vertex/top/left/x -0.125 \; /ev/pro/id1/vertex/top/left/y
+3 \; /ev/pro/id1/vertex/top/right/x 4 \; /ev/pro/id1/vertex/top/right/y
+3 \; /ev/pro/id1/vertex/bottom/left/x -0.125 \; /ev/pro/id1/vertex/bottom/left/y
+-3 \; /ev/pro/id1/vertex/bottom/right/x 4 \; /ev/pro/id1/vertex/bottom/right/y
+-3 \; /ev/pro/id0/shade/right 0.03 \; /ev/pro/id1/shade/left 0.03 \;
+/ev/texhelper/state 0 \;;
+#X obj 65 157 del 3000;
+#X connect 0 0 5 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 5 0 1 0;
+#X restore 763 41 pd init;
+#X obj 763 8 bng 15 250 50 0 empty empty reset 17 7 0 10 -262144 -1
+-1;
+#X obj 388 -2 ev_gemwin;
+#X text 606 -24 click "create" to start;
+#X obj 668 102 cnv 15 200 240 empty empty empty 20 12 0 14 -261234
+-66577 0;
+#X obj 675 130 tgl 15 0 empty /ev/texhelper/state empty 17 7 0 10 -262144
+-1 -1 1 1;
+#X text 676 106 toggle global texhelper state;
+#X text 696 132 Then set texture borders by;
+#X text 696 146 drag&drop inside the gemwin.;
+#X obj 650 415 t a a a;
+#X obj 687 188 == 0;
+#X text 726 198 projection modules.;
+#X text 726 185 also toggle;
+#X text 695 434 render texture behind.;
+#X obj 400 144 gemhead;
+#X obj 400 358 t a a;
+#X obj 400 562 ev_pro_22 id0;
+#X obj 427 504 ev_pro_22 id1;
+#X obj 487 144 gemhead;
+#X obj 487 236 pix_image;
+#X obj 487 348 pix_texture;
+#X obj 504 174 loadbang;
+#X msg 504 204 open ../media/cam2.jpg;
+#X obj 487 273 pix_flip;
+#X msg 449 236 none;
+#X msg 497 323 rectangle 1;
+#X obj 497 301 loadbang;
+#X msg 687 217 \; /ev/pro/id0/state \$1 \; /ev/pro/id1/state \$1;
+#X msg 675 270 \; /ev/texhelper/id0/state \$1 \; /ev/texhelper/id1/state
+\$1 \; /ev/rect/background/state \$1;
+#X obj 650 364 gemhead 60;
+#X obj 689 453 ev_rectangle background;
+#X obj 650 562 ev_texhelper id0;
+#X obj 669 504 ev_texhelper id1;
+#X connect 26 0 25 0;
+#X connect 30 0 35 0;
+#X connect 30 0 53 0;
+#X connect 34 0 56 0;
+#X connect 34 1 57 0;
+#X connect 34 2 55 0;
+#X connect 35 0 52 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X connect 40 1 42 0;
+#X connect 43 0 44 0;
+#X connect 44 0 48 0;
+#X connect 45 1 42 1;
+#X connect 45 1 41 1;
+#X connect 45 1 55 1;
+#X connect 46 0 47 0;
+#X connect 46 0 49 0;
+#X connect 47 0 44 0;
+#X connect 48 0 45 0;
+#X connect 49 0 48 0;
+#X connect 50 0 45 0;
+#X connect 51 0 50 0;
+#X connect 54 0 34 0;
+#X coords 0 717 1 716 85 60 0;

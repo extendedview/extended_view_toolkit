@@ -1,0 +1,137 @@
+#N canvas 349 22 798 756 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 27 48 cnv 15 240 50 empty empty INITIALISATIONS 20 12 0 14 -261234
+-66577 0;
+#N canvas 513 252 515 187 init 0;
+#X obj 44 -23 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 49 -3 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X obj 158 43 ev-main/ev_declare;
+#X restore 205 73 pd init;
+#X obj 27 337 cnv 15 745 300 empty empty input_abstractions 3 9 0 14
+-204786 -1 0;
+#X obj 27 644 cnv 15 745 340 empty empty panoramic_imagery_creation
+3 9 0 14 -262130 -1 0;
+#X obj 28 1668 cnv 15 745 420 empty empty abstractions_for_projection_mapping
+20 9 0 14 -204800 -66577 0;
+#X obj 27 10 cnv 15 745 30 empty empty EXTENDED_VIEW_TOOLKIT:_MODULE_LIST
+5 12 1 16 -128992 -262144 0;
+#X text 577 344 reside in the folder "./ev-in";
+#X obj 27 106 cnv 15 380 220 empty empty about_IDs 3 12 0 14 -228856
+-66577 0;
+#X text 39 131 Most of the objects of EXTENDED VIEW toolkit need unique
+IDs as first creation argument. These can be either numbers or symbols
+and must only be unique inside one object class. The IDs are used to
+adress the modules individually.;
+#X obj 37 445 ev_pic <id> <domain>;
+#X obj 37 524 ev_vid <id> <domain>;
+#X obj 37 381 ev_cam <id> <domain>;
+#X obj 38 697 ev_pano_group <id> <domain>;
+#X obj 48 1729 ev_pro_22 <id_a> <domain>;
+#X obj 46 1789 ev_pro_33 <id_b> <domain>;
+#X obj 38 904 ev_360 <id> <domain>;
+#X text 39 191 Example: [ev_pro_22 left] can be toggled by sending
+'1' or '0' to '/ev/pro/left/state'.;
+#X text 39 270 So you can \, for example \, exchange an [ev_pro_22easy]
+module by an [ev_pro_33] and use the same preset file as before on
+the projection side.;
+#X obj 413 106 cnv 15 360 85 empty empty Storage_Domain 3 12 0 14 -204800
+-66577 0;
+#X text 573 1672 reside in the folder "./ev-pro";
+#X text 571 650 reside in the folder "./ev-pano";
+#X obj 38 797 ev_pano_stitch <id> <domain>;
+#X obj 28 992 cnv 15 745 665 empty empty general_purpose_abstractions
+3 9 0 14 -232576 -66577 0;
+#X text 564 999 reside in the folder "./ev-main";
+#X obj 39 1422 ev_grid <id> <domain>;
+#X obj 39 1267 ev_storage <domain>;
+#X obj 42 1026 ev_buf <id> <domain>;
+#X obj 39 1507 ev_record <id> <domain>;
+#X obj 412 202 cnv 15 360 124 empty empty Where_to_find_help? 3 12
+0 14 -261234 -258113 0;
+#X text 414 223 All these modules have an individual help patch \,
+which can be opened by right-click --> help.;
+#X text 417 125 The second creation argument sets the storage domain
+to which this module gets registered to. Of course there must exist
+an [ev_storage] with that domain. For more information \, open the
+[ev_storage-help].;
+#X text 414 257 To get an overview \, how these modules work together
+\, have a look in the examples. The examples do not show how GEM works.
+To get an idea on the principles of GEM have a look for some GEM-introduction
+within PD´s helpbrowser \; ctrl+b -> GEM/manual;
+#X obj 38 1113 ev_base <id_b> <domain>;
+#X text 37 358 these modules are intented for quick media integration
+;
+#X obj 46 1850 ev_pro_55 <id_c> <domain>;
+#X obj 46 1971 ev_pro_33easy <id_e> <domain>;
+#X obj 46 1914 ev_pro_22easy <id_d> <domain>;
+#X text 253 2040 Little helper to set texture coordinates of [ev_pro_xx]
+modules graphically.;
+#X text 258 1741 Projection module for flat surfaces.;
+#X text 258 1804 Projection module for curved surfaces.;
+#X text 258 1864 Projection module for heavily distorted surfaces.
+;
+#X text 260 1917 The [ev_pro_xxeasy]-modules are lightweight versions
+of the [ev_pro_xx] modules \, with less functionality.;
+#X text 260 1947 They should run even on older systems.;
+#X text 235 386 Live camera input \, for webcams \, etc.;
+#X text 235 456 Load pictures.;
+#X text 412 531 Video player module \, with advanced features. Can
+also play specified parts of videos and set fade-in and fade-out.;
+#X text 229 716 combines multiple videos/images to one single \, continuous
+video/image. Should always be used in conjunction with [ev_pano_stitch].
+;
+#X text 31 664 These modules are designed to create panoramic content.
+Have a look in the examples & help-files on how to use them.;
+#X text 233 803 Aplies pillow distortion and softedge to blend with
+other images/videos. For stitching multiple sources to one continuous
+video/image. Should be used in conjunction with [ev_pano_group].;
+#X text 410 912 Unwraps panoramic imagery \, created with a single
+camera with special 360-degrees lens (extreme fisheye) or conical mirror
+system.;
+#X text 331 1026 Framebuffer-module. Creates a framebuffer to render
+content in it. The resulting texture can be further processed by shaders
+or textured onto geometric objects.;
+#X text 331 1067 Works perfectly together with the projection modules
+(see below).;
+#X text 409 1129 Template/Base for the creation of new modules and
+own addons.;
+#X text 238 1221 shortcut for texturing onto a rectangle.;
+#X text 256 1431 Grid-module to display a grid for projection-adjustments.
+Can be rendered into a framebuffer along with a panoramic image to
+label 45degree intervals.;
+#X text 419 1543 Can record videos and take snapshots.;
+#X text 419 1524 Export content of your gemwin or the current framebuffer.
+;
+#X text 46 1687 Use these modules for mapping content on challenging
+surfaces \, combine them for more complex setups.;
+#X obj 27 2097 cnv 15 745 120 empty empty General_OpenGL_shader_modules
+3 9 0 14 -261682 -1 0;
+#X text 277 2173 loads pairs of OpenGL-fragment and -vertex shaders.
+;
+#X text 575 2104 reside in the folder "./ev-glsl";
+#X obj 272 48 cnv 15 500 50 empty empty Description 20 12 0 14 -232576
+-66577 0;
+#X text 412 48 These are the main abstractions of the Extended View
+Toolkit. This list should help you to get an overview about the available
+modules.;
+#X text 46 73 Load pathes. Look inside:;
+#X obj 39 1213 ev_rectangle <id> <domain>;
+#X obj 46 2039 ev_texhelper <id_a>;
+#X obj 37 2167 ev_glsl name;
+#X text 203 1281 EVT´s storage solution: have a look in helpfile and
+examples to learn how it works \; Allows scene-based patching and parameter-transitions.
+;
+#X text 37 2119 these modules are intended to quickly apply video effects
+or geometric distortions via GLSL.;
+#X text 39 224 To be able to exchange them easily \, if needed \, in
+contrary to the input modules \, even projection modules of different
+classes can not be distinguished.;
+#X text 492 10 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X coords 0 756 1 755 85 60 0;

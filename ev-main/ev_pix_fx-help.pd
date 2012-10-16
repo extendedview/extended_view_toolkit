@@ -1,0 +1,4 @@
+#N canvas 387 276 340 118 10;
+#X text 20 48 See "ev_base-help.pd" for more information.;
+#X text 20 18 [ev_pix_fx] is an example file for [ev_base].;
+#X coords 0 118 1 117 360 85 0;

@@ -1,0 +1,30 @@
+#N canvas 226 123 526 338 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X declare;
+#X obj 9 -61 cnv 15 500 30 empty empty pathes_declaration_module 20
+12 0 14 -233017 -66577 0;
+#X text 315 -61 (C) Marian Weger & Peter Venus \; part of Extended
+View Toolkit;
+#X obj 9 65 cnv 15 360 70 empty empty Important_note: 20 12 0 14 -261234
+-258113 0;
+#X text 19 95 Important note: This abstraction only gets effective
+\, if the parent patch gets saved and PD got restarted!;
+#X obj 9 -15 cnv 15 360 70 empty empty Description 20 12 0 14 -228856
+-1 0;
+#X text 11 22 Place it in your main patch to get all the pathes loaded.
+;
+#X obj 389 21 cnv 15 100 60 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X obj 402 51 ev_declare;
+#X text 398 32 look inside!;
+#X obj 9 146 cnv 15 360 100 empty empty Add_additional_pathes 20 12
+0 14 -204800 -66577 0;
+#X text 26 176 Additional pathes and libraries can be added by an individual
+[declare] object:;
+#X obj 123 213 declare;
+#X text 175 214 (right-click to open help);
+#X coords 0 338 1 337 85 60 0;

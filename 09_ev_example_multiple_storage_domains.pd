@@ -1,0 +1,115 @@
+#N canvas 250 22 975 756 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 14 -176 cnv 15 700 30 empty empty Example:_multiple_storage_domains
+20 12 0 14 -233017 -66577 0;
+#X obj 14 574 cnv 15 910 160 empty empty INITIALIZE_multiple_storage_on_startup
+20 12 0 14 -261234 -66577 0;
+#N canvas 579 25 509 161 init 0;
+#X obj 44 27 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 49 47 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X obj 158 93 ev-main/ev_declare;
+#X restore 752 -172 pd init;
+#X text 477 -176 (c)2012 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X obj 402 584 loadbang;
+#X obj 382 584 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 402 608 del 1000;
+#X obj 402 630 t b b;
+#X obj 402 661 del 2000;
+#X msg 402 684 \; /main/ds/scene 0 \; /special/ds/scene 0 \;;
+#X obj 14 -9 cnv 15 450 100 empty empty Patch_domain_"main" 20 12 0
+14 -262130 -66577 0;
+#X obj 74 13 gemhead 50;
+#X obj 474 -9 cnv 15 450 100 empty empty Patch_domain_"special" 20
+12 0 14 -262130 -66577 0;
+#X obj 14 216 cnv 15 450 210 empty empty Storage 20 12 0 14 -204800
+-66577 0;
+#X obj 27 275 ev_storage main;
+#X obj 474 216 cnv 15 450 210 empty empty Storage 20 12 0 14 -204800
+-66577 0;
+#X obj 490 276 ev_storage special;
+#X text 488 242 Here \, domain "special" is specified by first creation
+argument.;
+#X obj 672 15 gemhead 51;
+#X text 26 249 Here \, domain "main" is specified by first creation
+argument.;
+#X msg 247 328 0;
+#X msg 277 328 1;
+#X msg 307 328 2;
+#X text 187 301 Change scene by clicking these message boxes;
+#X obj 247 370 s /main/ds/scene;
+#X msg 711 327 0;
+#X msg 741 327 1;
+#X msg 771 327 2;
+#X text 651 300 Change scene by clicking these message boxes;
+#X obj 711 369 s /special/ds/scene;
+#X obj 74 36 ev_pro_22easy projection_a main;
+#X obj 672 37 ev_pro_22easy projection_b special;
+#X obj 14 98 cnv 15 910 110 empty empty Gemwin 20 12 0 14 -261682 -66577
+0;
+#X obj 499 112 ev_gemwin main;
+#X text 27 135 As [ev_gemwin] has no ID argument \, the domain is set
+by the first creation argument.;
+#X text 27 173 Here \, it is also associated with domain "main".;
+#X obj 14 740 cnv 15 910 25 empty empty More_information_can_be_found_in_"ev_storage-help"
+20 12 0 14 -261234 -258113 0;
+#X msg 547 655 \; /main/ds/loadfile ../../data/ev_example_multiple_storage_domains_main.txt
+\; /special/ds/loadfile ../../data/ev_example_multiple_storage_domains_special.txt
+\;;
+#X obj 14 -137 cnv 15 910 120 empty empty general 20 12 0 14 -228856
+-66577 0;
+#X text 118 -137 In this example \, we introduce multiple storage domains.
+As we have seen before \, all modules of the toolkit rely on a unique
+identifier as their 1st creation argument and the so called storage-domain
+as their second \; The focus now lies on the storage-domain \; The
+[ev_storage] in general behaves like all the other modules of the toolkit:
+When creating it \, you are supposed to give it a identifier. If you
+do not type a identifier \, it will be set "0" by default.;
+#X text 487 -137 This identifier not only determines the variables
+in the paths for remote-control \, but setting the identifier for the
+storage domain used by other modules in your patch as well \, giving
+them an address \, they can send`n`save their parameters to \;;
+#X obj 292 34 cnv 15 360 30 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 293 34 The second creation argument always sets the storage
+domain of the module.;
+#X text 30 605 Both domains HAVE TO be initialized to get automatically
+loaded on startup.;
+#X text 551 612 trigger a message on load \, containing the path to
+the presetfile;
+#X obj 14 433 cnv 15 910 135 empty empty Synchronize_multiple_storage_domains
+20 12 0 14 -204786 -1 0;
+#X obj 37 471 r /main/ds/scene/current;
+#X obj 37 543 s /special/ds/scene/current;
+#X obj 37 523 spigot;
+#X obj 70 500 tgl 15 0 empty empty sync_"special"_to_"main" 17 7 0
+10 -262144 -1 -1 0 1;
+#X text 295 469 This example shows \, how storage domains can be synchronized
+to others.;
+#X text 295 499 This also makes it possible to synchronize to other
+\, external state saving systems.;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 37 0;
+#X connect 8 0 9 0;
+#X connect 11 0 30 0;
+#X connect 18 0 31 0;
+#X connect 20 0 24 0;
+#X connect 21 0 24 0;
+#X connect 22 0 24 0;
+#X connect 25 0 29 0;
+#X connect 26 0 29 0;
+#X connect 27 0 29 0;
+#X connect 46 0 48 0;
+#X connect 48 0 47 0;
+#X connect 49 0 48 1;
+#X coords 0 0 1 1 85 60 0;

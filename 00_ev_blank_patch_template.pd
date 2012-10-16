@@ -1,0 +1,34 @@
+#N canvas 232 22 780 589 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media;
+#X obj 14 14 cnv 15 700 30 empty empty EXTENDED_VIEW_TOOLKIT:_blank_patch_template
+20 12 0 14 -233017 -66577 0;
+#X obj 14 47 cnv 15 80 40 empty empty empty 2 8 0 10 -258113 -262144
+0;
+#N canvas 33 262 548 468 init 1;
+#X obj 56 92 loadbang;
+#X obj 83 138 del 1000;
+#X obj 56 114 t b b;
+#X obj 56 221 del 3000;
+#X obj 44 -23 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 49 -3 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X text 159 140 load the preset file on startup:;
+#X msg 56 288 \; /0/ds/scene 0 \;;
+#X obj 158 43 ev-main/ev_declare;
+#X text 165 206 (pathes relative to libs/kollabs);
+#X msg 83 170 \; /0/ds/loadfile ../../data/unnamed_preset.txt;
+#X text 66 262 Recall scene '0' from the loaded preset file:;
+#X connect 0 0 2 0;
+#X connect 1 0 10 0;
+#X connect 2 0 3 0;
+#X connect 2 1 1 0;
+#X connect 3 0 7 0;
+#X restore 30 59 pd init;
+#X text 109 48 This is a template file to start from scratch.;
+#X obj 13 106 ev_storage;
+#X obj 177 106 ev_gemwin;
+#X coords 0 0 1 1 85 60 0;

@@ -1,0 +1,118 @@
+#N canvas 63 54 1116 756 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 716 156 gemwin 20;
+#X msg 729 118 0 \, destroy;
+#X text 712 74 CLICK HERE:;
+#X obj 599 205 pix_texture;
+#X obj 599 227 rectangle 3.9 3.9;
+#X obj 17 527 cnv 15 360 220 empty empty parameter_list_for_ev_buf
+20 12 0 14 -233017 -66577 0;
+#X text 20 562 /ev/buf/<id>/color --- background color (R G B) \; /ev/buf/<id>/format
+--- (default=RGBA) \; /ev/buf/<id>/rectangle --- (default=1) \; /ev/buf/<id>/type
+--- (default=BYTE) \; --> for further details \, see [gemframebuffer]
+help \; \; /ev/buf/<id>/shift/x --- shift content in x-direction \;
+/ev/buf/<id>/shift/y --- shift content in y-direction \; /ev/buf/<id>/scale/x
+--- scale content in x-direction \; /ev/buf/<id>/scale/y --- scale
+content in y-direction \; /ev/buf/<id>/dimen/x --- framebuffer x-dimension
+in pixels \; /ev/buf/<id>/dimen/y --- framebuffer y-dimension in pixels
+\; /ev/buf/<id>/state --- turn module on (1) and off (0) \;;
+#X obj 399 220 t a a;
+#X obj 599 183 gemhead;
+#X obj 10 10 cnv 15 850 16 empty empty EXTENDED_VIEW_FRAMEBUFFER 20
+8 0 14 -233017 -66577 0;
+#X obj 17 360 cnv 15 360 60 empty empty creation_arguments: 5 12 0
+12 -162280 -1 0;
+#X obj 17 423 cnv 15 360 90 empty empty inlets/outlets 5 12 0 12 -233017
+-66577 0;
+#X obj 17 157 cnv 15 360 200 empty empty description 5 12 0 12 -233017
+-66577 0;
+#X text 149 481 other content;
+#X text 20 376 1st: module ID;
+#X obj 17 43 cnv 15 200 100 empty empty gui_controls 5 8 0 12 -204800
+-66577 0;
+#X text 17 82 scale x/y: scales the buffers;
+#X text 17 60 shift x/y: translates the buffers;
+#X text 17 104 dimen x/y: dimension of the FB;
+#X text 17 116 on/off: toggles state;
+#X text 20 388 2nd: render priority;
+#X text 21 176 [gemframebuffer] renders a scene into a buffer to used
+and altered later. the EV-Framebuffer allows to combine different sources
+\, like [ev_cam] to be used as one texture within the /ev-projection
+modules. It makes it possible \, that different targets can use the
+same scene as their texture.;
+#X text 21 259 Can be controlled via OSC \, which uses the same syntax
+as the EV internal send/recieve message system see list below for additional
+information about the specific parameter-names.;
+#X text 19 317 Contains specific storage_&_osc-subpatch which houses
+abstractions to register parameters for storage and osc communication
+;
+#N canvas 138 22 458 667 init 0;
+#X obj 38 93 loadbang;
+#X text 54 166 This is only needed for this help file.;
+#X text 48 181 To store your settings \, it is recommended;
+#X text 54 196 to use the integrated data storage system [ev_storage].
+;
+#X obj 38 117 del 2000;
+#X msg 38 224 \; /ev/grid/id0/labeling/size 0.0025 \; /ev/grid/id0/grid/res/y
+16 \; /ev/grid/id0/grid/res/x 16 \; /ev/grid/id0/grid/state 1 \; /ev/grid/id0/size
+4 \; /ev/pano/group/id0/trim/bottom 0.07 \; /ev/pano/group/id0/trim/top
+-0.01 \; /ev/pano/group/id0/trim/state 1 \; /ev/pic/id3/filename ../media/cam4.jpg
+\; /ev/pano/stitch/id3/shift/y 0.0154839 \; /ev/pano/stitch/id3/shift/x
+-0.0677419 \; /ev/pano/stitch/id3/shade 16.129 \; /ev/pic/id2/filename
+../media/cam3.jpg \; /ev/pano/stitch/id2/shift/y 0.0322581 \; /ev/pano/stitch/id2/shift/x
+-0.103226 \; /ev/pano/stitch/id2/shade 25.8065 \; /ev/pic/id1/filename
+../media/cam2.jpg \; /ev/pano/stitch/id1/shift/y 0.0632258 \; /ev/pano/stitch/id1/shift/x
+-0.0412903 \; /ev/pano/stitch/id1/shade 35.4839 \; /ev/pic/id0/filename
+../media/cam1.jpg \; /ev/buf/id0/scale/y 1.05 \; /ev/buf/id0/scale/x
+1.05 \; /ev/buf/id0/shift/x 0.04 \; /ev/pic/id0/load bang \; /ev/pic/id1/load
+bang \; /ev/pic/id2/load bang \; /ev/pic/id3/load bang;
+#X obj 122 67 ../ev-main/ev_declare;
+#X obj 17 71 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 4 0;
+#X connect 4 0 5 0;
+#X connect 7 0 4 0;
+#X restore 290 83 pd init;
+#X text 22 495 Outlet 2: texture id of the framebuffer;
+#X text 22 469 Outlet 1: gemlist \, to be connectet to input \, group
+or;
+#X obj 399 48 gemhead 20;
+#X text 22 453 Inlet 2: gemframebuffer settings (see gemframebuffer-help)
+;
+#X text 22 441 Inlet 1: gemlist \, to be connected to gemhead;
+#X text 416 709 (c)2011 Peter Venus & Marian Weger /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X obj 399 462 ev_pic id0;
+#X obj 399 555 ev_pano_stitch id0;
+#X obj 583 555 ev_pano_stitch id1;
+#X obj 767 555 ev_pano_stitch id2;
+#X obj 951 555 ev_pano_stitch id3;
+#X obj 399 86 ev_buf id0;
+#X obj 399 331 ev_grid id0;
+#X obj 613 331 ev_pano_group id0;
+#X obj 583 462 ev_pic id1;
+#X obj 767 462 ev_pic id2;
+#X obj 951 462 ev_pic id3;
+#X msg 716 96 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
+#X connect 1 0 0 0;
+#X connect 3 0 4 0;
+#X connect 7 0 37 0;
+#X connect 7 1 38 0;
+#X connect 8 0 3 0;
+#X connect 27 0 36 0;
+#X connect 31 0 32 0;
+#X connect 36 0 7 0;
+#X connect 36 1 3 1;
+#X connect 38 1 31 0;
+#X connect 38 2 39 0;
+#X connect 38 3 40 0;
+#X connect 38 4 41 0;
+#X connect 39 0 33 0;
+#X connect 40 0 34 0;
+#X connect 41 0 35 0;
+#X connect 42 0 0 0;
+#X coords 0 756 1 755 85 60 0;

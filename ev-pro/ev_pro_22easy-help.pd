@@ -1,0 +1,122 @@
+#N canvas 55 122 821 650 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 413 45 cnv 15 380 400 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X obj 562 59 gemhead;
+#X obj 562 111 pix_image;
+#X obj 562 133 pix_texture;
+#X obj 614 59 loadbang;
+#X obj 432 59 gemhead;
+#X obj 8 8 cnv 15 785 32 empty empty EXTENDED_VIEW_2x2_easy_projection_module
+20 12 0 14 -233017 -66577 0;
+#X obj 8 452 cnv 15 400 180 empty empty description 5 8 0 12 -233017
+-66577 0;
+#X msg 614 81 open ../media/cam2.jpg;
+#X obj 422 325 ev_gemwin;
+#X obj 432 157 ev_pro_22easy \$0;
+#X obj 413 520 cnv 15 380 60 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X text 417 556 Inlet 2: texture ID;
+#X text 417 540 Inlet 1: gemlist;
+#X obj 413 452 cnv 15 380 60 empty empty creation_arguments: 3 8 0
+12 -191407 -1 0;
+#X text 418 471 1st: module ID \, needs to be unique \; 2nd: storage
+domain \, see [ev_storage-help] for details;
+#X text 587 540 Outlet 1: gemlist;
+#X text 419 302 [ev_gemwin] is needed for cursor interaction support.
+;
+#X text 430 240 [ev_declare] loads all the needed pathes.;
+#X obj 413 587 cnv 15 380 60 empty empty parameter_list 5 8 0 12 -233017
+-66577 0;
+#N canvas 0 22 378 556 parameter_list 0;
+#X obj -42 3 cnv 15 360 540 empty empty PARAMETER_LIST 20 8 0 14 -233017
+-66577 0;
+#X text -35 29 /ev/pro/<id>/vertex/top/left/x ---- top left x \; /ev/pro/<id>/vertex/top/left/y
+--- top left y \; /ev/pro/<id>/vertex/top/right/x --- top right x \;
+/ev/pro/<id>/vertex/top/right/y --- top right y \; /ev/pro/<id>/vertex/bottom/left/x
+--- bottom left x \; /ev/pro/<id>/vertex/bottom/left/y --- bottom left
+y \; /ev/pro/<id>/vertex/bottom/right/x --- bottom right x \; /ev/pro/<id>/vertex/bottom/right/y
+--- bottom right y \; /ev/pro/<id>/texture/top/left/x --- top left
+x \; /ev/pro/<id>/texture/top/left/y --- top left y \; /ev/pro/<id>/texture/top/right/x
+--- top right x \; /ev/pro/<id>/texture/top/right/y --- top right y
+\; /ev/pro/<id>/texture/bottom/left/x --- bottom left x \; /ev/pro/<id>/texture/bottom/left/y
+--- bottom left y \; /ev/pro/<id>/texture/bottom/right/x --- bottom
+right x \; /ev/pro/<id>/texture/bottom/right/y --- bottom right y \;
+/ev/pro/<id>/state --- turn module on (1) / off (0) \; /ev/pro/<id>/texture/weight/x
+--- distance weight x \; /ev/pro/<id>/texture/weight/y --- distance
+weight y \; /ev/pro/<id>/set_alpha --- set alpha to value "1" \; /ev/pro/<id>/grid/state
+--- turn on(1)/off(0) grid \; /ev/pro/<id>/grid/res/x --- grid horizontal
+resolution \; /ev/pro/<id>/grid/res/y --- vertical grid resolution
+\; /ev/pro/<id>/grid/width --- grid line width \; /ev/pro/<id>/grid/color/h
+--- grid color hue \; /ev/pro/<id>/grid/color/s --- grid color saturation
+\; /ev/pro/<id>/grid/color/v --- grid color value \; /ev/pro/<id>/grid/color/a
+--- grid color alpha (opacity) \; /ev/pro/<id>/grid/tex/state --- grid
+texture state \; /ev/pro/<id>/grid/tex/open --- grid texture open dialog
+\; /ev/pro/<id>/grid/tex/load --- reload grid texture \; /ev/pro/<id>/grid/tex/flip/horizontal
+--- flip grid tex \; /ev/pro/<id>/grid/tex/flip/vertical --- flip grid
+tex \; /ev/pro/<id>/cursor/mode --- mouse interaction mode \; \;;
+#X restore 478 617 pd parameter_list;
+#X text 606 413 click "create" to start;
+#X obj 432 263 ../ev-main/ev_declare;
+#X text 12 469 This abstraction is an alternative to the ev_pro_22
+abstraction \, especially for use on older graphic chips. It has the
+same functionality to distort a vertex in 4 cornerpins. Input is textured
+on a [curve3d] object \, where all 4 cornerpins can be translated independently.
+\; IMPORTANT: the vertex parameters have the same \, ID-related \,
+send&receive-parameters. In the case you mix easymap and pro_22 or
+pro_33 abstraction in one patch \, make sure they all have different
+IDs. \; This is useful \, if you realize problems with the shaders
+\, so that you can quickly replace the projection modules with the
+easymap-modules and can still load the same presets.;
+#X text 557 9 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X obj 8 45 cnv 15 400 400 empty empty gui_controls 5 8 0 12 -204800
+-66577 0;
+#X text 11 65 on/off: toggles projection plane state;
+#X text 11 77 settings: opens settings window;
+#X text 12 127 vertex position parameters: control the x/y position
+of the;
+#X text 11 163 grid_texture:;
+#X text 11 166 _____________;
+#X text 11 183 state: turn on grid to replace the texture \; open_new_file:
+load your own grid image \; reload: reload the given image file \;
+flip: flip grid horizontal(<->) or vertical(^v).;
+#X text 11 243 cursor_interaction:;
+#X text 10 246 ___________________;
+#X text 11 264 cursor_mode:;
+#X text 42 281 vertex_mouseover: show vertex control points if hovered
+\; vertex_permanent: show vertex control points permanently \; texture_mouseover:
+show texture control points if hovered \; texture_permanent: show texture
+control points permanently \;;
+#X text 11 343 rendered_grid:;
+#X text 10 346 ______________;
+#X text 11 364 state: turn grid on/off;
+#X text 11 377 Resolution:;
+#X text 84 377 set vertical (y) and horizontal (x) grid resolution.
+;
+#X text 11 391 line_width: set thickness of the grid lines;
+#X text 11 404 COLOR: set the color of the grid;
+#X text 53 417 (H = hue \, S = saturation \, V = Value \, A = alpha)
+;
+#X text 180 138 projection primitives 4 corners;
+#X text 11 103 settings window;
+#X text 10 112 ===============;
+#X obj 413 654 cnv 15 380 140 empty empty additional_information 5
+8 0 12 -233017 -66577 0;
+#X text 427 672 Can be controlled via OSC \, which uses the same syntax
+as the EV internal send/recieve message system see paramter-list below
+for additional information about the specific parameter-names.;
+#X text 425 737 This Object is connected to the Data Storage System.
+All the vertex and texture coordinates and the softedge settings can
+be morphed between scenes individually.;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 1 10 1;
+#X connect 4 0 8 0;
+#X connect 5 0 10 0;
+#X connect 8 0 2 0;
+#X coords 0 650 1 649 85 60 0;

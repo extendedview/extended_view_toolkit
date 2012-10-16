@@ -1,0 +1,264 @@
+#N canvas 189 28 893 701 10;
+#X obj 581 490 curve3d 2 2;
+#X msg 470 375 draw fill;
+#X obj 581 436 pix_texture;
+#X obj 446 352 loadbang;
+#X obj 101 116 cnv 15 198 31 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 105 129 tgl 15 1 /ev/pro/\$1/state /ev/pro/\$1/state on/off
+17 7 0 10 -4034 -1 -1 1 1;
+#X msg 175 162 vis 1;
+#X obj 175 129 bng 15 250 50 0 empty empty settings 17 7 0 10 -159808
+-1 -1;
+#N canvas 192 127 398 291 init 0;
+#X obj 81 -256 loadbang;
+#X obj 81 -234 del 1000;
+#X msg 81 -165 \; /ev/pro/\$1/vertex/top/left/x -1 \; /ev/pro/\$1/vertex/top/left/y
+1 \; /ev/pro/\$1/vertex/top/right/x 1 \; /ev/pro/\$1/vertex/top/right/y
+1 \; /ev/pro/\$1/vertex/bottom/left/x -1 \; /ev/pro/\$1/vertex/bottom/left/y
+-1 \; /ev/pro/\$1/vertex/bottom/right/x 1 \; /ev/pro/\$1/vertex/bottom/right/y
+-1 \; /ev/pro/\$1/state 1 \; /ev/pro/\$1/cursor/mode 2 \;;
+#X obj 81 -192 list append \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X restore 44 197 pd init;
+#N canvas 123 255 505 323 coordinates 0;
+#X obj 156 278 outlet;
+#N canvas 0 22 173 130 pak 0;
+#X obj 73 39 t b f;
+#X obj 38 19 inlet;
+#X obj 38 90 outlet;
+#X obj 73 19 inlet;
+#X obj 38 69 pack f f 0;
+#X connect 0 0 4 0;
+#X connect 0 1 4 1;
+#X connect 1 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X restore 11 72 pd pak f f f;
+#X msg 11 94 set 0 1 \$1 \$2 \$3;
+#N canvas 0 22 173 130 pak 0;
+#X obj 73 39 t b f;
+#X obj 38 19 inlet;
+#X obj 38 90 outlet;
+#X obj 73 19 inlet;
+#X obj 38 69 pack f f 0;
+#X connect 0 0 4 0;
+#X connect 0 1 4 1;
+#X connect 1 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X restore 11 172 pd pak f f f;
+#X msg 11 194 set 0 0 \$1 \$2 \$3;
+#N canvas 0 22 173 130 pak 0;
+#X obj 73 39 t b f;
+#X obj 38 19 inlet;
+#X obj 38 90 outlet;
+#X obj 73 19 inlet;
+#X obj 38 69 pack f f 0;
+#X connect 0 0 4 0;
+#X connect 0 1 4 1;
+#X connect 1 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X restore 241 72 pd pak f f f;
+#N canvas 0 22 173 130 pak 0;
+#X obj 73 39 t b f;
+#X obj 38 19 inlet;
+#X obj 38 90 outlet;
+#X obj 73 19 inlet;
+#X obj 38 69 pack f f 0;
+#X connect 0 0 4 0;
+#X connect 0 1 4 1;
+#X connect 1 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X restore 241 172 pd pak f f f;
+#X msg 241 194 set 1 0 \$1 \$2 \$3;
+#X msg 241 94 set 1 1 \$1 \$2 \$3;
+#X obj 11 13 r /ev/pro/\$1/vertex/top/left/x;
+#X obj 22 35 r /ev/pro/\$1/vertex/top/left/y;
+#X obj 241 13 r /ev/pro/\$1/vertex/top/right/x;
+#X obj 252 35 r /ev/pro/\$1/vertex/top/right/y;
+#X obj 11 123 r /ev/pro/\$1/vertex/bottom/left/x;
+#X obj 241 123 r /ev/pro/\$1/vertex/bottom/right/x;
+#X obj 252 145 r /ev/pro/\$1/vertex/bottom/right/y;
+#X obj 22 145 r /ev/pro/\$1/vertex/bottom/left/y;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 1;
+#X connect 11 0 5 0;
+#X connect 12 0 5 1;
+#X connect 13 0 3 0;
+#X connect 14 0 6 0;
+#X connect 15 0 6 1;
+#X connect 16 0 3 1;
+#X restore 599 460 pd coordinates;
+#X obj 581 271 separator;
+#X obj 446 445 t a;
+#X obj 411 192 spigot;
+#X obj 444 166 r /ev/pro/\$1/state;
+#X obj 719 325 * -1;
+#X obj 719 347 + 1;
+#X obj 674 371 spigot 1;
+#X obj 763 381 spigot 0;
+#X obj 674 281 r /ev/pro/\$1/texture_id;
+#X obj 604 120 s /ev/pro/\$1/texture_id;
+#X obj 34 67 cnv 15 750 20 empty empty EXTENDED_VIEW_2x2_EASY_PROJECTION_MODULE
+20 12 0 14 -233017 -66577 0;
+#X msg 446 417 res 2 2;
+#X msg 458 396 grid 200 200;
+#N canvas 141 124 783 281 storage_&_osc 0;
+#X obj 40 171 ds_reg \$2 /ev/pro/\$1/vertex/bottom/right/y;
+#X obj 40 151 ds_reg \$2 /ev/pro/\$1/vertex/bottom/right/x;
+#X obj 40 131 ds_reg \$2 /ev/pro/\$1/vertex/bottom/left/y;
+#X obj 40 111 ds_reg \$2 /ev/pro/\$1/vertex/bottom/left/x;
+#X obj 40 91 ds_reg \$2 /ev/pro/\$1/vertex/top/right/y;
+#X obj 40 71 ds_reg \$2 /ev/pro/\$1/vertex/top/right/x;
+#X obj 40 51 ds_reg \$2 /ev/pro/\$1/vertex/top/left/y;
+#X obj 40 31 ds_reg \$2 /ev/pro/\$1/vertex/top/left/x;
+#X obj 320 31 osc_bi \$2 /ev/pro/\$1/vertex/top/left/x;
+#X obj 320 51 osc_bi \$2 /ev/pro/\$1/vertex/top/left/y;
+#X obj 320 71 osc_bi \$2 /ev/pro/\$1/vertex/top/right/x;
+#X obj 320 91 osc_bi \$2 /ev/pro/\$1/vertex/top/right/y;
+#X obj 320 111 osc_bi \$2 /ev/pro/\$1/vertex/bottom/left/x;
+#X obj 320 131 osc_bi \$2 /ev/pro/\$1/vertex/bottom/left/y;
+#X obj 320 151 osc_bi \$2 /ev/pro/\$1/vertex/bottom/right/x;
+#X obj 320 171 osc_bi \$2 /ev/pro/\$1/vertex/bottom/right/y;
+#X obj 320 191 osc_bi \$2 /ev/pro/\$1/state;
+#X obj 40 191 ds_reg \$2 /ev/pro/\$1/state nomorph;
+#X obj 320 211 osc_bi \$2 /ev/pro/\$1/cursor/mode;
+#X obj 40 211 ds_reg \$2 /ev/pro/\$1/cursor/mode nomorph;
+#X restore 44 221 pd storage_&_osc;
+#X obj 411 98 inlet gemlist;
+#X obj 604 98 inlet texture_id;
+#X obj 581 522 outlet gemlist;
+#N canvas 838 329 392 332 mouseover 0;
+#X obj 48 42 abs/ev_mouseover_vertex /ev/pro/\$1 /top/left;
+#X obj 48 62 abs/ev_mouseover_vertex /ev/pro/\$1 /top/right;
+#X obj 48 82 abs/ev_mouseover_vertex /ev/pro/\$1 /bottom/left;
+#X obj 48 102 abs/ev_mouseover_vertex /ev/pro/\$1 /bottom/right;
+#X restore 44 174 pd mouseover;
+#X obj 411 306 s /ev/pro/\$1/mouse/gemlist;
+#X obj 411 214 t a a a;
+#X obj 719 303 r /ev/pro/\$1/grid/tex/state;
+#X obj 808 353 r /ev/pro/\$1/grid/tex/state;
+#X obj 763 331 r /ev/pro/\$1/grid/tex/texture_id;
+#X obj 175 186 s pd-pro_\$1;
+#N canvas 503 44 363 261 pro_\$1 1;
+#X obj -7 -3 cnv 15 170 100 empty empty vertex_coordinates 20 12 0
+14 -228856 -1 0;
+#X obj 12 24 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/top/left/x
+/ev/pro/\$1/vertex/top/left/x x -10 7 0 10 -261234 -1 -1 -1 256;
+#X obj 12 40 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/top/left/y
+/ev/pro/\$1/vertex/top/left/y y -10 7 0 10 -261234 -1 -1 1 256;
+#X obj 82 24 nbx 5 14 -10000 10000 0 1 /ev/pro/\$1/vertex/top/right/x
+/ev/pro/\$1/vertex/top/right/x x -10 7 0 10 -261234 -1 -1 1 256;
+#X obj 82 40 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/top/right/y
+/ev/pro/\$1/vertex/top/right/y y -10 7 0 10 -261234 -1 -1 1 256;
+#X obj 12 60 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/bottom/left/x
+/ev/pro/\$1/vertex/bottom/left/x x -10 7 0 10 -261234 -1 -1 -1 256
+;
+#X obj 12 76 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/bottom/left/y
+/ev/pro/\$1/vertex/bottom/left/y y -10 7 0 10 -261234 -1 -1 -1 256
+;
+#X obj 82 60 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/bottom/right/x
+/ev/pro/\$1/vertex/bottom/right/x x -10 7 0 10 -261234 -1 -1 1 256
+;
+#X obj 82 76 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/bottom/right/y
+/ev/pro/\$1/vertex/bottom/right/y y -10 7 0 10 -261234 -1 -1 -1 256
+;
+#X obj 167 -3 cnv 15 170 145 empty empty rendered_grid 20 12 0 14 -233017
+-66577 0;
+#X obj 206 68 nbx 3 14 1 360 0 0 /ev/pro/\$1/grid/res/x /ev/pro/\$1/grid/res/x
+x -8 8 0 10 -203904 -1 -1 16 256;
+#X obj 206 84 nbx 3 14 1 360 0 0 /ev/pro/\$1/grid/res/y /ev/pro/\$1/grid/res/y
+y -8 8 0 10 -203904 -1 -1 16 256;
+#X obj 181 22 tgl 15 1 /ev/pro/\$1/grid/state /ev/pro/\$1/grid/state
+state 17 7 0 10 -4034 -1 -1 0 1;
+#X text 174 50 Resolution:;
+#X obj 179 122 hsl 64 15 1 7 0 0 /ev/pro/\$1/grid/width /ev/pro/\$1/grid/width
+line_width -2 -8 0 10 -261682 -1 -1 1050 1;
+#X obj 255 42 vsl 15 64 0 1 0 0 /ev/pro/\$1/grid/color/h /ev/pro/\$1/grid/color/h
+H 5 74 0 10 -262144 -1 -1 5806 1;
+#X obj 275 42 vsl 15 64 0 1 0 0 /ev/pro/\$1/grid/color/s /ev/pro/\$1/grid/color/s
+S 5 74 0 10 -262144 -1 -1 3780 1;
+#X obj 295 42 vsl 15 64 0 1 0 0 /ev/pro/\$1/grid/color/v /ev/pro/\$1/grid/color/v
+V 5 74 0 10 -262144 -1 -1 6300 1;
+#X obj 315 42 vsl 15 64 0 1 0 0 /ev/pro/\$1/grid/color/a /ev/pro/\$1/grid/color/a
+A 5 74 0 10 -262144 -1 -1 3780 1;
+#X obj -7 102 cnv 15 170 140 empty empty grid_texture 20 12 0 14 -233017
+-66577 0;
+#X obj 6 140 tgl 15 1 /ev/pro/\$1/grid/tex/state /ev/pro/\$1/grid/tex/state
+state 17 7 0 10 -4034 -1 -1 0 1;
+#X obj 6 162 bng 15 250 50 0 /ev/pro/\$1/grid/tex/open /ev/pro/\$1/grid/tex/open
+open_new_file 17 7 0 10 -262130 -1 -1;
+#X obj 6 180 bng 15 250 50 0 /ev/pro/\$1/grid/tex/load /ev/pro/\$1/grid/tex/load
+reload 17 7 0 10 -204800 -1 -1;
+#X obj 53 209 tgl 15 0 /ev/pro/\$1/grid/tex/flip/horizontal /ev/pro/\$1/grid/tex/flip/horizontal
+<-> 17 7 0 10 -204786 -1 -1 0 1;
+#X obj 89 209 tgl 15 0 /ev/pro/\$1/grid/tex/flip/vertical /ev/pro/\$1/grid/tex/flip/vertical
+^v 17 7 0 10 -204786 -1 -1 0 1;
+#X text 20 209 flip:;
+#X text 275 23 COLOR;
+#X obj 167 147 cnv 15 170 95 empty empty cursor_interaction 20 12 0
+14 -233017 -66577 0;
+#X obj 183 186 vradio 15 1 0 3 /ev/pro/\$1/cursor/mode /ev/pro/\$1/cursor/mode
+cursor_mode 0 -8 0 10 -262144 -1 -1 2;
+#X text 200 185 off;
+#X text 200 201 vertex mouseover;
+#X text 200 216 vertex permanent;
+#X coords 0 0 1 1 155 300 0;
+#X restore 175 208 pd pro_\$1;
+#X obj 581 313 color 1 1 1 1;
+#X obj 34 350 cnv 15 360 60 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X text 38 386 Inlet 2: texture ID;
+#X text 38 370 Inlet 1: gemlist;
+#X obj 34 282 cnv 15 360 60 empty empty creation_arguments: 3 8 0 12
+-191407 -1 0;
+#X text 39 301 1st: module ID \, needs to be unique \; 2nd: storage
+domain \, see [ev_storage-help] for details;
+#X text 208 370 Outlet 1: gemlist;
+#X obj 44 246 abs/ev_pro_grid \$1 \$2;
+#X obj 430 279 abs/ev_pro_grid22 \$1 \$2;
+#X text 62 443 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X connect 0 0 26 0;
+#X connect 1 0 11 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 3 0 22 0;
+#X connect 3 0 21 0;
+#X connect 6 0 33 0;
+#X connect 7 0 6 0;
+#X connect 9 0 0 0;
+#X connect 10 0 35 0;
+#X connect 11 0 0 0;
+#X connect 12 0 29 0;
+#X connect 13 0 12 1;
+#X connect 14 0 15 0;
+#X connect 15 0 16 1;
+#X connect 16 0 2 1;
+#X connect 17 0 2 1;
+#X connect 18 0 16 0;
+#X connect 21 0 11 0;
+#X connect 22 0 11 0;
+#X connect 24 0 12 0;
+#X connect 25 0 19 0;
+#X connect 29 0 28 0;
+#X connect 29 1 43 0;
+#X connect 29 2 10 0;
+#X connect 30 0 14 0;
+#X connect 31 0 17 1;
+#X connect 32 0 17 0;
+#X connect 35 0 2 0;
+#X coords 0 -1 1 1 200 50 1 100 100;

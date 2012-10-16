@@ -1,0 +1,85 @@
+#N canvas 150 22 909 754 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 34 34 cnv 15 700 30 empty empty Example:the_two_different_grids
+20 12 0 14 -233017 -66577 0;
+#X obj 654 67 cnv 15 80 40 empty empty declare_paths 2 8 0 10 -258113
+-262144 0;
+#N canvas 518 150 548 468 init 0;
+#X obj 56 92 loadbang;
+#X obj 44 -23 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 49 -3 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X text 159 170 load the preset file on startup:;
+#X text 66 272 Recall scene '0' from the loaded preset file \, and
+load the still image files.;
+#X obj 56 144 t b b;
+#X obj 83 168 del 1000;
+#X obj 56 231 del 3000;
+#X msg 56 308 \; /0/ds/scene 0 \;;
+#X obj 158 43 ev-main/ev_declare;
+#X msg 83 190 \; /0/ds/loadfile ../../data/ev_example_grids_preset.txt
+;
+#X text 157 223 (pathes relative to "./libs/kollabs");
+#X connect 0 0 5 0;
+#X connect 5 0 7 0;
+#X connect 5 1 6 0;
+#X connect 6 0 10 0;
+#X connect 7 0 8 0;
+#X restore 672 84 pd init;
+#X text 497 34 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X obj 80 309 cnv 15 800 300 empty empty grid_inside_projection_modules
+15 15 0 14 -262130 -66577 0;
+#X obj 240 123 ev_gemwin;
+#X obj 657 118 ev_storage;
+#X text 412 382 Open the "settings" dialog to get to the settings of
+the module. There are two types of grids to choose from:;
+#X text 412 422 RENDERED_GRID:;
+#X text 412 492 GRID_TEXTURE:;
+#X text 502 492 This grid gets textured onto the module instead of
+the original texture. Per default \, the image file is located in "./media/grid.png".
+But it is possible to load your own image by using the open dialog.
+This grid is most suitable for calibrating the "distance weight".;
+#X text 502 422 This grid gets always rendered on top of the projection
+module. It can be adjusted in forms of color \, thickness and opacity.
+This grid is not affected by the texture settings of the module. This
+grid is suitable for calibrating the vertex positions.;
+#X text 447 206 click "create" to start;
+#X obj 97 351 gemhead 50;
+#X obj 97 374 t a;
+#X obj 49 624 cnv 15 600 120 empty empty grid_inside_framebuffer 175
+12 0 14 -204786 -66577 0;
+#X obj 67 140 gemhead;
+#X obj 370 374 t a;
+#X text 282 653 [ev_grid] is an input abstraction that renders a basic
+grid. It is intended to be used inside the framebuffer \, for setting
+the texture positions.;
+#X text 282 695 The labeling can be switched on to calibrate panoramic
+video projections \, as it shows marks every 45 degrees \, assuming
+that the whole grid covers an angle of 360 degrees.;
+#X obj 137 533 ev_pro_22 l;
+#X obj 67 223 ev_buf 0;
+#X obj 67 650 ev_grid 0;
+#X obj 137 473 ev_pro_22 c;
+#X obj 137 413 ev_pro_22 r;
+#X text 525 271 This example uses scene 0 of "ev_example_grids_preset.txt".
+Presets are located in the "./data" folder.;
+#X obj 34 67 cnv 15 360 40 empty empty empty 2 8 0 10 -261234 -262144
+0;
+#X text 35 72 This example explains the three different GRID-functions
+of the toolkit.;
+#X connect 13 0 14 0;
+#X connect 14 0 20 0;
+#X connect 14 0 23 0;
+#X connect 14 0 24 0;
+#X connect 16 0 21 0;
+#X connect 17 0 20 1;
+#X connect 17 0 23 1;
+#X connect 17 0 24 1;
+#X connect 21 0 22 0;
+#X connect 21 1 17 0;

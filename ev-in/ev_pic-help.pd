@@ -1,0 +1,65 @@
+#N canvas 398 169 762 547 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 12 12 cnv 15 748 16 empty empty EXTENDED_VIEW_IMAGE_MODULE 2
+8 0 14 -99865 -262144 0;
+#X obj 13 345 cnv 15 360 180 empty empty PARAMETER_LIST_for_ev_vid
+20 8 0 14 -233017 -66577 0;
+#X obj 464 108 gemwin 20;
+#X msg 476 68 0 \, destroy;
+#X text 393 45 CLICK HERE:;
+#X obj 409 139 gemhead;
+#X obj 12 166 cnv 15 360 60 empty empty creation_arguments: 5 12 0
+12 -162280 -1 0;
+#X obj 12 229 cnv 15 360 45 empty empty inlets/outlets 5 12 0 12 -233017
+-66577 0;
+#X text 17 249 Inlet 1: GEMlist;
+#X obj 12 39 cnv 15 360 120 empty empty description 5 12 0 12 -233017
+-66577 0;
+#X text 14 107 Contains specific storage_&_osc-subpatch which houses
+abstractions to register parameters for storage and osc communication
+;
+#X obj 409 251 pix_texture;
+#X obj 409 277 rectangle 4 3;
+#N canvas 571 219 519 324 pathes 0;
+#X obj 122 67 ../ev-main/ev_declare;
+#X restore 612 106 pd pathes;
+#X obj 419 372 loadbang;
+#X obj 419 394 f \$0;
+#X obj 397 375 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 15 56 Module to load images for further processing. It features
+a flip function to mirror the image horizontally and vertically.;
+#X text 15 188 1st: unique module id;
+#X text 15 202 2nd: storage domain;
+#X text 147 249 Outlet 1: GEMlist;
+#X obj 13 279 cnv 15 360 60 empty empty GUI_controls 5 8 0 12 -204800
+-66577 0;
+#X text 15 295 on/off: toggles state;
+#X text 15 306 open / reload:;
+#X text 53 316 load/reload image;
+#X text 235 292 flip: flip image;
+#X text 272 307 <-> horizontal;
+#X text 272 320 ^v vertical;
+#X text 384 336 Load image files with the 'open' dialog \, or by sending
+a message:;
+#X text 20 481 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X msg 464 46 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
+#X msg 419 420 \; /ev/pic/\$1/filename ../media/cam2.jpg \;;
+#X obj 409 170 ev_pic \$0;
+#X text 17 365 /ev/pic/<id>/flip/horizontal --- flip image horizontally
+\; /ev/pic/<id>/flip/vertical --- flip image vertically \; /ev/pic/<id>/filename
+--- load given filename \; /ev/pic/<id>/reload --- load last specified
+file \; /ev/pic/<id>/open --- start open dialog \;;
+#X connect 3 0 2 0;
+#X connect 5 0 32 0;
+#X connect 11 0 12 0;
+#X connect 14 0 15 0;
+#X connect 15 0 31 0;
+#X connect 16 0 15 0;
+#X connect 30 0 2 0;
+#X connect 32 0 11 0;

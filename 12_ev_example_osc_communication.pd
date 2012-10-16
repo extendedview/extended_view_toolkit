@@ -1,0 +1,122 @@
+#N canvas 339 54 804 756 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 14 14 cnv 15 750 30 empty empty Example:_osc_communication 20
+12 0 14 -233017 -66577 0;
+#X obj 14 56 cnv 15 750 125 empty empty a_simple_patch 20 12 0 14 -262130
+-66577 0;
+#X obj 15 296 cnv 15 750 200 empty empty Registering_variables 20 12
+0 14 -204800 -66577 0;
+#N canvas 579 25 491 216 init 0;
+#X obj 44 -23 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 49 -3 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X obj 158 43 ev-main/ev_declare;
+#X obj 141 94 loadbang;
+#X obj 141 116 f \$0;
+#X msg 141 138 \; /ev/pro/\$1/grid/state 1 \;;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X restore 631 67 pd init;
+#X text 477 14 (c)2012 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X obj 41 93 ev_gemwin;
+#X obj 478 116 ev_pro_22easy \$0;
+#X obj 478 91 gemhead;
+#X text 257 76 Click "create" to start;
+#X text 22 329 New variables can be registered to a storage by the
+[osc_...] modules.;
+#X text 23 364 There are three types:;
+#X text 23 412 [osc_bi] registers a variable for BIDIRECTIONAL osc.
+;
+#X text 76 426 It also includes feedback prevention.;
+#X text 23 384 [osc_r] registers a variable to RECEIVE osc;
+#X text 23 398 [osc_s] registers a variable to SEND osc;
+#X text 24 448 SYNTAX: [osc_r <domain> <variable_name>] \, where <domain>
+is the name of the storage you want to register to \, and <variable_name>
+is the complete name of your variable.;
+#X obj 395 426 cnv 15 370 70 empty empty Important_note_about_domains
+20 12 0 14 -261234 -258113 0;
+#X text 403 455 In Extended View Toolkit \, the OSC domain is always
+the same as the storage domain!!!;
+#X obj 15 501 cnv 15 750 200 empty empty Example 20 12 0 14 -204800
+-66577 0;
+#X obj 613 595 hsl 128 15 0 127 0 0 /i/send/data /i/send/data /i/send/data
+-2 -8 0 10 -262144 -1 -1 0 1;
+#X obj 621 543 nbx 5 14 -1e+37 1e+37 0 0 /i/receive/data /i/receive/data
+/i/receive/data 0 -8 0 10 -262144 -1 -1 18 256;
+#X obj 28 541 osc_r 0 /i/receive/data;
+#X obj 32 603 osc_s 0 /i/send/data;
+#X text 189 540 This registers "/i/receive/data" to receive OSC from
+domain "0";
+#X text 181 597 This registers "/i/send/data" to send OSC from domain
+"0";
+#X obj 35 660 osc_bi 0 /i/do/both;
+#X text 186 659 This registers "/i/do/both" for bidirectional OSC communication
+with domain "0";
+#X obj 15 712 cnv 15 750 180 empty empty OSC_Output 20 12 0 14 -204786
+-66577 0;
+#X obj 151 739 r /0/osc/out;
+#X obj 151 839 print /0/osc/out;
+#X obj 184 790 tgl 15 0 empty empty print_osc_output 17 7 0 10 -262144
+-1 -1 0 1;
+#X text 538 788 [packOSC];
+#X text 538 798 |;
+#X text 538 808 |;
+#X text 538 818 [udpsend 127.0.0.1];
+#X text 538 778 |;
+#X text 538 768 |;
+#X text 538 758 [r /0/osc/out];
+#X obj 15 901 cnv 15 750 220 empty empty OSC_Input 20 12 0 14 -204786
+-66577 0;
+#X text 503 1069 |;
+#X text 503 1079 |;
+#X text 503 1049 |;
+#X text 503 1039 |;
+#X obj 145 1030 s /0/osc/in;
+#X text 503 1029 [udreceive 127.0.0.1];
+#X text 503 1059 [unpackOSC];
+#X text 503 1089 [s /0/osc/in];
+#X obj 21 938 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X msg 21 957 /i/receive/data \$1;
+#X msg 145 957 /i/do/both \$1;
+#X obj 148 937 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 224 1028 <-- put your OSC input in here. Like this:;
+#X obj 15 189 cnv 15 750 100 empty empty About_OSC_communication_with_Extended_View_Toolkit
+20 12 0 14 -228856 -66577 0;
+#X text 51 219 All modules of Extended View Toolkit are prepared for
+OSC communication. The names of all the parameters already fit the
+OSC standard. How to register new variables and how to access these
+OSC-streams is shown below.;
+#X obj 613 665 hsl 128 15 0 127 0 0 /i/do/both /i/do/both /i/do/both
+-2 -8 0 10 -262144 -1 -1 0 1;
+#X text 161 760 Connect this to your OSC externals \, i.e. mrpeach
+or iemnet:;
+#X text 128 717 The OSC output can be accessed und under "/<domain>/osc/out"
+;
+#X text 124 907 The OSC input must be sent to "/<domain>/osc/out";
+#X text 22 861 Play around with the patch on top of the page \, and
+see what's going to be printed...;
+#X msg 296 961 /ev/gemwin/create bang;
+#X msg 296 985 /ev/gemwin/destroy bang;
+#X text 446 965 (For a list of accessable variables \, open a module's
+help-patch and look for the "parameter-list");
+#X text 293 936 Access any variable of the toolkit by its name:;
+#X obj 151 815 spigot;
+#X connect 7 0 6 0;
+#X connect 28 0 63 0;
+#X connect 30 0 63 1;
+#X connect 47 0 48 0;
+#X connect 48 0 43 0;
+#X connect 49 0 43 0;
+#X connect 50 0 49 0;
+#X connect 59 0 43 0;
+#X connect 60 0 43 0;
+#X connect 63 0 29 0;
+#X coords 0 756 1 755 85 60 0;

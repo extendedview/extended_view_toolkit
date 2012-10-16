@@ -1,0 +1,43 @@
+#N canvas 295 332 817 465 10;
+#X obj 180 122 cnv 15 600 220 empty empty edit_this_for_your_specific_shader:
+20 12 0 14 -261234 -66577 0;
+#X obj 60 165 t b;
+#X obj 60 63 inlet shader_init;
+#X obj 192 398 outlet shader_data;
+#X obj 192 63 inlet shader_control;
+#X obj 192 243 f 0;
+#X text 219 243 specify initial value;
+#X text 548 241 specify initial value;
+#X obj 192 165 route <variable_1> <variable_2>;
+#X obj 462 243 list 1 1 1 1;
+#X msg 192 295 <variabe_1> \$1;
+#X obj 462 285 list prepend <variable_2>;
+#X obj 462 307 list trim;
+#X text 314 399 data sent to shader.;
+#X text 402 163 Here \, <variable_1> is of type float \, while <variable_2>
+is a 4-dimensional vector.;
+#X text 74 90 Variables get;
+#X text 74 104 initialized;
+#X text 74 118 on startup.;
+#X text 207 84 Control from the patch (right inlet of [ev_glsl]);
+#X text 54 246 The initialization;
+#X text 54 260 is useful \, as there;
+#X text 54 274 is no way to init;
+#X text 54 288 inside the shaders.;
+#X obj 462 213 t b a;
+#X text 596 415 (c)2012 Marian Weger;
+#X text 37 19 This is a template for the "<name>.ctl.pd" file needed
+by [ev_glsl <name>].;
+#X connect 1 0 5 0;
+#X connect 1 0 9 0;
+#X connect 2 0 1 0;
+#X connect 4 0 8 0;
+#X connect 5 0 10 0;
+#X connect 8 0 5 0;
+#X connect 8 1 23 0;
+#X connect 9 0 11 0;
+#X connect 10 0 3 0;
+#X connect 11 0 12 0;
+#X connect 12 0 3 0;
+#X connect 23 0 9 0;
+#X connect 23 1 9 1;

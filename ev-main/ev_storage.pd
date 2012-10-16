@@ -1,0 +1,14 @@
+#N canvas 105 129 744 371 10;
+#X obj 100 76 cnv 15 600 16 empty empty EXTENDED_VIEW_PRESET_MANAGEMENT
+20 8 0 14 -233017 -66577 0;
+#X text 338 211 outlet: data-stream in osc style;
+#X obj 339 190 outlet data-stream;
+#X text 337 140 contains the storage logic:;
+#X text 85 275 (c)2011 Marian Weger /part of EXTENDED VIEW toolkit/
+gpl v3;
+#X obj 339 158 ds_logic \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8;
+#X obj 100 115 ds_gui \$1;
+#X obj 101 115 cnv 15 148 14 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X connect 5 0 2 0;
+#X coords 0 -1 1 1 150 145 1 100 100;

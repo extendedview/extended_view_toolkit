@@ -1,0 +1,111 @@
+#N canvas 134 22 1038 749 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 9 81 cnv 15 800 16 empty empty EXTENDED_VIEW_PANORAMIC_GROUP_MODULE
+20 8 0 14 -233017 -66577 0;
+#X obj 11 111 cnv 15 250 85 empty empty gui_controls 5 8 0 12 -204800
+-66577 0;
+#X obj 11 201 cnv 15 260 250 empty empty description 5 8 0 12 -233017
+-66577 0;
+#X obj 11 456 cnv 15 250 60 empty empty creation_arguments 5 8 0 12
+-191407 -66577 0;
+#X obj 11 521 cnv 15 250 60 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X text 14 124 shift x/y: translate group in x/y;
+#X text 14 135 scale x/y: scale group in x/y;
+#X text 73 157 black rectangle;
+#X text 14 146 trim t/b: mask top/bottom of group with;
+#X text 15 167 on/off: toggles state;
+#X text 15 179 trim: toggles masking;
+#X text 13 269 Features a trim-function \, which enables;
+#X text 13 280 masking with a black rectangle to correct;
+#X text 13 291 horicontal alignment errors caused by;
+#X text 13 303 construction difficulties of a multi-cam;
+#X text 13 315 panoramic camera;
+#X text 13 327 Can be controlled via OSC \, which uses the;
+#X text 13 338 same syntax as the EV internal;
+#X text 13 349 send/recieve message system.;
+#X text 13 371 information about the specific parameter;
+#X text 13 382 names.;
+#X text 13 258 panoramic image);
+#X text 13 247 image(like multiple cam sources forming a;
+#X text 16 555 Outlets 1-6: gemlist for sources;
+#X text 16 533 Inlet: gemlist;
+#X text 13 360 See parameter list below for additional;
+#X obj 11 592 cnv 15 360 140 empty empty PARAMETER_LIST_for_ev_group
+20 8 0 14 -233017 -66577 0;
+#X text 21 610 /ev/group/<id>/state --- on (1) / off (0) \; /ev/group/<id>/trim/state
+--- trim on (1) / off (0) \; /ev/group/<id>/trim/top --- top trimming
+position \; /ev/group/<id>/trim/bottom --- bottom trimming position
+\; /ev/group/<id>/scale/x --- x-scaling factor for group \; /ev/group/<id>/scale/y
+--- y-scaling factor for group \; /ev/group/<id>/shift/x --- shift
+group in x-direction \; /ev/group/<id>/shift/y --- shift group in y-direction
+\; /ev/group/<id>/trim/color --- color of trimming (r g b) \;;
+#X text 13 402 Contains specific storage_&_osc-subpatch;
+#X text 13 413 which houses abstractions to register;
+#X text 13 435 osc communication;
+#X text 13 424 parameters for storage and;
+#X text 412 637 (c)2011 Peter Venus & Marian Weger /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X obj 286 149 gemhead;
+#X obj 591 226 gemwin 20;
+#X msg 603 188 0 \, destroy;
+#X text 520 165 CLICK HERE:;
+#N canvas 215 22 496 642 init 0;
+#X obj 66 117 loadbang;
+#X text 80 169 This is only needed for this help file.;
+#X text 74 184 To store your settings \, it is recommended;
+#X text 80 199 to use the integrated data storage system [ev_storage].
+;
+#X obj 66 146 del 1000;
+#X obj 122 67 ../ev-main/ev_declare;
+#X msg 66 223 \; /ev/pano/group/id0/scale/y 1.38 \; /ev/pano/group/id0/scale/x
+1.38 \; /ev/pano/group/id0/trim/bottom 0.07 \; /ev/pano/group/id0/trim/top
+-0.01 \; /ev/pano/group/id0/trim/state 1 \; /ev/pic/id3/filename ../media/cam4.jpg
+\; /ev/pano/stitch/id3/shift/y 0.0154839 \; /ev/pano/stitch/id3/shift/x
+-0.0677419 \; /ev/pano/stitch/id3/shade 16.129 \; /ev/pic/id2/filename
+../media/cam3.jpg \; /ev/pano/stitch/id2/shift/y 0.0322581 \; /ev/pano/stitch/id2/shift/x
+-0.103226 \; /ev/pano/stitch/id2/shade 25.8065 \; /ev/pic/id1/filename
+../media/cam2.jpg \; /ev/pano/stitch/id1/shift/y 0.0632258 \; /ev/pano/stitch/id1/shift/x
+-0.0412903 \; /ev/pano/stitch/id1/shade 35.4839 \; /ev/pic/id0/filename
+../media/cam1.jpg \;;
+#X obj 43 119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 4 0;
+#X connect 4 0 6 0;
+#X connect 7 0 4 0;
+#X restore 425 113 pd init;
+#X obj 286 179 ev_pano_group id0;
+#X obj 286 300 ev_pic id0;
+#X obj 286 420 ev_pano_stitch id0;
+#X obj 470 300 ev_pic id1;
+#X obj 470 420 ev_pano_stitch id1;
+#X obj 654 300 ev_pic id2;
+#X obj 654 420 ev_pano_stitch id2;
+#X obj 838 300 ev_pic id3;
+#X obj 838 420 ev_pano_stitch id3;
+#X text 13 225 be treated as one entity. Normally used to;
+#X text 13 236 to group multiple input sources to one big;
+#X text 13 213 [ev_pano_group] groups up to 6 sources to;
+#X obj 416 559 cnv 15 360 60 empty empty Important_note: 20 12 0 14
+-261234 -258113 0;
+#X text 420 585 This module is designed to work together with [ev_pano_stitch]
+and should not be used in another context.;
+#X text 15 485 2nd: storage domain;
+#X text 15 472 1st: module ID;
+#X msg 591 166 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
+#X connect 33 0 38 0;
+#X connect 35 0 34 0;
+#X connect 38 1 39 0;
+#X connect 38 2 41 0;
+#X connect 38 3 43 0;
+#X connect 38 4 45 0;
+#X connect 39 0 40 0;
+#X connect 41 0 42 0;
+#X connect 43 0 44 0;
+#X connect 45 0 46 0;
+#X connect 54 0 34 0;
+#X coords 0 749 1 748 210 91 0;

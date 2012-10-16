@@ -1,0 +1,2146 @@
+======================== GLOBAL ========================
+#settings
+#data
+======================== SCENE 0 ========================
+#settings
+/ev/pro/door/grid/width/ds/occupy 1
+/ev/pro/door/grid/width/ds/delay 0
+/ev/pro/door/grid/width/ds/slave 0
+/ev/pro/door/grid/color/a/ds/occupy 1
+/ev/pro/door/grid/color/a/ds/delay 0
+/ev/pro/door/grid/color/a/ds/slave 0
+/ev/pro/door/grid/color/v/ds/occupy 1
+/ev/pro/door/grid/color/v/ds/delay 0
+/ev/pro/door/grid/color/v/ds/slave 0
+/ev/pro/door/grid/color/s/ds/occupy 1
+/ev/pro/door/grid/color/s/ds/delay 0
+/ev/pro/door/grid/color/s/ds/slave 0
+/ev/pro/door/grid/color/h/ds/occupy 1
+/ev/pro/door/grid/color/h/ds/delay 0
+/ev/pro/door/grid/color/h/ds/slave 0
+/ev/pro/door/grid/res/y/ds/occupy 1
+/ev/pro/door/grid/res/y/ds/delay 0
+/ev/pro/door/grid/res/y/ds/slave 0
+/ev/pro/door/grid/res/x/ds/occupy 1
+/ev/pro/door/grid/res/x/ds/delay 0
+/ev/pro/door/grid/res/x/ds/slave 0
+/ev/pro/door/grid/state/ds/occupy 1
+/ev/pro/door/grid/state/ds/delay 0
+/ev/pro/door/grid/state/ds/slave 0
+/ev/pro/door/grid/tex/flip/vertical/ds/occupy 1
+/ev/pro/door/grid/tex/flip/vertical/ds/delay 0
+/ev/pro/door/grid/tex/flip/vertical/ds/slave 0
+/ev/pro/door/grid/tex/flip/horizontal/ds/occupy 1
+/ev/pro/door/grid/tex/flip/horizontal/ds/delay 0
+/ev/pro/door/grid/tex/flip/horizontal/ds/slave 0
+/ev/pro/door/grid/tex/filename/ds/occupy 1
+/ev/pro/door/grid/tex/filename/ds/delay 0
+/ev/pro/door/grid/tex/filename/ds/slave 0
+/ev/pro/door/grid/tex/state/ds/occupy 1
+/ev/pro/door/grid/tex/state/ds/delay 0
+/ev/pro/door/grid/tex/state/ds/slave 0
+/ev/pro/door/cursor/mode/ds/occupy 1
+/ev/pro/door/cursor/mode/ds/delay 0
+/ev/pro/door/cursor/mode/ds/slave 0
+/ev/pro/door/state/ds/occupy 0
+/ev/pro/door/state/ds/delay 0
+/ev/pro/door/state/ds/slave 0
+/ev/pro/door/res/ds/occupy 0
+/ev/pro/door/res/ds/delay 0
+/ev/pro/door/res/ds/slave 0
+/ev/pro/door/vertex/bottom/center/y/ds/occupy 0
+/ev/pro/door/vertex/bottom/center/y/ds/delay 0
+/ev/pro/door/vertex/bottom/center/y/ds/morph/timegrain 20
+/ev/pro/door/vertex/bottom/center/y/ds/morph/curve/quality 0
+/ev/pro/door/vertex/bottom/center/y/ds/slave 0
+/ev/pro/door/vertex/bottom/center/y/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/bottom/center/y/ds/morph/curve/weight 0
+/ev/pro/door/vertex/bottom/center/y/ds/morph/curve/shape 0
+/ev/pro/door/vertex/bottom/center/y/ds/morph/time 0
+/ev/pro/door/vertex/bottom/center/y/ds/morph 0
+/ev/pro/door/vertex/bottom/center/x/ds/occupy 0
+/ev/pro/door/vertex/bottom/center/x/ds/delay 0
+/ev/pro/door/vertex/bottom/center/x/ds/morph/timegrain 20
+/ev/pro/door/vertex/bottom/center/x/ds/morph/curve/quality 0
+/ev/pro/door/vertex/bottom/center/x/ds/slave 0
+/ev/pro/door/vertex/bottom/center/x/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/bottom/center/x/ds/morph/curve/weight 0
+/ev/pro/door/vertex/bottom/center/x/ds/morph/curve/shape 0
+/ev/pro/door/vertex/bottom/center/x/ds/morph/time 0
+/ev/pro/door/vertex/bottom/center/x/ds/morph 0
+/ev/pro/door/vertex/center/right/y/ds/occupy 0
+/ev/pro/door/vertex/center/right/y/ds/delay 0
+/ev/pro/door/vertex/center/right/y/ds/morph/timegrain 20
+/ev/pro/door/vertex/center/right/y/ds/morph/curve/quality 0
+/ev/pro/door/vertex/center/right/y/ds/slave 0
+/ev/pro/door/vertex/center/right/y/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/center/right/y/ds/morph/curve/weight 0
+/ev/pro/door/vertex/center/right/y/ds/morph/curve/shape 0
+/ev/pro/door/vertex/center/right/y/ds/morph/time 0
+/ev/pro/door/vertex/center/right/y/ds/morph 0
+/ev/pro/door/vertex/center/right/x/ds/occupy 0
+/ev/pro/door/vertex/center/right/x/ds/delay 0
+/ev/pro/door/vertex/center/right/x/ds/morph/timegrain 20
+/ev/pro/door/vertex/center/right/x/ds/morph/curve/quality 0
+/ev/pro/door/vertex/center/right/x/ds/slave 0
+/ev/pro/door/vertex/center/right/x/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/center/right/x/ds/morph/curve/weight 0
+/ev/pro/door/vertex/center/right/x/ds/morph/curve/shape 0
+/ev/pro/door/vertex/center/right/x/ds/morph/time 0
+/ev/pro/door/vertex/center/right/x/ds/morph 0
+/ev/pro/door/vertex/center/center/y/ds/occupy 0
+/ev/pro/door/vertex/center/center/y/ds/delay 0
+/ev/pro/door/vertex/center/center/y/ds/morph/timegrain 20
+/ev/pro/door/vertex/center/center/y/ds/morph/curve/quality 0
+/ev/pro/door/vertex/center/center/y/ds/slave 0
+/ev/pro/door/vertex/center/center/y/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/center/center/y/ds/morph/curve/weight 0
+/ev/pro/door/vertex/center/center/y/ds/morph/curve/shape 0
+/ev/pro/door/vertex/center/center/y/ds/morph/time 0
+/ev/pro/door/vertex/center/center/y/ds/morph 0
+/ev/pro/door/vertex/center/center/x/ds/occupy 0
+/ev/pro/door/vertex/center/center/x/ds/delay 0
+/ev/pro/door/vertex/center/center/x/ds/morph/timegrain 20
+/ev/pro/door/vertex/center/center/x/ds/morph/curve/quality 0
+/ev/pro/door/vertex/center/center/x/ds/slave 0
+/ev/pro/door/vertex/center/center/x/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/center/center/x/ds/morph/curve/weight 0
+/ev/pro/door/vertex/center/center/x/ds/morph/curve/shape 0
+/ev/pro/door/vertex/center/center/x/ds/morph/time 0
+/ev/pro/door/vertex/center/center/x/ds/morph 0
+/ev/pro/door/vertex/center/left/y/ds/occupy 0
+/ev/pro/door/vertex/center/left/y/ds/delay 0
+/ev/pro/door/vertex/center/left/y/ds/morph/timegrain 20
+/ev/pro/door/vertex/center/left/y/ds/morph/curve/quality 0
+/ev/pro/door/vertex/center/left/y/ds/slave 0
+/ev/pro/door/vertex/center/left/y/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/center/left/y/ds/morph/curve/weight 0
+/ev/pro/door/vertex/center/left/y/ds/morph/curve/shape 0
+/ev/pro/door/vertex/center/left/y/ds/morph/time 0
+/ev/pro/door/vertex/center/left/y/ds/morph 0
+/ev/pro/door/vertex/center/left/x/ds/occupy 0
+/ev/pro/door/vertex/center/left/x/ds/delay 0
+/ev/pro/door/vertex/center/left/x/ds/morph/timegrain 20
+/ev/pro/door/vertex/center/left/x/ds/morph/curve/quality 0
+/ev/pro/door/vertex/center/left/x/ds/slave 0
+/ev/pro/door/vertex/center/left/x/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/center/left/x/ds/morph/curve/weight 0
+/ev/pro/door/vertex/center/left/x/ds/morph/curve/shape 0
+/ev/pro/door/vertex/center/left/x/ds/morph/time 0
+/ev/pro/door/vertex/center/left/x/ds/morph 0
+/ev/pro/door/vertex/top/center/y/ds/occupy 0
+/ev/pro/door/vertex/top/center/y/ds/delay 0
+/ev/pro/door/vertex/top/center/y/ds/morph/timegrain 20
+/ev/pro/door/vertex/top/center/y/ds/morph/curve/quality 0
+/ev/pro/door/vertex/top/center/y/ds/slave 0
+/ev/pro/door/vertex/top/center/y/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/top/center/y/ds/morph/curve/weight 0
+/ev/pro/door/vertex/top/center/y/ds/morph/curve/shape 0
+/ev/pro/door/vertex/top/center/y/ds/morph/time 0
+/ev/pro/door/vertex/top/center/y/ds/morph 0
+/ev/pro/door/vertex/top/center/x/ds/occupy 0
+/ev/pro/door/vertex/top/center/x/ds/delay 0
+/ev/pro/door/vertex/top/center/x/ds/morph/timegrain 20
+/ev/pro/door/vertex/top/center/x/ds/morph/curve/quality 0
+/ev/pro/door/vertex/top/center/x/ds/slave 0
+/ev/pro/door/vertex/top/center/x/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/top/center/x/ds/morph/curve/weight 0
+/ev/pro/door/vertex/top/center/x/ds/morph/curve/shape 0
+/ev/pro/door/vertex/top/center/x/ds/morph/time 0
+/ev/pro/door/vertex/top/center/x/ds/morph 0
+/ev/pro/door/vertex/bottom/right/y/ds/occupy 0
+/ev/pro/door/vertex/bottom/right/y/ds/delay 0
+/ev/pro/door/vertex/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/door/vertex/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/door/vertex/bottom/right/y/ds/slave 0
+/ev/pro/door/vertex/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/door/vertex/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/door/vertex/bottom/right/y/ds/morph/time 0
+/ev/pro/door/vertex/bottom/right/y/ds/morph 0
+/ev/pro/door/vertex/bottom/right/x/ds/occupy 0
+/ev/pro/door/vertex/bottom/right/x/ds/delay 0
+/ev/pro/door/vertex/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/door/vertex/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/door/vertex/bottom/right/x/ds/slave 0
+/ev/pro/door/vertex/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/door/vertex/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/door/vertex/bottom/right/x/ds/morph/time 0
+/ev/pro/door/vertex/bottom/right/x/ds/morph 0
+/ev/pro/door/vertex/bottom/left/y/ds/occupy 0
+/ev/pro/door/vertex/bottom/left/y/ds/delay 0
+/ev/pro/door/vertex/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/door/vertex/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/door/vertex/bottom/left/y/ds/slave 0
+/ev/pro/door/vertex/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/door/vertex/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/door/vertex/bottom/left/y/ds/morph/time 0
+/ev/pro/door/vertex/bottom/left/y/ds/morph 0
+/ev/pro/door/vertex/bottom/left/x/ds/occupy 0
+/ev/pro/door/vertex/bottom/left/x/ds/delay 0
+/ev/pro/door/vertex/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/door/vertex/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/door/vertex/bottom/left/x/ds/slave 0
+/ev/pro/door/vertex/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/door/vertex/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/door/vertex/bottom/left/x/ds/morph/time 0
+/ev/pro/door/vertex/bottom/left/x/ds/morph 0
+/ev/pro/door/vertex/top/right/y/ds/occupy 0
+/ev/pro/door/vertex/top/right/y/ds/delay 0
+/ev/pro/door/vertex/top/right/y/ds/morph/timegrain 20
+/ev/pro/door/vertex/top/right/y/ds/morph/curve/quality 0
+/ev/pro/door/vertex/top/right/y/ds/slave 0
+/ev/pro/door/vertex/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/top/right/y/ds/morph/curve/weight 0
+/ev/pro/door/vertex/top/right/y/ds/morph/curve/shape 0
+/ev/pro/door/vertex/top/right/y/ds/morph/time 0
+/ev/pro/door/vertex/top/right/y/ds/morph 0
+/ev/pro/door/vertex/top/right/x/ds/occupy 0
+/ev/pro/door/vertex/top/right/x/ds/delay 0
+/ev/pro/door/vertex/top/right/x/ds/morph/timegrain 20
+/ev/pro/door/vertex/top/right/x/ds/morph/curve/quality 0
+/ev/pro/door/vertex/top/right/x/ds/slave 0
+/ev/pro/door/vertex/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/top/right/x/ds/morph/curve/weight 0
+/ev/pro/door/vertex/top/right/x/ds/morph/curve/shape 0
+/ev/pro/door/vertex/top/right/x/ds/morph/time 0
+/ev/pro/door/vertex/top/right/x/ds/morph 0
+/ev/pro/door/vertex/top/left/y/ds/occupy 0
+/ev/pro/door/vertex/top/left/y/ds/delay 0
+/ev/pro/door/vertex/top/left/y/ds/morph/timegrain 20
+/ev/pro/door/vertex/top/left/y/ds/morph/curve/quality 0
+/ev/pro/door/vertex/top/left/y/ds/slave 0
+/ev/pro/door/vertex/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/top/left/y/ds/morph/curve/weight 0
+/ev/pro/door/vertex/top/left/y/ds/morph/curve/shape 0
+/ev/pro/door/vertex/top/left/y/ds/morph/time 0
+/ev/pro/door/vertex/top/left/y/ds/morph 0
+/ev/pro/door/vertex/top/left/x/ds/occupy 0
+/ev/pro/door/vertex/top/left/x/ds/delay 0
+/ev/pro/door/vertex/top/left/x/ds/morph/timegrain 20
+/ev/pro/door/vertex/top/left/x/ds/morph/curve/quality 0
+/ev/pro/door/vertex/top/left/x/ds/slave 0
+/ev/pro/door/vertex/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/door/vertex/top/left/x/ds/morph/curve/weight 0
+/ev/pro/door/vertex/top/left/x/ds/morph/curve/shape 0
+/ev/pro/door/vertex/top/left/x/ds/morph/time 0
+/ev/pro/door/vertex/top/left/x/ds/morph 0
+/ev/pro/dow/grid/res/y/ds/occupy 1
+/ev/pro/dow/grid/res/y/ds/delay 0
+/ev/pro/dow/grid/res/y/ds/slave 0
+/ev/pro/dow/grid/res/x/ds/occupy 1
+/ev/pro/dow/grid/res/x/ds/delay 0
+/ev/pro/dow/grid/res/x/ds/slave 0
+/ev/pro/dow/grid/width/ds/occupy 1
+/ev/pro/dow/grid/width/ds/delay 0
+/ev/pro/dow/grid/width/ds/slave 0
+/ev/pro/dow/grid/color/a/ds/occupy 1
+/ev/pro/dow/grid/color/a/ds/delay 0
+/ev/pro/dow/grid/color/a/ds/slave 0
+/ev/pro/dow/grid/color/v/ds/occupy 1
+/ev/pro/dow/grid/color/v/ds/delay 0
+/ev/pro/dow/grid/color/v/ds/slave 0
+/ev/pro/dow/grid/color/s/ds/occupy 1
+/ev/pro/dow/grid/color/s/ds/delay 0
+/ev/pro/dow/grid/color/s/ds/slave 0
+/ev/pro/dow/grid/color/h/ds/occupy 1
+/ev/pro/dow/grid/color/h/ds/delay 0
+/ev/pro/dow/grid/color/h/ds/slave 0
+/ev/pro/dow/grid/state/ds/occupy 0
+/ev/pro/dow/grid/state/ds/delay 0
+/ev/pro/dow/grid/state/ds/slave 0
+/ev/pro/dow/grid/tex/flip/vertical/ds/occupy 1
+/ev/pro/dow/grid/tex/flip/vertical/ds/delay 0
+/ev/pro/dow/grid/tex/flip/vertical/ds/slave 0
+/ev/pro/dow/grid/tex/flip/horizontal/ds/occupy 1
+/ev/pro/dow/grid/tex/flip/horizontal/ds/delay 0
+/ev/pro/dow/grid/tex/flip/horizontal/ds/slave 0
+/ev/pro/dow/grid/tex/filename/ds/occupy 1
+/ev/pro/dow/grid/tex/filename/ds/delay 0
+/ev/pro/dow/grid/tex/filename/ds/slave 0
+/ev/pro/dow/grid/tex/state/ds/occupy 1
+/ev/pro/dow/grid/tex/state/ds/delay 0
+/ev/pro/dow/grid/tex/state/ds/slave 0
+/ev/pro/dow/cursor/mode/ds/occupy 1
+/ev/pro/dow/cursor/mode/ds/delay 0
+/ev/pro/dow/cursor/mode/ds/slave 0
+/ev/pro/dow/state/ds/occupy 0
+/ev/pro/dow/state/ds/delay 0
+/ev/pro/dow/state/ds/slave 0
+/ev/pro/dow/vertex/top/left/x/ds/occupy 0
+/ev/pro/dow/vertex/top/left/x/ds/delay 0
+/ev/pro/dow/vertex/top/left/x/ds/morph/timegrain 20
+/ev/pro/dow/vertex/top/left/x/ds/morph/curve/quality 0
+/ev/pro/dow/vertex/top/left/x/ds/slave 0
+/ev/pro/dow/vertex/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/dow/vertex/top/left/x/ds/morph/curve/weight 0
+/ev/pro/dow/vertex/top/left/x/ds/morph/curve/shape 0
+/ev/pro/dow/vertex/top/left/x/ds/morph/time 0
+/ev/pro/dow/vertex/top/left/x/ds/morph 0
+/ev/pro/dow/vertex/top/left/y/ds/occupy 0
+/ev/pro/dow/vertex/top/left/y/ds/delay 0
+/ev/pro/dow/vertex/top/left/y/ds/morph/timegrain 20
+/ev/pro/dow/vertex/top/left/y/ds/morph/curve/quality 0
+/ev/pro/dow/vertex/top/left/y/ds/slave 0
+/ev/pro/dow/vertex/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/dow/vertex/top/left/y/ds/morph/curve/weight 0
+/ev/pro/dow/vertex/top/left/y/ds/morph/curve/shape 0
+/ev/pro/dow/vertex/top/left/y/ds/morph/time 0
+/ev/pro/dow/vertex/top/left/y/ds/morph 0
+/ev/pro/dow/vertex/top/right/x/ds/occupy 0
+/ev/pro/dow/vertex/top/right/x/ds/delay 0
+/ev/pro/dow/vertex/top/right/x/ds/morph/timegrain 20
+/ev/pro/dow/vertex/top/right/x/ds/morph/curve/quality 0
+/ev/pro/dow/vertex/top/right/x/ds/slave 0
+/ev/pro/dow/vertex/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/dow/vertex/top/right/x/ds/morph/curve/weight 0
+/ev/pro/dow/vertex/top/right/x/ds/morph/curve/shape 0
+/ev/pro/dow/vertex/top/right/x/ds/morph/time 0
+/ev/pro/dow/vertex/top/right/x/ds/morph 0
+/ev/pro/dow/vertex/top/right/y/ds/occupy 0
+/ev/pro/dow/vertex/top/right/y/ds/delay 0
+/ev/pro/dow/vertex/top/right/y/ds/morph/timegrain 20
+/ev/pro/dow/vertex/top/right/y/ds/morph/curve/quality 0
+/ev/pro/dow/vertex/top/right/y/ds/slave 0
+/ev/pro/dow/vertex/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/dow/vertex/top/right/y/ds/morph/curve/weight 0
+/ev/pro/dow/vertex/top/right/y/ds/morph/curve/shape 0
+/ev/pro/dow/vertex/top/right/y/ds/morph/time 0
+/ev/pro/dow/vertex/top/right/y/ds/morph 0
+/ev/pro/dow/vertex/bottom/left/x/ds/occupy 0
+/ev/pro/dow/vertex/bottom/left/x/ds/delay 0
+/ev/pro/dow/vertex/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/dow/vertex/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/dow/vertex/bottom/left/x/ds/slave 0
+/ev/pro/dow/vertex/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/dow/vertex/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/dow/vertex/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/dow/vertex/bottom/left/x/ds/morph/time 0
+/ev/pro/dow/vertex/bottom/left/x/ds/morph 0
+/ev/pro/dow/vertex/bottom/left/y/ds/occupy 0
+/ev/pro/dow/vertex/bottom/left/y/ds/delay 0
+/ev/pro/dow/vertex/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/dow/vertex/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/dow/vertex/bottom/left/y/ds/slave 0
+/ev/pro/dow/vertex/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/dow/vertex/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/dow/vertex/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/dow/vertex/bottom/left/y/ds/morph/time 0
+/ev/pro/dow/vertex/bottom/left/y/ds/morph 0
+/ev/pro/dow/vertex/bottom/right/x/ds/occupy 0
+/ev/pro/dow/vertex/bottom/right/x/ds/delay 0
+/ev/pro/dow/vertex/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/dow/vertex/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/dow/vertex/bottom/right/x/ds/slave 0
+/ev/pro/dow/vertex/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/dow/vertex/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/dow/vertex/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/dow/vertex/bottom/right/x/ds/morph/time 0
+/ev/pro/dow/vertex/bottom/right/x/ds/morph 0
+/ev/pro/dow/vertex/bottom/right/y/ds/occupy 0
+/ev/pro/dow/vertex/bottom/right/y/ds/delay 0
+/ev/pro/dow/vertex/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/dow/vertex/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/dow/vertex/bottom/right/y/ds/slave 0
+/ev/pro/dow/vertex/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/dow/vertex/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/dow/vertex/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/dow/vertex/bottom/right/y/ds/morph/time 0
+/ev/pro/dow/vertex/bottom/right/y/ds/morph 0
+/ev/pro/win/grid/res/y/ds/occupy 1
+/ev/pro/win/grid/res/y/ds/delay 0
+/ev/pro/win/grid/res/y/ds/slave 0
+/ev/pro/win/grid/res/x/ds/occupy 1
+/ev/pro/win/grid/res/x/ds/delay 0
+/ev/pro/win/grid/res/x/ds/slave 0
+/ev/pro/win/grid/width/ds/occupy 1
+/ev/pro/win/grid/width/ds/delay 0
+/ev/pro/win/grid/width/ds/slave 0
+/ev/pro/win/grid/color/a/ds/occupy 1
+/ev/pro/win/grid/color/a/ds/delay 0
+/ev/pro/win/grid/color/a/ds/slave 0
+/ev/pro/win/grid/color/v/ds/occupy 1
+/ev/pro/win/grid/color/v/ds/delay 0
+/ev/pro/win/grid/color/v/ds/slave 0
+/ev/pro/win/grid/color/s/ds/occupy 1
+/ev/pro/win/grid/color/s/ds/delay 0
+/ev/pro/win/grid/color/s/ds/slave 0
+/ev/pro/win/grid/color/h/ds/occupy 1
+/ev/pro/win/grid/color/h/ds/delay 0
+/ev/pro/win/grid/color/h/ds/slave 0
+/ev/pro/win/grid/state/ds/occupy 0
+/ev/pro/win/grid/state/ds/delay 0
+/ev/pro/win/grid/state/ds/slave 0
+/ev/pro/win/grid/tex/flip/vertical/ds/occupy 1
+/ev/pro/win/grid/tex/flip/vertical/ds/delay 0
+/ev/pro/win/grid/tex/flip/vertical/ds/slave 0
+/ev/pro/win/grid/tex/flip/horizontal/ds/occupy 1
+/ev/pro/win/grid/tex/flip/horizontal/ds/delay 0
+/ev/pro/win/grid/tex/flip/horizontal/ds/slave 0
+/ev/pro/win/grid/tex/filename/ds/occupy 1
+/ev/pro/win/grid/tex/filename/ds/delay 0
+/ev/pro/win/grid/tex/filename/ds/slave 0
+/ev/pro/win/grid/tex/state/ds/occupy 1
+/ev/pro/win/grid/tex/state/ds/delay 0
+/ev/pro/win/grid/tex/state/ds/slave 0
+/ev/pro/win/cursor/mode/ds/occupy 1
+/ev/pro/win/cursor/mode/ds/delay 0
+/ev/pro/win/cursor/mode/ds/slave 0
+/ev/pro/win/state/ds/occupy 0
+/ev/pro/win/state/ds/delay 0
+/ev/pro/win/state/ds/slave 0
+/ev/pro/win/vertex/top/left/x/ds/occupy 0
+/ev/pro/win/vertex/top/left/x/ds/delay 0
+/ev/pro/win/vertex/top/left/x/ds/morph/timegrain 20
+/ev/pro/win/vertex/top/left/x/ds/morph/curve/quality 0
+/ev/pro/win/vertex/top/left/x/ds/slave 0
+/ev/pro/win/vertex/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/win/vertex/top/left/x/ds/morph/curve/weight 0
+/ev/pro/win/vertex/top/left/x/ds/morph/curve/shape 0
+/ev/pro/win/vertex/top/left/x/ds/morph/time 0
+/ev/pro/win/vertex/top/left/x/ds/morph 0
+/ev/pro/win/vertex/top/left/y/ds/occupy 0
+/ev/pro/win/vertex/top/left/y/ds/delay 0
+/ev/pro/win/vertex/top/left/y/ds/morph/timegrain 20
+/ev/pro/win/vertex/top/left/y/ds/morph/curve/quality 0
+/ev/pro/win/vertex/top/left/y/ds/slave 0
+/ev/pro/win/vertex/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/win/vertex/top/left/y/ds/morph/curve/weight 0
+/ev/pro/win/vertex/top/left/y/ds/morph/curve/shape 0
+/ev/pro/win/vertex/top/left/y/ds/morph/time 0
+/ev/pro/win/vertex/top/left/y/ds/morph 0
+/ev/pro/win/vertex/top/right/x/ds/occupy 0
+/ev/pro/win/vertex/top/right/x/ds/delay 0
+/ev/pro/win/vertex/top/right/x/ds/morph/timegrain 20
+/ev/pro/win/vertex/top/right/x/ds/morph/curve/quality 0
+/ev/pro/win/vertex/top/right/x/ds/slave 0
+/ev/pro/win/vertex/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/win/vertex/top/right/x/ds/morph/curve/weight 0
+/ev/pro/win/vertex/top/right/x/ds/morph/curve/shape 0
+/ev/pro/win/vertex/top/right/x/ds/morph/time 0
+/ev/pro/win/vertex/top/right/x/ds/morph 0
+/ev/pro/win/vertex/top/right/y/ds/occupy 0
+/ev/pro/win/vertex/top/right/y/ds/delay 0
+/ev/pro/win/vertex/top/right/y/ds/morph/timegrain 20
+/ev/pro/win/vertex/top/right/y/ds/morph/curve/quality 0
+/ev/pro/win/vertex/top/right/y/ds/slave 0
+/ev/pro/win/vertex/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/win/vertex/top/right/y/ds/morph/curve/weight 0
+/ev/pro/win/vertex/top/right/y/ds/morph/curve/shape 0
+/ev/pro/win/vertex/top/right/y/ds/morph/time 0
+/ev/pro/win/vertex/top/right/y/ds/morph 0
+/ev/pro/win/vertex/bottom/left/x/ds/occupy 0
+/ev/pro/win/vertex/bottom/left/x/ds/delay 0
+/ev/pro/win/vertex/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/win/vertex/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/win/vertex/bottom/left/x/ds/slave 0
+/ev/pro/win/vertex/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/win/vertex/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/win/vertex/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/win/vertex/bottom/left/x/ds/morph/time 0
+/ev/pro/win/vertex/bottom/left/x/ds/morph 0
+/ev/pro/win/vertex/bottom/left/y/ds/occupy 0
+/ev/pro/win/vertex/bottom/left/y/ds/delay 0
+/ev/pro/win/vertex/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/win/vertex/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/win/vertex/bottom/left/y/ds/slave 0
+/ev/pro/win/vertex/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/win/vertex/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/win/vertex/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/win/vertex/bottom/left/y/ds/morph/time 0
+/ev/pro/win/vertex/bottom/left/y/ds/morph 0
+/ev/pro/win/vertex/bottom/right/x/ds/occupy 0
+/ev/pro/win/vertex/bottom/right/x/ds/delay 0
+/ev/pro/win/vertex/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/win/vertex/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/win/vertex/bottom/right/x/ds/slave 0
+/ev/pro/win/vertex/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/win/vertex/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/win/vertex/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/win/vertex/bottom/right/x/ds/morph/time 0
+/ev/pro/win/vertex/bottom/right/x/ds/morph 0
+/ev/pro/win/vertex/bottom/right/y/ds/occupy 0
+/ev/pro/win/vertex/bottom/right/y/ds/delay 0
+/ev/pro/win/vertex/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/win/vertex/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/win/vertex/bottom/right/y/ds/slave 0
+/ev/pro/win/vertex/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/win/vertex/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/win/vertex/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/win/vertex/bottom/right/y/ds/morph/time 0
+/ev/pro/win/vertex/bottom/right/y/ds/morph 0
+/ev/mouse/texture/sensitivity/ds/occupy 1
+/ev/mouse/texture/sensitivity/ds/delay 0
+/ev/mouse/texture/sensitivity/ds/slave 0
+/ev/mouse/select_radius/ds/occupy 1
+/ev/mouse/select_radius/ds/delay 0
+/ev/mouse/select_radius/ds/slave 0
+/ev/gemwin/border/ds/occupy 0
+/ev/gemwin/border/ds/delay 0
+/ev/gemwin/border/ds/slave 0
+/ev/gemwin/lighting/ds/occupy 0
+/ev/gemwin/lighting/ds/delay 0
+/ev/gemwin/lighting/ds/slave 0
+/ev/gemwin/frame/ds/occupy 0
+/ev/gemwin/frame/ds/delay 0
+/ev/gemwin/frame/ds/slave 0
+/ev/gemwin/offset/y/ds/occupy 0
+/ev/gemwin/offset/y/ds/delay 0
+/ev/gemwin/offset/y/ds/slave 0
+/ev/gemwin/offset/x/ds/occupy 0
+/ev/gemwin/offset/x/ds/delay 0
+/ev/gemwin/offset/x/ds/slave 0
+/ev/gemwin/dimen/y/ds/occupy 0
+/ev/gemwin/dimen/y/ds/delay 0
+/ev/gemwin/dimen/y/ds/slave 0
+/ev/gemwin/dimen/x/ds/occupy 0
+/ev/gemwin/dimen/x/ds/delay 0
+/ev/gemwin/dimen/x/ds/slave 0
+/ev/pro/r/grid/res/y/ds/occupy 1
+/ev/pro/r/grid/res/y/ds/delay 0
+/ev/pro/r/grid/res/y/ds/slave 0
+/ev/pro/r/grid/res/x/ds/occupy 1
+/ev/pro/r/grid/res/x/ds/delay 0
+/ev/pro/r/grid/res/x/ds/slave 0
+/ev/pro/r/grid/width/ds/occupy 1
+/ev/pro/r/grid/width/ds/delay 0
+/ev/pro/r/grid/width/ds/slave 0
+/ev/pro/r/grid/color/a/ds/occupy 1
+/ev/pro/r/grid/color/a/ds/delay 0
+/ev/pro/r/grid/color/a/ds/slave 0
+/ev/pro/r/grid/color/v/ds/occupy 1
+/ev/pro/r/grid/color/v/ds/delay 0
+/ev/pro/r/grid/color/v/ds/slave 0
+/ev/pro/r/grid/color/s/ds/occupy 1
+/ev/pro/r/grid/color/s/ds/delay 0
+/ev/pro/r/grid/color/s/ds/slave 0
+/ev/pro/r/grid/color/h/ds/occupy 1
+/ev/pro/r/grid/color/h/ds/delay 0
+/ev/pro/r/grid/color/h/ds/slave 0
+/ev/pro/r/grid/state/ds/occupy 0
+/ev/pro/r/grid/state/ds/delay 0
+/ev/pro/r/grid/state/ds/slave 0
+/ev/pro/r/grid/tex/flip/vertical/ds/occupy 1
+/ev/pro/r/grid/tex/flip/vertical/ds/delay 0
+/ev/pro/r/grid/tex/flip/vertical/ds/slave 0
+/ev/pro/r/grid/tex/flip/horizontal/ds/occupy 1
+/ev/pro/r/grid/tex/flip/horizontal/ds/delay 0
+/ev/pro/r/grid/tex/flip/horizontal/ds/slave 0
+/ev/pro/r/grid/tex/filename/ds/occupy 1
+/ev/pro/r/grid/tex/filename/ds/delay 0
+/ev/pro/r/grid/tex/filename/ds/slave 0
+/ev/pro/r/grid/tex/state/ds/occupy 1
+/ev/pro/r/grid/tex/state/ds/delay 0
+/ev/pro/r/grid/tex/state/ds/slave 0
+/ev/pro/r/set_alpha/ds/occupy 1
+/ev/pro/r/set_alpha/ds/delay 0
+/ev/pro/r/set_alpha/ds/slave 0
+/ev/pro/r/cursor/mode/ds/occupy 0
+/ev/pro/r/cursor/mode/ds/delay 0
+/ev/pro/r/cursor/mode/ds/slave 0
+/ev/pro/r/state/ds/occupy 0
+/ev/pro/r/state/ds/delay 0
+/ev/pro/r/state/ds/slave 0
+/ev/pro/r/texture/weight/y/ds/occupy 1
+/ev/pro/r/texture/weight/y/ds/delay 0
+/ev/pro/r/texture/weight/y/ds/morph/timegrain 20
+/ev/pro/r/texture/weight/y/ds/morph/curve/quality 0
+/ev/pro/r/texture/weight/y/ds/slave 0
+/ev/pro/r/texture/weight/y/ds/morph/curve/resolution 100
+/ev/pro/r/texture/weight/y/ds/morph/curve/weight 0
+/ev/pro/r/texture/weight/y/ds/morph/curve/shape 0
+/ev/pro/r/texture/weight/y/ds/morph/time 0
+/ev/pro/r/texture/weight/y/ds/morph 0
+/ev/pro/r/texture/weight/x/ds/occupy 1
+/ev/pro/r/texture/weight/x/ds/delay 0
+/ev/pro/r/texture/weight/x/ds/morph/timegrain 20
+/ev/pro/r/texture/weight/x/ds/morph/curve/quality 0
+/ev/pro/r/texture/weight/x/ds/slave 0
+/ev/pro/r/texture/weight/x/ds/morph/curve/resolution 100
+/ev/pro/r/texture/weight/x/ds/morph/curve/weight 0
+/ev/pro/r/texture/weight/x/ds/morph/curve/shape 0
+/ev/pro/r/texture/weight/x/ds/morph/time 0
+/ev/pro/r/texture/weight/x/ds/morph 0
+/ev/pro/r/shade/left/ds/occupy 0
+/ev/pro/r/shade/left/ds/delay 0
+/ev/pro/r/shade/left/ds/morph/timegrain 20
+/ev/pro/r/shade/left/ds/morph/curve/quality 0
+/ev/pro/r/shade/left/ds/slave 0
+/ev/pro/r/shade/left/ds/morph/curve/resolution 100
+/ev/pro/r/shade/left/ds/morph/curve/weight 0
+/ev/pro/r/shade/left/ds/morph/curve/shape 0
+/ev/pro/r/shade/left/ds/morph/time 0
+/ev/pro/r/shade/left/ds/morph 0
+/ev/pro/r/shade/bottom/ds/occupy 0
+/ev/pro/r/shade/bottom/ds/delay 0
+/ev/pro/r/shade/bottom/ds/morph/timegrain 20
+/ev/pro/r/shade/bottom/ds/morph/curve/quality 0
+/ev/pro/r/shade/bottom/ds/slave 0
+/ev/pro/r/shade/bottom/ds/morph/curve/resolution 100
+/ev/pro/r/shade/bottom/ds/morph/curve/weight 0
+/ev/pro/r/shade/bottom/ds/morph/curve/shape 0
+/ev/pro/r/shade/bottom/ds/morph/time 0
+/ev/pro/r/shade/bottom/ds/morph 0
+/ev/pro/r/shade/right/ds/occupy 0
+/ev/pro/r/shade/right/ds/delay 0
+/ev/pro/r/shade/right/ds/morph/timegrain 20
+/ev/pro/r/shade/right/ds/morph/curve/quality 0
+/ev/pro/r/shade/right/ds/slave 0
+/ev/pro/r/shade/right/ds/morph/curve/resolution 100
+/ev/pro/r/shade/right/ds/morph/curve/weight 0
+/ev/pro/r/shade/right/ds/morph/curve/shape 0
+/ev/pro/r/shade/right/ds/morph/time 0
+/ev/pro/r/shade/right/ds/morph 0
+/ev/pro/r/shade/top/ds/occupy 0
+/ev/pro/r/shade/top/ds/delay 0
+/ev/pro/r/shade/top/ds/morph/timegrain 20
+/ev/pro/r/shade/top/ds/morph/curve/quality 0
+/ev/pro/r/shade/top/ds/slave 0
+/ev/pro/r/shade/top/ds/morph/curve/resolution 100
+/ev/pro/r/shade/top/ds/morph/curve/weight 0
+/ev/pro/r/shade/top/ds/morph/curve/shape 0
+/ev/pro/r/shade/top/ds/morph/time 0
+/ev/pro/r/shade/top/ds/morph 0
+/ev/pro/r/texture/bottom/right/y/ds/occupy 0
+/ev/pro/r/texture/bottom/right/y/ds/delay 0
+/ev/pro/r/texture/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/r/texture/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/r/texture/bottom/right/y/ds/slave 0
+/ev/pro/r/texture/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/r/texture/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/r/texture/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/r/texture/bottom/right/y/ds/morph/time 0
+/ev/pro/r/texture/bottom/right/y/ds/morph 0
+/ev/pro/r/texture/bottom/right/x/ds/occupy 0
+/ev/pro/r/texture/bottom/right/x/ds/delay 0
+/ev/pro/r/texture/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/r/texture/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/r/texture/bottom/right/x/ds/slave 0
+/ev/pro/r/texture/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/r/texture/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/r/texture/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/r/texture/bottom/right/x/ds/morph/time 0
+/ev/pro/r/texture/bottom/right/x/ds/morph 0
+/ev/pro/r/texture/bottom/left/y/ds/occupy 0
+/ev/pro/r/texture/bottom/left/y/ds/delay 0
+/ev/pro/r/texture/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/r/texture/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/r/texture/bottom/left/y/ds/slave 0
+/ev/pro/r/texture/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/r/texture/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/r/texture/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/r/texture/bottom/left/y/ds/morph/time 0
+/ev/pro/r/texture/bottom/left/y/ds/morph 0
+/ev/pro/r/texture/bottom/left/x/ds/occupy 0
+/ev/pro/r/texture/bottom/left/x/ds/delay 0
+/ev/pro/r/texture/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/r/texture/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/r/texture/bottom/left/x/ds/slave 0
+/ev/pro/r/texture/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/r/texture/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/r/texture/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/r/texture/bottom/left/x/ds/morph/time 0
+/ev/pro/r/texture/bottom/left/x/ds/morph 0
+/ev/pro/r/texture/top/right/y/ds/occupy 0
+/ev/pro/r/texture/top/right/y/ds/delay 0
+/ev/pro/r/texture/top/right/y/ds/morph/timegrain 20
+/ev/pro/r/texture/top/right/y/ds/morph/curve/quality 0
+/ev/pro/r/texture/top/right/y/ds/slave 0
+/ev/pro/r/texture/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/r/texture/top/right/y/ds/morph/curve/weight 0
+/ev/pro/r/texture/top/right/y/ds/morph/curve/shape 0
+/ev/pro/r/texture/top/right/y/ds/morph/time 0
+/ev/pro/r/texture/top/right/y/ds/morph 0
+/ev/pro/r/texture/top/right/x/ds/occupy 0
+/ev/pro/r/texture/top/right/x/ds/delay 0
+/ev/pro/r/texture/top/right/x/ds/morph/timegrain 20
+/ev/pro/r/texture/top/right/x/ds/morph/curve/quality 0
+/ev/pro/r/texture/top/right/x/ds/slave 0
+/ev/pro/r/texture/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/r/texture/top/right/x/ds/morph/curve/weight 0
+/ev/pro/r/texture/top/right/x/ds/morph/curve/shape 0
+/ev/pro/r/texture/top/right/x/ds/morph/time 0
+/ev/pro/r/texture/top/right/x/ds/morph 0
+/ev/pro/r/texture/top/left/y/ds/occupy 0
+/ev/pro/r/texture/top/left/y/ds/delay 0
+/ev/pro/r/texture/top/left/y/ds/morph/timegrain 20
+/ev/pro/r/texture/top/left/y/ds/morph/curve/quality 0
+/ev/pro/r/texture/top/left/y/ds/slave 0
+/ev/pro/r/texture/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/r/texture/top/left/y/ds/morph/curve/weight 0
+/ev/pro/r/texture/top/left/y/ds/morph/curve/shape 0
+/ev/pro/r/texture/top/left/y/ds/morph/time 0
+/ev/pro/r/texture/top/left/y/ds/morph 0
+/ev/pro/r/texture/top/left/x/ds/occupy 0
+/ev/pro/r/texture/top/left/x/ds/delay 0
+/ev/pro/r/texture/top/left/x/ds/morph/timegrain 20
+/ev/pro/r/texture/top/left/x/ds/morph/curve/quality 0
+/ev/pro/r/texture/top/left/x/ds/slave 0
+/ev/pro/r/texture/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/r/texture/top/left/x/ds/morph/curve/weight 0
+/ev/pro/r/texture/top/left/x/ds/morph/curve/shape 0
+/ev/pro/r/texture/top/left/x/ds/morph/time 0
+/ev/pro/r/texture/top/left/x/ds/morph 0
+/ev/pro/r/vertex/bottom/right/y/ds/occupy 0
+/ev/pro/r/vertex/bottom/right/y/ds/delay 0
+/ev/pro/r/vertex/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/r/vertex/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/r/vertex/bottom/right/y/ds/slave 0
+/ev/pro/r/vertex/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/r/vertex/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/r/vertex/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/r/vertex/bottom/right/y/ds/morph/time 0
+/ev/pro/r/vertex/bottom/right/y/ds/morph 0
+/ev/pro/r/vertex/bottom/right/x/ds/occupy 0
+/ev/pro/r/vertex/bottom/right/x/ds/delay 0
+/ev/pro/r/vertex/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/r/vertex/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/r/vertex/bottom/right/x/ds/slave 0
+/ev/pro/r/vertex/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/r/vertex/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/r/vertex/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/r/vertex/bottom/right/x/ds/morph/time 0
+/ev/pro/r/vertex/bottom/right/x/ds/morph 0
+/ev/pro/r/vertex/bottom/left/y/ds/occupy 0
+/ev/pro/r/vertex/bottom/left/y/ds/delay 0
+/ev/pro/r/vertex/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/r/vertex/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/r/vertex/bottom/left/y/ds/slave 0
+/ev/pro/r/vertex/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/r/vertex/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/r/vertex/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/r/vertex/bottom/left/y/ds/morph/time 0
+/ev/pro/r/vertex/bottom/left/y/ds/morph 0
+/ev/pro/r/vertex/bottom/left/x/ds/occupy 0
+/ev/pro/r/vertex/bottom/left/x/ds/delay 0
+/ev/pro/r/vertex/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/r/vertex/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/r/vertex/bottom/left/x/ds/slave 0
+/ev/pro/r/vertex/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/r/vertex/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/r/vertex/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/r/vertex/bottom/left/x/ds/morph/time 0
+/ev/pro/r/vertex/bottom/left/x/ds/morph 0
+/ev/pro/r/vertex/top/right/y/ds/occupy 0
+/ev/pro/r/vertex/top/right/y/ds/delay 0
+/ev/pro/r/vertex/top/right/y/ds/morph/timegrain 20
+/ev/pro/r/vertex/top/right/y/ds/morph/curve/quality 0
+/ev/pro/r/vertex/top/right/y/ds/slave 0
+/ev/pro/r/vertex/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/r/vertex/top/right/y/ds/morph/curve/weight 0
+/ev/pro/r/vertex/top/right/y/ds/morph/curve/shape 0
+/ev/pro/r/vertex/top/right/y/ds/morph/time 0
+/ev/pro/r/vertex/top/right/y/ds/morph 0
+/ev/pro/r/vertex/top/right/x/ds/occupy 0
+/ev/pro/r/vertex/top/right/x/ds/delay 0
+/ev/pro/r/vertex/top/right/x/ds/morph/timegrain 20
+/ev/pro/r/vertex/top/right/x/ds/morph/curve/quality 0
+/ev/pro/r/vertex/top/right/x/ds/slave 0
+/ev/pro/r/vertex/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/r/vertex/top/right/x/ds/morph/curve/weight 0
+/ev/pro/r/vertex/top/right/x/ds/morph/curve/shape 0
+/ev/pro/r/vertex/top/right/x/ds/morph/time 0
+/ev/pro/r/vertex/top/right/x/ds/morph 0
+/ev/pro/r/vertex/top/left/y/ds/occupy 0
+/ev/pro/r/vertex/top/left/y/ds/delay 0
+/ev/pro/r/vertex/top/left/y/ds/morph/timegrain 20
+/ev/pro/r/vertex/top/left/y/ds/morph/curve/quality 0
+/ev/pro/r/vertex/top/left/y/ds/slave 0
+/ev/pro/r/vertex/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/r/vertex/top/left/y/ds/morph/curve/weight 0
+/ev/pro/r/vertex/top/left/y/ds/morph/curve/shape 0
+/ev/pro/r/vertex/top/left/y/ds/morph/time 0
+/ev/pro/r/vertex/top/left/y/ds/morph 0
+/ev/pro/r/vertex/top/left/x/ds/occupy 0
+/ev/pro/r/vertex/top/left/x/ds/delay 0
+/ev/pro/r/vertex/top/left/x/ds/morph/timegrain 20
+/ev/pro/r/vertex/top/left/x/ds/morph/curve/quality 0
+/ev/pro/r/vertex/top/left/x/ds/slave 0
+/ev/pro/r/vertex/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/r/vertex/top/left/x/ds/morph/curve/weight 0
+/ev/pro/r/vertex/top/left/x/ds/morph/curve/shape 0
+/ev/pro/r/vertex/top/left/x/ds/morph/time 0
+/ev/pro/r/vertex/top/left/x/ds/morph 0
+/ev/pro/c/grid/res/y/ds/occupy 1
+/ev/pro/c/grid/res/y/ds/delay 0
+/ev/pro/c/grid/res/y/ds/slave 0
+/ev/pro/c/grid/res/x/ds/occupy 1
+/ev/pro/c/grid/res/x/ds/delay 0
+/ev/pro/c/grid/res/x/ds/slave 0
+/ev/pro/c/grid/width/ds/occupy 1
+/ev/pro/c/grid/width/ds/delay 0
+/ev/pro/c/grid/width/ds/slave 0
+/ev/pro/c/grid/color/a/ds/occupy 1
+/ev/pro/c/grid/color/a/ds/delay 0
+/ev/pro/c/grid/color/a/ds/slave 0
+/ev/pro/c/grid/color/v/ds/occupy 1
+/ev/pro/c/grid/color/v/ds/delay 0
+/ev/pro/c/grid/color/v/ds/slave 0
+/ev/pro/c/grid/color/s/ds/occupy 1
+/ev/pro/c/grid/color/s/ds/delay 0
+/ev/pro/c/grid/color/s/ds/slave 0
+/ev/pro/c/grid/color/h/ds/occupy 1
+/ev/pro/c/grid/color/h/ds/delay 0
+/ev/pro/c/grid/color/h/ds/slave 0
+/ev/pro/c/grid/state/ds/occupy 0
+/ev/pro/c/grid/state/ds/delay 0
+/ev/pro/c/grid/state/ds/slave 0
+/ev/pro/c/grid/tex/flip/vertical/ds/occupy 1
+/ev/pro/c/grid/tex/flip/vertical/ds/delay 0
+/ev/pro/c/grid/tex/flip/vertical/ds/slave 0
+/ev/pro/c/grid/tex/flip/horizontal/ds/occupy 1
+/ev/pro/c/grid/tex/flip/horizontal/ds/delay 0
+/ev/pro/c/grid/tex/flip/horizontal/ds/slave 0
+/ev/pro/c/grid/tex/filename/ds/occupy 1
+/ev/pro/c/grid/tex/filename/ds/delay 0
+/ev/pro/c/grid/tex/filename/ds/slave 0
+/ev/pro/c/grid/tex/state/ds/occupy 1
+/ev/pro/c/grid/tex/state/ds/delay 0
+/ev/pro/c/grid/tex/state/ds/slave 0
+/ev/pro/c/set_alpha/ds/occupy 1
+/ev/pro/c/set_alpha/ds/delay 0
+/ev/pro/c/set_alpha/ds/slave 0
+/ev/pro/c/cursor/mode/ds/occupy 0
+/ev/pro/c/cursor/mode/ds/delay 0
+/ev/pro/c/cursor/mode/ds/slave 0
+/ev/pro/c/state/ds/occupy 0
+/ev/pro/c/state/ds/delay 0
+/ev/pro/c/state/ds/slave 0
+/ev/pro/c/texture/weight/y/ds/occupy 1
+/ev/pro/c/texture/weight/y/ds/delay 0
+/ev/pro/c/texture/weight/y/ds/morph/timegrain 20
+/ev/pro/c/texture/weight/y/ds/morph/curve/quality 0
+/ev/pro/c/texture/weight/y/ds/slave 0
+/ev/pro/c/texture/weight/y/ds/morph/curve/resolution 100
+/ev/pro/c/texture/weight/y/ds/morph/curve/weight 0
+/ev/pro/c/texture/weight/y/ds/morph/curve/shape 0
+/ev/pro/c/texture/weight/y/ds/morph/time 0
+/ev/pro/c/texture/weight/y/ds/morph 0
+/ev/pro/c/texture/weight/x/ds/occupy 1
+/ev/pro/c/texture/weight/x/ds/delay 0
+/ev/pro/c/texture/weight/x/ds/morph/timegrain 20
+/ev/pro/c/texture/weight/x/ds/morph/curve/quality 0
+/ev/pro/c/texture/weight/x/ds/slave 0
+/ev/pro/c/texture/weight/x/ds/morph/curve/resolution 100
+/ev/pro/c/texture/weight/x/ds/morph/curve/weight 0
+/ev/pro/c/texture/weight/x/ds/morph/curve/shape 0
+/ev/pro/c/texture/weight/x/ds/morph/time 0
+/ev/pro/c/texture/weight/x/ds/morph 0
+/ev/pro/c/shade/left/ds/occupy 0
+/ev/pro/c/shade/left/ds/delay 0
+/ev/pro/c/shade/left/ds/morph/timegrain 20
+/ev/pro/c/shade/left/ds/morph/curve/quality 0
+/ev/pro/c/shade/left/ds/slave 0
+/ev/pro/c/shade/left/ds/morph/curve/resolution 100
+/ev/pro/c/shade/left/ds/morph/curve/weight 0
+/ev/pro/c/shade/left/ds/morph/curve/shape 0
+/ev/pro/c/shade/left/ds/morph/time 0
+/ev/pro/c/shade/left/ds/morph 0
+/ev/pro/c/shade/bottom/ds/occupy 0
+/ev/pro/c/shade/bottom/ds/delay 0
+/ev/pro/c/shade/bottom/ds/morph/timegrain 20
+/ev/pro/c/shade/bottom/ds/morph/curve/quality 0
+/ev/pro/c/shade/bottom/ds/slave 0
+/ev/pro/c/shade/bottom/ds/morph/curve/resolution 100
+/ev/pro/c/shade/bottom/ds/morph/curve/weight 0
+/ev/pro/c/shade/bottom/ds/morph/curve/shape 0
+/ev/pro/c/shade/bottom/ds/morph/time 0
+/ev/pro/c/shade/bottom/ds/morph 0
+/ev/pro/c/shade/right/ds/occupy 0
+/ev/pro/c/shade/right/ds/delay 0
+/ev/pro/c/shade/right/ds/morph/timegrain 20
+/ev/pro/c/shade/right/ds/morph/curve/quality 0
+/ev/pro/c/shade/right/ds/slave 0
+/ev/pro/c/shade/right/ds/morph/curve/resolution 100
+/ev/pro/c/shade/right/ds/morph/curve/weight 0
+/ev/pro/c/shade/right/ds/morph/curve/shape 0
+/ev/pro/c/shade/right/ds/morph/time 0
+/ev/pro/c/shade/right/ds/morph 0
+/ev/pro/c/shade/top/ds/occupy 0
+/ev/pro/c/shade/top/ds/delay 0
+/ev/pro/c/shade/top/ds/morph/timegrain 20
+/ev/pro/c/shade/top/ds/morph/curve/quality 0
+/ev/pro/c/shade/top/ds/slave 0
+/ev/pro/c/shade/top/ds/morph/curve/resolution 100
+/ev/pro/c/shade/top/ds/morph/curve/weight 0
+/ev/pro/c/shade/top/ds/morph/curve/shape 0
+/ev/pro/c/shade/top/ds/morph/time 0
+/ev/pro/c/shade/top/ds/morph 0
+/ev/pro/c/texture/bottom/right/y/ds/occupy 0
+/ev/pro/c/texture/bottom/right/y/ds/delay 0
+/ev/pro/c/texture/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/c/texture/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/c/texture/bottom/right/y/ds/slave 0
+/ev/pro/c/texture/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/c/texture/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/c/texture/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/c/texture/bottom/right/y/ds/morph/time 0
+/ev/pro/c/texture/bottom/right/y/ds/morph 0
+/ev/pro/c/texture/bottom/right/x/ds/occupy 0
+/ev/pro/c/texture/bottom/right/x/ds/delay 0
+/ev/pro/c/texture/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/c/texture/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/c/texture/bottom/right/x/ds/slave 0
+/ev/pro/c/texture/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/c/texture/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/c/texture/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/c/texture/bottom/right/x/ds/morph/time 0
+/ev/pro/c/texture/bottom/right/x/ds/morph 0
+/ev/pro/c/texture/bottom/left/y/ds/occupy 0
+/ev/pro/c/texture/bottom/left/y/ds/delay 0
+/ev/pro/c/texture/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/c/texture/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/c/texture/bottom/left/y/ds/slave 0
+/ev/pro/c/texture/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/c/texture/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/c/texture/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/c/texture/bottom/left/y/ds/morph/time 0
+/ev/pro/c/texture/bottom/left/y/ds/morph 0
+/ev/pro/c/texture/bottom/left/x/ds/occupy 0
+/ev/pro/c/texture/bottom/left/x/ds/delay 0
+/ev/pro/c/texture/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/c/texture/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/c/texture/bottom/left/x/ds/slave 0
+/ev/pro/c/texture/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/c/texture/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/c/texture/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/c/texture/bottom/left/x/ds/morph/time 0
+/ev/pro/c/texture/bottom/left/x/ds/morph 0
+/ev/pro/c/texture/top/right/y/ds/occupy 0
+/ev/pro/c/texture/top/right/y/ds/delay 0
+/ev/pro/c/texture/top/right/y/ds/morph/timegrain 20
+/ev/pro/c/texture/top/right/y/ds/morph/curve/quality 0
+/ev/pro/c/texture/top/right/y/ds/slave 0
+/ev/pro/c/texture/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/c/texture/top/right/y/ds/morph/curve/weight 0
+/ev/pro/c/texture/top/right/y/ds/morph/curve/shape 0
+/ev/pro/c/texture/top/right/y/ds/morph/time 0
+/ev/pro/c/texture/top/right/y/ds/morph 0
+/ev/pro/c/texture/top/right/x/ds/occupy 0
+/ev/pro/c/texture/top/right/x/ds/delay 0
+/ev/pro/c/texture/top/right/x/ds/morph/timegrain 20
+/ev/pro/c/texture/top/right/x/ds/morph/curve/quality 0
+/ev/pro/c/texture/top/right/x/ds/slave 0
+/ev/pro/c/texture/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/c/texture/top/right/x/ds/morph/curve/weight 0
+/ev/pro/c/texture/top/right/x/ds/morph/curve/shape 0
+/ev/pro/c/texture/top/right/x/ds/morph/time 0
+/ev/pro/c/texture/top/right/x/ds/morph 0
+/ev/pro/c/texture/top/left/y/ds/occupy 0
+/ev/pro/c/texture/top/left/y/ds/delay 0
+/ev/pro/c/texture/top/left/y/ds/morph/timegrain 20
+/ev/pro/c/texture/top/left/y/ds/morph/curve/quality 0
+/ev/pro/c/texture/top/left/y/ds/slave 0
+/ev/pro/c/texture/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/c/texture/top/left/y/ds/morph/curve/weight 0
+/ev/pro/c/texture/top/left/y/ds/morph/curve/shape 0
+/ev/pro/c/texture/top/left/y/ds/morph/time 0
+/ev/pro/c/texture/top/left/y/ds/morph 0
+/ev/pro/c/texture/top/left/x/ds/occupy 0
+/ev/pro/c/texture/top/left/x/ds/delay 0
+/ev/pro/c/texture/top/left/x/ds/morph/timegrain 20
+/ev/pro/c/texture/top/left/x/ds/morph/curve/quality 0
+/ev/pro/c/texture/top/left/x/ds/slave 0
+/ev/pro/c/texture/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/c/texture/top/left/x/ds/morph/curve/weight 0
+/ev/pro/c/texture/top/left/x/ds/morph/curve/shape 0
+/ev/pro/c/texture/top/left/x/ds/morph/time 0
+/ev/pro/c/texture/top/left/x/ds/morph 0
+/ev/pro/c/vertex/bottom/right/y/ds/occupy 0
+/ev/pro/c/vertex/bottom/right/y/ds/delay 0
+/ev/pro/c/vertex/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/c/vertex/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/c/vertex/bottom/right/y/ds/slave 0
+/ev/pro/c/vertex/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/c/vertex/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/c/vertex/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/c/vertex/bottom/right/y/ds/morph/time 0
+/ev/pro/c/vertex/bottom/right/y/ds/morph 0
+/ev/pro/c/vertex/bottom/right/x/ds/occupy 0
+/ev/pro/c/vertex/bottom/right/x/ds/delay 0
+/ev/pro/c/vertex/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/c/vertex/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/c/vertex/bottom/right/x/ds/slave 0
+/ev/pro/c/vertex/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/c/vertex/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/c/vertex/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/c/vertex/bottom/right/x/ds/morph/time 0
+/ev/pro/c/vertex/bottom/right/x/ds/morph 0
+/ev/pro/c/vertex/bottom/left/y/ds/occupy 0
+/ev/pro/c/vertex/bottom/left/y/ds/delay 0
+/ev/pro/c/vertex/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/c/vertex/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/c/vertex/bottom/left/y/ds/slave 0
+/ev/pro/c/vertex/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/c/vertex/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/c/vertex/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/c/vertex/bottom/left/y/ds/morph/time 0
+/ev/pro/c/vertex/bottom/left/y/ds/morph 0
+/ev/pro/c/vertex/bottom/left/x/ds/occupy 0
+/ev/pro/c/vertex/bottom/left/x/ds/delay 0
+/ev/pro/c/vertex/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/c/vertex/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/c/vertex/bottom/left/x/ds/slave 0
+/ev/pro/c/vertex/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/c/vertex/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/c/vertex/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/c/vertex/bottom/left/x/ds/morph/time 0
+/ev/pro/c/vertex/bottom/left/x/ds/morph 0
+/ev/pro/c/vertex/top/right/y/ds/occupy 0
+/ev/pro/c/vertex/top/right/y/ds/delay 0
+/ev/pro/c/vertex/top/right/y/ds/morph/timegrain 20
+/ev/pro/c/vertex/top/right/y/ds/morph/curve/quality 0
+/ev/pro/c/vertex/top/right/y/ds/slave 0
+/ev/pro/c/vertex/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/c/vertex/top/right/y/ds/morph/curve/weight 0
+/ev/pro/c/vertex/top/right/y/ds/morph/curve/shape 0
+/ev/pro/c/vertex/top/right/y/ds/morph/time 0
+/ev/pro/c/vertex/top/right/y/ds/morph 0
+/ev/pro/c/vertex/top/right/x/ds/occupy 0
+/ev/pro/c/vertex/top/right/x/ds/delay 0
+/ev/pro/c/vertex/top/right/x/ds/morph/timegrain 20
+/ev/pro/c/vertex/top/right/x/ds/morph/curve/quality 0
+/ev/pro/c/vertex/top/right/x/ds/slave 0
+/ev/pro/c/vertex/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/c/vertex/top/right/x/ds/morph/curve/weight 0
+/ev/pro/c/vertex/top/right/x/ds/morph/curve/shape 0
+/ev/pro/c/vertex/top/right/x/ds/morph/time 0
+/ev/pro/c/vertex/top/right/x/ds/morph 0
+/ev/pro/c/vertex/top/left/y/ds/occupy 0
+/ev/pro/c/vertex/top/left/y/ds/delay 0
+/ev/pro/c/vertex/top/left/y/ds/morph/timegrain 20
+/ev/pro/c/vertex/top/left/y/ds/morph/curve/quality 0
+/ev/pro/c/vertex/top/left/y/ds/slave 0
+/ev/pro/c/vertex/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/c/vertex/top/left/y/ds/morph/curve/weight 0
+/ev/pro/c/vertex/top/left/y/ds/morph/curve/shape 0
+/ev/pro/c/vertex/top/left/y/ds/morph/time 0
+/ev/pro/c/vertex/top/left/y/ds/morph 0
+/ev/pro/c/vertex/top/left/x/ds/occupy 0
+/ev/pro/c/vertex/top/left/x/ds/delay 0
+/ev/pro/c/vertex/top/left/x/ds/morph/timegrain 20
+/ev/pro/c/vertex/top/left/x/ds/morph/curve/quality 0
+/ev/pro/c/vertex/top/left/x/ds/slave 0
+/ev/pro/c/vertex/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/c/vertex/top/left/x/ds/morph/curve/weight 0
+/ev/pro/c/vertex/top/left/x/ds/morph/curve/shape 0
+/ev/pro/c/vertex/top/left/x/ds/morph/time 0
+/ev/pro/c/vertex/top/left/x/ds/morph 0
+/ev/pro/l/grid/res/y/ds/occupy 1
+/ev/pro/l/grid/res/y/ds/delay 0
+/ev/pro/l/grid/res/y/ds/slave 0
+/ev/pro/l/grid/res/x/ds/occupy 1
+/ev/pro/l/grid/res/x/ds/delay 0
+/ev/pro/l/grid/res/x/ds/slave 0
+/ev/pro/l/grid/width/ds/occupy 1
+/ev/pro/l/grid/width/ds/delay 0
+/ev/pro/l/grid/width/ds/slave 0
+/ev/pro/l/grid/color/a/ds/occupy 1
+/ev/pro/l/grid/color/a/ds/delay 0
+/ev/pro/l/grid/color/a/ds/slave 0
+/ev/pro/l/grid/color/v/ds/occupy 1
+/ev/pro/l/grid/color/v/ds/delay 0
+/ev/pro/l/grid/color/v/ds/slave 0
+/ev/pro/l/grid/color/s/ds/occupy 1
+/ev/pro/l/grid/color/s/ds/delay 0
+/ev/pro/l/grid/color/s/ds/slave 0
+/ev/pro/l/grid/color/h/ds/occupy 1
+/ev/pro/l/grid/color/h/ds/delay 0
+/ev/pro/l/grid/color/h/ds/slave 0
+/ev/pro/l/grid/state/ds/occupy 0
+/ev/pro/l/grid/state/ds/delay 0
+/ev/pro/l/grid/state/ds/slave 0
+/ev/pro/l/grid/tex/flip/vertical/ds/occupy 1
+/ev/pro/l/grid/tex/flip/vertical/ds/delay 0
+/ev/pro/l/grid/tex/flip/vertical/ds/slave 0
+/ev/pro/l/grid/tex/flip/horizontal/ds/occupy 1
+/ev/pro/l/grid/tex/flip/horizontal/ds/delay 0
+/ev/pro/l/grid/tex/flip/horizontal/ds/slave 0
+/ev/pro/l/grid/tex/filename/ds/occupy 1
+/ev/pro/l/grid/tex/filename/ds/delay 0
+/ev/pro/l/grid/tex/filename/ds/slave 0
+/ev/pro/l/grid/tex/state/ds/occupy 1
+/ev/pro/l/grid/tex/state/ds/delay 0
+/ev/pro/l/grid/tex/state/ds/slave 0
+/ev/pro/l/set_alpha/ds/occupy 1
+/ev/pro/l/set_alpha/ds/delay 0
+/ev/pro/l/set_alpha/ds/slave 0
+/ev/pro/l/cursor/mode/ds/occupy 0
+/ev/pro/l/cursor/mode/ds/delay 0
+/ev/pro/l/cursor/mode/ds/slave 0
+/ev/pro/l/state/ds/occupy 0
+/ev/pro/l/state/ds/delay 0
+/ev/pro/l/state/ds/slave 0
+/ev/pro/l/texture/weight/y/ds/occupy 1
+/ev/pro/l/texture/weight/y/ds/delay 0
+/ev/pro/l/texture/weight/y/ds/morph/timegrain 20
+/ev/pro/l/texture/weight/y/ds/morph/curve/quality 0
+/ev/pro/l/texture/weight/y/ds/slave 0
+/ev/pro/l/texture/weight/y/ds/morph/curve/resolution 100
+/ev/pro/l/texture/weight/y/ds/morph/curve/weight 0
+/ev/pro/l/texture/weight/y/ds/morph/curve/shape 0
+/ev/pro/l/texture/weight/y/ds/morph/time 0
+/ev/pro/l/texture/weight/y/ds/morph 0
+/ev/pro/l/texture/weight/x/ds/occupy 1
+/ev/pro/l/texture/weight/x/ds/delay 0
+/ev/pro/l/texture/weight/x/ds/morph/timegrain 20
+/ev/pro/l/texture/weight/x/ds/morph/curve/quality 0
+/ev/pro/l/texture/weight/x/ds/slave 0
+/ev/pro/l/texture/weight/x/ds/morph/curve/resolution 100
+/ev/pro/l/texture/weight/x/ds/morph/curve/weight 0
+/ev/pro/l/texture/weight/x/ds/morph/curve/shape 0
+/ev/pro/l/texture/weight/x/ds/morph/time 0
+/ev/pro/l/texture/weight/x/ds/morph 0
+/ev/pro/l/shade/left/ds/occupy 0
+/ev/pro/l/shade/left/ds/delay 0
+/ev/pro/l/shade/left/ds/morph/timegrain 20
+/ev/pro/l/shade/left/ds/morph/curve/quality 0
+/ev/pro/l/shade/left/ds/slave 0
+/ev/pro/l/shade/left/ds/morph/curve/resolution 100
+/ev/pro/l/shade/left/ds/morph/curve/weight 0
+/ev/pro/l/shade/left/ds/morph/curve/shape 0
+/ev/pro/l/shade/left/ds/morph/time 0
+/ev/pro/l/shade/left/ds/morph 0
+/ev/pro/l/shade/bottom/ds/occupy 0
+/ev/pro/l/shade/bottom/ds/delay 0
+/ev/pro/l/shade/bottom/ds/morph/timegrain 20
+/ev/pro/l/shade/bottom/ds/morph/curve/quality 0
+/ev/pro/l/shade/bottom/ds/slave 0
+/ev/pro/l/shade/bottom/ds/morph/curve/resolution 100
+/ev/pro/l/shade/bottom/ds/morph/curve/weight 0
+/ev/pro/l/shade/bottom/ds/morph/curve/shape 0
+/ev/pro/l/shade/bottom/ds/morph/time 0
+/ev/pro/l/shade/bottom/ds/morph 0
+/ev/pro/l/shade/right/ds/occupy 0
+/ev/pro/l/shade/right/ds/delay 0
+/ev/pro/l/shade/right/ds/morph/timegrain 20
+/ev/pro/l/shade/right/ds/morph/curve/quality 0
+/ev/pro/l/shade/right/ds/slave 0
+/ev/pro/l/shade/right/ds/morph/curve/resolution 100
+/ev/pro/l/shade/right/ds/morph/curve/weight 0
+/ev/pro/l/shade/right/ds/morph/curve/shape 0
+/ev/pro/l/shade/right/ds/morph/time 0
+/ev/pro/l/shade/right/ds/morph 0
+/ev/pro/l/shade/top/ds/occupy 0
+/ev/pro/l/shade/top/ds/delay 0
+/ev/pro/l/shade/top/ds/morph/timegrain 20
+/ev/pro/l/shade/top/ds/morph/curve/quality 0
+/ev/pro/l/shade/top/ds/slave 0
+/ev/pro/l/shade/top/ds/morph/curve/resolution 100
+/ev/pro/l/shade/top/ds/morph/curve/weight 0
+/ev/pro/l/shade/top/ds/morph/curve/shape 0
+/ev/pro/l/shade/top/ds/morph/time 0
+/ev/pro/l/shade/top/ds/morph 0
+/ev/pro/l/texture/bottom/right/y/ds/occupy 0
+/ev/pro/l/texture/bottom/right/y/ds/delay 0
+/ev/pro/l/texture/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/l/texture/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/l/texture/bottom/right/y/ds/slave 0
+/ev/pro/l/texture/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/l/texture/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/l/texture/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/l/texture/bottom/right/y/ds/morph/time 0
+/ev/pro/l/texture/bottom/right/y/ds/morph 0
+/ev/pro/l/texture/bottom/right/x/ds/occupy 0
+/ev/pro/l/texture/bottom/right/x/ds/delay 0
+/ev/pro/l/texture/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/l/texture/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/l/texture/bottom/right/x/ds/slave 0
+/ev/pro/l/texture/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/l/texture/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/l/texture/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/l/texture/bottom/right/x/ds/morph/time 0
+/ev/pro/l/texture/bottom/right/x/ds/morph 0
+/ev/pro/l/texture/bottom/left/y/ds/occupy 0
+/ev/pro/l/texture/bottom/left/y/ds/delay 0
+/ev/pro/l/texture/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/l/texture/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/l/texture/bottom/left/y/ds/slave 0
+/ev/pro/l/texture/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/l/texture/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/l/texture/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/l/texture/bottom/left/y/ds/morph/time 0
+/ev/pro/l/texture/bottom/left/y/ds/morph 0
+/ev/pro/l/texture/bottom/left/x/ds/occupy 0
+/ev/pro/l/texture/bottom/left/x/ds/delay 0
+/ev/pro/l/texture/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/l/texture/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/l/texture/bottom/left/x/ds/slave 0
+/ev/pro/l/texture/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/l/texture/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/l/texture/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/l/texture/bottom/left/x/ds/morph/time 0
+/ev/pro/l/texture/bottom/left/x/ds/morph 0
+/ev/pro/l/texture/top/right/y/ds/occupy 0
+/ev/pro/l/texture/top/right/y/ds/delay 0
+/ev/pro/l/texture/top/right/y/ds/morph/timegrain 20
+/ev/pro/l/texture/top/right/y/ds/morph/curve/quality 0
+/ev/pro/l/texture/top/right/y/ds/slave 0
+/ev/pro/l/texture/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/l/texture/top/right/y/ds/morph/curve/weight 0
+/ev/pro/l/texture/top/right/y/ds/morph/curve/shape 0
+/ev/pro/l/texture/top/right/y/ds/morph/time 0
+/ev/pro/l/texture/top/right/y/ds/morph 0
+/ev/pro/l/texture/top/right/x/ds/occupy 0
+/ev/pro/l/texture/top/right/x/ds/delay 0
+/ev/pro/l/texture/top/right/x/ds/morph/timegrain 20
+/ev/pro/l/texture/top/right/x/ds/morph/curve/quality 0
+/ev/pro/l/texture/top/right/x/ds/slave 0
+/ev/pro/l/texture/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/l/texture/top/right/x/ds/morph/curve/weight 0
+/ev/pro/l/texture/top/right/x/ds/morph/curve/shape 0
+/ev/pro/l/texture/top/right/x/ds/morph/time 0
+/ev/pro/l/texture/top/right/x/ds/morph 0
+/ev/pro/l/texture/top/left/y/ds/occupy 0
+/ev/pro/l/texture/top/left/y/ds/delay 0
+/ev/pro/l/texture/top/left/y/ds/morph/timegrain 20
+/ev/pro/l/texture/top/left/y/ds/morph/curve/quality 0
+/ev/pro/l/texture/top/left/y/ds/slave 0
+/ev/pro/l/texture/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/l/texture/top/left/y/ds/morph/curve/weight 0
+/ev/pro/l/texture/top/left/y/ds/morph/curve/shape 0
+/ev/pro/l/texture/top/left/y/ds/morph/time 0
+/ev/pro/l/texture/top/left/y/ds/morph 0
+/ev/pro/l/texture/top/left/x/ds/occupy 0
+/ev/pro/l/texture/top/left/x/ds/delay 0
+/ev/pro/l/texture/top/left/x/ds/morph/timegrain 20
+/ev/pro/l/texture/top/left/x/ds/morph/curve/quality 0
+/ev/pro/l/texture/top/left/x/ds/slave 0
+/ev/pro/l/texture/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/l/texture/top/left/x/ds/morph/curve/weight 0
+/ev/pro/l/texture/top/left/x/ds/morph/curve/shape 0
+/ev/pro/l/texture/top/left/x/ds/morph/time 0
+/ev/pro/l/texture/top/left/x/ds/morph 0
+/ev/pro/l/vertex/bottom/right/y/ds/occupy 0
+/ev/pro/l/vertex/bottom/right/y/ds/delay 0
+/ev/pro/l/vertex/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/l/vertex/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/l/vertex/bottom/right/y/ds/slave 0
+/ev/pro/l/vertex/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/l/vertex/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/l/vertex/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/l/vertex/bottom/right/y/ds/morph/time 0
+/ev/pro/l/vertex/bottom/right/y/ds/morph 0
+/ev/pro/l/vertex/bottom/right/x/ds/occupy 0
+/ev/pro/l/vertex/bottom/right/x/ds/delay 0
+/ev/pro/l/vertex/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/l/vertex/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/l/vertex/bottom/right/x/ds/slave 0
+/ev/pro/l/vertex/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/l/vertex/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/l/vertex/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/l/vertex/bottom/right/x/ds/morph/time 0
+/ev/pro/l/vertex/bottom/right/x/ds/morph 0
+/ev/pro/l/vertex/bottom/left/y/ds/occupy 0
+/ev/pro/l/vertex/bottom/left/y/ds/delay 0
+/ev/pro/l/vertex/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/l/vertex/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/l/vertex/bottom/left/y/ds/slave 0
+/ev/pro/l/vertex/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/l/vertex/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/l/vertex/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/l/vertex/bottom/left/y/ds/morph/time 0
+/ev/pro/l/vertex/bottom/left/y/ds/morph 0
+/ev/pro/l/vertex/bottom/left/x/ds/occupy 0
+/ev/pro/l/vertex/bottom/left/x/ds/delay 0
+/ev/pro/l/vertex/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/l/vertex/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/l/vertex/bottom/left/x/ds/slave 0
+/ev/pro/l/vertex/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/l/vertex/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/l/vertex/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/l/vertex/bottom/left/x/ds/morph/time 0
+/ev/pro/l/vertex/bottom/left/x/ds/morph 0
+/ev/pro/l/vertex/top/right/y/ds/occupy 0
+/ev/pro/l/vertex/top/right/y/ds/delay 0
+/ev/pro/l/vertex/top/right/y/ds/morph/timegrain 20
+/ev/pro/l/vertex/top/right/y/ds/morph/curve/quality 0
+/ev/pro/l/vertex/top/right/y/ds/slave 0
+/ev/pro/l/vertex/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/l/vertex/top/right/y/ds/morph/curve/weight 0
+/ev/pro/l/vertex/top/right/y/ds/morph/curve/shape 0
+/ev/pro/l/vertex/top/right/y/ds/morph/time 0
+/ev/pro/l/vertex/top/right/y/ds/morph 0
+/ev/pro/l/vertex/top/right/x/ds/occupy 0
+/ev/pro/l/vertex/top/right/x/ds/delay 0
+/ev/pro/l/vertex/top/right/x/ds/morph/timegrain 20
+/ev/pro/l/vertex/top/right/x/ds/morph/curve/quality 0
+/ev/pro/l/vertex/top/right/x/ds/slave 0
+/ev/pro/l/vertex/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/l/vertex/top/right/x/ds/morph/curve/weight 0
+/ev/pro/l/vertex/top/right/x/ds/morph/curve/shape 0
+/ev/pro/l/vertex/top/right/x/ds/morph/time 0
+/ev/pro/l/vertex/top/right/x/ds/morph 0
+/ev/pro/l/vertex/top/left/y/ds/occupy 0
+/ev/pro/l/vertex/top/left/y/ds/delay 0
+/ev/pro/l/vertex/top/left/y/ds/morph/timegrain 20
+/ev/pro/l/vertex/top/left/y/ds/morph/curve/quality 0
+/ev/pro/l/vertex/top/left/y/ds/slave 0
+/ev/pro/l/vertex/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/l/vertex/top/left/y/ds/morph/curve/weight 0
+/ev/pro/l/vertex/top/left/y/ds/morph/curve/shape 0
+/ev/pro/l/vertex/top/left/y/ds/morph/time 0
+/ev/pro/l/vertex/top/left/y/ds/morph 0
+/ev/pro/l/vertex/top/left/x/ds/occupy 0
+/ev/pro/l/vertex/top/left/x/ds/delay 0
+/ev/pro/l/vertex/top/left/x/ds/morph/timegrain 20
+/ev/pro/l/vertex/top/left/x/ds/morph/curve/quality 0
+/ev/pro/l/vertex/top/left/x/ds/slave 0
+/ev/pro/l/vertex/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/l/vertex/top/left/x/ds/morph/curve/weight 0
+/ev/pro/l/vertex/top/left/x/ds/morph/curve/shape 0
+/ev/pro/l/vertex/top/left/x/ds/morph/time 0
+/ev/pro/l/vertex/top/left/x/ds/morph 0
+/ev/buf/0/shift/z/ds/occupy 1
+/ev/buf/0/shift/z/ds/delay 0
+/ev/buf/0/shift/z/ds/morph/timegrain 20
+/ev/buf/0/shift/z/ds/morph/curve/quality 0
+/ev/buf/0/shift/z/ds/slave 0
+/ev/buf/0/shift/z/ds/morph/curve/resolution 100
+/ev/buf/0/shift/z/ds/morph/curve/weight 0
+/ev/buf/0/shift/z/ds/morph/curve/shape 0
+/ev/buf/0/shift/z/ds/morph/time 0
+/ev/buf/0/shift/z/ds/morph 0
+/ev/buf/0/scale/z/ds/occupy 1
+/ev/buf/0/scale/z/ds/delay 0
+/ev/buf/0/scale/z/ds/morph/timegrain 20
+/ev/buf/0/scale/z/ds/morph/curve/quality 0
+/ev/buf/0/scale/z/ds/slave 0
+/ev/buf/0/scale/z/ds/morph/curve/resolution 100
+/ev/buf/0/scale/z/ds/morph/curve/weight 0
+/ev/buf/0/scale/z/ds/morph/curve/shape 0
+/ev/buf/0/scale/z/ds/morph/time 0
+/ev/buf/0/scale/z/ds/morph 0
+/ev/buf/0/state/ds/occupy 0
+/ev/buf/0/state/ds/delay 0
+/ev/buf/0/state/ds/slave 0
+/ev/buf/0/dimen/y/ds/occupy 0
+/ev/buf/0/dimen/y/ds/delay 0
+/ev/buf/0/dimen/y/ds/slave 0
+/ev/buf/0/dimen/x/ds/occupy 0
+/ev/buf/0/dimen/x/ds/delay 0
+/ev/buf/0/dimen/x/ds/slave 0
+/ev/buf/0/type/ds/occupy 0
+/ev/buf/0/type/ds/delay 0
+/ev/buf/0/type/ds/slave 0
+/ev/buf/0/format/ds/occupy 0
+/ev/buf/0/format/ds/delay 0
+/ev/buf/0/format/ds/slave 0
+/ev/buf/0/rectangle/ds/occupy 0
+/ev/buf/0/rectangle/ds/delay 0
+/ev/buf/0/rectangle/ds/slave 0
+/ev/buf/0/color/ds/occupy 0
+/ev/buf/0/color/ds/delay 0
+/ev/buf/0/color/ds/morph/timegrain 20
+/ev/buf/0/color/ds/morph/curve/quality 0
+/ev/buf/0/color/ds/slave 0
+/ev/buf/0/color/ds/morph/curve/resolution 100
+/ev/buf/0/color/ds/morph/curve/weight 0
+/ev/buf/0/color/ds/morph/curve/shape 0
+/ev/buf/0/color/ds/morph/time 0
+/ev/buf/0/color/ds/morph 0
+/ev/buf/0/shift/y/ds/occupy 0
+/ev/buf/0/shift/y/ds/delay 0
+/ev/buf/0/shift/y/ds/morph/timegrain 20
+/ev/buf/0/shift/y/ds/morph/curve/quality 0
+/ev/buf/0/shift/y/ds/slave 0
+/ev/buf/0/shift/y/ds/morph/curve/resolution 100
+/ev/buf/0/shift/y/ds/morph/curve/weight 0
+/ev/buf/0/shift/y/ds/morph/curve/shape 0
+/ev/buf/0/shift/y/ds/morph/time 0
+/ev/buf/0/shift/y/ds/morph 0
+/ev/buf/0/shift/x/ds/occupy 0
+/ev/buf/0/shift/x/ds/delay 0
+/ev/buf/0/shift/x/ds/morph/timegrain 20
+/ev/buf/0/shift/x/ds/morph/curve/quality 0
+/ev/buf/0/shift/x/ds/slave 0
+/ev/buf/0/shift/x/ds/morph/curve/resolution 100
+/ev/buf/0/shift/x/ds/morph/curve/weight 0
+/ev/buf/0/shift/x/ds/morph/curve/shape 0
+/ev/buf/0/shift/x/ds/morph/time 0
+/ev/buf/0/shift/x/ds/morph 0
+/ev/buf/0/scale/y/ds/occupy 0
+/ev/buf/0/scale/y/ds/delay 0
+/ev/buf/0/scale/y/ds/morph/timegrain 20
+/ev/buf/0/scale/y/ds/morph/curve/quality 0
+/ev/buf/0/scale/y/ds/slave 0
+/ev/buf/0/scale/y/ds/morph/curve/resolution 100
+/ev/buf/0/scale/y/ds/morph/curve/weight 0
+/ev/buf/0/scale/y/ds/morph/curve/shape 0
+/ev/buf/0/scale/y/ds/morph/time 0
+/ev/buf/0/scale/y/ds/morph 0
+/ev/buf/0/scale/x/ds/occupy 0
+/ev/buf/0/scale/x/ds/delay 0
+/ev/buf/0/scale/x/ds/morph/timegrain 20
+/ev/buf/0/scale/x/ds/morph/curve/quality 0
+/ev/buf/0/scale/x/ds/slave 0
+/ev/buf/0/scale/x/ds/morph/curve/resolution 100
+/ev/buf/0/scale/x/ds/morph/curve/weight 0
+/ev/buf/0/scale/x/ds/morph/curve/shape 0
+/ev/buf/0/scale/x/ds/morph/time 0
+/ev/buf/0/scale/x/ds/morph 0
+#data
+/ev/pro/door/grid/width 2
+/ev/pro/door/grid/color/a 0.6
+/ev/pro/door/grid/color/v 1
+/ev/pro/door/grid/color/s 0.6
+/ev/pro/door/grid/color/h 0.564706
+/ev/pro/door/grid/res/y 16
+/ev/pro/door/grid/res/x 16
+/ev/pro/door/grid/state 0
+/ev/pro/door/grid/tex/flip/vertical 0
+/ev/pro/door/grid/tex/flip/horizontal 0
+/ev/pro/door/grid/tex/filename ../media/grid.png
+/ev/pro/door/grid/tex/state 0
+/ev/pro/door/cursor/mode 2
+/ev/pro/door/state 1
+/ev/pro/door/res 1
+/ev/pro/door/vertex/bottom/center/y -0.893333
+/ev/pro/door/vertex/bottom/center/x 0.346667
+/ev/pro/door/vertex/center/right/y -0.0266666
+/ev/pro/door/vertex/center/right/x 0.96
+/ev/pro/door/vertex/center/center/y 0
+/ev/pro/door/vertex/center/center/x 0
+/ev/pro/door/vertex/center/left/y 0.0133334
+/ev/pro/door/vertex/center/left/x -0.24
+/ev/pro/door/vertex/top/center/y 0.986667
+/ev/pro/door/vertex/top/center/x 0.346667
+/ev/pro/door/vertex/bottom/right/y -0.733333
+/ev/pro/door/vertex/bottom/right/x 0.973333
+/ev/pro/door/vertex/bottom/left/y -0.826667
+/ev/pro/door/vertex/bottom/left/x -0.2
+/ev/pro/door/vertex/top/right/y 0.426667
+/ev/pro/door/vertex/top/right/x 0.8
+/ev/pro/door/vertex/top/left/y 0.44
+/ev/pro/door/vertex/top/left/x -0.08
+/ev/pro/dow/grid/res/y 16
+/ev/pro/dow/grid/res/x 16
+/ev/pro/dow/grid/width 2
+/ev/pro/dow/grid/color/a 0.6
+/ev/pro/dow/grid/color/v 1
+/ev/pro/dow/grid/color/s 0.6
+/ev/pro/dow/grid/color/h 0.631373
+/ev/pro/dow/grid/state 0
+/ev/pro/dow/grid/tex/flip/vertical 0
+/ev/pro/dow/grid/tex/flip/horizontal 0
+/ev/pro/dow/grid/tex/filename ../media/grid.png
+/ev/pro/dow/grid/tex/state 0
+/ev/pro/dow/cursor/mode 2
+/ev/pro/dow/state 1
+/ev/pro/dow/vertex/top/left/x -2.89333
+/ev/pro/dow/vertex/top/left/y 1.6
+/ev/pro/dow/vertex/top/right/x -2.09667
+/ev/pro/dow/vertex/top/right/y 1.41333
+/ev/pro/dow/vertex/bottom/left/x -2.92333
+/ev/pro/dow/vertex/bottom/left/y -0.52
+/ev/pro/dow/vertex/bottom/right/x -1.73333
+/ev/pro/dow/vertex/bottom/right/y -0.16
+/ev/pro/win/grid/res/y 16
+/ev/pro/win/grid/res/x 16
+/ev/pro/win/grid/width 2
+/ev/pro/win/grid/color/a 0.6
+/ev/pro/win/grid/color/v 1
+/ev/pro/win/grid/color/s 0.6
+/ev/pro/win/grid/color/h 0.921569
+/ev/pro/win/grid/state 0
+/ev/pro/win/grid/tex/flip/vertical 0
+/ev/pro/win/grid/tex/flip/horizontal 0
+/ev/pro/win/grid/tex/filename ../media/grid.png
+/ev/pro/win/grid/tex/state 0
+/ev/pro/win/cursor/mode 2
+/ev/pro/win/state 1
+/ev/pro/win/vertex/top/left/x -4.44667
+/ev/pro/win/vertex/top/left/y 1.22667
+/ev/pro/win/vertex/top/right/x -3.29667
+/ev/pro/win/vertex/top/right/y 1.10667
+/ev/pro/win/vertex/bottom/left/x -4.50667
+/ev/pro/win/vertex/bottom/left/y -1.68
+/ev/pro/win/vertex/bottom/right/x -3.31333
+/ev/pro/win/vertex/bottom/right/y -1.18667
+/ev/mouse/texture/sensitivity 50
+/ev/mouse/select_radius 0.0807982
+/ev/gemwin/border 1
+/ev/gemwin/lighting 30
+/ev/gemwin/frame 25
+/ev/gemwin/offset/y 0
+/ev/gemwin/offset/x 0
+/ev/gemwin/dimen/y 600
+/ev/gemwin/dimen/x 800
+/ev/pro/r/grid/res/y 16
+/ev/pro/r/grid/res/x 16
+/ev/pro/r/grid/width 2
+/ev/pro/r/grid/color/a 0.6
+/ev/pro/r/grid/color/v 1
+/ev/pro/r/grid/color/s 0.6
+/ev/pro/r/grid/color/h 0.729412
+/ev/pro/r/grid/state 0
+/ev/pro/r/grid/tex/flip/vertical 0
+/ev/pro/r/grid/tex/flip/horizontal 0
+/ev/pro/r/grid/tex/filename ../media/grid.png
+/ev/pro/r/grid/tex/state 0
+/ev/pro/r/set_alpha 1
+/ev/pro/r/cursor/mode 2
+/ev/pro/r/state 1
+/ev/pro/r/texture/weight/y 0
+/ev/pro/r/texture/weight/x 0
+/ev/pro/r/shade/left 0
+/ev/pro/r/shade/bottom 0
+/ev/pro/r/shade/right 0
+/ev/pro/r/shade/top 0
+/ev/pro/r/texture/bottom/right/y 421
+/ev/pro/r/texture/bottom/right/x 1024
+/ev/pro/r/texture/bottom/left/y 421
+/ev/pro/r/texture/bottom/left/x 682
+/ev/pro/r/texture/top/right/y 610
+/ev/pro/r/texture/top/right/x 1024
+/ev/pro/r/texture/top/left/y 610
+/ev/pro/r/texture/top/left/x 681.78
+/ev/pro/r/vertex/bottom/right/y -2.93333
+/ev/pro/r/vertex/bottom/right/x 4.92
+/ev/pro/r/vertex/bottom/left/y -0.606666
+/ev/pro/r/vertex/bottom/left/x 1.79333
+/ev/pro/r/vertex/top/right/y 2.85333
+/ev/pro/r/vertex/top/right/x 4.74334
+/ev/pro/r/vertex/top/left/y 1.66667
+/ev/pro/r/vertex/top/left/x 1.70333
+/ev/pro/c/grid/res/y 16
+/ev/pro/c/grid/res/x 16
+/ev/pro/c/grid/width 2
+/ev/pro/c/grid/color/a 0.6
+/ev/pro/c/grid/color/v 1
+/ev/pro/c/grid/color/s 0.6
+/ev/pro/c/grid/color/h 0.929412
+/ev/pro/c/grid/state 0
+/ev/pro/c/grid/tex/flip/vertical 0
+/ev/pro/c/grid/tex/flip/horizontal 0
+/ev/pro/c/grid/tex/filename ../media/grid.png
+/ev/pro/c/grid/tex/state 0
+/ev/pro/c/set_alpha 1
+/ev/pro/c/cursor/mode 2
+/ev/pro/c/state 1
+/ev/pro/c/texture/weight/y 0
+/ev/pro/c/texture/weight/x 0
+/ev/pro/c/shade/left 0
+/ev/pro/c/shade/bottom 0
+/ev/pro/c/shade/right 0
+/ev/pro/c/shade/top 0
+/ev/pro/c/texture/bottom/right/y 421
+/ev/pro/c/texture/bottom/right/x 682
+/ev/pro/c/texture/bottom/left/y 421
+/ev/pro/c/texture/bottom/left/x 341
+/ev/pro/c/texture/top/right/y 610
+/ev/pro/c/texture/top/right/x 682
+/ev/pro/c/texture/top/left/y 610
+/ev/pro/c/texture/top/left/x 341
+/ev/pro/c/vertex/bottom/right/y -0.613333
+/ev/pro/c/vertex/bottom/right/x 1.81333
+/ev/pro/c/vertex/bottom/left/y -0.986663
+/ev/pro/c/vertex/bottom/left/x -1.35
+/ev/pro/c/vertex/top/right/y 1.68
+/ev/pro/c/vertex/top/right/x 1.72
+/ev/pro/c/vertex/top/left/y 1.84334
+/ev/pro/c/vertex/top/left/x -1.31667
+/ev/pro/l/grid/res/y 16
+/ev/pro/l/grid/res/x 16
+/ev/pro/l/grid/width 2
+/ev/pro/l/grid/color/a 0.6
+/ev/pro/l/grid/color/v 1
+/ev/pro/l/grid/color/s 0.6
+/ev/pro/l/grid/color/h 0.745098
+/ev/pro/l/grid/state 0
+/ev/pro/l/grid/tex/flip/vertical 0
+/ev/pro/l/grid/tex/flip/horizontal 0
+/ev/pro/l/grid/tex/filename ../media/grid.png
+/ev/pro/l/grid/tex/state 0
+/ev/pro/l/set_alpha 1
+/ev/pro/l/cursor/mode 2
+/ev/pro/l/state 1
+/ev/pro/l/texture/weight/y 0
+/ev/pro/l/texture/weight/x 0
+/ev/pro/l/shade/left 0
+/ev/pro/l/shade/bottom 0
+/ev/pro/l/shade/right 0
+/ev/pro/l/shade/top 0
+/ev/pro/l/texture/bottom/right/y 421
+/ev/pro/l/texture/bottom/right/x 341
+/ev/pro/l/texture/bottom/left/y 421
+/ev/pro/l/texture/bottom/left/x 0
+/ev/pro/l/texture/top/right/y 610
+/ev/pro/l/texture/top/right/x 341
+/ev/pro/l/texture/top/left/y 610
+/ev/pro/l/texture/top/left/x 0
+/ev/pro/l/vertex/bottom/right/y -0.973333
+/ev/pro/l/vertex/bottom/right/x -1.34667
+/ev/pro/l/vertex/bottom/left/y -3.32
+/ev/pro/l/vertex/bottom/left/x -4.90667
+/ev/pro/l/vertex/top/right/y 1.85334
+/ev/pro/l/vertex/top/right/x -1.31
+/ev/pro/l/vertex/top/left/y 3.48
+/ev/pro/l/vertex/top/left/x -4.81
+/ev/buf/0/shift/z 0
+/ev/buf/0/scale/z 1
+/ev/buf/0/state 1
+/ev/buf/0/dimen/y 1024
+/ev/buf/0/dimen/x 1024
+/ev/buf/0/type BYTE
+/ev/buf/0/format RGBA
+/ev/buf/0/rectangle 1
+/ev/buf/0/color 0.9 0.6 0.1 1
+/ev/buf/0/shift/y 0
+/ev/buf/0/shift/x 0
+/ev/buf/0/scale/y 1.05
+/ev/buf/0/scale/x 1.05
+======================== SCENE 1 ========================
+#settings
+#data
+/ev/mouse/texture/sensitivity 300
+/ev/mouse/texture/state 0
+/ev/mouse/texture/show_corners 0
+/ev/mouse/vertex/state 1
+/ev/mouse/vertex/show_corners 1
+/ev/mouse/select_radius 0.0522908
+/ev/pro/door/res 1
+/ev/pro/door/vertex/bottom/center/y -0.893333
+/ev/pro/door/vertex/bottom/center/x 0.346667
+/ev/pro/door/vertex/center/right/y -0.0266666
+/ev/pro/door/vertex/center/right/x 0.96
+/ev/pro/door/vertex/center/center/y 0
+/ev/pro/door/vertex/bottom/right/y -0.48
+/ev/pro/door/vertex/center/center/x 0
+/ev/pro/door/vertex/center/left/y 0.0133334
+/ev/pro/door/vertex/center/left/x -0.24
+/ev/pro/door/vertex/top/center/y 0.986667
+/ev/pro/door/vertex/top/center/x 0.346667
+/ev/pro/door/vertex/bottom/right/x 0.76
+/ev/pro/door/vertex/bottom/left/y -0.64
+/ev/pro/door/vertex/bottom/left/x -1.01333
+/ev/pro/door/vertex/top/right/y 0.64
+/ev/pro/door/vertex/top/right/x 0.746667
+/ev/pro/door/vertex/top/left/y 0.6
+/ev/pro/door/vertex/top/left/x -1.02667
+/ev/pro/door/state 1
+/ev/pro/win/state 1
+/ev/pro/win/vertex/bottom/right/y -1.18667
+/ev/pro/win/vertex/bottom/right/x -3.31333
+/ev/pro/win/vertex/bottom/left/y -1.68
+/ev/pro/win/vertex/bottom/left/x -4.50667
+/ev/pro/win/vertex/top/right/y 1.10667
+/ev/pro/win/vertex/top/right/x -3.29667
+/ev/pro/win/vertex/top/left/y 1.22667
+/ev/pro/win/vertex/top/left/x -4.44667
+/ev/pro/win/grid/state 0
+/ev/pro/dow/state 1
+/ev/pro/dow/vertex/bottom/right/y 0.986667
+/ev/pro/dow/vertex/bottom/right/x 1.74667
+/ev/pro/dow/vertex/bottom/left/y 1.02667
+/ev/pro/dow/vertex/bottom/left/x -1.27
+/ev/pro/dow/vertex/top/right/y 1.44
+/ev/pro/dow/vertex/top/right/x 1.74333
+/ev/pro/dow/vertex/top/left/y 1.58667
+/ev/pro/dow/vertex/top/left/x -1.26667
+/ev/pro/dow/grid/state 0
+/ev/pro/r/grid/state 0
+/ev/pro/r/state 1
+/ev/pro/r/shade/left 0
+/ev/pro/r/shade/bottom 0
+/ev/pro/r/shade/right 0
+/ev/pro/r/shade/top 0
+/ev/pro/r/texture/bottom/right/y 421
+/ev/pro/r/texture/bottom/right/x 1024
+/ev/pro/r/texture/bottom/left/y 421
+/ev/pro/r/texture/bottom/left/x 682
+/ev/pro/r/texture/top/right/y 610
+/ev/pro/r/texture/top/right/x 1024
+/ev/pro/r/texture/top/left/y 610
+/ev/pro/r/texture/top/left/x 681.78
+/ev/pro/r/vertex/bottom/right/y -2.93333
+/ev/pro/r/vertex/bottom/right/x 4.92
+/ev/pro/r/vertex/bottom/left/y -0.606666
+/ev/pro/r/vertex/bottom/left/x 1.79333
+/ev/pro/r/vertex/top/right/y 2.85333
+/ev/pro/r/vertex/top/right/x 4.74334
+/ev/pro/r/vertex/top/left/y 1.66667
+/ev/pro/r/vertex/top/left/x 1.70333
+/ev/pro/c/grid/state 0
+/ev/pro/c/state 1
+/ev/pro/c/shade/left 0
+/ev/pro/c/shade/bottom 0
+/ev/pro/c/shade/right 0
+/ev/pro/c/shade/top 0
+/ev/pro/c/texture/bottom/right/y 421
+/ev/pro/c/texture/bottom/right/x 682
+/ev/pro/c/texture/bottom/left/y 421
+/ev/pro/c/texture/bottom/left/x 341
+/ev/pro/c/texture/top/right/y 610
+/ev/pro/c/texture/top/right/x 682
+/ev/pro/c/texture/top/left/y 610
+/ev/pro/c/texture/top/left/x 341
+/ev/pro/c/vertex/bottom/right/y -0.613333
+/ev/pro/c/vertex/bottom/right/x 1.81333
+/ev/pro/c/vertex/bottom/left/y -0.986663
+/ev/pro/c/vertex/bottom/left/x -1.35
+/ev/pro/c/vertex/top/right/y 1.68
+/ev/pro/c/vertex/top/right/x 1.72
+/ev/pro/c/vertex/top/left/y 3.44334
+/ev/pro/c/vertex/top/left/x -0.930003
+/ev/pro/l/grid/state 0
+/ev/pro/l/state 1
+/ev/pro/l/shade/left 0
+/ev/pro/l/shade/bottom 0
+/ev/pro/l/shade/right 0
+/ev/pro/l/shade/top 0
+/ev/pro/l/texture/bottom/right/y 421
+/ev/pro/l/texture/bottom/right/x 341
+/ev/pro/l/texture/bottom/left/y 421
+/ev/pro/l/texture/bottom/left/x 0
+/ev/pro/l/texture/top/right/y 610
+/ev/pro/l/texture/top/right/x 341
+/ev/pro/l/texture/top/left/y 610
+/ev/pro/l/texture/top/left/x 0
+/ev/pro/l/vertex/bottom/right/y -0.973333
+/ev/pro/l/vertex/bottom/right/x -1.34667
+/ev/pro/l/vertex/bottom/left/y -3.32
+/ev/pro/l/vertex/bottom/left/x -4.90667
+/ev/pro/l/vertex/top/right/y 3.45334
+/ev/pro/l/vertex/top/right/x -0.923333
+/ev/pro/l/vertex/top/left/y 3.48
+/ev/pro/l/vertex/top/left/x -4.81
+/ev/buf/0/color 0.9 0.6 0.1 1
+/ev/buf/0/format RGBA
+/ev/buf/0/rectangle 1
+/ev/buf/0/type BYTE
+/ev/buf/0/shift/y 0
+/ev/buf/0/shift/x 0
+/ev/buf/0/scale/y 1.3
+/ev/buf/0/scale/x 1.3
+/ev/buf/0/dimen/y 1024
+/ev/buf/0/dimen/x 1024
+/ev/buf/0/state 1
+/ev/pro/grid/flip/vertical 0
+/ev/pro/grid/flip/horizontal 0
+/ev/pro/grid/filename ../data/grid.png
+/ev/pro/grid/state 1
+======================== SCENE 2 ========================
+#settings
+#data
+/ev/mouse/texture/sensitivity 300
+/ev/mouse/texture/state 0
+/ev/mouse/texture/show_corners 0
+/ev/mouse/vertex/state 1
+/ev/mouse/vertex/show_corners 1
+/ev/mouse/select_radius 0.0522908
+/ev/pro/door/res 1
+/ev/pro/door/vertex/bottom/center/y -0.893333
+/ev/pro/door/vertex/bottom/center/x 0.346667
+/ev/pro/door/vertex/center/right/y -0.0266666
+/ev/pro/door/vertex/center/right/x 0.96
+/ev/pro/door/vertex/center/center/y 0
+/ev/pro/door/vertex/bottom/right/y -0.48
+/ev/pro/door/vertex/center/center/x 0
+/ev/pro/door/vertex/center/left/y 0.0133334
+/ev/pro/door/vertex/center/left/x -0.24
+/ev/pro/door/vertex/top/center/y 0.986667
+/ev/pro/door/vertex/top/center/x 0.346667
+/ev/pro/door/vertex/bottom/right/x 0.76
+/ev/pro/door/vertex/bottom/left/y -0.64
+/ev/pro/door/vertex/bottom/left/x -1.01333
+/ev/pro/door/vertex/top/right/y 0.64
+/ev/pro/door/vertex/top/right/x 0.746667
+/ev/pro/door/vertex/top/left/y 0.6
+/ev/pro/door/vertex/top/left/x -1.02667
+/ev/pro/door/state 1
+/ev/pro/win/state 1
+/ev/pro/win/vertex/bottom/right/y -1.18667
+/ev/pro/win/vertex/bottom/right/x -3.31333
+/ev/pro/win/vertex/bottom/left/y -1.68
+/ev/pro/win/vertex/bottom/left/x -4.50667
+/ev/pro/win/vertex/top/right/y 1.65334
+/ev/pro/win/vertex/top/right/x -2.07
+/ev/pro/win/vertex/top/left/y 1.22667
+/ev/pro/win/vertex/top/left/x -4.44667
+/ev/pro/win/grid/state 0
+/ev/pro/dow/state 1
+/ev/pro/dow/vertex/bottom/right/y 0.986667
+/ev/pro/dow/vertex/bottom/right/x 1.74667
+/ev/pro/dow/vertex/bottom/left/y 1.02667
+/ev/pro/dow/vertex/bottom/left/x -1.27
+/ev/pro/dow/vertex/top/right/y 1.44
+/ev/pro/dow/vertex/top/right/x 1.74333
+/ev/pro/dow/vertex/top/left/y 1.58667
+/ev/pro/dow/vertex/top/left/x -1.26667
+/ev/pro/dow/grid/state 0
+/ev/pro/r/grid/state 0
+/ev/pro/r/state 1
+/ev/pro/r/shade/left 0
+/ev/pro/r/shade/bottom 0
+/ev/pro/r/shade/right 0
+/ev/pro/r/shade/top 0
+/ev/pro/r/texture/bottom/right/y 421
+/ev/pro/r/texture/bottom/right/x 1024
+/ev/pro/r/texture/bottom/left/y 421
+/ev/pro/r/texture/bottom/left/x 682
+/ev/pro/r/texture/top/right/y 610
+/ev/pro/r/texture/top/right/x 1024
+/ev/pro/r/texture/top/left/y 610
+/ev/pro/r/texture/top/left/x 681.78
+/ev/pro/r/vertex/bottom/right/y -2.93333
+/ev/pro/r/vertex/bottom/right/x 4.92
+/ev/pro/r/vertex/bottom/left/y -0.606666
+/ev/pro/r/vertex/bottom/left/x 1.79333
+/ev/pro/r/vertex/top/right/y 2.85333
+/ev/pro/r/vertex/top/right/x 4.74334
+/ev/pro/r/vertex/top/left/y 1.66667
+/ev/pro/r/vertex/top/left/x 1.70333
+/ev/pro/c/grid/state 0
+/ev/pro/c/state 1
+/ev/pro/c/shade/left 0
+/ev/pro/c/shade/bottom 0
+/ev/pro/c/shade/right 0
+/ev/pro/c/shade/top 0
+/ev/pro/c/texture/bottom/right/y 421
+/ev/pro/c/texture/bottom/right/x 682
+/ev/pro/c/texture/bottom/left/y 421
+/ev/pro/c/texture/bottom/left/x 341
+/ev/pro/c/texture/top/right/y 610
+/ev/pro/c/texture/top/right/x 682
+/ev/pro/c/texture/top/left/y 610
+/ev/pro/c/texture/top/left/x 341
+/ev/pro/c/vertex/bottom/right/y -0.613333
+/ev/pro/c/vertex/bottom/right/x 1.81333
+/ev/pro/c/vertex/bottom/left/y -0.986663
+/ev/pro/c/vertex/bottom/left/x -1.35
+/ev/pro/c/vertex/top/right/y 1.68
+/ev/pro/c/vertex/top/right/x 1.72
+/ev/pro/c/vertex/top/left/y 3.39001
+/ev/pro/c/vertex/top/left/x -1.03667
+/ev/pro/l/grid/state 0
+/ev/pro/l/state 1
+/ev/pro/l/shade/left 0
+/ev/pro/l/shade/bottom 0
+/ev/pro/l/shade/right 0
+/ev/pro/l/shade/top 0
+/ev/pro/l/texture/bottom/right/y 421
+/ev/pro/l/texture/bottom/right/x 341
+/ev/pro/l/texture/bottom/left/y 421
+/ev/pro/l/texture/bottom/left/x 0
+/ev/pro/l/texture/top/right/y 610
+/ev/pro/l/texture/top/right/x 341
+/ev/pro/l/texture/top/left/y 610
+/ev/pro/l/texture/top/left/x 0
+/ev/pro/l/vertex/bottom/right/y -0.973333
+/ev/pro/l/vertex/bottom/right/x -1.34667
+/ev/pro/l/vertex/bottom/left/y -3.32
+/ev/pro/l/vertex/bottom/left/x -4.90667
+/ev/pro/l/vertex/top/right/y 3.40001
+/ev/pro/l/vertex/top/right/x -1.03
+/ev/pro/l/vertex/top/left/y 3.48
+/ev/pro/l/vertex/top/left/x -4.81
+/ev/buf/0/color 0.9 0.6 0.1 1
+/ev/buf/0/format RGBA
+/ev/buf/0/rectangle 1
+/ev/buf/0/type BYTE
+/ev/buf/0/shift/y 0
+/ev/buf/0/shift/x 0
+/ev/buf/0/scale/y 1.3
+/ev/buf/0/scale/x 1.3
+/ev/buf/0/dimen/y 1024
+/ev/buf/0/dimen/x 1024
+/ev/buf/0/state 1
+/ev/pro/grid/flip/vertical 0
+/ev/pro/grid/flip/horizontal 0
+/ev/pro/grid/filename ../data/grid.png
+/ev/pro/grid/state 1
+======================== SCENE 3 ========================
+#settings
+#data
+======================== SCENE 4 ========================
+#settings
+#data
+======================== SCENE 5 ========================
+#settings
+#data
+======================== SCENE 6 ========================
+#settings
+#data
+======================== SCENE 7 ========================
+#settings
+#data
+======================== SCENE 8 ========================
+#settings
+#data
+======================== SCENE 9 ========================
+#settings
+#data
+======================== SCENE 10 ========================
+#settings
+#data
+======================== SCENE 11 ========================
+#settings
+#data
+======================== SCENE 12 ========================
+#settings
+#data
+======================== SCENE 13 ========================
+#settings
+#data
+======================== SCENE 14 ========================
+#settings
+#data
+======================== SCENE 15 ========================
+#settings
+#data
+======================== SCENE 16 ========================
+#settings
+#data
+======================== SCENE 17 ========================
+#settings
+#data
+======================== SCENE 18 ========================
+#settings
+#data
+======================== SCENE 19 ========================
+#settings
+#data
+======================== SCENE 20 ========================
+#settings
+#data
+======================== SCENE 21 ========================
+#settings
+#data
+======================== SCENE 22 ========================
+#settings
+#data
+======================== SCENE 23 ========================
+#settings
+#data
+======================== SCENE 24 ========================
+#settings
+#data
+======================== SCENE 25 ========================
+#settings
+#data
+======================== SCENE 26 ========================
+#settings
+#data
+======================== SCENE 27 ========================
+#settings
+#data
+======================== SCENE 28 ========================
+#settings
+#data
+======================== SCENE 29 ========================
+#settings
+#data
+======================== SCENE 30 ========================
+#settings
+#data
+======================== SCENE 31 ========================
+#settings
+#data
+======================== SCENE 32 ========================
+#settings
+#data
+======================== SCENE 33 ========================
+#settings
+#data
+======================== SCENE 34 ========================
+#settings
+#data
+======================== SCENE 35 ========================
+#settings
+#data
+======================== SCENE 36 ========================
+#settings
+#data
+======================== SCENE 37 ========================
+#settings
+#data
+======================== SCENE 38 ========================
+#settings
+#data
+======================== SCENE 39 ========================
+#settings
+#data
+======================== SCENE 40 ========================
+#settings
+#data
+======================== SCENE 41 ========================
+#settings
+#data
+======================== SCENE 42 ========================
+#settings
+#data
+======================== SCENE 43 ========================
+#settings
+#data
+======================== SCENE 44 ========================
+#settings
+#data
+======================== SCENE 45 ========================
+#settings
+#data
+======================== SCENE 46 ========================
+#settings
+#data
+======================== SCENE 47 ========================
+#settings
+#data
+======================== SCENE 48 ========================
+#settings
+#data
+======================== SCENE 49 ========================
+#settings
+#data
+======================== SCENE 50 ========================
+#settings
+#data
+======================== SCENE 51 ========================
+#settings
+#data
+======================== SCENE 52 ========================
+#settings
+#data
+======================== SCENE 53 ========================
+#settings
+#data
+======================== SCENE 54 ========================
+#settings
+#data
+======================== SCENE 55 ========================
+#settings
+#data
+======================== SCENE 56 ========================
+#settings
+#data
+======================== SCENE 57 ========================
+#settings
+#data
+======================== SCENE 58 ========================
+#settings
+#data
+======================== SCENE 59 ========================
+#settings
+#data
+======================== SCENE 60 ========================
+#settings
+#data
+======================== SCENE 61 ========================
+#settings
+#data
+======================== SCENE 62 ========================
+#settings
+#data
+======================== SCENE 63 ========================
+#settings
+#data
+======================== SCENE 64 ========================
+#settings
+#data
+======================== SCENE 65 ========================
+#settings
+#data
+======================== SCENE 66 ========================
+#settings
+#data
+======================== SCENE 67 ========================
+#settings
+#data
+======================== SCENE 68 ========================
+#settings
+#data
+======================== SCENE 69 ========================
+#settings
+#data
+======================== SCENE 70 ========================
+#settings
+#data
+======================== SCENE 71 ========================
+#settings
+#data
+======================== SCENE 72 ========================
+#settings
+#data
+======================== SCENE 73 ========================
+#settings
+#data
+======================== SCENE 74 ========================
+#settings
+#data
+======================== SCENE 75 ========================
+#settings
+#data
+======================== SCENE 76 ========================
+#settings
+#data
+======================== SCENE 77 ========================
+#settings
+#data
+======================== SCENE 78 ========================
+#settings
+#data
+======================== SCENE 79 ========================
+#settings
+#data
+======================== SCENE 80 ========================
+#settings
+#data
+======================== SCENE 81 ========================
+#settings
+#data
+======================== SCENE 82 ========================
+#settings
+#data
+======================== SCENE 83 ========================
+#settings
+#data
+======================== SCENE 84 ========================
+#settings
+#data
+======================== SCENE 85 ========================
+#settings
+#data
+======================== SCENE 86 ========================
+#settings
+#data
+======================== SCENE 87 ========================
+#settings
+#data
+======================== SCENE 88 ========================
+#settings
+#data
+======================== SCENE 89 ========================
+#settings
+#data
+======================== SCENE 90 ========================
+#settings
+#data
+======================== SCENE 91 ========================
+#settings
+#data
+======================== SCENE 92 ========================
+#settings
+#data
+======================== SCENE 93 ========================
+#settings
+#data
+======================== SCENE 94 ========================
+#settings
+#data
+======================== SCENE 95 ========================
+#settings
+#data
+======================== SCENE 96 ========================
+#settings
+#data
+======================== SCENE 97 ========================
+#settings
+#data
+======================== SCENE 98 ========================
+#settings
+#data
+======================== SCENE 99 ========================
+#settings
+#data

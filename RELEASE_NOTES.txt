@@ -1,0 +1,184 @@
+=====================
+EXTENDED VIEW TOOLKIT
+=====================
+
+
+Release Notes v0.4 Rotterdam
+============================
+
+This version of Extended View Toolkit is not compatible to previous 
+versions!!!
+
+*  completely reworked storage-solution with:
+      * scene based playlist
+      * individual parameter transitions between scenes
+   (based on kollabs abstraction-library)
+*  added a bunch of new examples
+*  reworked the old examples
+
+input abstractions
+------------------
+*  simplified organisation of input-modules: 
+   features for panoramic imagery are in own modules now
+*  reworked [ev_vid] with many new features
+*  new [ev_base] module to allow fast creation of own modules, 
+   that are directly integrated in EVT«s storage and control system
+
+panoramic abstractions
+----------------------
+*  new [ev_360] module for panoramic video with one camera
+*  new [ev_pano_stitch] module for stitching of multiple images
+*  new [ev_pano_group] module
+
+general purpose abs
+-------------------
+*  new [ev_gemwin] module
+*  new video and image recording/grabbing module [ev_record]
+*  new [ev_declare] module to load the right pathes on startup
+
+projection abstractions
+-----------------------
+*  [ev_pro_grid] is now built into all projection modules. 
+   (No need to create it specifically anymore)
+*  [ev_mouseover] has been dropped. 
+   (The mouseover functionality is now integrated into the projection 
+   modules)
+*  new [ev_pro_55] module with 5x5 vertex-points
+*  added new rendered grid to the projection modules
+*  NEW: added horizontal and vertical "weight" factor for perspective 
+   projection
+*  renamed all projection modules
+*  NEW: [ev_texhelper] module for easy texture coordinates selection
+
+general abstractions for OpenGL Shaders
+---------------------------------------
+*  new [ev_glsl] module for easy shader implementations
+
+
+Release Notes v0.31
+===================
+
+changed ev_pro_flat and ev_pro_curved abstractions:
+---------------------------------------------------
+*  no gemhead included anymore for consistency with easymap abstractions
+*  gemhead now has to be connected externally, see corresponding 
+   helpfiles for details
+*  second creation argument of ev_pro_flat/curved deprecated
+
+changed ev_buf:
+---------------
+*  no gemhead built in anymore, has to be connected externally for more 
+   clear structure of patch and more obvious dataflow, see helpfile 
+   for example
+
+changed ev_mouseover:
+---------------------
+* removed creation arguments; 
+  render order and gemwin dimen must from now on be set via messages.
+
+added new example patches:
+--------------------------
+*  ev_module-list (quick overview of the modules)
+*  ev_example_masking (masking capabilities for video mapping)
+*  ev_example_3d (3d renderings)
+*  ev_example_framebuffers (using multiple framebuffers)
+*  ev_example_vfx (pix_É video effects)
+*  ev_example_grids (using the two different grids)
+*  ev_example_storage&osc (using the data storage solution 
+   & transmit/receive osc-streams
+
+*  minor changes inside the data storage logic (v0.1)
+*  minor changes in gil, not affecting the toolkit (v0.11)
+
+*  fixed some bugs inside ev_grid
+*  added flip functions to ev_pro_grid
+
+*  fixed bug in ev_buf: framebuffer content was translated 0/0/-5. 
+   Now 0/0/-4 to compensate the viewpoint mismatch of framebuffer and 
+   gemwin. Also all helpfiles & examples using ev_buf have been corrected.
+
+
+Release Notes v0.3
+==================
+
+Due to some major changes, this version is not backwards compatible 
+to previous versions.
+
+*  integrated new storage system which supports multiple scenes in one file
+*  mrpeach osc externals are not needed anymore.
+*  prepared for bidirectional osc-communication without feedback
+*  added support for on-screen drag&drop interaction (vertex position, 
+   texture position) using GIL
+*  completely new help-patches & examples
+*  added grid function to the projection modules
+*  new folder structure
+*  all files have been modified
+*  no backwards compatibility to older versions
+*  added new projection modules: ev_easymap22, ev_easymap33
+
+
+Release Notes v0.22
+===================
+
+*  fixed: ev_grid: some wrong init parameters.
+
+
+Release Notes v0.21
+===================
+
+*  fixed parameters.pd
+*  added lens correction control to the input modules (cam, pic, vid)
+
+
+Release Notes v0.2
+==================
+
+The following bugs are now fixed:
+
+ev_sto
+------
+*  in some cases, not all parameters were saved.
+
+ev_pro_curved
+-------------
+*  /ev/pro/$1/vertex/top/center/y could not be stored or loaded
+*  the shade settings (soft edging) could not be stored
+
+ev_pro_flat
+-----------
+*  the shade settings (soft edging) could not be stored
+
+ev_buf
+------
+*  the framebuffer options format, rectangle, color and type could not be modified, stored or loaded
+
+ev_EXAMPLE
+----------
+*  preset not loaded at startup
+*  pictures were not loaded at startup
+*  missing example for control bus system
+
+parameters.pd
+-------------
+*  confusing nams for ev_storage
+
+ev_storage
+----------
+*  missing parameters.pd in helpfile
+*  confusing: object name: "ev_storage", but OSC syntax: "/ev/preset/..."
+
+
+The following files have been modified:
+---------------------------------------
+*  ev_sto.pd
+*  ev_buf.pd
+*  ev_buf-help.pd
+*  ev_pro_curved.pd
+*  ev_pro_curved-help.pd
+*  ev_pro_flat.pd
+*  ev_pro_flat-help.pd
+*  ev_EXAMPLE.pd
+*  ev_storage.pd
+*  ev_storage-help.pd
+*  parameters.pd
+*  preset0.txt (has been moved inside the project folder)

@@ -1,0 +1,179 @@
+#N canvas -2106 250 892 756 10;
+#X obj -15 106 inlet;
+#X text -15 84 inlet 1: gemlist;
+#X obj 241 105 cnv 15 178 72 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 363 157 tgl 15 0 /ev/pano/group/\$1/trim/state /ev/pano/group/\$1/trim/state
+trim 17 7 0 10 -232576 -1 -262144 0 1;
+#X obj 251 157 tgl 15 1 /ev/pano/group/\$1/state /ev/pano/group/\$1/state
+on/off 17 7 0 10 -4034 -1 -262144 1 1;
+#X obj 307 137 nbx 4 14 -1e+37 1e+37 0 0 /ev/pano/group/\$1/scale/y
+/ev/pano/group/\$1/scale/y empty -8 8 0 10 -261682 -1 -1 1 256;
+#X obj 251 121 nbx 5 14 -1e+37 1e+37 0 0 /ev/pano/group/\$1/shift/x
+/ev/pano/group/\$1/shift/x shift: 2 -8 0 10 -262130 -1 -262144 0 256
+;
+#X obj 251 137 nbx 5 14 -1e+37 1e+37 0 0 /ev/pano/group/\$1/shift/y
+/ev/pano/group/\$1/shift/y y -8 8 0 10 -262130 -1 -262144 0 256;
+#X obj 307 121 nbx 4 14 -1e+37 1e+37 0 0 /ev/pano/group/\$1/scale/x
+/ev/pano/group/\$1/scale/x scale: 2 -8 0 10 -261682 -1 -262144 1 256
+;
+#X obj -15 140 spigot 1;
+#X obj 363 137 nbx 5 14 -1e+37 1e+37 0 0 /ev/pano/group/\$1/trim/bottom
+/ev/pano/group/\$1/trim/bottom b -8 8 0 10 -232576 -1 -262144 0 256
+;
+#X obj 363 121 nbx 5 14 -1e+37 1e+37 0 0 /ev/pano/group/\$1/trim/top
+/ev/pano/group/\$1/trim/top trim: 2 -8 0 10 -232576 -1 -262144 0 256
+;
+#X obj -17 44 cnv 15 800 16 empty empty EXTENDED_VIEW_GROUP_MODULE
+20 8 0 14 -233017 -66577 0;
+#X obj -19 367 cnv 15 850 220 empty empty group_outlets 20 8 0 14 -204786
+-66577 0;
+#X obj 559 494 separator;
+#X obj 419 494 separator;
+#X obj 279 494 separator;
+#X obj 139 494 separator;
+#X obj -1 494 separator;
+#X obj 699 494 separator;
+#X obj 12 413 t a a a a a a;
+#X obj -15 387 t a a;
+#X text 240 413 outlets: gemlist for up to 6 modules;
+#X obj -1 522 translateXYZ -4.75 0 0;
+#X obj 279 522 translateXYZ -0.95 0 0;
+#X obj 419 522 translateXYZ 0.95 0 0;
+#X obj 559 522 translateXYZ 2.85 0 0;
+#X obj 699 522 translateXYZ 4.75 0 0;
+#X obj 139 522 translateXYZ -2.85 0 0;
+#X obj -19 170 cnv 15 245 190 empty empty group_operations 20 8 0 14
+-233017 -66577 0;
+#X obj -15 192 separator;
+#X obj -15 268 translateXYZ 0 0 0;
+#X obj -15 335 scaleXYZ 1 1 1;
+#X obj -19 603 cnv 15 550 250 empty empty trim 20 8 0 14 -261682 -66577
+0;
+#X obj -15 703 separator;
+#X obj -15 643 spigot;
+#X obj -15 806 color 0 0 0;
+#X obj 245 703 separator;
+#X obj 245 806 color 0 0 0;
+#X obj -15 728 translateXYZ 0 0 0;
+#X obj 245 728 translateXYZ 0 0 0;
+#X obj -15 667 t a a;
+#X obj -15 758 translateXYZ 0 1.5 0;
+#X obj 245 758 translateXYZ 0 -1.5 0;
+#X obj -15 835 rectangle 7 0.75;
+#X obj 245 835 rectangle 7 0.75;
+#X obj 466 92 cnv 15 250 85 empty empty gui_controls 5 8 0 12 -204800
+-66577 0;
+#X obj 466 187 cnv 15 250 40 empty empty creation_arguments 5 8 0 12
+-128992 -66577 0;
+#X obj 466 232 cnv 15 250 60 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X text 469 105 shift x/y: translate group in x/y;
+#X text 469 116 scale x/y: scale group in x/y;
+#X text 528 138 black rectangle;
+#X text 469 127 trim t/b: mask top/bottom of group with;
+#X text 470 148 on/off: toggles state;
+#X text 470 160 trim: toggles masking;
+#X text 470 203 1st: module ID;
+#X text 471 266 Outlets 1-6: gemlist for sources;
+#N canvas 499 138 377 353 init 0;
+#X obj 91 24 loadbang;
+#X msg 91 75 \; /ev/pano/group/\$1/state 1 \; /ev/pano/group/\$1/trim/state
+0 \; /ev/pano/group/\$1/trim/top 0 \; /ev/pano/group/\$1/trim/bottom
+0 \; /ev/pano/group/\$1/trim/color 0 0 0 \; /ev/pano/group/\$1/scale/x
+1 \; /ev/pano/group/\$1/scale/y 1 \; /ev/pano/group/\$1/shift/x 0 \;
+/ev/pano/group/\$1/shift/y 0 \;;
+#X obj 91 48 list append \$1;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X restore 249 301 pd init;
+#X text 369 321 (c)2011 Marian Weger & Peter Venus /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X text 471 244 Inlet: gemlist;
+#X obj 30 106 r /ev/pano/group/\$1/state;
+#X obj 20 216 r /ev/pano/group/\$1/shift/x;
+#X obj 55 240 r /ev/pano/group/\$1/shift/y;
+#X obj 12 293 r /ev/pano/group/\$1/scale/x;
+#X obj 39 312 r /ev/pano/group/\$1/scale/y;
+#X obj 18 620 r /ev/pano/group/\$1/trim/state;
+#X obj 55 703 r /ev/pano/group/\$1/trim/top;
+#X obj 48 785 r /ev/pano/group/\$1/trim/color;
+#X obj 315 703 r /ev/pano/group/\$1/trim/bottom;
+#X obj 308 785 r /ev/pano/group/\$1/trim/color;
+#N canvas 243 215 632 271 storage_&_osc 0;
+#X obj 353 39 osc_bi \$2 /ev/pano/group/\$1/state;
+#X obj 353 59 osc_bi \$2 /ev/pano/group/\$1/trim/state;
+#X obj 353 79 osc_bi \$2 /ev/pano/group/\$1/trim/top;
+#X obj 353 99 osc_bi \$2 /ev/pano/group/\$1/trim/bottom;
+#X obj 353 119 osc_bi \$2 /ev/pano/group/\$1/trim/color;
+#X obj 353 139 osc_bi \$2 /ev/pano/group/\$1/scale/x;
+#X obj 353 159 osc_bi \$2 /ev/pano/group/\$1/scale/y;
+#X obj 353 179 osc_bi \$2 /ev/pano/group/\$1/shift/x;
+#X obj 353 199 osc_bi \$2 /ev/pano/group/\$1/shift/y;
+#X obj 33 39 ds_reg \$2 /ev/pano/group/\$1/state nomorph;
+#X obj 33 59 ds_reg \$2 /ev/pano/group/\$1/trim/state nomorph;
+#X obj 33 79 ds_reg \$2 /ev/pano/group/\$1/trim/top nomorph;
+#X obj 33 99 ds_reg \$2 /ev/pano/group/\$1/trim/bottom nomorph;
+#X obj 33 119 ds_reg \$2 /ev/pano/group/\$1/trim/color nomorph;
+#X obj 33 139 ds_reg \$2 /ev/pano/group/\$1/scale/x nomorph;
+#X obj 33 159 ds_reg \$2 /ev/pano/group/\$1/scale/y nomorph;
+#X obj 33 179 ds_reg \$2 /ev/pano/group/\$1/shift/x nomorph;
+#X obj 33 199 ds_reg \$2 /ev/pano/group/\$1/shift/y nomorph;
+#X restore 247 252 pd storage_&_osc;
+#X obj 699 549 outlet;
+#X obj 559 549 outlet;
+#X obj 419 549 outlet;
+#X obj 279 549 outlet;
+#X obj 139 549 outlet;
+#X obj -1 549 outlet;
+#X obj 242 123 cnv 10 10 10 empty empty x 1 5 0 10 -99865 -262144 0
+;
+#X obj 354 124 cnv 10 8 10 empty empty t 1 5 0 10 -99865 -262144 0
+;
+#X connect 0 0 9 0;
+#X connect 9 0 30 0;
+#X connect 14 0 26 0;
+#X connect 15 0 25 0;
+#X connect 16 0 24 0;
+#X connect 17 0 28 0;
+#X connect 18 0 23 0;
+#X connect 19 0 27 0;
+#X connect 20 0 19 0;
+#X connect 20 1 14 0;
+#X connect 20 2 15 0;
+#X connect 20 3 16 0;
+#X connect 20 4 17 0;
+#X connect 20 5 18 0;
+#X connect 21 0 35 0;
+#X connect 21 1 20 0;
+#X connect 23 0 76 0;
+#X connect 24 0 74 0;
+#X connect 25 0 73 0;
+#X connect 26 0 72 0;
+#X connect 27 0 71 0;
+#X connect 28 0 75 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 21 0;
+#X connect 34 0 39 0;
+#X connect 35 0 41 0;
+#X connect 36 0 44 0;
+#X connect 37 0 40 0;
+#X connect 38 0 45 0;
+#X connect 39 0 42 0;
+#X connect 40 0 43 0;
+#X connect 41 0 34 0;
+#X connect 41 1 37 0;
+#X connect 42 0 36 0;
+#X connect 43 0 38 0;
+#X connect 60 0 9 1;
+#X connect 61 0 31 1;
+#X connect 62 0 31 2;
+#X connect 63 0 32 1;
+#X connect 64 0 32 2;
+#X connect 65 0 35 1;
+#X connect 66 0 39 2;
+#X connect 67 0 36 1;
+#X connect 68 0 40 2;
+#X connect 69 0 38 1;
+#X coords 0 -1 1 1 180 91 1 240 90;

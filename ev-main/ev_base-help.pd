@@ -1,0 +1,91 @@
+#N canvas 309 22 788 747 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj -194 8 cnv 15 740 16 empty empty EXTENDED_VIEW_BASE:_module/addon-template
+2 8 0 14 -99865 -262144 0;
+#X obj -194 659 cnv 15 360 120 empty empty PARAMETER_LIST_for_ev_base
+3 8 0 14 -162280 -1 0;
+#X obj 281 107 gemwin 20;
+#X msg 296 77 0 \, destroy;
+#X text 210 46 CLICK HERE:;
+#X obj -194 319 cnv 15 360 90 empty empty GUI_controls 5 8 0 12 -204800
+-66577 0;
+#X obj -194 209 cnv 15 360 60 empty empty creation_arguments: 5 12
+0 12 -162280 -1 0;
+#X obj -194 274 cnv 15 360 40 empty empty inlets/outlets 3 8 0 12 -233017
+-66577 0;
+#X obj -194 35 cnv 15 360 170 empty empty description 3 8 0 12 -233017
+-66577 0;
+#X text -192 161 Contains specific storage_&_osc-subpatch which houses
+abstractions to register parameters for storage and osc communication
+;
+#X text -189 229 1st: module ID \, needs to be unique \; 2nd: storage
+domain \, see [ev_storage-help] for details;
+#X text -192 290 Inlet 1: depending on what you build in;
+#X text -192 300 Outlet 1: depending on what you build in;
+#X text -193 343 0/1: bypassing the module \; 1 to 8: controlling parameters
+of (internally) connected FX all GUI-controls are ranging from 0 to
+1 \; either drag coursor in slider or in numberboxes;
+#X text -188 680 /ev/base/<id>/parameter/1 : control parameter [0...1]
+;
+#X text -188 690 /ev/base/<id>/parameter/2 : control parameter [0...1]
+;
+#X text -188 700 /ev/base/<id>/parameter/3 : control parameter [0...1]
+;
+#X text -188 710 /ev/base/<id>/parameter/4 : control parameter [0...1]
+;
+#X text -188 720 /ev/base/<id>/parameter/5 : control parameter [0...1]
+;
+#X text -188 730 /ev/base/<id>/parameter/6 : control parameter [0...1]
+;
+#X text -188 740 /ev/base/<id>/parameter/7 : control parameter [0...1]
+;
+#X text -188 750 /ev/base/<id>/parameter/8 : control parameter [0...1]
+;
+#X obj 183 167 ev_base \$0;
+#X text -188 762 /ev/base/<id>/state : bypass module [0/1];
+#X obj -194 414 cnv 15 360 240 empty empty USAGE 5 8 0 12 -258113 -262144
+0;
+#X obj 183 300 gemhead;
+#X obj 183 507 pix_texture;
+#X obj 183 529 rectangle 4 3;
+#X obj 243 331 loadbang;
+#X obj 221 332 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 183 385 pix_image;
+#X msg 221 359 open ../media/cam2.jpg;
+#X text -192 427 In your patch \, create a [ev_base] \, and save it
+under a new name within ./ev-main. Then create your just saved abstraction
+in you patch & program into it whatever you like \; Remember \, all
+storage and control related parameters still rely on the parameter-list
+below \, so you want to make sure \, that you create your own created
+effects with UNIQUE-IDs to avoid paramter-mixup \; What happens \,
+if you dont take care of this? \; Both \, the original [ev_base] and
+the [ev_pix_fx] are initialised with the same ID \, so changing a parameter
+on [ev_base] changes it on the other as well \; \; _______________________ADVANCED___________________________
+\; to add additional parameters \, please have a look in the helpfile
+for [ev_storage] under <Registering Variables>;
+#X obj 183 414 ev_pix_fx \$0;
+#X msg 281 47 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
+#X obj 255 623 ../ev-main/ev_declare;
+#X text 218 602 set pathes to needed abstractions;
+#X text -191 51 [ev_base] is a module \, that lets you integrate PIX-effects
+\, other GEM-functions or whatever your needs are easily in your ExtendedViewToolkit-based-patches.
+It allows you to instantly take advantage of the built-in storage and
+transition features \, ultimately allowing for faster patching when
+preparing a show or installation \; There is a BYPASS-funtion and some
+parameters already integrated.;
+#X text 220 699 (c)2012 Peter Venus & Marian Weger \; /part of EXTENDEDVIEW
+toolkit/ gpl v3;
+#X connect 3 0 2 0;
+#X connect 25 0 30 0;
+#X connect 26 0 27 0;
+#X connect 28 0 31 0;
+#X connect 29 0 31 0;
+#X connect 30 0 33 0;
+#X connect 31 0 30 0;
+#X connect 33 0 26 0;
+#X connect 34 0 2 0;

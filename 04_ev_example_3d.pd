@@ -1,0 +1,153 @@
+#N canvas 160 22 912 712 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 106 655 world_light;
+#X obj 106 631 gemhead;
+#X obj 14 14 cnv 15 700 30 empty empty Example:_3d_renderings 20 12
+0 14 -233017 -66577 0;
+#X obj 707 315 s /ev/buf/0/color;
+#X msg 707 290 0.9 0.6 0.1 1;
+#X obj 707 245 loadbang;
+#X obj 707 267 del 3000;
+#X obj 43 114 gemhead 20;
+#X obj 33 455 cnv 15 250 135 empty empty 3d_rendering 20 12 0 10 -233017
+-66577 0;
+#X obj 43 530 teapot;
+#N canvas 0 22 482 487 teapot-movement 0;
+#X obj 81 -49 inlet;
+#X obj 81 263 outlet;
+#X obj 81 149 translateXYZ 0 0 0;
+#X obj 81 189 rotateXYZ 0 0 0;
+#X obj 177 -12 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 198 -12 metro 10000;
+#X obj 81 211 scaleXYZ 0.6 0.6 0.6;
+#X msg 198 20 0 \, 1 10000;
+#X obj 198 149 * 360;
+#X obj 198 -49 loadbang;
+#X obj 109 -10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 131 -12 1;
+#X obj 116 85 *;
+#X obj 116 107 cos;
+#X obj 116 129 * 4;
+#X obj 131 20 atan;
+#X obj 131 50 * 8;
+#X obj 81 233 color 1 1 1;
+#X obj 198 50 line 0 40;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 6 0 17 0;
+#X connect 7 0 18 0;
+#X connect 8 0 3 3;
+#X connect 8 0 3 2;
+#X connect 8 0 3 1;
+#X connect 9 0 11 0;
+#X connect 9 0 5 0;
+#X connect 10 0 11 0;
+#X connect 11 0 15 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 2 1;
+#X connect 15 0 16 0;
+#X connect 16 0 12 1;
+#X connect 17 0 1 0;
+#X connect 18 0 8 0;
+#X connect 18 0 12 0;
+#X restore 43 498 pd teapot-movement;
+#X obj 53 241 cnv 15 230 200 empty empty empty 2 8 0 10 -191407 -66577
+0;
+#X obj 173 365 pix_texture;
+#X obj 173 388 rectangle 3 3;
+#X obj 61 295 tgl 15 0 empty empty show_content_of_frambuffer 17 7
+0 10 -262144 -1 -1 0 1;
+#X obj 14 47 cnv 15 80 40 empty empty declare_paths 2 8 0 10 -258113
+-262144 0;
+#N canvas 518 150 548 468 init 0;
+#X obj 56 92 loadbang;
+#X obj 44 -23 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 49 -3 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X text 159 170 load the preset file on startup:;
+#X text 66 272 Recall scene '0' from the loaded preset file \, and
+load the still image files.;
+#X obj 158 43 ev-main/ev_declare;
+#X obj 56 144 t b b;
+#X obj 83 168 del 1000;
+#X obj 56 231 del 3000;
+#X msg 56 308 \; /0/ds/scene 0 \;;
+#X msg 83 190 \; /0/ds/loadfile ../../data/ev_example_3d_preset.txt
+;
+#X text 157 223 (pathes relative to "./libs/kollabs");
+#X connect 0 0 6 0;
+#X connect 6 0 8 0;
+#X connect 6 1 7 0;
+#X connect 7 0 10 0;
+#X connect 8 0 9 0;
+#X restore 32 64 pd init;
+#X obj 294 241 cnv 15 350 370 empty empty projection_planes 20 12 0
+14 -262130 -66577 0;
+#X obj 582 354 t a;
+#X obj 313 353 gemhead 50;
+#X obj 313 385 t a a a;
+#X obj 582 241 t a;
+#X obj 313 328 tgl 15 1 empty empty toggle_projection_planes 17 7 0
+10 -262144 -1 -1 1 1;
+#X text 372 190 send the texture id of the \; framebuffer to the projection
+modules;
+#X text 477 14 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X text 109 46 This example shows how to project 3d renderings with
+the Extended View Toolkit.;
+#X text 666 226 orange framebuffer background:;
+#X text 670 432 "ev_example_3d_preset.txt";
+#X obj 675 450 ev_storage;
+#X obj 43 139 ev_buf 0;
+#X obj 313 545 ev_pro_22 l;
+#X obj 373 484 ev_pro_22 c;
+#X obj 350 97 ev_gemwin;
+#X obj 313 282 loadbang;
+#X msg 313 304 1;
+#X obj 61 252 loadbang;
+#X msg 61 275 0;
+#X obj 173 340 gemhead 99;
+#X text 39 602 For 3d objects \, some light is needed:;
+#X text 139 536 Simple 3d object;
+#X text 566 76 click "create" to start;
+#X obj 396 425 ev_pro_22 r;
+#X text 670 419 This example uses scene "0" of;
+#X text 672 601 Presets are lcated in the;
+#X text 672 614 "./data" folder.;
+#X connect 1 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 29 0;
+#X connect 10 0 9 0;
+#X connect 12 0 13 0;
+#X connect 14 0 37 0;
+#X connect 18 0 30 1;
+#X connect 18 0 31 1;
+#X connect 18 0 41 1;
+#X connect 19 0 20 0;
+#X connect 20 0 30 0;
+#X connect 20 1 31 0;
+#X connect 20 2 41 0;
+#X connect 21 0 18 0;
+#X connect 22 0 19 0;
+#X connect 29 0 10 0;
+#X connect 29 1 12 1;
+#X connect 29 1 21 0;
+#X connect 33 0 34 0;
+#X connect 34 0 22 0;
+#X connect 35 0 36 0;
+#X connect 36 0 14 0;
+#X connect 37 0 12 0;
+#X coords 0 0 1 1 85 60 0;

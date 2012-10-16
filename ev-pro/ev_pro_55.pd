@@ -1,0 +1,1056 @@
+#N canvas 280 81 999 557 10;
+#X obj 101 132 cnv 15 198 31 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 195 136 bng 15 250 50 0 empty empty settings 17 7 0 10 -159808
+-1 -1;
+#X obj 105 135 tgl 15 1 /ev/pro/\$1/state /ev/pro/\$1/state on/off
+17 7 0 10 -4034 -1 -1 1 1;
+#N canvas 494 174 664 455 soft_edging 0;
+#X obj 335 366 outlet;
+#X obj 48 112 inlet;
+#X obj 48 135 t b b b b;
+#X obj 125 135 r /ev/pro/\$1/shade/left;
+#X obj 195 155 r /ev/pro/\$1/shade/right;
+#X obj 265 175 r /ev/pro/\$1/shade/top;
+#X obj 335 195 r /ev/pro/\$1/shade/bottom;
+#X obj 125 262 f 0;
+#X obj 195 262 f 0;
+#X obj 265 262 f 0;
+#X obj 335 262 f 0;
+#X obj 125 284 max 0.0001;
+#X obj 195 284 max 0.0001;
+#X obj 265 284 max 0.0001;
+#X obj 335 284 max 0.0001;
+#X msg 125 315 Sl \$1;
+#X msg 195 315 Sr \$1;
+#X msg 265 315 St \$1;
+#X msg 335 315 Sb \$1;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 2 1 8 0;
+#X connect 2 2 9 0;
+#X connect 2 3 10 0;
+#X connect 3 0 7 0;
+#X connect 4 0 8 0;
+#X connect 5 0 9 0;
+#X connect 6 0 10 0;
+#X connect 7 0 11 0;
+#X connect 8 0 12 0;
+#X connect 9 0 13 0;
+#X connect 10 0 14 0;
+#X connect 11 0 15 0;
+#X connect 12 0 16 0;
+#X connect 13 0 17 0;
+#X connect 14 0 18 0;
+#X connect 15 0 0 0;
+#X connect 16 0 0 0;
+#X connect 17 0 0 0;
+#X connect 18 0 0 0;
+#X restore 699 437 pd soft_edging;
+#N canvas 176 54 956 756 texture_position 0;
+#X obj 177 168 pack f f;
+#X obj 205 103 t b f;
+#X obj 177 821 outlet;
+#X obj 90 -40 inlet;
+#X obj 327 168 pack f f;
+#X obj 355 103 t b f;
+#X obj 307 558 pack f f;
+#X obj 335 493 t b f;
+#X obj 457 558 pack f f;
+#X obj 485 493 t b f;
+#X obj 90 543 t b b;
+#X obj 117 11 t b b;
+#X obj 177 -9 r /ev/pro/\$1/texture/top/left/x;
+#X obj 205 11 r /ev/pro/\$1/texture/top/left/y;
+#X obj 327 34 r /ev/pro/\$1/texture/top/right/x;
+#X obj 355 54 r /ev/pro/\$1/texture/top/right/y;
+#X obj 307 349 r /ev/pro/\$1/texture/bottom/left/x;
+#X obj 335 369 r /ev/pro/\$1/texture/bottom/left/y;
+#X obj 457 393 r /ev/pro/\$1/texture/bottom/right/x;
+#X obj 485 413 r /ev/pro/\$1/texture/bottom/right/y;
+#X obj 90 -18 t b b;
+#X obj 586 31 t l l l l;
+#X msg 586 73 0 \$2;
+#X msg 603 93 \$1 \$2;
+#X msg 620 216 0 0;
+#X msg 637 236 \$1 0;
+#X obj 758 31 t f f;
+#X obj 758 93 sel 0;
+#X obj 327 188 spigot 1;
+#X obj 177 188 spigot 1;
+#X obj 117 243 list;
+#X obj 117 265 list trim;
+#X obj 267 243 list;
+#X obj 267 265 list trim;
+#X obj 758 435 t b;
+#X obj 237 188 spigot 0;
+#X obj 387 188 spigot 0;
+#X obj 815 61 * -1;
+#X obj 815 83 + 1;
+#X obj 815 435 t f;
+#X obj 785 435 t f;
+#X obj 457 583 spigot 1;
+#X obj 307 583 spigot 1;
+#X obj 247 638 list;
+#X obj 247 660 list trim;
+#X obj 397 638 list;
+#X obj 397 660 list trim;
+#X obj 367 583 spigot 0;
+#X obj 517 583 spigot 0;
+#X msg 177 305 Ttl \$1 \$2;
+#X msg 457 700 Tbr \$1 \$2;
+#X obj 758 9 r /ev/pro/\$1/grid/tex/state;
+#X msg 327 305 Ttr \$1 \$2;
+#X msg 307 700 Tbl \$1 \$2;
+#X obj 586 -11 r /ev/pro/\$1/grid/tex/texture_id;
+#X msg 586 11 \$2 \$3;
+#X connect 0 0 29 0;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 3 0 20 0;
+#X connect 4 0 28 0;
+#X connect 5 0 4 0;
+#X connect 5 1 4 1;
+#X connect 6 0 42 0;
+#X connect 7 0 6 0;
+#X connect 7 1 6 1;
+#X connect 8 0 41 0;
+#X connect 9 0 8 0;
+#X connect 9 1 8 1;
+#X connect 10 0 43 0;
+#X connect 10 1 45 0;
+#X connect 11 0 30 0;
+#X connect 11 1 32 0;
+#X connect 12 0 0 0;
+#X connect 13 0 1 0;
+#X connect 14 0 4 0;
+#X connect 15 0 5 0;
+#X connect 16 0 6 0;
+#X connect 17 0 7 0;
+#X connect 18 0 8 0;
+#X connect 19 0 9 0;
+#X connect 20 0 10 0;
+#X connect 20 1 11 0;
+#X connect 21 0 22 0;
+#X connect 21 1 23 0;
+#X connect 21 2 24 0;
+#X connect 21 3 25 0;
+#X connect 22 0 35 0;
+#X connect 23 0 36 0;
+#X connect 24 0 47 0;
+#X connect 25 0 48 0;
+#X connect 26 0 27 0;
+#X connect 26 1 36 1;
+#X connect 26 1 35 1;
+#X connect 26 1 37 0;
+#X connect 26 1 40 0;
+#X connect 27 0 0 0;
+#X connect 27 0 4 0;
+#X connect 27 0 34 0;
+#X connect 28 0 52 0;
+#X connect 28 0 32 1;
+#X connect 29 0 49 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
+#X connect 31 0 49 0;
+#X connect 32 0 33 0;
+#X connect 33 0 52 0;
+#X connect 34 0 8 0;
+#X connect 34 0 6 0;
+#X connect 35 0 30 1;
+#X connect 35 0 49 0;
+#X connect 36 0 32 1;
+#X connect 36 0 52 0;
+#X connect 37 0 38 0;
+#X connect 38 0 29 1;
+#X connect 38 0 28 1;
+#X connect 38 0 39 0;
+#X connect 39 0 42 1;
+#X connect 39 0 41 1;
+#X connect 40 0 47 1;
+#X connect 40 0 48 1;
+#X connect 41 0 50 0;
+#X connect 41 0 45 1;
+#X connect 42 0 53 0;
+#X connect 42 0 43 1;
+#X connect 43 0 44 0;
+#X connect 44 0 53 0;
+#X connect 45 0 46 0;
+#X connect 46 0 50 0;
+#X connect 47 0 43 1;
+#X connect 47 0 53 0;
+#X connect 48 0 45 1;
+#X connect 48 0 50 0;
+#X connect 49 0 2 0;
+#X connect 50 0 2 0;
+#X connect 51 0 26 0;
+#X connect 52 0 2 0;
+#X connect 53 0 2 0;
+#X connect 54 0 55 0;
+#X connect 55 0 21 0;
+#X coords 0 0 1 1 200 70 0;
+#X restore 575 437 pd texture_position;
+#N canvas 43 22 907 756 vertex_position 0;
+#X obj 228 12 t b f;
+#X obj 402 92 t b f;
+#X obj 312 52 t b f;
+#X msg 204 224 V00 \$1 \$2;
+#X obj 204 -28 r /ev/pro/\$1/vertex/0/0/x;
+#X obj 228 -8 r /ev/pro/\$1/vertex/0/0/y;
+#X obj 294 12 r /ev/pro/\$1/vertex/0/1/x;
+#X obj 312 32 r /ev/pro/\$1/vertex/0/1/y;
+#X obj 384 52 r /ev/pro/\$1/vertex/0/2/x;
+#X obj 402 72 r /ev/pro/\$1/vertex/0/2/y;
+#X obj 582 172 t b f;
+#X obj 492 132 t b f;
+#X obj 474 92 r /ev/pro/\$1/vertex/0/3/x;
+#X obj 492 112 r /ev/pro/\$1/vertex/0/3/y;
+#X obj 564 132 r /ev/pro/\$1/vertex/0/4/x;
+#X obj 582 152 r /ev/pro/\$1/vertex/0/4/y;
+#X obj 228 372 t b f;
+#X obj 412 452 t b f;
+#X obj 312 412 t b f;
+#X obj 592 532 t b f;
+#X obj 502 492 t b f;
+#X obj 228 722 t b f;
+#X obj 402 802 t b f;
+#X obj 312 762 t b f;
+#X obj 582 882 t b f;
+#X obj 492 842 t b f;
+#X obj 228 1072 t b f;
+#X obj 432 1152 t b f;
+#X obj 322 1112 t b f;
+#X obj 632 1232 t b f;
+#X obj 532 1192 t b f;
+#X obj 228 1412 t b f;
+#X obj 422 1492 t b f;
+#X obj 322 1452 t b f;
+#X obj 622 1572 t b f;
+#X obj 522 1532 t b f;
+#X obj 564 280 s /ev/pro/\$1/wall_data;
+#X obj 61 -28 r /ev/pro/\$1/wall_init;
+#X obj 61 332 r /ev/pro/\$1/wall_init;
+#X obj 61 1032 r /ev/pro/\$1/wall_init;
+#X obj 61 1372 r /ev/pro/\$1/wall_init;
+#X obj 61 682 r /ev/pro/\$1/wall_init;
+#X obj 574 626 s /ev/pro/\$1/wall_data;
+#X obj 564 976 s /ev/pro/\$1/wall_data;
+#X obj 614 1336 s /ev/pro/\$1/wall_data;
+#X obj 604 1676 s /ev/pro/\$1/wall_data;
+#X obj 204 332 r /ev/pro/\$1/vertex/1/0/x;
+#X obj 228 352 r /ev/pro/\$1/vertex/1/0/y;
+#X obj 294 372 r /ev/pro/\$1/vertex/1/1/x;
+#X obj 312 392 r /ev/pro/\$1/vertex/1/1/y;
+#X obj 394 412 r /ev/pro/\$1/vertex/1/2/x;
+#X obj 412 432 r /ev/pro/\$1/vertex/1/2/y;
+#X obj 484 452 r /ev/pro/\$1/vertex/1/3/x;
+#X obj 502 472 r /ev/pro/\$1/vertex/1/3/y;
+#X obj 574 492 r /ev/pro/\$1/vertex/1/4/x;
+#X obj 592 512 r /ev/pro/\$1/vertex/1/4/y;
+#X obj 204 682 r /ev/pro/\$1/vertex/2/0/x;
+#X obj 228 702 r /ev/pro/\$1/vertex/2/0/y;
+#X obj 294 722 r /ev/pro/\$1/vertex/2/1/x;
+#X obj 312 742 r /ev/pro/\$1/vertex/2/1/y;
+#X obj 384 762 r /ev/pro/\$1/vertex/2/2/x;
+#X obj 402 782 r /ev/pro/\$1/vertex/2/2/y;
+#X obj 474 802 r /ev/pro/\$1/vertex/2/3/x;
+#X obj 492 822 r /ev/pro/\$1/vertex/2/3/y;
+#X obj 564 842 r /ev/pro/\$1/vertex/2/4/x;
+#X obj 582 862 r /ev/pro/\$1/vertex/2/4/y;
+#X obj 204 1032 r /ev/pro/\$1/vertex/3/0/x;
+#X obj 228 1052 r /ev/pro/\$1/vertex/3/0/y;
+#X obj 304 1072 r /ev/pro/\$1/vertex/3/1/x;
+#X obj 322 1092 r /ev/pro/\$1/vertex/3/1/y;
+#X obj 414 1112 r /ev/pro/\$1/vertex/3/2/x;
+#X obj 432 1132 r /ev/pro/\$1/vertex/3/2/y;
+#X obj 514 1152 r /ev/pro/\$1/vertex/3/3/x;
+#X obj 532 1172 r /ev/pro/\$1/vertex/3/3/y;
+#X obj 614 1192 r /ev/pro/\$1/vertex/3/4/x;
+#X obj 632 1212 r /ev/pro/\$1/vertex/3/4/y;
+#X obj 204 1372 r /ev/pro/\$1/vertex/4/0/x;
+#X obj 228 1392 r /ev/pro/\$1/vertex/4/0/y;
+#X obj 304 1412 r /ev/pro/\$1/vertex/4/1/x;
+#X obj 322 1432 r /ev/pro/\$1/vertex/4/1/y;
+#X obj 404 1452 r /ev/pro/\$1/vertex/4/2/x;
+#X obj 422 1472 r /ev/pro/\$1/vertex/4/2/y;
+#X obj 504 1492 r /ev/pro/\$1/vertex/4/3/x;
+#X obj 522 1512 r /ev/pro/\$1/vertex/4/3/y;
+#X obj 604 1532 r /ev/pro/\$1/vertex/4/4/x;
+#X obj 622 1552 r /ev/pro/\$1/vertex/4/4/y;
+#X msg 604 1624 V44 \$1 \$2;
+#X msg 514 1284 V33 \$1 \$2;
+#X msg 384 934 V22 \$1 \$2;
+#X msg 294 584 V11 \$1 \$2;
+#X obj 204 199 pack -1.5 1.5;
+#X obj 294 199 pack -0.75 1.5;
+#X obj 384 199 pack 0 1.5;
+#X obj 474 199 pack 0.75 1.5;
+#X obj 564 199 pack 1.5 1.5;
+#X obj 204 559 pack -1.5 0.75;
+#X obj 294 559 pack -0.75 0.75;
+#X obj 394 559 pack 0 0.75;
+#X obj 484 559 pack 0.75 0.75;
+#X obj 574 559 pack 1.5 0.75;
+#X obj 204 909 pack -1.5 0;
+#X obj 294 909 pack -0.75 0;
+#X obj 384 909 pack 0 0;
+#X obj 474 909 pack 0.75 0;
+#X obj 564 909 pack 1.5 0;
+#X obj 204 1259 pack -1.5 -0.75;
+#X obj 304 1259 pack -0.75 -0.75;
+#X obj 414 1259 pack 0 -0.75;
+#X obj 614 1259 pack 1.5 -0.75;
+#X obj 514 1259 pack 0.75 -0.75;
+#X obj 204 1599 pack -1.5 -1.5;
+#X obj 304 1599 pack -0.75 -1.5;
+#X obj 404 1599 pack 0 -1.5;
+#X obj 504 1599 pack 0.75 -1.5;
+#X obj 604 1599 pack 1.5 -1.5;
+#X msg 294 224 V10 \$1 \$2;
+#X msg 384 224 V20 \$1 \$2;
+#X msg 474 224 V30 \$1 \$2;
+#X msg 564 224 V40 \$1 \$2;
+#X msg 204 584 V01 \$1 \$2;
+#X msg 394 584 V21 \$1 \$2;
+#X msg 484 584 V31 \$1 \$2;
+#X msg 574 584 V41 \$1 \$2;
+#X msg 204 934 V02 \$1 \$2;
+#X msg 294 934 V12 \$1 \$2;
+#X msg 474 934 V32 \$1 \$2;
+#X msg 564 934 V42 \$1 \$2;
+#X msg 204 1284 V03 \$1 \$2;
+#X msg 304 1284 V13 \$1 \$2;
+#X msg 414 1284 V23 \$1 \$2;
+#X msg 614 1284 V43 \$1 \$2;
+#X msg 204 1624 V04 \$1 \$2;
+#X msg 304 1624 V14 \$1 \$2;
+#X msg 404 1624 V24 \$1 \$2;
+#X msg 504 1624 V34 \$1 \$2;
+#X connect 0 0 90 0;
+#X connect 0 1 90 1;
+#X connect 1 0 92 0;
+#X connect 1 1 92 1;
+#X connect 2 0 91 0;
+#X connect 2 1 91 1;
+#X connect 3 0 36 0;
+#X connect 4 0 90 0;
+#X connect 5 0 0 0;
+#X connect 6 0 91 0;
+#X connect 7 0 2 0;
+#X connect 8 0 92 0;
+#X connect 9 0 1 0;
+#X connect 10 0 94 0;
+#X connect 10 1 94 1;
+#X connect 11 0 93 0;
+#X connect 11 1 93 1;
+#X connect 12 0 93 0;
+#X connect 13 0 11 0;
+#X connect 14 0 94 0;
+#X connect 15 0 10 0;
+#X connect 16 0 95 0;
+#X connect 16 1 95 1;
+#X connect 17 0 97 0;
+#X connect 17 1 97 1;
+#X connect 18 0 96 0;
+#X connect 18 1 96 1;
+#X connect 19 0 99 0;
+#X connect 19 1 99 1;
+#X connect 20 0 98 0;
+#X connect 20 1 98 1;
+#X connect 21 0 100 0;
+#X connect 21 1 100 1;
+#X connect 22 0 102 0;
+#X connect 22 1 102 1;
+#X connect 23 0 101 0;
+#X connect 23 1 101 1;
+#X connect 24 0 104 0;
+#X connect 24 1 104 1;
+#X connect 25 0 103 0;
+#X connect 25 1 103 1;
+#X connect 26 0 105 0;
+#X connect 26 1 105 1;
+#X connect 27 0 107 0;
+#X connect 27 1 107 1;
+#X connect 28 0 106 0;
+#X connect 28 1 106 1;
+#X connect 29 0 108 0;
+#X connect 29 1 108 1;
+#X connect 30 0 109 0;
+#X connect 30 1 109 1;
+#X connect 31 0 110 0;
+#X connect 31 1 110 1;
+#X connect 32 0 112 0;
+#X connect 32 1 112 1;
+#X connect 33 0 111 0;
+#X connect 33 1 111 1;
+#X connect 34 0 114 0;
+#X connect 34 1 114 1;
+#X connect 35 0 113 0;
+#X connect 35 1 113 1;
+#X connect 37 0 90 0;
+#X connect 37 0 91 0;
+#X connect 37 0 92 0;
+#X connect 37 0 93 0;
+#X connect 37 0 94 0;
+#X connect 38 0 95 0;
+#X connect 38 0 96 0;
+#X connect 38 0 97 0;
+#X connect 38 0 98 0;
+#X connect 38 0 99 0;
+#X connect 39 0 105 0;
+#X connect 39 0 106 0;
+#X connect 39 0 107 0;
+#X connect 39 0 109 0;
+#X connect 39 0 108 0;
+#X connect 40 0 110 0;
+#X connect 40 0 111 0;
+#X connect 40 0 112 0;
+#X connect 40 0 113 0;
+#X connect 40 0 114 0;
+#X connect 41 0 100 0;
+#X connect 41 0 101 0;
+#X connect 41 0 102 0;
+#X connect 41 0 103 0;
+#X connect 41 0 104 0;
+#X connect 46 0 95 0;
+#X connect 47 0 16 0;
+#X connect 48 0 96 0;
+#X connect 49 0 18 0;
+#X connect 50 0 97 0;
+#X connect 51 0 17 0;
+#X connect 52 0 98 0;
+#X connect 53 0 20 0;
+#X connect 54 0 99 0;
+#X connect 55 0 19 0;
+#X connect 56 0 100 0;
+#X connect 57 0 21 0;
+#X connect 58 0 101 0;
+#X connect 59 0 23 0;
+#X connect 60 0 102 0;
+#X connect 61 0 22 0;
+#X connect 62 0 103 0;
+#X connect 63 0 25 0;
+#X connect 64 0 104 0;
+#X connect 65 0 24 0;
+#X connect 66 0 105 0;
+#X connect 67 0 26 0;
+#X connect 68 0 106 0;
+#X connect 69 0 28 0;
+#X connect 70 0 107 0;
+#X connect 71 0 27 0;
+#X connect 72 0 109 0;
+#X connect 73 0 30 0;
+#X connect 74 0 108 0;
+#X connect 75 0 29 0;
+#X connect 76 0 110 0;
+#X connect 77 0 31 0;
+#X connect 78 0 111 0;
+#X connect 79 0 33 0;
+#X connect 80 0 112 0;
+#X connect 81 0 32 0;
+#X connect 82 0 113 0;
+#X connect 83 0 35 0;
+#X connect 84 0 114 0;
+#X connect 85 0 34 0;
+#X connect 86 0 45 0;
+#X connect 87 0 44 0;
+#X connect 88 0 43 0;
+#X connect 89 0 42 0;
+#X connect 90 0 3 0;
+#X connect 91 0 115 0;
+#X connect 92 0 116 0;
+#X connect 93 0 117 0;
+#X connect 94 0 118 0;
+#X connect 95 0 119 0;
+#X connect 96 0 89 0;
+#X connect 97 0 120 0;
+#X connect 98 0 121 0;
+#X connect 99 0 122 0;
+#X connect 100 0 123 0;
+#X connect 101 0 124 0;
+#X connect 102 0 88 0;
+#X connect 103 0 125 0;
+#X connect 104 0 126 0;
+#X connect 105 0 127 0;
+#X connect 106 0 128 0;
+#X connect 107 0 129 0;
+#X connect 108 0 130 0;
+#X connect 109 0 87 0;
+#X connect 110 0 131 0;
+#X connect 111 0 132 0;
+#X connect 112 0 133 0;
+#X connect 113 0 134 0;
+#X connect 114 0 86 0;
+#X connect 115 0 36 0;
+#X connect 116 0 36 0;
+#X connect 117 0 36 0;
+#X connect 118 0 36 0;
+#X connect 119 0 42 0;
+#X connect 120 0 42 0;
+#X connect 121 0 42 0;
+#X connect 122 0 42 0;
+#X connect 123 0 43 0;
+#X connect 124 0 43 0;
+#X connect 125 0 43 0;
+#X connect 126 0 43 0;
+#X connect 127 0 44 0;
+#X connect 128 0 44 0;
+#X connect 129 0 44 0;
+#X connect 130 0 44 0;
+#X connect 131 0 45 0;
+#X connect 132 0 45 0;
+#X connect 133 0 45 0;
+#X connect 134 0 45 0;
+#X coords 0 0 1 1 200 70 0;
+#X restore 456 437 pd vertex_position;
+#X obj 492 257 s /ev/pro/\$1/wall_init;
+#X obj 597 208 r /ev/pro/\$1/wall_data;
+#X obj 575 494 s /ev/pro/\$1/wall_data;
+#X obj 575 355 r /ev/pro/\$1/wall_init;
+#N canvas 242 108 556 451 nfp_curved_wall 0;
+#X obj 64 311 pix_texture;
+#X obj 64 27 alpha;
+#X obj 64 339 mesh_square 50 50;
+#N canvas 488 22 792 790 glsl 0;
+#X obj 88 189 glsl_vertex;
+#X msg 42 188 print;
+#X obj 88 476 glsl_program;
+#X obj 173 405 pack 0 0;
+#X msg 40 326 print;
+#X obj 173 361 change;
+#X obj 160 208 change;
+#X msg 173 429 link \$1 \$2;
+#X msg 42 470 print;
+#X obj 87 340 glsl_fragment;
+#X floatatom 173 385 2 0 0 0 ID - -;
+#X floatatom 160 231 2 0 0 0 ID - -;
+#X obj 191 450 print linking;
+#X obj 25 31 inlet;
+#X obj 88 512 outlet;
+#X obj 428 31 inlet;
+#X obj 25 54 route bang;
+#X obj 265 21 gemhead 1;
+#X msg 265 43 1;
+#X obj 265 67 change;
+#X obj 265 91 t b;
+#X obj 167 497 change;
+#X obj 167 518 t b;
+#X obj 168 540 outlet;
+#X obj 100 276 symbol;
+#X obj 100 251 t b;
+#X msg 297 448 0;
+#X obj 25 75 t b b b;
+#X msg 128 157 open ev_pro_55.vert;
+#X msg 100 303 open ev_pro_55.frag;
+#X connect 0 0 9 0;
+#X connect 0 1 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 14 0;
+#X connect 2 1 21 0;
+#X connect 3 0 7 0;
+#X connect 4 0 9 0;
+#X connect 5 0 10 0;
+#X connect 6 0 11 0;
+#X connect 6 0 25 0;
+#X connect 7 0 2 0;
+#X connect 7 0 12 0;
+#X connect 8 0 2 0;
+#X connect 9 0 2 0;
+#X connect 9 1 5 0;
+#X connect 10 0 3 0;
+#X connect 11 0 3 1;
+#X connect 13 0 16 0;
+#X connect 15 0 2 0;
+#X connect 16 0 27 0;
+#X connect 16 1 0 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 28 0;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 24 0 29 0;
+#X connect 25 0 24 0;
+#X connect 26 0 21 0;
+#X connect 27 0 26 0;
+#X connect 27 1 10 0;
+#X connect 27 2 28 0;
+#X connect 28 0 0 0;
+#X connect 29 0 9 0;
+#X restore 64 79 pd glsl;
+#X obj 360 20 inlet;
+#X obj 359 146 outlet;
+#X obj 127 179 r /ev/pro/\$1/texture_id;
+#X obj 172 223 * -1;
+#X obj 172 245 + 1;
+#X obj 127 269 spigot 1;
+#X obj 316 229 spigot 0;
+#X obj 64 -36 inlet;
+#X obj 361 201 r /ev/pro/\$1/grid/tex/state;
+#X obj 316 179 r /ev/pro/\$1/grid/tex/texture_id;
+#X obj 172 201 r /ev/pro/\$1/grid/tex/state;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 3 0 0 0;
+#X connect 3 1 5 0;
+#X connect 4 0 3 1;
+#X connect 6 0 9 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 1;
+#X connect 9 0 0 1;
+#X connect 10 0 0 1;
+#X connect 11 0 1 0;
+#X connect 12 0 10 1;
+#X connect 13 0 10 0;
+#X connect 14 0 7 0;
+#X restore 492 232 pd nfp_curved_wall;
+#X msg 195 180 vis 1;
+#X obj 50 85 cnv 15 750 16 empty empty EXTENDED_VIEW_5x5_PROJECTION_MODULE
+20 8 0 14 -233017 -66577 0;
+#N canvas 563 22 377 674 init 0;
+#X obj 71 94 loadbang;
+#X obj 71 116 del 1000;
+#X obj 71 148 list append \$1;
+#X msg 71 175 \; /ev/pro/\$1/vertex/0/0/x -1.5 \; /ev/pro/\$1/vertex/0/0/y
+1.5 \; /ev/pro/\$1/vertex/0/1/x -0.75 \; /ev/pro/\$1/vertex/0/1/y 1.5
+\; /ev/pro/\$1/vertex/0/2/x 0 \; /ev/pro/\$1/vertex/0/2/y 1.5 \; /ev/pro/\$1/vertex/0/3/x
+0.75 \; /ev/pro/\$1/vertex/0/3/y 1.5 \; /ev/pro/\$1/vertex/0/4/x 1.5
+\; /ev/pro/\$1/vertex/0/4/y 1.5 \; /ev/pro/\$1/vertex/1/0/x -1.5 \;
+/ev/pro/\$1/vertex/1/0/y 0.75 \; /ev/pro/\$1/vertex/1/1/x -0.75 \;
+/ev/pro/\$1/vertex/1/1/y 0.75 \; /ev/pro/\$1/vertex/1/2/x 0 \; /ev/pro/\$1/vertex/1/2/y
+0.75 \; /ev/pro/\$1/vertex/1/3/x 0.75 \; /ev/pro/\$1/vertex/1/3/y 0.75
+\; /ev/pro/\$1/vertex/1/4/x 1.5 \; /ev/pro/\$1/vertex/1/4/y 0.75 \;
+/ev/pro/\$1/vertex/2/0/x -1.5 \; /ev/pro/\$1/vertex/2/0/y 0 \; /ev/pro/\$1/vertex/2/1/x
+-0.75 \; /ev/pro/\$1/vertex/2/1/y 0 \; /ev/pro/\$1/vertex/2/2/x 0 \;
+/ev/pro/\$1/vertex/2/2/y 0 \; /ev/pro/\$1/vertex/2/3/x 0.75 \; /ev/pro/\$1/vertex/2/3/y
+0 \; /ev/pro/\$1/vertex/2/4/x 1.5 \; /ev/pro/\$1/vertex/2/4/y 0 \;
+/ev/pro/\$1/vertex/3/0/x -1.5 \; /ev/pro/\$1/vertex/3/0/y -0.75 \;
+/ev/pro/\$1/vertex/3/1/x -0.75 \; /ev/pro/\$1/vertex/3/1/y -0.75 \;
+/ev/pro/\$1/vertex/3/2/x 0 \; /ev/pro/\$1/vertex/3/2/y -0.75 \; /ev/pro/\$1/vertex/3/3/x
+0.75 \; /ev/pro/\$1/vertex/3/3/y -0.75 \; /ev/pro/\$1/vertex/3/4/x
+1.5 \; /ev/pro/\$1/vertex/3/4/y -0.75 \; /ev/pro/\$1/vertex/4/0/x -1.5
+\; /ev/pro/\$1/vertex/4/0/y -1.5 \; /ev/pro/\$1/vertex/4/1/x -0.75
+\; /ev/pro/\$1/vertex/4/1/y -1.5 \; /ev/pro/\$1/vertex/4/2/x 0 \; /ev/pro/\$1/vertex/4/2/y
+-1.5 \; /ev/pro/\$1/vertex/4/3/x 0.75 \; /ev/pro/\$1/vertex/4/3/y -1.5
+\; /ev/pro/\$1/vertex/4/4/x 1.5 \; /ev/pro/\$1/vertex/4/4/y -1.5 \;
+/ev/pro/\$1/texture/top/left/x 0 \; /ev/pro/\$1/texture/top/left/y
+480 \; /ev/pro/\$1/texture/top/right/x 640 \; /ev/pro/\$1/texture/top/right/y
+480 \; /ev/pro/\$1/texture/bottom/left/x 0 \; /ev/pro/\$1/texture/bottom/left/y
+0 \; /ev/pro/\$1/texture/bottom/right/x 640 \; /ev/pro/\$1/texture/bottom/right/y
+0 \; /ev/pro/\$1/shade/top 0 \; /ev/pro/\$1/shade/right 0 \; /ev/pro/\$1/shade/bottom
+0 \; /ev/pro/\$1/shade/left 0 \; /ev/pro/\$1/state 1 \; /ev/pro/\$1/cursor/mode
+2 \; /ev/pro/\$1/set_alpha 1 \;;
+#X obj 38 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 2 0;
+#X coords 0 674 1 673 85 60 0;
+#X restore 108 231 pd init;
+#X obj 699 136 s /ev/pro/\$1/texture_id;
+#N canvas 73 81 820 661 mouseover 0;
+#X obj 34 37 abs/ev_mouseover_vertex /ev/pro/\$1 /0/0;
+#X obj 34 57 abs/ev_mouseover_vertex /ev/pro/\$1 /0/1;
+#X obj 34 77 abs/ev_mouseover_vertex /ev/pro/\$1 /0/2;
+#X obj 34 97 abs/ev_mouseover_vertex /ev/pro/\$1 /0/3;
+#X obj 34 117 abs/ev_mouseover_vertex /ev/pro/\$1 /0/4;
+#X obj 34 137 abs/ev_mouseover_vertex /ev/pro/\$1 /1/0;
+#X obj 34 157 abs/ev_mouseover_vertex /ev/pro/\$1 /1/1;
+#X obj 34 177 abs/ev_mouseover_vertex /ev/pro/\$1 /1/2;
+#X obj 34 197 abs/ev_mouseover_vertex /ev/pro/\$1 /1/3;
+#X obj 34 217 abs/ev_mouseover_vertex /ev/pro/\$1 /1/4;
+#X obj 34 237 abs/ev_mouseover_vertex /ev/pro/\$1 /2/0;
+#X obj 34 257 abs/ev_mouseover_vertex /ev/pro/\$1 /2/1;
+#X obj 34 277 abs/ev_mouseover_vertex /ev/pro/\$1 /2/2;
+#X obj 34 297 abs/ev_mouseover_vertex /ev/pro/\$1 /2/3;
+#X obj 34 317 abs/ev_mouseover_vertex /ev/pro/\$1 /2/4;
+#X obj 34 337 abs/ev_mouseover_vertex /ev/pro/\$1 /3/0;
+#X obj 34 357 abs/ev_mouseover_vertex /ev/pro/\$1 /3/1;
+#X obj 34 377 abs/ev_mouseover_vertex /ev/pro/\$1 /3/2;
+#X obj 34 397 abs/ev_mouseover_vertex /ev/pro/\$1 /3/3;
+#X obj 34 417 abs/ev_mouseover_vertex /ev/pro/\$1 /3/4;
+#X obj 34 437 abs/ev_mouseover_vertex /ev/pro/\$1 /4/0;
+#X obj 34 457 abs/ev_mouseover_vertex /ev/pro/\$1 /4/1;
+#X obj 34 477 abs/ev_mouseover_vertex /ev/pro/\$1 /4/2;
+#X obj 34 497 abs/ev_mouseover_vertex /ev/pro/\$1 /4/3;
+#X obj 34 517 abs/ev_mouseover_vertex /ev/pro/\$1 /4/4;
+#X obj 34 537 abs/ev_mouseover_texture /ev/pro/\$1 /top/left;
+#X obj 34 557 abs/ev_mouseover_texture /ev/pro/\$1 /top/right;
+#X obj 34 577 abs/ev_mouseover_texture /ev/pro/\$1 /bottom/left;
+#X obj 34 597 abs/ev_mouseover_texture /ev/pro/\$1 /bottom/right;
+#X obj 364 128 r /ev/pro/\$1/vertex/0/0/x;
+#X obj 364 150 s /ev/pro/\$1/vertex/top/left/x;
+#X obj 574 128 r /ev/pro/\$1/vertex/0/0/y;
+#X obj 574 150 s /ev/pro/\$1/vertex/top/left/y;
+#X obj 364 188 r /ev/pro/\$1/vertex/0/4/x;
+#X obj 574 188 r /ev/pro/\$1/vertex/0/4/y;
+#X obj 364 210 s /ev/pro/\$1/vertex/top/right/x;
+#X obj 574 210 s /ev/pro/\$1/vertex/top/right/y;
+#X obj 364 248 r /ev/pro/\$1/vertex/4/0/x;
+#X obj 364 270 s /ev/pro/\$1/vertex/bottom/left/x;
+#X obj 574 248 r /ev/pro/\$1/vertex/4/0/y;
+#X obj 574 270 s /ev/pro/\$1/vertex/bottom/left/y;
+#X obj 364 308 r /ev/pro/\$1/vertex/4/4/x;
+#X obj 364 330 s /ev/pro/\$1/vertex/bottom/right/x;
+#X obj 574 308 r /ev/pro/\$1/vertex/4/4/y;
+#X obj 574 330 s /ev/pro/\$1/vertex/bottom/right/y;
+#X connect 29 0 30 0;
+#X connect 31 0 32 0;
+#X connect 33 0 35 0;
+#X connect 34 0 36 0;
+#X connect 37 0 38 0;
+#X connect 39 0 40 0;
+#X connect 41 0 42 0;
+#X connect 43 0 44 0;
+#X restore 78 184 pd mouseover;
+#N canvas 29 22 954 756 storage_&_osc 0;
+#X obj 40 571 ds_reg \$1 /ev/pro/\$1/texture/top/left/x;
+#X obj 40 591 ds_reg \$1 /ev/pro/\$1/texture/top/left/y;
+#X obj 40 611 ds_reg \$1 /ev/pro/\$1/texture/top/right/x;
+#X obj 40 631 ds_reg \$1 /ev/pro/\$1/texture/top/right/y;
+#X obj 40 651 ds_reg \$1 /ev/pro/\$1/texture/bottom/left/x;
+#X obj 40 671 ds_reg \$1 /ev/pro/\$1/texture/bottom/left/y;
+#X obj 40 691 ds_reg \$1 /ev/pro/\$1/texture/bottom/right/x;
+#X obj 40 711 ds_reg \$1 /ev/pro/\$1/texture/bottom/right/y;
+#X obj 40 731 ds_reg \$1 /ev/pro/\$1/shade/top;
+#X obj 40 751 ds_reg \$1 /ev/pro/\$1/shade/right;
+#X obj 40 771 ds_reg \$1 /ev/pro/\$1/shade/bottom;
+#X obj 40 791 ds_reg \$1 /ev/pro/\$1/shade/left;
+#X obj 310 571 osc_bi \$1 /ev/pro/\$1/texture/top/left/x;
+#X obj 310 591 osc_bi \$1 /ev/pro/\$1/texture/top/left/y;
+#X obj 310 611 osc_bi \$1 /ev/pro/\$1/texture/top/right/x;
+#X obj 310 631 osc_bi \$1 /ev/pro/\$1/texture/top/right/y;
+#X obj 310 651 osc_bi \$1 /ev/pro/\$1/texture/bottom/left/x;
+#X obj 310 671 osc_bi \$1 /ev/pro/\$1/texture/bottom/left/y;
+#X obj 310 691 osc_bi \$1 /ev/pro/\$1/texture/bottom/right/x;
+#X obj 310 711 osc_bi \$1 /ev/pro/\$1/texture/bottom/right/y;
+#X obj 310 731 osc_bi \$1 /ev/pro/\$1/shade/top;
+#X obj 310 751 osc_bi \$1 /ev/pro/\$1/shade/right;
+#X obj 310 771 osc_bi \$1 /ev/pro/\$1/shade/bottom;
+#X obj 310 791 osc_bi \$1 /ev/pro/\$1/shade/left;
+#X obj 310 811 osc_bi \$1 /ev/pro/\$1/state;
+#X obj 310 831 osc_bi \$1 /ev/pro/\$1/cursor/mode;
+#X obj 310 851 osc_bi \$1 /ev/pro/\$1/set_alpha;
+#X obj 40 811 ds_reg \$1 /ev/pro/\$1/state nomorph;
+#X obj 40 831 ds_reg \$1 /ev/pro/\$1/cursor/mode nomorph;
+#X obj 40 851 ds_reg \$1 /ev/pro/\$1/set_alpha nomorph;
+#X obj 40 31 ds_reg \$1 /ev/pro/\$1/vertex/0/1/x;
+#X obj 40 71 ds_reg \$1 /ev/pro/\$1/vertex/0/3/x;
+#X obj 40 141 ds_reg \$1 /ev/pro/\$1/vertex/1/1/x;
+#X obj 40 181 ds_reg \$1 /ev/pro/\$1/vertex/1/3/x;
+#X obj 40 251 ds_reg \$1 /ev/pro/\$1/vertex/2/1/x;
+#X obj 40 11 ds_reg \$1 /ev/pro/\$1/vertex/0/0/x;
+#X obj 40 121 ds_reg \$1 /ev/pro/\$1/vertex/1/0/x;
+#X obj 40 231 ds_reg \$1 /ev/pro/\$1/vertex/2/0/x;
+#X obj 40 291 ds_reg \$1 /ev/pro/\$1/vertex/2/3/x;
+#X obj 40 341 ds_reg \$1 /ev/pro/\$1/vertex/3/0/x;
+#X obj 40 361 ds_reg \$1 /ev/pro/\$1/vertex/3/1/x;
+#X obj 40 401 ds_reg \$1 /ev/pro/\$1/vertex/3/3/x;
+#X obj 40 451 ds_reg \$1 /ev/pro/\$1/vertex/4/0/x;
+#X obj 40 471 ds_reg \$1 /ev/pro/\$1/vertex/4/1/x;
+#X obj 40 511 ds_reg \$1 /ev/pro/\$1/vertex/4/3/x;
+#X obj 40 51 ds_reg \$1 /ev/pro/\$1/vertex/0/2/x;
+#X obj 40 91 ds_reg \$1 /ev/pro/\$1/vertex/0/4/x;
+#X obj 40 161 ds_reg \$1 /ev/pro/\$1/vertex/1/2/x;
+#X obj 40 201 ds_reg \$1 /ev/pro/\$1/vertex/1/4/x;
+#X obj 40 271 ds_reg \$1 /ev/pro/\$1/vertex/2/2/x;
+#X obj 40 311 ds_reg \$1 /ev/pro/\$1/vertex/2/4/x;
+#X obj 40 381 ds_reg \$1 /ev/pro/\$1/vertex/3/2/x;
+#X obj 40 421 ds_reg \$1 /ev/pro/\$1/vertex/3/4/x;
+#X obj 40 491 ds_reg \$1 /ev/pro/\$1/vertex/4/2/x;
+#X obj 40 531 ds_reg \$1 /ev/pro/\$1/vertex/4/4/x;
+#X obj 250 11 ds_reg \$1 /ev/pro/\$1/vertex/0/0/y;
+#X obj 250 31 ds_reg \$1 /ev/pro/\$1/vertex/0/1/y;
+#X obj 250 51 ds_reg \$1 /ev/pro/\$1/vertex/0/2/y;
+#X obj 250 71 ds_reg \$1 /ev/pro/\$1/vertex/0/3/y;
+#X obj 250 91 ds_reg \$1 /ev/pro/\$1/vertex/0/4/y;
+#X obj 250 121 ds_reg \$1 /ev/pro/\$1/vertex/1/0/y;
+#X obj 250 141 ds_reg \$1 /ev/pro/\$1/vertex/1/1/y;
+#X obj 250 161 ds_reg \$1 /ev/pro/\$1/vertex/1/2/y;
+#X obj 250 181 ds_reg \$1 /ev/pro/\$1/vertex/1/3/y;
+#X obj 250 201 ds_reg \$1 /ev/pro/\$1/vertex/1/4/y;
+#X obj 250 231 ds_reg \$1 /ev/pro/\$1/vertex/2/0/y;
+#X obj 250 251 ds_reg \$1 /ev/pro/\$1/vertex/2/1/y;
+#X obj 250 271 ds_reg \$1 /ev/pro/\$1/vertex/2/2/y;
+#X obj 250 291 ds_reg \$1 /ev/pro/\$1/vertex/2/3/y;
+#X obj 250 311 ds_reg \$1 /ev/pro/\$1/vertex/2/4/y;
+#X obj 250 341 ds_reg \$1 /ev/pro/\$1/vertex/3/0/y;
+#X obj 250 361 ds_reg \$1 /ev/pro/\$1/vertex/3/1/y;
+#X obj 250 381 ds_reg \$1 /ev/pro/\$1/vertex/3/2/y;
+#X obj 250 401 ds_reg \$1 /ev/pro/\$1/vertex/3/3/y;
+#X obj 250 421 ds_reg \$1 /ev/pro/\$1/vertex/3/4/y;
+#X obj 250 451 ds_reg \$1 /ev/pro/\$1/vertex/4/0/y;
+#X obj 250 471 ds_reg \$1 /ev/pro/\$1/vertex/4/1/y;
+#X obj 250 491 ds_reg \$1 /ev/pro/\$1/vertex/4/2/y;
+#X obj 250 511 ds_reg \$1 /ev/pro/\$1/vertex/4/3/y;
+#X obj 250 531 ds_reg \$1 /ev/pro/\$1/vertex/4/4/y;
+#X obj 490 11 osc_bi \$1 /ev/pro/\$1/vertex/0/0/x;
+#X obj 490 31 osc_bi \$1 /ev/pro/\$1/vertex/0/1/x;
+#X obj 490 51 osc_bi \$1 /ev/pro/\$1/vertex/0/2/x;
+#X obj 490 71 osc_bi \$1 /ev/pro/\$1/vertex/0/3/x;
+#X obj 490 91 osc_bi \$1 /ev/pro/\$1/vertex/0/4/x;
+#X obj 490 121 osc_bi \$1 /ev/pro/\$1/vertex/1/0/x;
+#X obj 490 141 osc_bi \$1 /ev/pro/\$1/vertex/1/1/x;
+#X obj 490 161 osc_bi \$1 /ev/pro/\$1/vertex/1/2/x;
+#X obj 490 181 osc_bi \$1 /ev/pro/\$1/vertex/1/3/x;
+#X obj 490 201 osc_bi \$1 /ev/pro/\$1/vertex/1/4/x;
+#X obj 490 231 osc_bi \$1 /ev/pro/\$1/vertex/2/0/x;
+#X obj 490 251 osc_bi \$1 /ev/pro/\$1/vertex/2/1/x;
+#X obj 490 271 osc_bi \$1 /ev/pro/\$1/vertex/2/2/x;
+#X obj 490 291 osc_bi \$1 /ev/pro/\$1/vertex/2/3/x;
+#X obj 490 311 osc_bi \$1 /ev/pro/\$1/vertex/2/4/x;
+#X obj 490 341 osc_bi \$1 /ev/pro/\$1/vertex/3/0/x;
+#X obj 490 361 osc_bi \$1 /ev/pro/\$1/vertex/3/1/x;
+#X obj 490 381 osc_bi \$1 /ev/pro/\$1/vertex/3/2/x;
+#X obj 490 401 osc_bi \$1 /ev/pro/\$1/vertex/3/3/x;
+#X obj 490 421 osc_bi \$1 /ev/pro/\$1/vertex/3/4/x;
+#X obj 490 451 osc_bi \$1 /ev/pro/\$1/vertex/4/0/x;
+#X obj 490 471 osc_bi \$1 /ev/pro/\$1/vertex/4/1/x;
+#X obj 490 491 osc_bi \$1 /ev/pro/\$1/vertex/4/2/x;
+#X obj 490 511 osc_bi \$1 /ev/pro/\$1/vertex/4/3/x;
+#X obj 490 531 osc_bi \$1 /ev/pro/\$1/vertex/4/4/x;
+#X obj 700 11 osc_bi \$1 /ev/pro/\$1/vertex/0/0/y;
+#X obj 700 31 osc_bi \$1 /ev/pro/\$1/vertex/0/1/y;
+#X obj 700 51 osc_bi \$1 /ev/pro/\$1/vertex/0/2/y;
+#X obj 700 71 osc_bi \$1 /ev/pro/\$1/vertex/0/3/y;
+#X obj 700 91 osc_bi \$1 /ev/pro/\$1/vertex/0/4/y;
+#X obj 700 121 osc_bi \$1 /ev/pro/\$1/vertex/1/0/y;
+#X obj 700 141 osc_bi \$1 /ev/pro/\$1/vertex/1/1/y;
+#X obj 700 161 osc_bi \$1 /ev/pro/\$1/vertex/1/2/y;
+#X obj 700 181 osc_bi \$1 /ev/pro/\$1/vertex/1/3/y;
+#X obj 700 201 osc_bi \$1 /ev/pro/\$1/vertex/1/4/y;
+#X obj 700 231 osc_bi \$1 /ev/pro/\$1/vertex/2/0/y;
+#X obj 700 251 osc_bi \$1 /ev/pro/\$1/vertex/2/1/y;
+#X obj 700 271 osc_bi \$1 /ev/pro/\$1/vertex/2/2/y;
+#X obj 700 291 osc_bi \$1 /ev/pro/\$1/vertex/2/3/y;
+#X obj 700 311 osc_bi \$1 /ev/pro/\$1/vertex/2/4/y;
+#X obj 700 341 osc_bi \$1 /ev/pro/\$1/vertex/3/0/y;
+#X obj 700 361 osc_bi \$1 /ev/pro/\$1/vertex/3/1/y;
+#X obj 700 381 osc_bi \$1 /ev/pro/\$1/vertex/3/2/y;
+#X obj 700 401 osc_bi \$1 /ev/pro/\$1/vertex/3/3/y;
+#X obj 700 421 osc_bi \$1 /ev/pro/\$1/vertex/3/4/y;
+#X obj 700 451 osc_bi \$1 /ev/pro/\$1/vertex/4/0/y;
+#X obj 700 471 osc_bi \$1 /ev/pro/\$1/vertex/4/1/y;
+#X obj 700 491 osc_bi \$1 /ev/pro/\$1/vertex/4/2/y;
+#X obj 700 511 osc_bi \$1 /ev/pro/\$1/vertex/4/3/y;
+#X obj 700 531 osc_bi \$1 /ev/pro/\$1/vertex/4/4/y;
+#X restore 54 209 pd storage_&_osc;
+#X obj 699 109 inlet texture_id;
+#X obj 59 437 loadbang;
+#X obj 465 111 inlet gemlist;
+#X obj 492 209 separator;
+#X obj 465 287 s /ev/pro/\$1/mouse/gemlist;
+#N canvas 213 97 560 493 alpha 0;
+#X obj 125 366 outlet;
+#X obj 48 112 inlet;
+#X obj 48 135 t b;
+#X msg 125 285 set_alpha \$1;
+#X obj 125 262 f 1;
+#X obj 125 135 r /ev/pro/\$1/set_alpha;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X restore 699 407 pd alpha;
+#X obj 195 204 s pd-pro_\$1;
+#N canvas 858 48 373 530 pro_\$1 1;
+#X obj -8 0 cnv 15 360 380 empty empty settings 20 12 0 14 -228856
+-66577 0;
+#X obj 272 243 vsl 15 50 0.15 0 0 0 /ev/pro/\$1/shade/top /ev/pro/\$1/shade/top
+top 18 6 0 10 -262130 -1 -1 4900 1;
+#X obj 272 313 vsl 15 50 0 0.15 0 0 /ev/pro/\$1/shade/bottom /ev/pro/\$1/shade/bottom
+bottom 18 47 0 10 -262130 -1 -1 0 1;
+#X obj 290 296 hsl 50 15 0.15 0 0 0 /ev/pro/\$1/shade/right /ev/pro/\$1/shade/right
+right 20 -8 0 10 -262130 -1 -1 4900 1;
+#X obj 220 296 hsl 50 15 0 0.15 0 0 /ev/pro/\$1/shade/left /ev/pro/\$1/shade/left
+left 2 -8 0 10 -262130 -1 -1 0 1;
+#X obj 7 47 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/0/0/x /ev/pro/\$1/vertex/0/0/x
+x -10 7 0 10 -261234 -1 -1 -1.5 256;
+#X obj 7 63 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/0/0/y /ev/pro/\$1/vertex/0/0/y
+y -10 7 0 10 -261234 -1 -1 1.5 256;
+#X obj 7 119 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/2/0/x /ev/pro/\$1/vertex/2/0/x
+x -10 7 0 10 -261234 -1 -1 -1.5 256;
+#X obj 7 135 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/2/0/y /ev/pro/\$1/vertex/2/0/y
+y -10 7 0 10 -261234 -1 -1 0 256;
+#X obj 7 83 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/1/0/x /ev/pro/\$1/vertex/1/0/x
+x -10 7 0 10 -261234 -1 -1 -1.5 256;
+#X obj 7 99 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/1/0/y /ev/pro/\$1/vertex/1/0/y
+y -10 7 0 10 -261234 -1 -1 0.75 256;
+#X text -3 25 vertex position;
+#X text -5 233 texture position (px);
+#X text 166 233 shade size;
+#X obj 7 253 nbx 5 14 -1e+37 1e+37 0 0 /ev/pro/\$1/texture/top/left/x
+/ev/pro/\$1/texture/top/left/x x -10 7 0 10 -204800 -1 -1 0 256;
+#X obj 7 269 nbx 5 14 -1e+37 1e+37 0 0 /ev/pro/\$1/texture/top/left/y
+/ev/pro/\$1/texture/top/left/y y -10 7 0 10 -204800 -1 -1 480 256;
+#X obj 77 253 nbx 5 14 -1e+37 1e+37 0 0 /ev/pro/\$1/texture/top/right/x
+/ev/pro/\$1/texture/top/right/x x -10 7 0 10 -204800 -1 -1 640 256
+;
+#X obj 77 269 nbx 5 14 -1e+37 1e+37 0 0 /ev/pro/\$1/texture/top/right/y
+/ev/pro/\$1/texture/top/right/y y -10 7 0 10 -204800 -1 -1 480 256
+;
+#X obj 7 289 nbx 5 14 -1e+37 1e+37 0 0 /ev/pro/\$1/texture/bottom/left/x
+/ev/pro/\$1/texture/bottom/left/x x -10 7 0 10 -204800 -1 -1 0 256
+;
+#X obj 7 305 nbx 5 14 -1e+37 1e+37 0 0 /ev/pro/\$1/texture/bottom/left/y
+/ev/pro/\$1/texture/bottom/left/y y -10 7 0 10 -204800 -1 -1 0 256
+;
+#X obj 77 289 nbx 5 14 -1e+37 1e+37 0 0 /ev/pro/\$1/texture/bottom/right/x
+/ev/pro/\$1/texture/bottom/right/x x -10 7 0 10 -204800 -1 -1 640 256
+;
+#X obj 77 305 nbx 5 14 -1e+37 1e+37 0 0 /ev/pro/\$1/texture/bottom/right/y
+/ev/pro/\$1/texture/bottom/right/y y -10 7 0 10 -204800 -1 -1 0 256
+;
+#X obj 7 191 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/4/0/x /ev/pro/\$1/vertex/4/0/x
+x -10 7 0 10 -261234 -1 -1 -1.5 256;
+#X obj 7 207 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/4/0/y /ev/pro/\$1/vertex/4/0/y
+y -10 7 0 10 -261234 -1 -1 -1.5 256;
+#X obj 7 155 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/3/0/x /ev/pro/\$1/vertex/3/0/x
+x -10 7 0 10 -261234 -1 -1 -1.5 256;
+#X obj 7 171 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/3/0/y /ev/pro/\$1/vertex/3/0/y
+y -10 7 0 10 -261234 -1 -1 -0.75 256;
+#X obj 77 47 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/0/1/x /ev/pro/\$1/vertex/0/1/x
+x -10 7 0 10 -261234 -1 -1 -0.75 256;
+#X obj 77 63 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/0/1/y /ev/pro/\$1/vertex/0/1/y
+y -10 7 0 10 -261234 -1 -1 1.5 256;
+#X obj 77 119 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/2/1/x /ev/pro/\$1/vertex/2/1/x
+x -10 7 0 10 -261234 -1 -1 -0.75 256;
+#X obj 77 135 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/2/1/y /ev/pro/\$1/vertex/2/1/y
+y -10 7 0 10 -261234 -1 -1 0 256;
+#X obj 77 83 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/1/1/x /ev/pro/\$1/vertex/1/1/x
+x -10 7 0 10 -261234 -1 -1 -0.75 256;
+#X obj 77 99 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/1/1/y /ev/pro/\$1/vertex/1/1/y
+y -10 7 0 10 -261234 -1 -1 0.75 256;
+#X obj 77 191 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/4/1/x /ev/pro/\$1/vertex/4/1/x
+x -10 7 0 10 -261234 -1 -1 -0.75 256;
+#X obj 77 207 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/4/1/y /ev/pro/\$1/vertex/4/1/y
+y -10 7 0 10 -261234 -1 -1 -1.5 256;
+#X obj 77 155 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/3/1/x /ev/pro/\$1/vertex/3/1/x
+x -10 7 0 10 -261234 -1 -1 -0.75 256;
+#X obj 77 171 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/3/1/y /ev/pro/\$1/vertex/3/1/y
+y -10 7 0 10 -261234 -1 -1 -0.75 256;
+#X obj 147 47 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/0/2/x /ev/pro/\$1/vertex/0/2/x
+x -10 7 0 10 -261234 -1 -1 0 256;
+#X obj 147 63 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/0/2/y /ev/pro/\$1/vertex/0/2/y
+y -10 7 0 10 -261234 -1 -1 1.5 256;
+#X obj 147 119 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/2/2/x /ev/pro/\$1/vertex/2/2/x
+x -10 7 0 10 -261234 -1 -1 0 256;
+#X obj 147 135 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/2/2/y /ev/pro/\$1/vertex/2/2/y
+y -10 7 0 10 -261234 -1 -1 0 256;
+#X obj 147 83 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/1/2/x /ev/pro/\$1/vertex/1/2/x
+x -10 7 0 10 -261234 -1 -1 0 256;
+#X obj 147 99 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/1/2/y /ev/pro/\$1/vertex/1/2/y
+y -10 7 0 10 -261234 -1 -1 0.75 256;
+#X obj 147 191 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/4/2/x /ev/pro/\$1/vertex/4/2/x
+x -10 7 0 10 -261234 -1 -1 0 256;
+#X obj 147 207 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/4/2/y /ev/pro/\$1/vertex/4/2/y
+y -10 7 0 10 -261234 -1 -1 -1.5 256;
+#X obj 147 155 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/3/2/x /ev/pro/\$1/vertex/3/2/x
+x -10 7 0 10 -261234 -1 -1 0 256;
+#X obj 147 171 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/3/2/y /ev/pro/\$1/vertex/3/2/y
+y -10 7 0 10 -261234 -1 -1 -0.75 256;
+#X obj 217 47 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/0/3/x /ev/pro/\$1/vertex/0/3/x
+x -10 7 0 10 -261234 -1 -1 0.75 256;
+#X obj 217 63 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/0/3/y /ev/pro/\$1/vertex/0/3/y
+y -10 7 0 10 -261234 -1 -1 1.5 256;
+#X obj 217 119 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/2/3/x /ev/pro/\$1/vertex/2/3/x
+x -10 7 0 10 -261234 -1 -1 0.75 256;
+#X obj 217 135 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/2/3/y /ev/pro/\$1/vertex/2/3/y
+y -10 7 0 10 -261234 -1 -1 0 256;
+#X obj 217 83 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/1/3/x /ev/pro/\$1/vertex/1/3/x
+x -10 7 0 10 -261234 -1 -1 0.75 256;
+#X obj 217 99 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/1/3/y /ev/pro/\$1/vertex/1/3/y
+y -10 7 0 10 -261234 -1 -1 0.75 256;
+#X obj 217 191 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/4/3/x /ev/pro/\$1/vertex/4/3/x
+x -10 7 0 10 -261234 -1 -1 0.75 256;
+#X obj 217 207 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/4/3/y /ev/pro/\$1/vertex/4/3/y
+y -10 7 0 10 -261234 -1 -1 -1.5 256;
+#X obj 217 155 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/3/3/x /ev/pro/\$1/vertex/3/3/x
+x -10 7 0 10 -261234 -1 -1 0.75 256;
+#X obj 217 171 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/3/3/y /ev/pro/\$1/vertex/3/3/y
+y -10 7 0 10 -261234 -1 -1 -0.75 256;
+#X obj 287 47 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/0/4/x /ev/pro/\$1/vertex/0/4/x
+x -10 7 0 10 -261234 -1 -1 1.5 256;
+#X obj 287 63 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/0/4/y /ev/pro/\$1/vertex/0/4/y
+y -10 7 0 10 -261234 -1 -1 1.5 256;
+#X obj 287 119 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/2/4/x /ev/pro/\$1/vertex/2/4/x
+x -10 7 0 10 -261234 -1 -1 1.5 256;
+#X obj 287 135 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/2/4/y /ev/pro/\$1/vertex/2/4/y
+y -10 7 0 10 -261234 -1 -1 0 256;
+#X obj 287 83 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/1/4/x /ev/pro/\$1/vertex/1/4/x
+x -10 7 0 10 -261234 -1 -1 1.5 256;
+#X obj 287 99 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/1/4/y /ev/pro/\$1/vertex/1/4/y
+y -10 7 0 10 -261234 -1 -1 0.75 256;
+#X obj 287 191 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/4/4/x /ev/pro/\$1/vertex/4/4/x
+x -10 7 0 10 -261234 -1 -1 1.5 256;
+#X obj 287 207 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/4/4/y /ev/pro/\$1/vertex/4/4/y
+y -10 7 0 10 -261234 -1 -1 -1.5 256;
+#X obj 287 155 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/3/4/x /ev/pro/\$1/vertex/3/4/x
+x -10 7 0 10 -261234 -1 -1 1.5 256;
+#X obj 287 171 nbx 5 14 -10000 10000 0 0 /ev/pro/\$1/vertex/3/4/y /ev/pro/\$1/vertex/3/4/y
+y -10 7 0 10 -261234 -1 -1 -0.75 256;
+#X obj -8 386 cnv 15 170 125 empty empty grid_texture 20 12 0 14 -233017
+-66577 0;
+#X obj 5 414 tgl 15 1 /ev/pro/\$1/grid/tex/state /ev/pro/\$1/grid/tex/state
+state 17 7 0 10 -4034 -1 -1 0 1;
+#X obj 5 436 bng 15 250 50 0 /ev/pro/\$1/grid/tex/open /ev/pro/\$1/grid/tex/open
+open_new_file 17 7 0 10 -262130 -1 -1;
+#X obj 5 454 bng 15 250 50 0 /ev/pro/\$1/grid/tex/load /ev/pro/\$1/grid/tex/load
+reload 17 7 0 10 -204800 -1 -1;
+#X obj 52 483 tgl 15 0 /ev/pro/\$1/grid/tex/flip/horizontal /ev/pro/\$1/grid/tex/flip/horizontal
+<-> 17 7 0 10 -204786 -1 -1 0 1;
+#X obj 88 483 tgl 15 0 /ev/pro/\$1/grid/tex/flip/vertical /ev/pro/\$1/grid/tex/flip/vertical
+^v 17 7 0 10 -204786 -1 -1 0 1;
+#X text 19 483 flip:;
+#X obj 172 386 cnv 15 180 125 empty empty cursor_interaction 20 12
+0 14 -233017 -66577 0;
+#X obj 188 427 vradio 15 1 0 5 /ev/pro/\$1/cursor/mode /ev/pro/\$1/cursor/mode
+cursor_mode 0 -8 0 10 -262144 -1 -1 0;
+#X text 205 426 off;
+#X text 205 442 vertex mouseover;
+#X text 205 457 vertex permanent;
+#X text 205 472 texture mouseover;
+#X text 205 487 texture permanent;
+#X obj -8 336 cnv 15 170 44 empty empty alpha 20 12 0 14 -162280 -66577
+0;
+#X obj -2 360 tgl 15 0 /ev/pro/\$1/set_alpha /ev/pro/\$1/set_alpha
+set_alpha_to_'1' 17 7 0 10 -262144 -1 -1 0 1;
+#X coords 0 0 1 1 155 300 0;
+#X restore 195 229 pd pro_\$1;
+#X obj 54 360 cnv 15 360 60 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X text 58 396 Inlet 2: texture ID;
+#X text 58 380 Inlet 1: gemlist;
+#X obj 54 292 cnv 15 360 60 empty empty creation_arguments: 3 8 0 12
+-191407 -1 0;
+#X text 59 311 1st: module ID \, needs to be unique \; 2nd: storage
+domain \, see [ev_storage-help] for details;
+#X obj 498 133 r /ev/pro/\$1/state;
+#X obj 465 161 spigot;
+#X obj 48 254 abs/ev_pro_grid \$1 \$2;
+#X obj 59 494 print ev_pro_55;
+#X obj 465 183 t a a;
+#X msg 59 459 (c)2012 Cyrille Henry | Peter Venus | Marian Weger \,
+part of EXTENDED VIEW toolkit | gpl v3;
+#X connect 1 0 11 0;
+#X connect 3 0 8 0;
+#X connect 4 0 8 0;
+#X connect 7 0 10 1;
+#X connect 9 0 3 0;
+#X connect 9 0 4 0;
+#X connect 9 0 22 0;
+#X connect 10 0 6 0;
+#X connect 11 0 23 0;
+#X connect 17 0 14 0;
+#X connect 18 0 35 0;
+#X connect 19 0 31 0;
+#X connect 20 0 10 0;
+#X connect 22 0 8 0;
+#X connect 30 0 31 1;
+#X connect 31 0 34 0;
+#X connect 34 0 21 0;
+#X connect 34 1 20 0;
+#X connect 35 0 33 0;
+#X coords 0 -1 1 1 200 50 1 100 117;

@@ -1,0 +1,121 @@
+#N canvas 146 130 775 650 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 12 12 cnv 15 740 16 empty empty EXTENDED_VIEW_VIDEOPLAYBACK_MODULE
+2 8 0 14 -99865 -262144 0;
+#X obj 392 563 cnv 15 360 45 empty empty PARAMETER_LIST_for_ev_vid
+3 8 0 12 -128992 -262144 0;
+#X obj 486 100 gemwin 20;
+#X msg 486 69 0 \, destroy;
+#X text 380 41 CLICK HERE:;
+#X obj 392 121 gemhead;
+#X obj 12 245 cnv 15 360 45 empty empty creation_arguments: 5 8 0 12
+-162280 -1 0;
+#X obj 12 296 cnv 15 360 40 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X text 16 308 Inlet 1: GEMlist;
+#X obj 12 39 cnv 15 360 200 empty empty description 5 12 0 12 -233017
+-66577 0;
+#X text 17 193 Contains specific storage_&_osc-subpatch which houses
+abstractions to register parameters for storage and osc communication
+;
+#X obj 584 346 unpack f f;
+#X floatatom 584 368 5 0 0 0 - - -;
+#X floatatom 641 368 5 0 0 0 - - -;
+#X text 580 384 video resolution;
+#X floatatom 507 457 5 0 0 0 - - -;
+#X floatatom 546 414 5 0 0 0 - - -;
+#X text 486 469 elapsed time;
+#X text 522 429 video length;
+#N canvas 1 54 434 136 init 0;
+#X obj 122 67 ../ev-main/ev_declare;
+#X restore 704 70 pd init;
+#X obj 392 530 bng 15 250 50 0 empty empty bangs_when_fadeIN_ends 17
+7 0 10 -262144 -1 -1;
+#X obj 469 494 bng 15 250 50 0 empty empty bangs_when_end_is_reached
+17 7 0 10 -262144 -1 -1;
+#X obj 12 343 cnv 15 360 300 empty empty GUI_controls 5 8 0 12 -204800
+-66577 0;
+#X obj 392 323 route fIn fOut end elapsed length dimen;
+#X obj 430 512 bng 15 250 50 0 empty empty bangs_when_fadeout_starts
+17 7 0 10 -262144 -1 -1;
+#X obj 392 247 pix_texture;
+#X obj 392 269 rectangle 4 3;
+#X text 146 308 Outlet 1: GEMlist;
+#X text 17 257 1st: module ID \, needs to be unique \; 2nd: storage
+domain \, see [ev_storage-help] for details;
+#N canvas 712 224 379 208 explanation_modes 0;
+#X text 12 13 explanation of [time_accurate] and [frame_accurate] \;
+\; one deploys a counter that counts up to the end of the file \, which
+means \, if the cpu is under heavy load \, playback speed maybe gets
+slow. The [time accurate]-mode relies on the realtime-object and makes
+sure \, that the playback-speed of the file is constant. If CPU-Load
+is up \, it results in frames being dropped/jumped over. the visual
+output is still rather ok and looks fluid.;
+#X restore 225 428 pd explanation_modes;
+#X text 15 59 video playback module with controls over In/Out fades
+\, and time-adjustments \; All values for length are given in frames.
+Fade-length is given in frames as well. Fade-out-time-value displays
+the length of the fade-out in frames. \; The numberbox [sec:] displays
+entered or actively changed values in seconds. Framerate of loaded
+videos have to be entered manually \, but is saved within scenes of
+the Extended-view-storage system.;
+#X obj 636 253 loadbang;
+#X obj 636 323 s /ev/vid/\$0/filename;
+#X msg 636 301 ../media/diver.mov;
+#X obj 636 275 del 1000;
+#X text 396 615 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X msg 451 42 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
+#X obj 392 143 ev_vid \$0;
+#X obj 392 298 r /ev/vid/\$0/info;
+#X text 15 356 on/off : switches the module and its processing on/off
+\; open : open file dialog \; loop_on/off : switch file looping on/off
+\; play & stop : should do what it says \; frame/time accurate : switches
+between 2 playback modes. open subpatch for further details \; \; fps
+: set framerate of loaded file \; settings : opens advanced settings
+\; \; __________________advanced settings________________________ start/end_time
+: set in and out points of loaded video \; fade_in/out_time : set fades
+directly in the player (compare to the transition-possibilities in
+[ev_storage].. see [ev_storage-help] for details) \; lvl : set gain/level
+for video (0...100) \; form : adjust shape of the fade-curve (0...100)
+\; weight : fade between linear and curved fade-behaviour (0-100) \;
+show_curve: shows the fade-curve \; flip: flips content horicontal
+and vertical;
+#N canvas 1 54 470 519 parameter_list 0;
+#X text 28 13 control parameters for [ev_vid];
+#X text 25 36 /ev/vid/<id>/fadeIn_time --- fadeIn-time in frames \;
+/ev/vid/<id>/fadeOut_time --- fadeOut-time in frames \; /ev/vid/<id>/start_time
+--- time offset in frames(adjusting length of file \, non destructive)
+\; /ev/vid/<id>/end_time --in frames \, adjusting endpoint of videofile
+\, in frames \, non destructive \; /ev/vid/<id>/filename --- set new
+video file path \; /ev/vid/<id>/start --- start video \; /ev/vid/<id>/stop
+--- stop video \; /ev/vid/<id>/open --- start open dialog \; /ev/vid/<id>/texture_id
+--- access as texture from outside \; /ev/vid/<id>/gain --- sets max
+gain level of video \; /ev/vid/<id>/weight --- adjusts weight of the
+fading-curve \; /ev/vid/<id>/form --- alters the shape of the fade
+curve \; /ev/vid/<id>/loop --- play video in a loop \; /ev/vid/<id>/flip/horicontal
+--- flip video horicontally \; /ev/vid/<id>/flip/vertical --- flip
+video vertically \; /ev/vid/\$1/curve/vis --- show fade curve \;;
+#X restore 574 582 pd parameter_list for ev_vid;
+#X text 395 582 open subpatch for list;
+#X connect 3 0 2 0;
+#X connect 5 0 37 0;
+#X connect 11 0 12 0;
+#X connect 11 1 13 0;
+#X connect 23 0 20 0;
+#X connect 23 1 24 0;
+#X connect 23 2 21 0;
+#X connect 23 3 15 0;
+#X connect 23 4 16 0;
+#X connect 23 5 11 0;
+#X connect 25 0 26 0;
+#X connect 31 0 34 0;
+#X connect 33 0 32 0;
+#X connect 34 0 33 0;
+#X connect 36 0 2 0;
+#X connect 37 0 25 0;
+#X connect 38 0 23 0;

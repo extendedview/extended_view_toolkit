@@ -1,0 +1,106 @@
+#N canvas 0 169 1151 731 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X text 38 356 creation argument: id;
+#X obj 12 7 cnv 15 1120 16 empty empty EXTENDED_VIEW_PANORAMIC_IMAGE_STITCHING_MODULE
+2 8 0 14 -99865 -262144 0;
+#X obj 12 248 cnv 15 360 100 empty empty creation_arguments: 5 12 0
+12 -162280 -1 0;
+#X obj 12 341 cnv 15 360 70 empty empty inlets/outlets 5 12 0 12 -233017
+-66577 0;
+#X text 17 361 Inlet 1: GEMlist;
+#X obj 12 35 cnv 15 360 210 empty empty description 5 12 0 12 -233017
+-66577 0;
+#X text 14 205 Contains specific storage_&_osc-subpatch which houses
+abstractions to register parameters for storage and osc communication
+;
+#X text 15 104 Gives control over position of the image to align it
+with other sources(shift x/y). Normally you would used multiple of
+those modules to display a continouus panoramic video out of multiple
+\, related sources. Can be controlled via OSC \, which uses the same
+syntax as the EV internal send/recieve message system see parameter
+list below for additional information about the specific parameter-names.
+;
+#X obj 12 420 cnv 15 360 170 empty empty PARAMETER_LIST_for_ev_pano_stitch
+20 8 0 14 -233017 -66577 0;
+#X obj 663 204 gemwin 20;
+#X msg 675 166 0 \, destroy;
+#X text 592 142 CLICK HERE:;
+#X obj 389 214 gemhead;
+#X text 11 614 (c)2011 Cyrille Henry \, Peter Venus & Marian Weger
+/part of EXTENDED VIEW toolkit/ gpl v3;
+#N canvas 215 22 496 642 init 0;
+#X obj 66 117 loadbang;
+#X text 80 169 This is only needed for this help file.;
+#X text 74 184 To store your settings \, it is recommended;
+#X text 80 199 to use the integrated data storage system [ev_storage].
+;
+#X obj 66 146 del 1000;
+#X obj 122 67 ../ev-main/ev_declare;
+#X msg 66 223 \; /ev/pano/group/id0/scale/y 1.38 \; /ev/pano/group/id0/scale/x
+1.38 \; /ev/pano/group/id0/trim/bottom 0.07 \; /ev/pano/group/id0/trim/top
+-0.01 \; /ev/pano/group/id0/trim/state 1 \; /ev/pic/id3/filename ../media/cam4.jpg
+\; /ev/pano/stitch/id3/shift/y 0.0154839 \; /ev/pano/stitch/id3/shift/x
+-0.0677419 \; /ev/pano/stitch/id3/shade 16.129 \; /ev/pic/id2/filename
+../media/cam3.jpg \; /ev/pano/stitch/id2/shift/y 0.0322581 \; /ev/pano/stitch/id2/shift/x
+-0.103226 \; /ev/pano/stitch/id2/shade 25.8065 \; /ev/pic/id1/filename
+../media/cam2.jpg \; /ev/pano/stitch/id1/shift/y 0.0632258 \; /ev/pano/stitch/id1/shift/x
+-0.0412903 \; /ev/pano/stitch/id1/shade 35.4839 \; /ev/pic/id0/filename
+../media/cam1.jpg \;;
+#X connect 0 0 4 0;
+#X connect 4 0 6 0;
+#X restore 842 220 pd init;
+#X text 16 439 /ev/pic/<id>/flip --- flip image \; ---> (0=off \, 1=both
+\, 2=horizontal \, 3=vertical) \; /ev/pic/<id>/shade --- amount of
+softedging on left side \; /ev/pic/<id>/shift/x --- shift in x-direction
+\; /ev/pic/<id>/shift/y --- shift in y-direction \; /ev/pic/<id>/lens_compensation
+-- lens compensation factor \; /ev/pic/<id>/vfx --- turn on video effects
+\; /ev/pic/<id>/open --- start open dialog \; /ev/pic/<id>/load ---
+load/reload current file \; /ev/pic/<id>/filename --- set new image
+path \; /ev/pic/<id>/texture_id --- access as texture from outside
+\;;
+#X obj 389 244 ev_pano_group id0;
+#X obj 389 365 ev_pic id0;
+#X obj 389 485 ev_pano_stitch id0;
+#X text 15 52 Panoramic image stitching module. Based on openGLshader
+it is possible to softedge the left edge of the image as well as correct
+the lens-distortion of the used camera(within some limits).;
+#X text 147 361 Outlet 1: GEMlist;
+#X obj 383 35 cnv 15 160 145 empty empty GUI_controls 5 8 0 12 -204800
+-66577 0;
+#X text 385 61 shift x/y: translates;
+#X text 451 72 image in x/y;
+#X text 385 87 shade: sets width of;
+#X text 427 97 left softedge;
+#X text 385 111 on/off: toggles state;
+#X text 386 146 rotate: rotate image;
+#X text 386 126 pillow: correction factor;
+#X text 15 270 1st: the modules ID \, neccessary when used multiple
+times in a patch and for the control parameters;
+#X text 15 300 2nd: save domain;
+#X obj 941 365 ev_pic id3;
+#X obj 757 365 ev_pic id2;
+#X obj 573 365 ev_pic id1;
+#X obj 561 33 cnv 15 360 60 empty empty Important_note: 20 12 0 14
+-261234 -258113 0;
+#X text 574 59 This module is designed to work together with [ev_pano_group]
+and should not be used independently.;
+#X obj 573 485 ev_pano_stitch id1;
+#X obj 757 485 ev_pano_stitch id2;
+#X obj 941 485 ev_pano_stitch id3;
+#X msg 663 144 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
+#X connect 10 0 9 0;
+#X connect 12 0 16 0;
+#X connect 16 1 17 0;
+#X connect 16 2 33 0;
+#X connect 16 3 32 0;
+#X connect 16 4 31 0;
+#X connect 17 0 18 0;
+#X connect 31 0 38 0;
+#X connect 32 0 37 0;
+#X connect 33 0 36 0;
+#X connect 39 0 9 0;
+#X coords 0 731 1 730 85 60 0;

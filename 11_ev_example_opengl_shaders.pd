@@ -1,0 +1,99 @@
+#N canvas 131 55 794 756 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 6 164 cnv 15 380 750 empty empty Two-pass_Gaussian_Blur 20 12
+0 14 -262130 -66577 0;
+#X obj 36 236 cnv 15 340 340 empty empty Horizontal_blur 20 12 0 14
+-261682 -66577 0;
+#X obj 13 586 cnv 15 340 320 empty empty Vertical_blur 20 12 0 14 -261682
+-66577 0;
+#X obj 6 26 cnv 15 700 16 empty empty exmple:_OpenGL_Shaders 2 8 0
+14 -99865 -262144 0;
+#X text 403 871 (c)2012 Marian Weger \; part of EXTENDEDVIEW toolkit/
+gpl v3;
+#X obj 396 353 cnv 15 310 330 empty empty controls_for_shader 20 12
+0 14 -204800 -66577 0;
+#X obj 95 352 loadbang;
+#X obj 73 353 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 45 416 pix_image;
+#X text 427 490 These controls are only for the;
+#X text 429 536 Other shaders might need;
+#X text 429 549 different controls.;
+#X obj 6 52 cnv 15 700 100 empty empty description 5 12 0 12 -261234
+-66577 0;
+#X obj 396 224 cnv 15 310 120 empty empty Create_Gem_Window 20 12 0
+14 -204786 -66577 0;
+#X obj 417 319 gemwin 20;
+#X msg 453 295 0 \, destroy;
+#X msg 417 269 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
+#X text 460 251 CLICK HERE TO START:;
+#X obj 476 194 ../ev-main/ev_declare;
+#X obj 45 447 ev_glsl gaussian_blur_horizontal;
+#X obj 18 211 t a a;
+#X msg 410 405 blur_size \$1;
+#X obj 413 381 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 427 503 "gaussian_blur" shader \, loaded;
+#X text 429 516 in this example.;
+#X obj 410 650 t a;
+#X obj 396 700 cnv 15 310 160 empty empty Resulting_Image 20 12 0 14
+-232576 -66577 0;
+#X text 437 169 set pathes to the needed abstractions;
+#X text 9 79 This example shows \, how OpenGL Shaders are implemented
+with Extended View Toolkit.;
+#X text 436 72 See [ev_glsl-help] for more information (./ev-glsl/ev_glsl-help.pd).
+;
+#X msg 73 380 open media/cam2.jpg;
+#X text 57 489 apply the "gaussian_blur_horizontal" shader \, that
+is specified by 1st creation argument.;
+#X text 31 760 apply the "gaussian_blur_vertical" shader \, that is
+specified by 1st creation argument.;
+#X obj 45 264 ev_buf horizontal;
+#X obj 18 610 ev_buf vertical;
+#X obj 91 830 r /ev/buf/horizontal/texture_id;
+#X obj 497 776 r /ev/buf/vertical/texture_id;
+#X text 118 215 should use the same settings.;
+#X text 9 109 Here \, the implementation of a 2-pass gaussian blur
+is shown. It consists of two indidual shaders \, that are computed
+one after another.;
+#X text 89 798 The result of buffer 1 (horizontal) \; is used in buffer
+2 (vertical);
+#X text 487 727 The result of buffer 2 (vertical) \; containing the
+final blurred image \; is rendered onto a rectangle.;
+#X text 430 432 both \, "gaussian_blur_horizontal" and "gaussian_blur_vertical"
+\; use the same control variable "blur_size".;
+#X text 123 408 load image;
+#X obj 18 716 ev_glsl gaussian_blur_vertical;
+#X obj 416 741 gemhead 49;
+#X obj 18 189 gemhead 48;
+#X text 118 201 both [ev_buf] ("horizontal" and "vertical");
+#X text 402 906 Source of fragment shader: http://www.gamerendering.com/2008/10/11/gaussian-blur-filter-shader/
+;
+#X obj 45 529 ev_rectangle horizontal;
+#X obj 18 858 ev_rectangle vertical;
+#X obj 416 809 ev_rectangle result;
+#X connect 6 0 30 0;
+#X connect 7 0 30 0;
+#X connect 8 0 19 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;
+#X connect 19 0 48 0;
+#X connect 20 0 34 0;
+#X connect 20 1 33 0;
+#X connect 21 0 25 0;
+#X connect 21 0 19 1;
+#X connect 22 0 21 0;
+#X connect 25 0 43 1;
+#X connect 30 0 8 0;
+#X connect 33 0 8 0;
+#X connect 34 0 43 0;
+#X connect 35 0 49 1;
+#X connect 36 0 50 1;
+#X connect 43 0 49 0;
+#X connect 44 0 50 0;
+#X connect 45 0 20 0;
+#X coords 0 756 1 755 85 60 0;

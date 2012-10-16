@@ -1,0 +1,125 @@
+#N canvas 219 141 828 810 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj -156 1 cnv 15 785 32 empty empty EXTENDED_VIEW_3x3_easy_projection_module
+20 12 0 14 -233017 -66577 0;
+#X obj 249 38 cnv 15 380 400 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X obj 391 50 gemhead;
+#X obj 391 102 pix_image;
+#X obj 391 124 pix_texture;
+#X obj 447 50 loadbang;
+#X obj 261 50 gemhead;
+#X obj -156 445 cnv 15 400 220 empty empty description 5 8 0 12 -233017
+-66577 0;
+#X obj 261 319 ev_gemwin \$0;
+#X msg 447 72 open ../media/cam2.jpg;
+#X obj 261 154 ev_pro_33easy \$0;
+#X obj 249 513 cnv 15 380 60 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X text 253 549 Inlet 2: texture ID;
+#X text 253 533 Inlet 1: gemlist;
+#X obj 249 445 cnv 15 380 60 empty empty creation_arguments: 3 8 0
+12 -191407 -1 0;
+#X text 254 464 1st: module ID \, needs to be unique \; 2nd: storage
+domain \, see [ev_storage-help] for details;
+#X text 423 533 Outlet 1: gemlist;
+#X text 258 296 [ev_gemwin] is needed for mouse interaction support.
+;
+#X text 262 234 [ev_declare] is needed to load all the pathes.;
+#X obj 249 583 cnv 15 380 60 empty empty parameter_list 5 8 0 12 -233017
+-66577 0;
+#N canvas 1 55 374 532 parameter-list 0;
+#X obj -164 2 cnv 15 360 510 empty empty PARAMETER_LIST 20 8 0 14 -233017
+-66577 0;
+#X text -157 29 /ev/pro/<id>/vertex/top/left/x ---- top left x \; /ev/pro/<id>/vertex/top/left/y
+--- top left y \; /ev/pro/<id>/vertex/top/right/x --- top right x \;
+/ev/pro/<id>/vertex/top/right/y --- top right y \; /ev/pro/<id>/vertex/bottom/left/x
+--- bottom left x \; /ev/pro/<id>/vertex/bottom/left/y --- bottom left
+y \; /ev/pro/<id>/vertex/bottom/right/x --- bottom right x \; /ev/pro/<id>/vertex/bottom/right/y
+--- bottom right y \; /ev/pro/<id>/texture/top/left/x --- top left
+x \; /ev/pro/<id>/texture/top/left/y --- top left y \; /ev/pro/<id>/texture/top/right/x
+--- top right x \; /ev/pro/<id>/texture/top/right/y --- top right y
+\; /ev/pro/<id>/texture/bottom/left/x --- bottom left x \; /ev/pro/<id>/texture/bottom/left/y
+--- bottom left y \; /ev/pro/<id>/texture/bottom/right/x --- bottom
+right x \; /ev/pro/<id>/texture/bottom/right/y --- bottom right y \;
+/ev/pro/<id>/state --- turn module on (1) / off (0) \; /ev/pro/<id>/res
+--- change between curved or non-curved \; /ev/pro/<id>/texture/weight/x
+--- distance weight x \; /ev/pro/<id>/texture/weight/y --- distance
+weight y \; /ev/pro/<id>/set_alpha --- set alpha to value "1" \; /ev/pro/<id>/grid/state
+--- turn on(1)/off(0) grid \; /ev/pro/<id>/grid/res/x --- grid horizontal
+resolution \; /ev/pro/<id>/grid/res/y --- vertical grid resolution
+\; /ev/pro/<id>/grid/width --- grid line width \; /ev/pro/<id>/grid/color/h
+--- grid color hue \; /ev/pro/<id>/grid/color/s --- grid color saturation
+\; /ev/pro/<id>/grid/color/v --- grid color value \; /ev/pro/<id>/grid/color/a
+--- grid color alpha (opacity) \; /ev/pro/<id>/grid/tex/state --- grid
+texture state \; /ev/pro/<id>/grid/tex/open --- grid texture open dialog
+\; /ev/pro/<id>/grid/tex/load --- reload grid texture \; /ev/pro/<id>/grid/tex/flip/horizontal
+--- flip grid tex \; /ev/pro/<id>/grid/tex/flip/vertical --- flip grid
+tex \; /ev/pro/<id>/cursor/mode --- mouse interaction mode \; \;;
+#X restore 346 612 pd parameter-list;
+#X text 436 414 click "create" to start;
+#X obj 261 257 ../ev-main/ev_declare;
+#X text -152 462 This abstraction is an alternative to the [ev_pro_33]
+abstraction \, especially for use on older graphic chips. It has the
+same functionality to distort a vertex in 9 cornerpins. Input is textured
+on a [curve3d] object \, where all 9 cornerpins can be translated independently.
+It also makes use of the [curve3d] functionality to change the resolution
+of the objects grid in order to allow for curved or non-curved edges
+\; IMPORTANT: the vertex parameters have the same \, ID-related \,
+send&receive-parameters. In the case you mix easymap and pro_22 or
+pro_33 abstraction in one patch \, make sure they all have different
+IDs. \; This is useful \, if you realize problems with the shaders
+\, so that you can quickly replace the projection modules with the
+easymap-modules and can still load the same presets.;
+#X obj 249 651 cnv 15 380 140 empty empty additional_information 5
+8 0 12 -233017 -66577 0;
+#X text 263 669 Can be controlled via OSC \, which uses the same syntax
+as the EV internal send/recieve message system see paramter-list below
+for additional information about the specific parameter-names.;
+#X text 261 734 This Object is connected to the Data Storage System.
+All the vertex and texture coordinates and the softedge settings can
+be morphed between scenes individually.;
+#X obj -156 38 cnv 15 400 400 empty empty gui_controls 5 8 0 12 -204800
+-66577 0;
+#X text -153 58 on/off: toggles projection plane state;
+#X text -153 70 settings: opens settings window;
+#X text -152 120 vertex position parameters: control the x/y position
+of the;
+#X text -153 156 grid_texture:;
+#X text -153 159 _____________;
+#X text -153 176 state: turn on grid to replace the texture \; open_new_file:
+load your own grid image \; reload: reload the given image file \;
+flip: flip grid horizontal(<->) or vertical(^v).;
+#X text -153 236 cursor_interaction:;
+#X text -154 239 ___________________;
+#X text -153 257 cursor_mode:;
+#X text -122 274 vertex_mouseover: show vertex control points if hovered
+\; vertex_permanent: show vertex control points permanently \; texture_mouseover:
+show texture control points if hovered \; texture_permanent: show texture
+control points permanently \;;
+#X text -153 336 rendered_grid:;
+#X text -154 339 ______________;
+#X text -153 357 state: turn grid on/off;
+#X text -153 370 Resolution:;
+#X text -80 370 set vertical (y) and horizontal (x) grid resolution.
+;
+#X text -153 384 line_width: set thickness of the grid lines;
+#X text -153 397 COLOR: set the color of the grid;
+#X text -111 410 (H = hue \, S = saturation \, V = Value \, A = alpha)
+;
+#X text -153 96 settings window;
+#X text -154 105 ===============;
+#X text 387 0 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X text 16 131 projection primitives 3x3=9 vertex;
+#X text 16 143 points;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 1 10 1;
+#X connect 5 0 9 0;
+#X connect 6 0 10 0;
+#X connect 9 0 3 0;

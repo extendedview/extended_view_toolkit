@@ -1,0 +1,909 @@
+======================== GLOBAL ========================
+#settings
+#data
+======================== SCENE 0 <unnamed> ========================
+#settings
+/i/am/also/a/variable/ds/occupy 1
+/i/am/also/a/variable/ds/delay 0
+/i/am/also/a/variable/ds/morph/timegrain 20
+/i/am/also/a/variable/ds/morph/curve/quality 0
+/i/am/also/a/variable/ds/slave 0
+/i/am/also/a/variable/ds/morph/curve/resolution 100
+/i/am/also/a/variable/ds/morph/curve/weight 0
+/i/am/also/a/variable/ds/morph/curve/shape 0
+/i/am/also/a/variable/ds/morph/time 0
+/i/am/also/a/variable/ds/morph 0
+/i/am/a/variable/ds/occupy 1
+/i/am/a/variable/ds/delay 0
+/i/am/a/variable/ds/morph/timegrain 20
+/i/am/a/variable/ds/morph/curve/quality 0
+/i/am/a/variable/ds/slave 0
+/i/am/a/variable/ds/morph/curve/resolution 100
+/i/am/a/variable/ds/morph/curve/weight 0
+/i/am/a/variable/ds/morph/curve/shape 0
+/i/am/a/variable/ds/morph/time 0
+/i/am/a/variable/ds/morph 0
+/ev/pro/projection/grid/res/y/ds/occupy 1
+/ev/pro/projection/grid/res/y/ds/delay 0
+/ev/pro/projection/grid/res/y/ds/slave 0
+/ev/pro/projection/grid/res/x/ds/occupy 1
+/ev/pro/projection/grid/res/x/ds/delay 0
+/ev/pro/projection/grid/res/x/ds/slave 0
+/ev/pro/projection/grid/width/ds/occupy 1
+/ev/pro/projection/grid/width/ds/delay 0
+/ev/pro/projection/grid/width/ds/slave 0
+/ev/pro/projection/grid/color/a/ds/occupy 1
+/ev/pro/projection/grid/color/a/ds/delay 0
+/ev/pro/projection/grid/color/a/ds/slave 0
+/ev/pro/projection/grid/color/v/ds/occupy 1
+/ev/pro/projection/grid/color/v/ds/delay 0
+/ev/pro/projection/grid/color/v/ds/slave 0
+/ev/pro/projection/grid/color/s/ds/occupy 1
+/ev/pro/projection/grid/color/s/ds/delay 0
+/ev/pro/projection/grid/color/s/ds/slave 0
+/ev/pro/projection/grid/color/h/ds/occupy 1
+/ev/pro/projection/grid/color/h/ds/delay 0
+/ev/pro/projection/grid/color/h/ds/slave 0
+/ev/pro/projection/grid/state/ds/occupy 1
+/ev/pro/projection/grid/state/ds/delay 0
+/ev/pro/projection/grid/state/ds/slave 0
+/ev/pro/projection/grid/tex/flip/vertical/ds/occupy 1
+/ev/pro/projection/grid/tex/flip/vertical/ds/delay 0
+/ev/pro/projection/grid/tex/flip/vertical/ds/slave 0
+/ev/pro/projection/grid/tex/flip/horizontal/ds/occupy 1
+/ev/pro/projection/grid/tex/flip/horizontal/ds/delay 0
+/ev/pro/projection/grid/tex/flip/horizontal/ds/slave 0
+/ev/pro/projection/grid/tex/filename/ds/occupy 1
+/ev/pro/projection/grid/tex/filename/ds/delay 0
+/ev/pro/projection/grid/tex/filename/ds/slave 0
+/ev/pro/projection/grid/tex/state/ds/occupy 1
+/ev/pro/projection/grid/tex/state/ds/delay 0
+/ev/pro/projection/grid/tex/state/ds/slave 0
+/ev/pro/projection/cursor/mode/ds/occupy 1
+/ev/pro/projection/cursor/mode/ds/delay 0
+/ev/pro/projection/cursor/mode/ds/slave 0
+/ev/pro/projection/state/ds/occupy 1
+/ev/pro/projection/state/ds/delay 0
+/ev/pro/projection/state/ds/slave 0
+/ev/pro/projection/vertex/top/left/x/ds/occupy 1
+/ev/pro/projection/vertex/top/left/x/ds/delay 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/left/x/ds/slave 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/time 0
+/ev/pro/projection/vertex/top/left/x/ds/morph 0
+/ev/pro/projection/vertex/top/left/y/ds/occupy 1
+/ev/pro/projection/vertex/top/left/y/ds/delay 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/left/y/ds/slave 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/time 0
+/ev/pro/projection/vertex/top/left/y/ds/morph 0
+/ev/pro/projection/vertex/top/right/x/ds/occupy 1
+/ev/pro/projection/vertex/top/right/x/ds/delay 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/right/x/ds/slave 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/time 0
+/ev/pro/projection/vertex/top/right/x/ds/morph 0
+/ev/pro/projection/vertex/top/right/y/ds/occupy 1
+/ev/pro/projection/vertex/top/right/y/ds/delay 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/right/y/ds/slave 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/time 0
+/ev/pro/projection/vertex/top/right/y/ds/morph 0
+/ev/pro/projection/vertex/bottom/left/x/ds/occupy 1
+/ev/pro/projection/vertex/bottom/left/x/ds/delay 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/left/x/ds/slave 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph 0
+/ev/pro/projection/vertex/bottom/left/y/ds/occupy 1
+/ev/pro/projection/vertex/bottom/left/y/ds/delay 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/left/y/ds/slave 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph 0
+/ev/pro/projection/vertex/bottom/right/x/ds/occupy 1
+/ev/pro/projection/vertex/bottom/right/x/ds/delay 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/right/x/ds/slave 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph 0
+/ev/pro/projection/vertex/bottom/right/y/ds/occupy 1
+/ev/pro/projection/vertex/bottom/right/y/ds/delay 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/right/y/ds/slave 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph 0
+/ev/mouse/texture/sensitivity/ds/occupy 1
+/ev/mouse/texture/sensitivity/ds/delay 0
+/ev/mouse/texture/sensitivity/ds/slave 0
+/ev/mouse/select_radius/ds/occupy 1
+/ev/mouse/select_radius/ds/delay 0
+/ev/mouse/select_radius/ds/slave 0
+/ev/gemwin/border/ds/occupy 0
+/ev/gemwin/border/ds/delay 0
+/ev/gemwin/border/ds/slave 0
+/ev/gemwin/lighting/ds/occupy 0
+/ev/gemwin/lighting/ds/delay 0
+/ev/gemwin/lighting/ds/slave 0
+/ev/gemwin/frame/ds/occupy 0
+/ev/gemwin/frame/ds/delay 0
+/ev/gemwin/frame/ds/slave 0
+/ev/gemwin/offset/y/ds/occupy 0
+/ev/gemwin/offset/y/ds/delay 0
+/ev/gemwin/offset/y/ds/slave 0
+/ev/gemwin/offset/x/ds/occupy 0
+/ev/gemwin/offset/x/ds/delay 0
+/ev/gemwin/offset/x/ds/slave 0
+/ev/gemwin/dimen/y/ds/occupy 0
+/ev/gemwin/dimen/y/ds/delay 0
+/ev/gemwin/dimen/y/ds/slave 0
+/ev/gemwin/dimen/x/ds/occupy 0
+/ev/gemwin/dimen/x/ds/delay 0
+/ev/gemwin/dimen/x/ds/slave 0
+#data
+/i/am/also/a/variable 2
+/i/am/a/variable 1
+/ev/pro/projection/grid/res/y 16
+/ev/pro/projection/grid/res/x 16
+/ev/pro/projection/grid/width 2
+/ev/pro/projection/grid/color/a 0.6
+/ev/pro/projection/grid/color/v 1
+/ev/pro/projection/grid/color/s 0.6
+/ev/pro/projection/grid/color/h 0.745098
+/ev/pro/projection/grid/state 1
+/ev/pro/projection/grid/tex/flip/vertical 0
+/ev/pro/projection/grid/tex/flip/horizontal 0
+/ev/pro/projection/grid/tex/filename ../media/grid.png
+/ev/pro/projection/grid/tex/state 0
+/ev/pro/projection/cursor/mode 2
+/ev/pro/projection/state 1
+/ev/pro/projection/vertex/top/left/x -1
+/ev/pro/projection/vertex/top/left/y 1
+/ev/pro/projection/vertex/top/right/x 2.97333
+/ev/pro/projection/vertex/top/right/y 2.73333
+/ev/pro/projection/vertex/bottom/left/x -2.57333
+/ev/pro/projection/vertex/bottom/left/y -1.90667
+/ev/pro/projection/vertex/bottom/right/x 1
+/ev/pro/projection/vertex/bottom/right/y -1
+/ev/mouse/texture/sensitivity 50
+/ev/mouse/select_radius 0.2
+/ev/gemwin/border 1
+/ev/gemwin/lighting 0
+/ev/gemwin/frame 25
+/ev/gemwin/offset/y 0
+/ev/gemwin/offset/x 0
+/ev/gemwin/dimen/y 600
+/ev/gemwin/dimen/x 800
+======================== SCENE 1 <unnamed> ========================
+#settings
+/i/am/also/a/variable/ds/occupy 1
+/i/am/also/a/variable/ds/delay 0
+/i/am/also/a/variable/ds/morph/timegrain 20
+/i/am/also/a/variable/ds/morph/curve/quality 0
+/i/am/also/a/variable/ds/slave 0
+/i/am/also/a/variable/ds/morph/curve/resolution 100
+/i/am/also/a/variable/ds/morph/curve/weight 0
+/i/am/also/a/variable/ds/morph/curve/shape 0
+/i/am/also/a/variable/ds/morph/time 0
+/i/am/also/a/variable/ds/morph 0
+/i/am/a/variable/ds/occupy 1
+/i/am/a/variable/ds/delay 0
+/i/am/a/variable/ds/morph/timegrain 20
+/i/am/a/variable/ds/morph/curve/quality 0
+/i/am/a/variable/ds/slave 0
+/i/am/a/variable/ds/morph/curve/resolution 100
+/i/am/a/variable/ds/morph/curve/weight 0
+/i/am/a/variable/ds/morph/curve/shape 0
+/i/am/a/variable/ds/morph/time 0
+/i/am/a/variable/ds/morph 0
+/ev/pro/projection/grid/res/y/ds/occupy 1
+/ev/pro/projection/grid/res/y/ds/delay 0
+/ev/pro/projection/grid/res/y/ds/slave 0
+/ev/pro/projection/grid/res/x/ds/occupy 1
+/ev/pro/projection/grid/res/x/ds/delay 0
+/ev/pro/projection/grid/res/x/ds/slave 0
+/ev/pro/projection/grid/width/ds/occupy 1
+/ev/pro/projection/grid/width/ds/delay 0
+/ev/pro/projection/grid/width/ds/slave 0
+/ev/pro/projection/grid/color/a/ds/occupy 1
+/ev/pro/projection/grid/color/a/ds/delay 0
+/ev/pro/projection/grid/color/a/ds/slave 0
+/ev/pro/projection/grid/color/v/ds/occupy 1
+/ev/pro/projection/grid/color/v/ds/delay 0
+/ev/pro/projection/grid/color/v/ds/slave 0
+/ev/pro/projection/grid/color/s/ds/occupy 1
+/ev/pro/projection/grid/color/s/ds/delay 0
+/ev/pro/projection/grid/color/s/ds/slave 0
+/ev/pro/projection/grid/color/h/ds/occupy 1
+/ev/pro/projection/grid/color/h/ds/delay 0
+/ev/pro/projection/grid/color/h/ds/slave 0
+/ev/pro/projection/grid/state/ds/occupy 1
+/ev/pro/projection/grid/state/ds/delay 0
+/ev/pro/projection/grid/state/ds/slave 0
+/ev/pro/projection/grid/tex/flip/vertical/ds/occupy 1
+/ev/pro/projection/grid/tex/flip/vertical/ds/delay 0
+/ev/pro/projection/grid/tex/flip/vertical/ds/slave 0
+/ev/pro/projection/grid/tex/flip/horizontal/ds/occupy 1
+/ev/pro/projection/grid/tex/flip/horizontal/ds/delay 0
+/ev/pro/projection/grid/tex/flip/horizontal/ds/slave 0
+/ev/pro/projection/grid/tex/filename/ds/occupy 1
+/ev/pro/projection/grid/tex/filename/ds/delay 0
+/ev/pro/projection/grid/tex/filename/ds/slave 0
+/ev/pro/projection/grid/tex/state/ds/occupy 1
+/ev/pro/projection/grid/tex/state/ds/delay 0
+/ev/pro/projection/grid/tex/state/ds/slave 0
+/ev/pro/projection/cursor/mode/ds/occupy 1
+/ev/pro/projection/cursor/mode/ds/delay 0
+/ev/pro/projection/cursor/mode/ds/slave 0
+/ev/pro/projection/state/ds/occupy 1
+/ev/pro/projection/state/ds/delay 0
+/ev/pro/projection/state/ds/slave 0
+/ev/pro/projection/vertex/top/left/x/ds/occupy 1
+/ev/pro/projection/vertex/top/left/x/ds/delay 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/left/x/ds/slave 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/time 0
+/ev/pro/projection/vertex/top/left/x/ds/morph 0
+/ev/pro/projection/vertex/top/left/y/ds/occupy 1
+/ev/pro/projection/vertex/top/left/y/ds/delay 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/left/y/ds/slave 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/time 0
+/ev/pro/projection/vertex/top/left/y/ds/morph 0
+/ev/pro/projection/vertex/top/right/x/ds/occupy 1
+/ev/pro/projection/vertex/top/right/x/ds/delay 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/right/x/ds/slave 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/time 0
+/ev/pro/projection/vertex/top/right/x/ds/morph 0
+/ev/pro/projection/vertex/top/right/y/ds/occupy 1
+/ev/pro/projection/vertex/top/right/y/ds/delay 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/right/y/ds/slave 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/time 0
+/ev/pro/projection/vertex/top/right/y/ds/morph 0
+/ev/pro/projection/vertex/bottom/left/x/ds/occupy 1
+/ev/pro/projection/vertex/bottom/left/x/ds/delay 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/left/x/ds/slave 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph 0
+/ev/pro/projection/vertex/bottom/left/y/ds/occupy 1
+/ev/pro/projection/vertex/bottom/left/y/ds/delay 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/left/y/ds/slave 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph 0
+/ev/pro/projection/vertex/bottom/right/x/ds/occupy 1
+/ev/pro/projection/vertex/bottom/right/x/ds/delay 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/right/x/ds/slave 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph 0
+/ev/pro/projection/vertex/bottom/right/y/ds/occupy 1
+/ev/pro/projection/vertex/bottom/right/y/ds/delay 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/right/y/ds/slave 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph 0
+/ev/mouse/texture/sensitivity/ds/occupy 1
+/ev/mouse/texture/sensitivity/ds/delay 0
+/ev/mouse/texture/sensitivity/ds/slave 0
+/ev/mouse/select_radius/ds/occupy 1
+/ev/mouse/select_radius/ds/delay 0
+/ev/mouse/select_radius/ds/slave 0
+/ev/gemwin/border/ds/occupy 0
+/ev/gemwin/border/ds/delay 0
+/ev/gemwin/border/ds/slave 0
+/ev/gemwin/lighting/ds/occupy 0
+/ev/gemwin/lighting/ds/delay 0
+/ev/gemwin/lighting/ds/slave 0
+/ev/gemwin/frame/ds/occupy 0
+/ev/gemwin/frame/ds/delay 0
+/ev/gemwin/frame/ds/slave 0
+/ev/gemwin/offset/y/ds/occupy 0
+/ev/gemwin/offset/y/ds/delay 0
+/ev/gemwin/offset/y/ds/slave 0
+/ev/gemwin/offset/x/ds/occupy 0
+/ev/gemwin/offset/x/ds/delay 0
+/ev/gemwin/offset/x/ds/slave 0
+/ev/gemwin/dimen/y/ds/occupy 0
+/ev/gemwin/dimen/y/ds/delay 0
+/ev/gemwin/dimen/y/ds/slave 0
+/ev/gemwin/dimen/x/ds/occupy 0
+/ev/gemwin/dimen/x/ds/delay 0
+/ev/gemwin/dimen/x/ds/slave 0
+#data
+/i/am/also/a/variable 58
+/i/am/a/variable 3
+/ev/pro/projection/grid/res/y 16
+/ev/pro/projection/grid/res/x 16
+/ev/pro/projection/grid/width 2
+/ev/pro/projection/grid/color/a 0.6
+/ev/pro/projection/grid/color/v 1
+/ev/pro/projection/grid/color/s 0.6
+/ev/pro/projection/grid/color/h 0.745098
+/ev/pro/projection/grid/state 1
+/ev/pro/projection/grid/tex/flip/vertical 0
+/ev/pro/projection/grid/tex/flip/horizontal 0
+/ev/pro/projection/grid/tex/filename ../media/grid.png
+/ev/pro/projection/grid/tex/state 0
+/ev/pro/projection/cursor/mode 2
+/ev/pro/projection/state 1
+/ev/pro/projection/vertex/top/left/x -2.56
+/ev/pro/projection/vertex/top/left/y 1.4
+/ev/pro/projection/vertex/top/right/x 1.25333
+/ev/pro/projection/vertex/top/right/y 0.786663
+/ev/pro/projection/vertex/bottom/left/x -2.57333
+/ev/pro/projection/vertex/bottom/left/y -1.90667
+/ev/pro/projection/vertex/bottom/right/x 1
+/ev/pro/projection/vertex/bottom/right/y -1
+/ev/mouse/texture/sensitivity 50
+/ev/mouse/select_radius 0.2
+/ev/gemwin/border 1
+/ev/gemwin/lighting 0
+/ev/gemwin/frame 25
+/ev/gemwin/offset/y 0
+/ev/gemwin/offset/x 0
+/ev/gemwin/dimen/y 600
+/ev/gemwin/dimen/x 800
+======================== SCENE 2 <unnamed> ========================
+#settings
+/i/am/also/a/variable/ds/occupy 1
+/i/am/also/a/variable/ds/delay 0
+/i/am/also/a/variable/ds/morph/timegrain 20
+/i/am/also/a/variable/ds/morph/curve/quality 0
+/i/am/also/a/variable/ds/slave 0
+/i/am/also/a/variable/ds/morph/curve/resolution 100
+/i/am/also/a/variable/ds/morph/curve/weight 0
+/i/am/also/a/variable/ds/morph/curve/shape 0
+/i/am/also/a/variable/ds/morph/time 0
+/i/am/also/a/variable/ds/morph 0
+/i/am/a/variable/ds/occupy 1
+/i/am/a/variable/ds/delay 0
+/i/am/a/variable/ds/morph/timegrain 20
+/i/am/a/variable/ds/morph/curve/quality 0
+/i/am/a/variable/ds/slave 0
+/i/am/a/variable/ds/morph/curve/resolution 100
+/i/am/a/variable/ds/morph/curve/weight 0
+/i/am/a/variable/ds/morph/curve/shape 0
+/i/am/a/variable/ds/morph/time 0
+/i/am/a/variable/ds/morph 0
+/ev/pro/projection/grid/res/y/ds/occupy 1
+/ev/pro/projection/grid/res/y/ds/delay 0
+/ev/pro/projection/grid/res/y/ds/slave 0
+/ev/pro/projection/grid/res/x/ds/occupy 1
+/ev/pro/projection/grid/res/x/ds/delay 0
+/ev/pro/projection/grid/res/x/ds/slave 0
+/ev/pro/projection/grid/width/ds/occupy 1
+/ev/pro/projection/grid/width/ds/delay 0
+/ev/pro/projection/grid/width/ds/slave 0
+/ev/pro/projection/grid/color/a/ds/occupy 1
+/ev/pro/projection/grid/color/a/ds/delay 0
+/ev/pro/projection/grid/color/a/ds/slave 0
+/ev/pro/projection/grid/color/v/ds/occupy 1
+/ev/pro/projection/grid/color/v/ds/delay 0
+/ev/pro/projection/grid/color/v/ds/slave 0
+/ev/pro/projection/grid/color/s/ds/occupy 1
+/ev/pro/projection/grid/color/s/ds/delay 0
+/ev/pro/projection/grid/color/s/ds/slave 0
+/ev/pro/projection/grid/color/h/ds/occupy 1
+/ev/pro/projection/grid/color/h/ds/delay 0
+/ev/pro/projection/grid/color/h/ds/slave 0
+/ev/pro/projection/grid/state/ds/occupy 1
+/ev/pro/projection/grid/state/ds/delay 0
+/ev/pro/projection/grid/state/ds/slave 0
+/ev/pro/projection/grid/tex/flip/vertical/ds/occupy 1
+/ev/pro/projection/grid/tex/flip/vertical/ds/delay 0
+/ev/pro/projection/grid/tex/flip/vertical/ds/slave 0
+/ev/pro/projection/grid/tex/flip/horizontal/ds/occupy 1
+/ev/pro/projection/grid/tex/flip/horizontal/ds/delay 0
+/ev/pro/projection/grid/tex/flip/horizontal/ds/slave 0
+/ev/pro/projection/grid/tex/filename/ds/occupy 1
+/ev/pro/projection/grid/tex/filename/ds/delay 0
+/ev/pro/projection/grid/tex/filename/ds/slave 0
+/ev/pro/projection/grid/tex/state/ds/occupy 1
+/ev/pro/projection/grid/tex/state/ds/delay 0
+/ev/pro/projection/grid/tex/state/ds/slave 0
+/ev/pro/projection/cursor/mode/ds/occupy 1
+/ev/pro/projection/cursor/mode/ds/delay 0
+/ev/pro/projection/cursor/mode/ds/slave 0
+/ev/pro/projection/state/ds/occupy 1
+/ev/pro/projection/state/ds/delay 0
+/ev/pro/projection/state/ds/slave 0
+/ev/pro/projection/vertex/top/left/x/ds/occupy 1
+/ev/pro/projection/vertex/top/left/x/ds/delay 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/left/x/ds/slave 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/left/x/ds/morph/time 0
+/ev/pro/projection/vertex/top/left/x/ds/morph 0
+/ev/pro/projection/vertex/top/left/y/ds/occupy 1
+/ev/pro/projection/vertex/top/left/y/ds/delay 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/left/y/ds/slave 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/left/y/ds/morph/time 0
+/ev/pro/projection/vertex/top/left/y/ds/morph 0
+/ev/pro/projection/vertex/top/right/x/ds/occupy 1
+/ev/pro/projection/vertex/top/right/x/ds/delay 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/right/x/ds/slave 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/right/x/ds/morph/time 0
+/ev/pro/projection/vertex/top/right/x/ds/morph 0
+/ev/pro/projection/vertex/top/right/y/ds/occupy 1
+/ev/pro/projection/vertex/top/right/y/ds/delay 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/top/right/y/ds/slave 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/top/right/y/ds/morph/time 0
+/ev/pro/projection/vertex/top/right/y/ds/morph 0
+/ev/pro/projection/vertex/bottom/left/x/ds/occupy 1
+/ev/pro/projection/vertex/bottom/left/x/ds/delay 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/left/x/ds/slave 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/left/x/ds/morph 0
+/ev/pro/projection/vertex/bottom/left/y/ds/occupy 1
+/ev/pro/projection/vertex/bottom/left/y/ds/delay 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/left/y/ds/slave 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/left/y/ds/morph 0
+/ev/pro/projection/vertex/bottom/right/x/ds/occupy 1
+/ev/pro/projection/vertex/bottom/right/x/ds/delay 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/right/x/ds/slave 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/right/x/ds/morph 0
+/ev/pro/projection/vertex/bottom/right/y/ds/occupy 1
+/ev/pro/projection/vertex/bottom/right/y/ds/delay 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/timegrain 20
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/quality 0
+/ev/pro/projection/vertex/bottom/right/y/ds/slave 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/resolution 100
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/weight 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/curve/shape 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph/time 0
+/ev/pro/projection/vertex/bottom/right/y/ds/morph 0
+/ev/mouse/texture/sensitivity/ds/occupy 1
+/ev/mouse/texture/sensitivity/ds/delay 0
+/ev/mouse/texture/sensitivity/ds/slave 0
+/ev/mouse/select_radius/ds/occupy 1
+/ev/mouse/select_radius/ds/delay 0
+/ev/mouse/select_radius/ds/slave 0
+/ev/gemwin/border/ds/occupy 0
+/ev/gemwin/border/ds/delay 0
+/ev/gemwin/border/ds/slave 0
+/ev/gemwin/lighting/ds/occupy 0
+/ev/gemwin/lighting/ds/delay 0
+/ev/gemwin/lighting/ds/slave 0
+/ev/gemwin/frame/ds/occupy 0
+/ev/gemwin/frame/ds/delay 0
+/ev/gemwin/frame/ds/slave 0
+/ev/gemwin/offset/y/ds/occupy 0
+/ev/gemwin/offset/y/ds/delay 0
+/ev/gemwin/offset/y/ds/slave 0
+/ev/gemwin/offset/x/ds/occupy 0
+/ev/gemwin/offset/x/ds/delay 0
+/ev/gemwin/offset/x/ds/slave 0
+/ev/gemwin/dimen/y/ds/occupy 0
+/ev/gemwin/dimen/y/ds/delay 0
+/ev/gemwin/dimen/y/ds/slave 0
+/ev/gemwin/dimen/x/ds/occupy 0
+/ev/gemwin/dimen/x/ds/delay 0
+/ev/gemwin/dimen/x/ds/slave 0
+#data
+/i/am/also/a/variable 114
+/i/am/a/variable 66
+/ev/pro/projection/grid/res/y 16
+/ev/pro/projection/grid/res/x 16
+/ev/pro/projection/grid/width 2
+/ev/pro/projection/grid/color/a 0.6
+/ev/pro/projection/grid/color/v 1
+/ev/pro/projection/grid/color/s 0.6
+/ev/pro/projection/grid/color/h 0.745098
+/ev/pro/projection/grid/state 1
+/ev/pro/projection/grid/tex/flip/vertical 0
+/ev/pro/projection/grid/tex/flip/horizontal 0
+/ev/pro/projection/grid/tex/filename ../media/grid.png
+/ev/pro/projection/grid/tex/state 0
+/ev/pro/projection/cursor/mode 2
+/ev/pro/projection/state 1
+/ev/pro/projection/vertex/top/left/x -1.58667
+/ev/pro/projection/vertex/top/left/y 2.82667
+/ev/pro/projection/vertex/top/right/x 2.97333
+/ev/pro/projection/vertex/top/right/y 2.73333
+/ev/pro/projection/vertex/bottom/left/x -0.279997
+/ev/pro/projection/vertex/bottom/left/y -2.16
+/ev/pro/projection/vertex/bottom/right/x 4.30667
+/ev/pro/projection/vertex/bottom/right/y -2.6
+/ev/mouse/texture/sensitivity 50
+/ev/mouse/select_radius 0.2
+/ev/gemwin/border 1
+/ev/gemwin/lighting 0
+/ev/gemwin/frame 25
+/ev/gemwin/offset/y 0
+/ev/gemwin/offset/x 0
+/ev/gemwin/dimen/y 600
+/ev/gemwin/dimen/x 800
+======================== SCENE 3 <unnamed> ========================
+#settings
+#data
+======================== SCENE 4 <unnamed> ========================
+#settings
+#data
+======================== SCENE 5 <unnamed> ========================
+#settings
+#data
+======================== SCENE 6 <unnamed> ========================
+#settings
+#data
+======================== SCENE 7 <unnamed> ========================
+#settings
+#data
+======================== SCENE 8 <unnamed> ========================
+#settings
+#data
+======================== SCENE 9 <unnamed> ========================
+#settings
+#data
+======================== SCENE 10 <unnamed> ========================
+#settings
+#data
+======================== SCENE 11 <unnamed> ========================
+#settings
+#data
+======================== SCENE 12 <unnamed> ========================
+#settings
+#data
+======================== SCENE 13 <unnamed> ========================
+#settings
+#data
+======================== SCENE 14 <unnamed> ========================
+#settings
+#data
+======================== SCENE 15 <unnamed> ========================
+#settings
+#data
+======================== SCENE 16 <unnamed> ========================
+#settings
+#data
+======================== SCENE 17 <unnamed> ========================
+#settings
+#data
+======================== SCENE 18 <unnamed> ========================
+#settings
+#data
+======================== SCENE 19 <unnamed> ========================
+#settings
+#data
+======================== SCENE 20 <unnamed> ========================
+#settings
+#data
+======================== SCENE 21 <unnamed> ========================
+#settings
+#data
+======================== SCENE 22 <unnamed> ========================
+#settings
+#data
+======================== SCENE 23 <unnamed> ========================
+#settings
+#data
+======================== SCENE 24 <unnamed> ========================
+#settings
+#data
+======================== SCENE 25 <unnamed> ========================
+#settings
+#data
+======================== SCENE 26 <unnamed> ========================
+#settings
+#data
+======================== SCENE 27 <unnamed> ========================
+#settings
+#data
+======================== SCENE 28 <unnamed> ========================
+#settings
+#data
+======================== SCENE 29 <unnamed> ========================
+#settings
+#data
+======================== SCENE 30 <unnamed> ========================
+#settings
+#data
+======================== SCENE 31 <unnamed> ========================
+#settings
+#data
+======================== SCENE 32 <unnamed> ========================
+#settings
+#data
+======================== SCENE 33 <unnamed> ========================
+#settings
+#data
+======================== SCENE 34 <unnamed> ========================
+#settings
+#data
+======================== SCENE 35 <unnamed> ========================
+#settings
+#data
+======================== SCENE 36 <unnamed> ========================
+#settings
+#data
+======================== SCENE 37 <unnamed> ========================
+#settings
+#data
+======================== SCENE 38 <unnamed> ========================
+#settings
+#data
+======================== SCENE 39 <unnamed> ========================
+#settings
+#data
+======================== SCENE 40 <unnamed> ========================
+#settings
+#data
+======================== SCENE 41 <unnamed> ========================
+#settings
+#data
+======================== SCENE 42 <unnamed> ========================
+#settings
+#data
+======================== SCENE 43 <unnamed> ========================
+#settings
+#data
+======================== SCENE 44 <unnamed> ========================
+#settings
+#data
+======================== SCENE 45 <unnamed> ========================
+#settings
+#data
+======================== SCENE 46 <unnamed> ========================
+#settings
+#data
+======================== SCENE 47 <unnamed> ========================
+#settings
+#data
+======================== SCENE 48 <unnamed> ========================
+#settings
+#data
+======================== SCENE 49 <unnamed> ========================
+#settings
+#data
+======================== SCENE 50 <unnamed> ========================
+#settings
+#data
+======================== SCENE 51 <unnamed> ========================
+#settings
+#data
+======================== SCENE 52 <unnamed> ========================
+#settings
+#data
+======================== SCENE 53 <unnamed> ========================
+#settings
+#data
+======================== SCENE 54 <unnamed> ========================
+#settings
+#data
+======================== SCENE 55 <unnamed> ========================
+#settings
+#data
+======================== SCENE 56 <unnamed> ========================
+#settings
+#data
+======================== SCENE 57 <unnamed> ========================
+#settings
+#data
+======================== SCENE 58 <unnamed> ========================
+#settings
+#data
+======================== SCENE 59 <unnamed> ========================
+#settings
+#data
+======================== SCENE 60 <unnamed> ========================
+#settings
+#data
+======================== SCENE 61 <unnamed> ========================
+#settings
+#data
+======================== SCENE 62 <unnamed> ========================
+#settings
+#data
+======================== SCENE 63 <unnamed> ========================
+#settings
+#data
+======================== SCENE 64 <unnamed> ========================
+#settings
+#data
+======================== SCENE 65 <unnamed> ========================
+#settings
+#data
+======================== SCENE 66 <unnamed> ========================
+#settings
+#data
+======================== SCENE 67 <unnamed> ========================
+#settings
+#data
+======================== SCENE 68 <unnamed> ========================
+#settings
+#data
+======================== SCENE 69 <unnamed> ========================
+#settings
+#data
+======================== SCENE 70 <unnamed> ========================
+#settings
+#data
+======================== SCENE 71 <unnamed> ========================
+#settings
+#data
+======================== SCENE 72 <unnamed> ========================
+#settings
+#data
+======================== SCENE 73 <unnamed> ========================
+#settings
+#data
+======================== SCENE 74 <unnamed> ========================
+#settings
+#data
+======================== SCENE 75 <unnamed> ========================
+#settings
+#data
+======================== SCENE 76 <unnamed> ========================
+#settings
+#data
+======================== SCENE 77 <unnamed> ========================
+#settings
+#data
+======================== SCENE 78 <unnamed> ========================
+#settings
+#data
+======================== SCENE 79 <unnamed> ========================
+#settings
+#data
+======================== SCENE 80 <unnamed> ========================
+#settings
+#data
+======================== SCENE 81 <unnamed> ========================
+#settings
+#data
+======================== SCENE 82 <unnamed> ========================
+#settings
+#data
+======================== SCENE 83 <unnamed> ========================
+#settings
+#data
+======================== SCENE 84 <unnamed> ========================
+#settings
+#data
+======================== SCENE 85 <unnamed> ========================
+#settings
+#data
+======================== SCENE 86 <unnamed> ========================
+#settings
+#data
+======================== SCENE 87 <unnamed> ========================
+#settings
+#data
+======================== SCENE 88 <unnamed> ========================
+#settings
+#data
+======================== SCENE 89 <unnamed> ========================
+#settings
+#data
+======================== SCENE 90 <unnamed> ========================
+#settings
+#data
+======================== SCENE 91 <unnamed> ========================
+#settings
+#data
+======================== SCENE 92 <unnamed> ========================
+#settings
+#data
+======================== SCENE 93 <unnamed> ========================
+#settings
+#data
+======================== SCENE 94 <unnamed> ========================
+#settings
+#data
+======================== SCENE 95 <unnamed> ========================
+#settings
+#data
+======================== SCENE 96 <unnamed> ========================
+#settings
+#data
+======================== SCENE 97 <unnamed> ========================
+#settings
+#data
+======================== SCENE 98 <unnamed> ========================
+#settings
+#data
+======================== SCENE 99 <unnamed> ========================
+#settings
+#data

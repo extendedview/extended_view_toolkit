@@ -1,0 +1,77 @@
+#N canvas 381 22 813 616 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media;
+#X obj 205 48 cnv 15 380 250 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X obj 224 242 gemhead;
+#X obj -166 21 cnv 15 780 20 empty empty EXTENDED_VIEW_gemwin_module
+20 12 0 14 -233017 -66577 0;
+#X obj -166 48 cnv 15 360 250 empty empty gui_controls 5 8 0 12 -233017
+-66577 0;
+#X obj -166 305 cnv 15 360 100 empty empty description 5 8 0 12 -233017
+-66577 0;
+#X obj -166 412 cnv 15 360 75 empty empty PARAMETER_LIST 20 8 0 14
+-233017 -66577 0;
+#X obj 214 68 ev_gemwin;
+#X obj 205 380 cnv 15 380 60 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X obj 205 312 cnv 15 380 60 empty empty creation_arguments: 3 8 0
+12 -191407 -1 0;
+#X text 222 173 [ev_declare] loads all the needed pathes.;
+#X obj 224 264 teapot;
+#X text 210 331 1st: storage domain \, see [ev_storage-help] for details
+;
+#X text 209 400 Inlet 1: settings;
+#X text 379 400 Outlet 1: info;
+#X obj 205 447 cnv 15 380 75 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 210 473 For further information on [gemwin] \, have a look
+at the [gemwin-help];
+#N canvas 141 129 407 261 parameter_list 0;
+#X text 31 -218 \; /ev/gemwin/dimen/x ---- gemwin size (horizontal)
+\; /ev/gemwin/dimen/y ---- gemwin size (vertical) \; /ev/gemwin/dimen
+--- list of x and y gemwin size \; /ev/gemwin/offset/x ---- shift gemwin
+horizontally \; /ev/gemwin/offset/y ---- shift gemwin vertically \;
+/ev/gemwin/frame ---- overall gem framerate \; /ev/gemwin/border ----
+show border \; /ev/gemwin/lighting ---- turn on/off lighting \; /ev/gemwin/create
+---- create gemwin (bang) \; /ev/gemwin/destroy ---- destroy gemwin
+(bang) \; /ev/mouse/select_radius --- cursor interaction radius \;
+/ev/mouse/texture/sensitivity --- tex. shift sensitivity \; /ev/gemwin/rendering
+--- turn on/off rendering \; \;;
+#X coords 0 261 1 260 85 60 0;
+#X restore -58 448 pd parameter_list;
+#X text 209 452 The settings inlet takes the same messages as [gemwin]
+;
+#X text -163 327 [ev_gemwin] basically does the same as [gemwin] \,
+but includes a graphical interface and state saving of its parameters.
+It also provides support of cursor interaction for the projection modules.
+;
+#X text -163 70 dimen:;
+#X text -119 70 This lets you set the size of the output window.;
+#X text -119 83 In general \, this would be the resolution of your
+;
+#X text -119 96 projector.;
+#X text -163 120 offset:;
+#X text -119 120 Offset is important if a seperate video output;
+#X text -119 132 for controls and gem window is desired.;
+#X text -119 145 Possibly \, you want to set the x offset to the;
+#X text -119 158 horizontal resolution of your control monitor.;
+#X text -163 180 fps:;
+#X text -119 180 Set GEM framerate here.;
+#X text -163 200 border:;
+#X text -119 200 Turn on/off the borders of the gemwin.;
+#X text -163 220 lighting:;
+#X text -99 220 Turn on/off lighting.;
+#X text -69 240 Create/destroy the gem window;
+#X text -163 240 create/destroy:;
+#X text -163 260 cursor_interaction:;
+#X text -39 260 Open settings dialog for cursor inter-;
+#X text -39 273 action with the projection modules.;
+#X text 326 253 Click on the "create" button to start.;
+#X text -163 385 Press the "Escape" key to destroy the window!;
+#X text -124 498 (c)2012 Marian Weger & Peter Venus \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X obj 224 196 ../ev-main/ev_declare;
+#X connect 1 0 10 0;

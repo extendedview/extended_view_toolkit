@@ -1,0 +1,74 @@
+========================================
+                 TODO
+========================================
+things that should be done in the future
+
+
+Fundamental changes:
+--------------------
+*   divide all modules in [ev_xxxx_gui] and [ev_xxxx_dsp]
+    *   modules without gui: for performance reasons
+    *   only gui: for remote from other computers
+    *   no changed behavior for the standard modules [ev_xxxx]
+
+Communication:
+--------------
+*   solution for easy midi integration (with midi-learn)
+    *   just map midi-controls to existing osc-messages?
+        (midi<--->osc converter?)
+*   map osc-values to other osc-values? osc-learn function?
+*   dmx control
+    *   control lighting via dmx
+    *   receive control data from lighting console
+*   ability to record/play automations
+
+
+New modules:
+------------
+*   [ev_glslbuf] module, consisting of a [ev_glsl] rendered in a framebuffer
+    (for quicker patching of shader-based effects)
+*   [ev_glslbuf2] object, containing two [ev_glslbuf] for 2-pass shaders (i.e. blur)
+*   [ev_paint] module to paint maskings for video mappings with mouse/tablet
+*   [ev_audio] module to play sound for videos in sync with [ev_vid]
+*   [ev_presenter] module to load presentation slides and provide basic 
+    functions for presentations
+*   [ev_pano_virtual] virtual panoramic camera to create panoramic live-imagery 
+    from inside a rendered 3d-scene.
+*   [ev_playlist] playlist module for media files (sound, video)
+    *   save playlist in textfile
+*   [ev_audio] audioplayer for synchronised audio to [ev_vid]
+*   [ev_pro_55easy]
+*   [ev_3d] 3d-based projection mapping modules
+    *   load 3d models of the room out of blender, etc. into Pd
+*   kinect-based modules (using [pix_freenect]/[pix_openni])
+    *   depth-image to 3d-model converter
+    *   stitching of depth-images
+        *   panoramic kinect camera system
+        *   cover big stages with multiple kinect
+    *   treshold module, to set tresholds of depth-image
+*   file-pool module that watches specified folder and adds containing
+    media files automatically. with ability to send files to playlists.
+*   solution for camera that captures a full dome, and to project such spherical
+    imagery onto a dome-shaped screen.
+*   [ev_pro_3] triangular projection module
+*   [ev_subtitles] subtitle text module
+
+Changes in existing modules:
+----------------------------
+*   match vertex behavior of [ev_pro_55] and [ev_pro_22/33]
+    *   decide for one algorithm in all projection modules?
+    *   toggle to select algorithm the modules?
+*   improve mouse/keyboard interaction with [ev_pro_xx] inside the gemwin
+    *   select multiple points to be able to move them together
+    *   move selected points with keyboard arrow keys
+    *   add mouseover functionality for modules inside modules
+        (backwards calculation of vertex transformation)
+*   [ev_vid]: changeable playback speed
+*   [ev_gemwin] change cursor type (+ ability to hide cursor)
+
+New examples:
+-------------
+*   simple VJ setup: dual videoplayer, video-mixer, video-effect, ev_pro_22easy.
+*   midi control
+*   osc remote from other computer / other pd instance
+

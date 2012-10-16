@@ -1,0 +1,175 @@
+#N canvas 43 185 825 756 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 416 609 cnv 15 380 60 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X obj 9 10 cnv 15 785 32 empty empty EXTENDED_VIEW_2x2_projection_module
+20 8 0 14 -233017 -66577 0;
+#X text 421 643 Inlet 2: texture ID;
+#X text 421 627 Inlet 1: gemlist;
+#X obj 416 538 cnv 15 380 60 empty empty creation_arguments: 3 8 0
+12 -191407 -1 0;
+#X text 421 557 1st: module ID \, needs to be unique \; 2nd: storage
+domain \, see [ev_storage-help] for details;
+#X obj 414 48 cnv 15 380 475 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X obj 555 62 gemhead;
+#X obj 555 122 pix_image;
+#X obj 555 206 pix_texture;
+#X obj 611 62 loadbang;
+#X obj 425 61 gemhead;
+#X msg 640 92 open ../media/cam2.jpg;
+#X obj 555 164 pix_flip;
+#X msg 640 122 none;
+#X obj 424 407 ev_gemwin;
+#X obj 425 232 ev_pro_22 \$0;
+#X text 429 385 [ev_gemwin] module is needed for mouse interaction
+support;
+#X text 429 318 [ev_declare] loads all the needed pathes.;
+#X obj 416 679 cnv 15 380 60 empty empty parameter_list 5 8 0 12 -233017
+-66577 0;
+#N canvas 0 22 378 556 parameter_list 0;
+#X obj -42 3 cnv 15 360 540 empty empty PARAMETER_LIST 20 8 0 14 -233017
+-66577 0;
+#X text -35 29 /ev/pro/<id>/vertex/top/left/x ---- top left x \; /ev/pro/<id>/vertex/top/left/y
+--- top left y \; /ev/pro/<id>/vertex/top/right/x --- top right x \;
+/ev/pro/<id>/vertex/top/right/y --- top right y \; /ev/pro/<id>/vertex/bottom/left/x
+--- bottom left x \; /ev/pro/<id>/vertex/bottom/left/y --- bottom left
+y \; /ev/pro/<id>/vertex/bottom/right/x --- bottom right x \; /ev/pro/<id>/vertex/bottom/right/y
+--- bottom right y \; /ev/pro/<id>/texture/top/left/x --- top left
+x \; /ev/pro/<id>/texture/top/left/y --- top left y \; /ev/pro/<id>/texture/top/right/x
+--- top right x \; /ev/pro/<id>/texture/top/right/y --- top right y
+\; /ev/pro/<id>/texture/bottom/left/x --- bottom left x \; /ev/pro/<id>/texture/bottom/left/y
+--- bottom left y \; /ev/pro/<id>/texture/bottom/right/x --- bottom
+right x \; /ev/pro/<id>/texture/bottom/right/y --- bottom right y \;
+/ev/pro/<id>/shade/top --- top softedge amount \; /ev/pro/<id>/shade/right
+--- right softedge amount \; /ev/pro/<id>/shade/bottom --- bottom softedge
+amount \; /ev/pro/<id>/shade/left --- left softedge amount \; /ev/pro/<id>/state
+--- turn module on (1) / off (0) \; /ev/pro/<id>/texture/weight/x ---
+distance weight x \; /ev/pro/<id>/texture/weight/y --- distance weight
+y \; /ev/pro/<id>/set_alpha --- set alpha to value "1" \; /ev/pro/<id>/grid/state
+--- turn on(1)/off(0) grid \; /ev/pro/<id>/grid/res/x --- grid horizontal
+resolution \; /ev/pro/<id>/grid/res/y --- vertical grid resolution
+\; /ev/pro/<id>/grid/width --- grid line width \; /ev/pro/<id>/grid/color/h
+--- grid color hue \; /ev/pro/<id>/grid/color/s --- grid color saturation
+\; /ev/pro/<id>/grid/color/v --- grid color value \; /ev/pro/<id>/grid/color/a
+--- grid color alpha (opacity) \; /ev/pro/<id>/grid/tex/state --- grid
+texture state \; /ev/pro/<id>/grid/tex/open --- grid texture open dialog
+\; /ev/pro/<id>/grid/tex/load --- reload grid texture \; /ev/pro/<id>/grid/tex/flip/horizontal
+--- flip grid tex \; /ev/pro/<id>/grid/tex/flip/vertical --- flip grid
+tex \; /ev/pro/<id>/cursor/mode --- mouse interaction mode \; \;;
+#X restore 481 709 pd parameter_list;
+#X text 632 498 click "create" to start;
+#X obj 446 347 ../ev-main/ev_declare;
+#X msg 640 164 rectangle 1;
+#X obj 9 48 cnv 15 400 480 empty empty gui_controls 5 8 0 12 -204800
+-66577 0;
+#X text 12 68 on/off: toggles projection plane state;
+#X text 12 80 settings: opens settings window;
+#X text 12 106 settings window;
+#X text 13 130 vertex position parameters: control the x/y position
+of the;
+#X text 13 152 texture position parameters: control the x/y position
+of the;
+#X text 183 163 texture corners \, can be outside the;
+#X text 184 174 visible area;
+#X text 12 186 shade size: set the size of the softedge on the edges
+of the visible area(vertex);
+#X text 12 256 grid_texture:;
+#X text 12 259 _____________;
+#X text 12 276 state: turn on grid to replace the texture \; open_new_file:
+load your own grid image \; reload: reload the given image file \;
+flip: flip grid horizontal(<->) or vertical(^v).;
+#X text 12 336 cursor_interaction:;
+#X text 11 339 ___________________;
+#X text 12 357 cursor_mode:;
+#X text 43 374 vertex_mouseover: show vertex control points if hovered
+\; vertex_permanent: show vertex control points permanently \; texture_mouseover:
+show texture control points if hovered \; texture_permanent: show texture
+control points permanently \;;
+#X text 12 222 set_alpha_to_'1': If selected \, alpha channel is set
+to 1 If not selected \, alpha channel remains as it gets in.;
+#X text 12 436 rendered_grid:;
+#X text 11 439 ______________;
+#X text 12 457 state: turn grid on/off;
+#X text 12 470 Resolution:;
+#X text 85 470 set vertical (y) and horizontal (x) grid resolution.
+;
+#X text 12 484 line_width: set thickness of the grid lines;
+#X text 12 497 COLOR: set the color of the grid;
+#X text 54 510 (H = hue \, S = saturation \, V = Value \, A = alpha)
+;
+#X obj 9 534 cnv 15 400 450 empty empty description 5 8 0 12 -233017
+-66577 0;
+#X obj 21 843 cnv 15 150 120 empty empty texture 10 10 0 10 -261234
+-66577 0;
+#X text 44 897 /;
+#X text 26 928 /;
+#X text 156 919 |;
+#X text 38 907 /;
+#X text 156 909 |;
+#X text 42 886 x/y---------------x/y;
+#X text 32 918 /;
+#X text 156 897 |;
+#X text 156 929 |;
+#X text 21 941 x/y------------------x/y;
+#X text 188 905 ==>;
+#X text 49 911 Texture positions;
+#X obj 231 843 cnv 15 150 120 empty empty gem_window 10 10 0 10 -191407
+-66577 0;
+#X text 346 884 /;
+#X text 322 926 /;
+#X text 241 926 |;
+#X text 340 894 /;
+#X text 241 918 |;
+#X text 242 896 |;
+#X text 241 906 | Vertex;
+#X text 181 141 projection primitives 4 corners;
+#X text 20 555 This abstraction aims on video mapping onto flat surfaces.
+It can map a specified part of a texture onto a square plane \, which
+can then be distorted by a matrix of 3x3=9 control points \; The source
+is specified by a texture id \, and can be a framebuffer or any other
+texture. By 4 independently settable corner points \, a polygonal part
+of this texture is specified \, which is then mapped completely onto
+a square. This square can then be positioned and distorted by four
+corner points \; It is also possible to blend the four sides with a
+soft edge \, what makes it possible to overlay multiple modules to
+form a bigger \, but still adjustable projection plane. This would
+be useful in multiple projector environment \, where the gem window
+spans over all projectors but aligning them hard-edged is not possible
+or a challenge \; By the settable texture positions \, it is possible
+to display just a portion of the complete content of a framebuffer.
+This is useful if you build a big projection area out of multiple [ev_pro_xx]
+abstractions \, which cut their individual part out of the same texture.
+;
+#X text 334 906 /;
+#X text 329 915 /;
+#X text 242 874 x/y---------------x/y;
+#X text 241 936 x/y---------x/y;
+#X text 240 887 |;
+#X obj 416 751 cnv 15 380 140 empty empty additional_information 5
+8 0 12 -233017 -66577 0;
+#X text 430 769 Can be controlled via OSC \, which uses the same syntax
+as the EV internal send/recieve message system see paramter-list below
+for additional information about the specific parameter-names.;
+#X text 428 834 This Object is connected to the Data Storage System.
+All the vertex and texture coordinates and the softedge settings can
+be morphed between scenes individually.;
+#X text 437 11 (c)2011 Cyrille Henry \, Peter Venus & Marian Weger
+\; /part of EXTENDED VIEW toolkit/ gpl v3;
+#X text 11 115 ===============;
+#X connect 7 0 8 0;
+#X connect 8 0 13 0;
+#X connect 9 1 16 1;
+#X connect 10 0 12 0;
+#X connect 10 0 14 0;
+#X connect 10 0 23 0;
+#X connect 11 0 16 0;
+#X connect 12 0 8 0;
+#X connect 13 0 9 0;
+#X connect 14 0 13 0;
+#X connect 23 0 9 0;
+#X coords 0 756 1 755 85 60 0;

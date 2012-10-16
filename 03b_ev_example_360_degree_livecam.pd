@@ -1,0 +1,119 @@
+#N canvas 178 22 922 756 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 18 106 cnv 15 650 400 empty empty CAMERA 20 12 0 14 -204786
+-66577 0;
+#X obj 18 20 cnv 15 650 16 empty empty example:_360_DEGREE_LIVECAM
+20 8 0 14 -233017 -66577 0;
+#X obj 508 45 cnv 15 160 50 empty empty INITIALISATIONS 20 12 0 14
+-261682 -66577 0;
+#N canvas 407 127 535 539 init 0;
+#X obj 56 92 loadbang;
+#X obj 44 -23 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 49 -3 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X text 159 160 load the preset file on startup:;
+#X text 66 272 Recall scene '0' from the loaded preset file \, and
+load the still image files.;
+#X obj 158 43 ev-main/ev_declare;
+#X obj 56 134 t b b;
+#X obj 83 158 del 1000;
+#X obj 56 231 del 3000;
+#X text 127 93 The DATA STORAGE SYSTEM will be explained in a later
+example.;
+#X msg 56 308 \; /0/ds/scene 0 \;;
+#X msg 83 179 \; /0/ds/loadfile ../../data/ev_example_360_degree_livecam.txt
+\;;
+#X text 166 226 (pathes relative to "./libs/kollabs");
+#X connect 0 0 6 0;
+#X connect 6 0 8 0;
+#X connect 6 1 7 0;
+#X connect 7 0 11 0;
+#X connect 8 0 10 0;
+#X restore 602 74 pd init;
+#X text 523 72 look inside:;
+#X text 177 653 This example uses scene 0 of;
+#X obj 18 625 ev_storage;
+#X obj 18 520 ev_gemwin;
+#X obj 26 335 ev_cam 0;
+#X obj 26 169 gemhead;
+#X msg 238 225 enumerate;
+#X msg 244 257 dialog;
+#X msg 212 185 device 0;
+#N canvas 109 147 570 420 device 0;
+#X obj 204 60 cnv 20 20 20 empty \$0-open-canvas 0 4 10 0 16 -233017
+-1 0;
+#X obj 60 61 hradio 18 1 0 8 empty empty empty 0 -6 0 8 -225271 -1
+-1 0;
+#X obj 60 13 inlet;
+#X msg 160 254 label \$1;
+#X obj 160 232 makefilename %d;
+#X obj 60 108 int;
+#X obj 60 337 outlet;
+#X obj 160 277 send \$0-open-canvas;
+#X msg 130 170 device \$1;
+#X obj 60 130 t b f;
+#X obj 130 192 t a a;
+#X obj 130 298 list prepend set;
+#X obj 130 320 list trim;
+#X obj 160 211 route device;
+#X obj 130 116 loadbang;
+#X msg 130 138 0;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 7 0;
+#X connect 4 0 3 0;
+#X connect 5 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 6 0;
+#X connect 9 1 8 0;
+#X connect 10 0 11 0;
+#X connect 10 1 13 0;
+#X connect 11 0 12 0;
+#X connect 12 0 6 0;
+#X connect 13 0 4 0;
+#X connect 14 0 15 0;
+#X connect 15 0 8 0;
+#X coords 0 -1 1 1 165 20 1 60 60;
+#X restore 212 161 pd device;
+#X obj 199 285 t a;
+#X msg 199 123 dimen 1920 1080;
+#X obj 26 260 scaleXYZ 1.33 1 1;
+#X obj 543 425 r /ev/360/0/dimen/y;
+#X obj 413 425 r /ev/360/0/dimen/x;
+#X floatatom 413 447 5 0 0 0 - - -;
+#X floatatom 543 447 5 0 0 0 - - -;
+#X text 414 401 Get dimensions:;
+#X text 289 260 (If available. Use this on OSX);
+#X floatatom 59 229 5 0 0 0 - - -;
+#X floatatom 92 229 5 0 0 0 - - -;
+#X text 47 209 Scale image:;
+#X text 312 20 (c)2012 Peter Venus & Marian Weger /EXTENDED VIEW toolkit/
+;
+#X text 387 539 <-- create gem window;
+#X text 180 635 Presets are located in the "./data" folder;
+#X text 177 666 "ev_example_360_degree_livecam.txt";
+#X obj 26 401 ev_360 0;
+#X text 229 299 See [pix_video-help] for more information.;
+#X obj 18 45 cnv 15 360 50 empty empty Important_note: 20 12 0 14 -261234
+-1 0;
+#X text 32 67 This example needs a webcam and a cone-shaped mirror
+in front of it \, to get a 360 degree image in realtime.;
+#X connect 8 0 30 0;
+#X connect 9 0 16 0;
+#X connect 10 0 14 0;
+#X connect 11 0 14 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 14 0 8 1;
+#X connect 15 0 14 0;
+#X connect 16 0 8 0;
+#X connect 17 0 20 0;
+#X connect 18 0 19 0;
+#X connect 23 0 16 1;
+#X connect 24 0 16 2;
+#X coords 0 756 1 755 85 60 0;

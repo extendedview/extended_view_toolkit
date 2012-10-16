@@ -1,0 +1,109 @@
+#N canvas 190 67 697 540 10;
+#N canvas 368 70 422 293 init 0;
+#X obj 81 -166 loadbang;
+#X obj 81 -142 list append \$1;
+#X obj 60 -164 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 80 -115 \; /ev/base/\$1/state 1 \; /ev/base/\$1/parameter/1
+1 \; /ev/base/\$1/parameter/2 1 \; /ev/base/\$1/parameter/3 1 \; /ev/base/\$1/parameter/4
+1 \; /ev/base/\$1/parameter/5 0 \; /ev/base/\$1/parameter/6 0 \; /ev/base/\$1/parameter/7
+0 \; /ev/base/\$1/parameter/8 0;
+#X text 38 -214 In here \, all parameters get initialised with a starting
+value. Add variables and change their init value in this list:;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X restore 324 27 pd init;
+#N canvas 329 203 823 433 storage_&_osc 0;
+#X obj 43 118 ds_reg \$2 /ev/base/\$1/parameter/1;
+#X obj 463 118 osc_bi \$2 /ev/base/\$1/parameter/1;
+#X obj 43 138 ds_reg \$2 /ev/base/\$1/parameter/2;
+#X obj 43 158 ds_reg \$2 /ev/base/\$1/parameter/3;
+#X obj 43 178 ds_reg \$2 /ev/base/\$1/parameter/4;
+#X obj 43 198 ds_reg \$2 /ev/base/\$1/parameter/5;
+#X obj 43 218 ds_reg \$2 /ev/base/\$1/parameter/6;
+#X obj 43 238 ds_reg \$2 /ev/base/\$1/parameter/7;
+#X obj 43 258 ds_reg \$2 /ev/base/\$1/parameter/8;
+#X obj 463 138 osc_bi \$2 /ev/base/\$1/parameter/2;
+#X obj 463 158 osc_bi \$2 /ev/base/\$1/parameter/3;
+#X obj 463 178 osc_bi \$2 /ev/base/\$1/parameter/4;
+#X obj 463 198 osc_bi \$2 /ev/base/\$1/parameter/5;
+#X obj 463 218 osc_bi \$2 /ev/base/\$1/parameter/6;
+#X obj 463 238 osc_bi \$2 /ev/base/\$1/parameter/7;
+#X obj 463 258 osc_bi \$2 /ev/base/\$1/parameter/8;
+#X obj 463 278 osc_bi \$2 /ev/base/\$1/state;
+#X obj 43 358 ds_reg \$2 /ev/base/\$1/state nomorph;
+#X text 28 14 In this subpatch \, all parameters are registered to
+the preset management system and osc communication.;
+#X text 28 64 For every parameter that needs state saving \, a [ds_reg]
+abstraction must be created. See [ev_storage-help] for more information.
+;
+#X text 27 289 As the "state" parameter of is only a toggle \, it makes
+no sense to fade it between two values. The "nomorph" argument disables
+scene morphing for this specific parameter permanently.;
+#X text 445 18 To enable osc comminication for a variable \, there
+are three [osc_...] abstractions available:;
+#X text 445 48 [osc_in] for receiving OSC messages;
+#X text 445 61 [osc_out] for sending OSC messages;
+#X text 445 75 [osc_bi] for bidirectional OSC communication without
+feedback.;
+#X restore 213 27 pd storage_&_osc;
+#X obj 11 66 cnv 15 358 65 empty empty empty 20 12 0 14 -13330 -66577
+0;
+#X obj 45 72 hsl 80 10 0 1 0 0 /ev/base/\$1/parameter/1 /ev/base/\$1/parameter/1
+empty -2 -8 0 10 -262144 -258113 -1 6500 1;
+#X obj 131 71 nbx 5 12 0 1 0 0 /ev/base/\$1/parameter/1 /ev/base/\$1/parameter/1
+R 58 7 0 10 -262144 -1 -4034 0.822785 256;
+#X obj 45 87 hsl 80 10 0 1 0 0 /ev/base/\$1/parameter/2 /ev/base/\$1/parameter/2
+empty -2 -8 0 10 -262144 -258113 -1 5300 1;
+#X obj 131 86 nbx 5 12 0 1 0 0 /ev/base/\$1/parameter/2 /ev/base/\$1/parameter/2
+G 58 7 0 10 -262144 -1 -4034 0.670886 256;
+#X obj 45 102 hsl 80 10 0 1 0 0 /ev/base/\$1/parameter/3 /ev/base/\$1/parameter/3
+empty -2 -8 0 10 -262144 -258113 -1 5200 1;
+#X obj 131 101 nbx 5 12 0 1 0 0 /ev/base/\$1/parameter/3 /ev/base/\$1/parameter/3
+B 58 7 0 10 -262144 -1 -4034 0.658228 256;
+#X obj 45 117 hsl 80 10 0 1 0 0 /ev/base/\$1/parameter/4 /ev/base/\$1/parameter/4
+empty -2 -8 0 10 -262144 -258113 -1 7900 1;
+#X obj 131 116 nbx 5 12 0 1 0 0 /ev/base/\$1/parameter/4 /ev/base/\$1/parameter/4
+A 58 7 0 10 -262144 -1 -4034 1 256;
+#X obj 18 72 tgl 15 0 /ev/base/\$1/state /ev/base/\$1/state O/1 0 23
+0 10 -4034 -1 -262144 1 1;
+#X obj 375 27 cnv 15 235 110 empty empty how_to: 3 8 0 12 -233017 -66577
+0;
+#X obj 375 147 cnv 15 235 360 empty empty send_n_recieves_for_controller-values
+3 8 0 10 -203904 -66577 0;
+#X obj 445 380 s /ev/base/\$1/parameter/1;
+#X obj 435 400 s /ev/base/\$1/parameter/2;
+#X obj 425 420 s /ev/base/\$1/parameter/3;
+#X obj 415 440 s /ev/base/\$1/parameter/4;
+#X obj 405 460 s /ev/base/\$1/parameter/5;
+#X obj 91 154 inlet gemlist;
+#X obj 91 410 outlet gemlist;
+#X obj 91 201 kdemux2;
+#X obj 130 176 r /ev/base/\$1/state;
+#X obj 130 251 alpha;
+#X obj 10 4 cnv 15 600 18 empty empty EXTENDED_VIEW_Example_for_EV_MODULE_BASE_based_PixFX
+3 10 0 14 -99865 -262144 0;
+#X text 88 463 (c)2012 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X text 143 200 bypass-logic;
+#X obj 396 203 r /ev/base/\$1/parameter/1;
+#X obj 406 223 r /ev/base/\$1/parameter/2;
+#X obj 416 243 r /ev/base/\$1/parameter/3;
+#X obj 426 263 r /ev/base/\$1/parameter/4;
+#X text 375 109 all controls are normalised from 0 to 1;
+#X text 375 63 this container \, save it under another \; name and
+enjoy instant storage and \; transition-features of EVT :);
+#X text 376 50 Build new compatible modules around;
+#X obj 130 361 colorRGB 1 1 1 1;
+#X connect 19 0 21 0;
+#X connect 21 0 20 0;
+#X connect 21 1 23 0;
+#X connect 22 0 21 1;
+#X connect 23 0 34 0;
+#X connect 27 0 34 1;
+#X connect 28 0 34 2;
+#X connect 29 0 34 3;
+#X connect 30 0 34 4;
+#X connect 34 0 20 0;
+#X coords 0 -1 1 1 360 85 1 10 50;

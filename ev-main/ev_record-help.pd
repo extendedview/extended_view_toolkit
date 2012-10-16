@@ -1,0 +1,93 @@
+#N canvas 350 74 764 631 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 12 -18 cnv 15 740 16 empty empty EXTENDED_VIEW_RECORD&EXPORT_MODULE
+2 8 0 14 -99865 -262144 0;
+#X obj 386 512 cnv 15 360 45 empty empty PARAMETER_LIST_for_ev_rec
+3 8 0 12 -128992 -262144 0;
+#X msg 536 63 0 \, destroy;
+#X text 390 19 CLICK HERE:;
+#X obj 12 285 cnv 15 360 45 empty empty creation_arguments: 5 8 0 12
+-162280 -1 0;
+#X obj 12 337 cnv 15 360 40 empty empty inlets/outlets 5 8 0 12 -233017
+-66577 0;
+#X text 16 349 Inlet 1: GEMlist;
+#X obj 13 9 cnv 15 360 270 empty empty description 5 8 0 12 -233017
+-66577 0;
+#X text 17 233 Contains specific storage_&_osc-subpatch which houses
+abstractions to register parameters for storage and osc communication
+;
+#N canvas 0 22 434 136 init 0;
+#X obj 122 67 ../ev-main/ev_declare;
+#X restore 682 85 pd init;
+#X obj 12 384 cnv 15 360 210 empty empty GUI_controls 5 8 0 12 -204800
+-66577 0;
+#X text 146 349 Outlet 1: GEMlist;
+#N canvas 0 22 438 271 parameter_list 0;
+#X text 28 13 control parameters for [ev_rec];
+#X text 27 40 /ev/rec/<id>/snap/dimen/x --- set x dimension \; /ev/rec/<id>/snap/dimen/y
+--- set y dimension \; /ev/rec/<id>/sync --- toggle syncing (0 \, 1)
+\; /ev/rec/<id>/file/quality --- set file quality of snapshot \; /ev/rec/<id>/snap/offset/x
+--- set x-offset \; /ev/rec/<id>/snap/offset/y --- set y-offset \;
+/ev/rec/<id>/rec --- start recording \; /ev/rec/<id>/stop --- stop
+recording: /ev/rec/<id>/grab --- grab snapshot \; /ev/rec/<id>/codec_nbr
+--- select codec for recording \;;
+#X restore 624 523 pd parameter_list;
+#X text 389 532 open subpatch for parameter-list;
+#X text 17 297 1st: module ID \, needs to be unique \; 2nd: storage
+domain \, see [ev_storage-help] for details;
+#X obj 387 308 ev_record <id123>;
+#X obj 387 85 gemhead 35;
+#X obj 387 286 gemhead 40;
+#X obj 536 90 gemwin 25;
+#X text 390 565 (c)2012 Peter Venus & Marian Weger /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X obj 387 236 rotateXYZ;
+#X obj 387 138 color 0.6 0.8 0.5;
+#X obj 502 137 world_light;
+#X obj 387 108 t a a;
+#X obj 421 207 line;
+#X msg 421 183 0 \, 360 12000;
+#X obj 457 207 sel 360;
+#X obj 421 164 loadbang;
+#X obj 387 258 teapot 1.5 8;
+#X msg 391 38 dimen 640 480 \, lighting 1 \, color 0.5 0.5 0.5 \, create
+\, 1;
+#X text 17 21 Recording Module to allow for export/recording of rendered
+content to disk or to take a snapshot (photo) of the content \; 1st
+set size and part of the screen you want to capture \; dimension and
+offset given in pixel \; 2nd: for video recording \, select codec from
+list and set it via nbr-box \, codeclist not working on all OS \; also:
+if you use [ev_vid] for playback you can sync recording to its playback-frames
+\; ATTENTION: using the sync-function only works properly \, if frame-accurate
+playback-mode is selected in [ev_vid] \; 3a: choose filename`n`storage-location
+\, then hit REC \; 3b: for taking snapshots of framebuffer/gemwin:
+select filename and location \, set quality and hit GRAB \; once you´ve
+set a filename you can take a number of snaphots- file will be numbered
+accordingly.;
+#X text 17 402 dimX/dimY: set dimension of target \; off_x/off_y: set
+offset \, if you just want to capture a part of the framebuffer \;
+codeclist: shows available codecs in pd-window \; select_codec: set
+codec according to codeclist \; SYNC_on/off: toggle frame-synced video
+recording \; VIDEO__SAVE_AS: set directory and filename \; REC/STOP:
+start & stop recording \; IMAGE__SAVE_AS: set directory&filename for
+snapshot \; IMG_quality: set image quality (default: 80) \; GRAB: bang
+snapshot \;;
+#X connect 2 0 18 0;
+#X connect 16 0 23 0;
+#X connect 17 0 15 0;
+#X connect 20 0 28 0;
+#X connect 21 0 20 0;
+#X connect 23 0 21 0;
+#X connect 23 1 22 0;
+#X connect 24 0 26 0;
+#X connect 24 0 20 1;
+#X connect 24 0 20 2;
+#X connect 24 0 20 3;
+#X connect 25 0 24 0;
+#X connect 26 0 25 0;
+#X connect 27 0 25 0;
+#X connect 29 0 18 0;

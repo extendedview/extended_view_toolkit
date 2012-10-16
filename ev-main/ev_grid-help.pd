@@ -1,0 +1,67 @@
+#N canvas 362 22 727 714 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 45 -14 cnv 15 600 16 empty empty EXTENDED_VIEW_GRID_MODULE 20
+8 0 14 -233017 -66577 0;
+#X obj 47 16 cnv 15 164 80 empty empty gui_controls 5 8 0 12 -204800
+-66577 0;
+#X text 50 31 grid: toggles grid on/off;
+#X text 50 43 labeling: toggles colored;
+#X text 98 55 orientation lines;
+#X text 51 67 segments x/y: determines;
+#X text 63 77 the number of segments;
+#X obj 47 104 cnv 15 200 200 empty empty description 5 8 0 14 -233017
+-66577 0;
+#X text 50 118 the grid module is supposed to;
+#X text 50 130 help adjusting projections by;
+#X text 50 141 providing a rectangled grid with;
+#X text 50 152 variable amount of segments.;
+#X text 50 162 It also features a labeling tool \,;
+#X text 51 172 that draws vertical lines in;
+#X text 51 183 45degree Intervals \, assuming;
+#X text 51 194 the grid covers a 360 degrees.;
+#X text 52 211 Can be controlled via OSC \, which;
+#X text 52 222 uses the same syntax as the /ev;
+#X text 51 234 internal send/recieve message;
+#X obj 47 311 cnv 15 200 60 empty empty creation_arguments 5 8 0 14
+-162280 -66577 0;
+#X text 51 328 1st: module ID;
+#X obj 47 388 cnv 15 200 60 empty empty inlets/outlets 5 8 0 14 -233017
+-66577 0;
+#X text 51 403 Inlet: GEMlist;
+#X obj 45 515 cnv 15 360 170 empty empty PARAMETER_LIST_for_ev_grid
+20 8 0 14 -233017 -66577 0;
+#X text 52 246 system see parameter list below;
+#X text 52 258 for additional information about;
+#X text 52 268 the specific parameter-names.;
+#X obj 45 457 cnv 15 360 50 empty empty empty 20 8 0 14 -233017 -66577
+0;
+#X text 52 464 Contains specific storage_&_osc-subpatch which houses
+abstractions to register parameters for storage and osc communication
+;
+#X text 48 535 /ev/grid/<id>/size --- scaling factor \; /ev/grid/<id>/state
+--- turn module on (1) and off (0) \; /ev/grid/<id>/res/x --- number
+of segments in x-direction \; /ev/grid/<id>/res/y --- number of segments
+in y-direction \; /ev/grid/<id>/labeling/state --- labeling on (1)
+/ off (0) \; /ev/grid/<id>/labeling/zero/color --- color of zero line
+\; /ev/grid/<id>/labeling/border/color --- color of border \; /ev/grid/<id>/labeling/mark/color
+--- color of 45deg marks \; /ev/grid/<id>/labeling/size -- thickness
+of labeling lines \; \; colors format: (r g b);
+#X obj 291 183 gemhead;
+#X obj 319 98 gemwin 20;
+#X msg 331 60 0 \, destroy;
+#X text 242 37 CLICK HERE:;
+#X text 269 405 (c)2011 Peter Venus & Marian Weger /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X obj 291 216 ev_grid \$0;
+#X text 51 341 2nd: storage domain;
+#X obj 318 358 ../ev-main/ev_declare;
+#X text 273 338 set the pathes to the needed abstractions;
+#X msg 319 38 dimen 800 600 \, color 0.2 0.2 0.2 \, create \, 1;
+#X connect 30 0 35 0;
+#X connect 32 0 31 0;
+#X connect 39 0 31 0;
+#X coords 0 714 1 713 110 85 0;

@@ -1,0 +1,185 @@
+#N canvas 365 22 883 756 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media;
+#X obj 41 652 world_light;
+#X obj 41 631 gemhead;
+#X obj 14 14 cnv 15 700 30 empty empty Example:_masking_for_video_mappings
+20 12 0 14 -233017 -66577 0;
+#X obj 40 759 s /ev/buf/0/color;
+#X msg 40 734 0.9 0.6 0.1 1;
+#X obj 40 689 loadbang;
+#X obj 40 711 del 3000;
+#X obj 23 154 gemhead 20;
+#X obj 16 436 cnv 15 150 135 empty empty simple_3d-object 20 12 0 10
+-233017 -66577 0;
+#X obj 23 501 teapot;
+#N canvas 0 22 450 300 teapot-movement 0;
+#X obj 25 14 inlet;
+#X obj 19 263 outlet;
+#X obj 41 119 translateXYZ 0 0 0;
+#X obj 41 159 rotateXYZ 0 0 0;
+#X floatatom 158 121 5 0 0 0 - - -;
+#X obj 158 -10 line;
+#X obj 137 -52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 158 -52 metro 10000;
+#X obj 41 181 scaleXYZ 0.6 0.6 0.6;
+#X msg 158 -30 0 \, 1 10000;
+#X obj 158 99 * 360;
+#X obj 160 -149 loadbang;
+#X obj 69 -50 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 91 -52 1;
+#X obj 76 25 *;
+#X obj 76 47 cos;
+#X obj 76 69 * 4;
+#X floatatom 76 93 5 0 0 0 - - -;
+#X obj 91 -30 atan;
+#X obj 91 -10 * 8;
+#X obj 41 203 color 1 1 1;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 4 0 3 2;
+#X connect 4 0 3 1;
+#X connect 4 0 3 3;
+#X connect 5 0 10 0;
+#X connect 5 0 14 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 8 0 20 0;
+#X connect 9 0 5 0;
+#X connect 10 0 4 0;
+#X connect 11 0 13 0;
+#X connect 11 0 7 0;
+#X connect 12 0 13 0;
+#X connect 13 0 18 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 2 1;
+#X connect 18 0 19 0;
+#X connect 19 0 14 1;
+#X connect 20 0 1 0;
+#X restore 23 469 pd teapot-movement;
+#X obj 153 371 pix_texture;
+#X obj 153 394 rectangle 3 3;
+#X obj 43 310 tgl 15 0 empty empty show_content_of_frambuffer 17 7
+0 10 -260097 -1 -1 0 1;
+#X obj 14 47 cnv 15 80 40 empty empty declare_paths 2 8 0 10 -258113
+-262144 0;
+#N canvas 513 252 548 468 init 0;
+#X obj 56 92 loadbang;
+#X obj 44 -23 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 49 -3 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X text 159 170 load the preset file on startup:;
+#X text 66 272 Recall scene '0' from the loaded preset file \, and
+load the still image files.;
+#X obj 158 43 ev-main/ev_declare;
+#X obj 56 144 t b b;
+#X obj 83 168 del 1000;
+#X obj 56 231 del 3000;
+#X msg 56 308 \; /0/ds/scene 0 \;;
+#X msg 83 190 \; /0/ds/loadfile ../../data/ev_example_masking_preset.txt
+;
+#X text 160 226 (pathes relative to "./libs/kollabs");
+#X connect 0 0 6 0;
+#X connect 6 0 8 0;
+#X connect 6 1 7 0;
+#X connect 7 0 10 0;
+#X connect 8 0 9 0;
+#X restore 32 64 pd init;
+#X text 99 46 This example shows how to use the projection modules
+to create masking when doing video-mapping on objects like facades
+of buildings or similar;
+#X obj 179 436 cnv 15 270 350 empty empty projection_planes 20 12 0
+14 -262130 -66577 0;
+#X obj 393 547 t a;
+#X obj 200 569 t a a a;
+#X obj 393 436 t a;
+#X obj 200 512 tgl 15 1 empty empty toggle_projection_modules 17 7
+0 10 -260097 -1 -1 1 1;
+#X text 372 366 send the texture id of the \; framebuffer to the projection
+modules;
+#X obj 461 436 cnv 15 370 390 empty empty projection_modules_used_for_masking
+20 12 0 14 -261234 -66577 0;
+#X obj 688 490 gemhead;
+#X obj 688 607 pix_texture;
+#X msg 717 537 RGBA;
+#X obj 751 491 loadbang;
+#X obj 483 509 gemhead 51;
+#X text 477 14 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X text 462 244 "ev_example_masking_preset.txt";
+#X obj 200 537 gemhead 30;
+#X obj 661 218 ev_storage;
+#X obj 23 179 ev_buf 0;
+#X obj 200 728 ev_pro_22 l;
+#X obj 219 667 ev_pro_22 c;
+#X obj 239 608 ev_pro_22 r;
+#X obj 354 94 ev_gemwin;
+#X obj 688 584 pix_separator;
+#X obj 688 512 alpha;
+#X obj 688 562 pix_set 1 1;
+#X obj 483 755 ev_pro_22easy win;
+#X obj 502 695 ev_pro_22easy dow;
+#X obj 522 635 ev_pro_33easy door;
+#X msg 751 537 0 0 0 1;
+#X obj 483 597 t a a a;
+#X text 608 468 generate coloured texture \; for masks;
+#X text 496 537 gemhead is rendered after \; projection-planes \, so
+\; masks are on top;
+#X obj 200 463 loadbang;
+#X msg 200 485 1;
+#X obj 43 267 loadbang;
+#X msg 43 289 0;
+#X obj 43 336 gemhead 99;
+#X text 577 71 click "create" to start;
+#X text 462 231 This example uses scene 0 of;
+#X text 24 610 light needed for 3d:;
+#X text 463 276 Presets are located in the \; "./data" folder;
+#X connect 1 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 33 0;
+#X connect 10 0 9 0;
+#X connect 11 0 12 0;
+#X connect 13 0 52 0;
+#X connect 18 0 34 1;
+#X connect 18 0 35 1;
+#X connect 18 0 36 1;
+#X connect 19 0 34 0;
+#X connect 19 1 35 0;
+#X connect 19 2 36 0;
+#X connect 20 0 18 0;
+#X connect 21 0 31 0;
+#X connect 24 0 39 0;
+#X connect 25 1 43 1;
+#X connect 25 1 42 1;
+#X connect 25 1 41 1;
+#X connect 26 0 40 0;
+#X connect 27 0 26 0;
+#X connect 27 0 44 0;
+#X connect 28 0 45 0;
+#X connect 31 0 19 0;
+#X connect 33 0 10 0;
+#X connect 33 1 11 1;
+#X connect 33 1 20 0;
+#X connect 38 0 25 0;
+#X connect 39 0 40 0;
+#X connect 40 0 38 0;
+#X connect 44 0 40 1;
+#X connect 45 0 41 0;
+#X connect 45 1 42 0;
+#X connect 45 2 43 0;
+#X connect 48 0 49 0;
+#X connect 49 0 21 0;
+#X connect 50 0 51 0;
+#X connect 51 0 13 0;
+#X connect 52 0 11 0;
+#X coords 0 0 1 1 85 60 0;
