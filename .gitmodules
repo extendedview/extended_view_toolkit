@@ -1,6 +1,0 @@
-[submodule "libs/kollabs"]
-	path = libs/kollabs
-	url = git://github.com/m---w/kollabs.git
-[submodule "libs/gil"]
-	path = libs/gil
-	url = git://github.com/m---w/gil.git

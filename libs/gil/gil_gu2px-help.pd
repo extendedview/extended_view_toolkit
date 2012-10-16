@@ -1,0 +1,25 @@
+#N canvas 225 51 482 474 10;
+#X floatatom 234 340 5 0 0 0 x - -;
+#X floatatom 283 340 5 0 0 0 y - -;
+#X text 157 416 (c) 2012 Marian Weger;
+#X obj 234 276 gil_gu2px 800 600;
+#X text 30 49 converts coordinates from gem units to pixels;
+#X text 31 21 gil_gu2px <gemwin dimen x> <gemwin dimen y>;
+#X text 35 83 [gil_gu2px] takes coordinates given in gem units by inlets
+1 (x) and 2 (y) \, and converts them to pixels. For doing that \, it
+needs to know the current gemwin dimension by either creation arguments
+or the third inlet.;
+#X text 320 24 e.g. 800 600;
+#X floatatom 234 209 5 0 0 0 x - -;
+#X floatatom 283 209 5 0 0 0 y - -;
+#X msg 348 180 dimen 800 600;
+#X msg 363 211 800 600;
+#X text 32 339 Cursor position in pixels:;
+#X text 32 209 Cursor position in GEM units:;
+#X text 355 255 gemwin dimensions;
+#X connect 3 0 0 0;
+#X connect 3 1 1 0;
+#X connect 8 0 3 0;
+#X connect 9 0 3 1;
+#X connect 10 0 3 2;
+#X connect 11 0 3 2;

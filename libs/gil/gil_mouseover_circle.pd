@@ -1,0 +1,74 @@
+#N canvas 235 22 557 681 10;
+#X obj 100 358 -;
+#X obj 100 402 *;
+#X obj 100 380 t f f;
+#X obj 100 464 +;
+#X obj 157 358 -;
+#X obj 157 402 *;
+#X obj 157 380 t f f;
+#X obj 157 424 t b f;
+#X obj 100 538 change;
+#X text 216 203 object position x \, y;
+#X obj 100 486 sqrt;
+#X obj 73 207 t l l;
+#X obj 344 310 loadbang;
+#X obj 344 356 sel 0;
+#X obj 100 516 <= 1;
+#X obj 73 626 outlet cursor-list;
+#X obj 73 176 inlet cursor-list;
+#X obj 223 226 inlet x;
+#X obj 283 226 inlet y;
+#X obj 383 226 inlet r;
+#X text 68 23 gil_mouseover_circle <radius>;
+#X text 101 589 outlet 2: 1 if cursor inside r \, 0 if cursor outside
+r;
+#X text 285 458 (c)2011 Marian Weger /part of GIL/;
+#X text 381 207 inlet 3: radius;
+#X obj 100 570 outlet mouseover;
+#X obj 344 332 \$1;
+#X obj 100 229 unpack f f f;
+#X obj 169 250 * -1;
+#X obj 169 272 + 1;
+#X obj 100 311 spigot 1;
+#X obj 157 311 spigot 1;
+#X text 65 54 [gil_mouseover_circle] detects \, if the cursor hovers
+over a given point inside the gemwin \, in a given radius around that
+point. When the cursor enters the radius \, and the left button is
+not pressed since the cursor has been outside the circle \, a '1' is
+sent to the 2nd outlet. By leaving the radius \, having the left mouse
+button unpressed \, the 2nd outlet gets a '0'. the radius can be given
+by either creation argument or 3rd inlet.;
+#X obj 253 503 cnv 15 220 50 empty empty HELP? 20 12 0 14 -261234 -258113
+0;
+#X text 254 530 for further help: see [gil_example];
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 1 1 1;
+#X connect 3 0 10 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 6 1 5 1;
+#X connect 7 0 3 0;
+#X connect 7 1 3 1;
+#X connect 8 0 24 0;
+#X connect 10 0 14 0;
+#X connect 11 0 15 0;
+#X connect 11 1 26 0;
+#X connect 12 0 25 0;
+#X connect 13 1 14 1;
+#X connect 14 0 8 0;
+#X connect 16 0 11 0;
+#X connect 17 0 0 1;
+#X connect 18 0 4 1;
+#X connect 19 0 14 1;
+#X connect 25 0 13 0;
+#X connect 26 0 29 0;
+#X connect 26 1 30 0;
+#X connect 26 2 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 30 1;
+#X connect 28 0 29 1;
+#X connect 29 0 0 0;
+#X connect 30 0 4 0;

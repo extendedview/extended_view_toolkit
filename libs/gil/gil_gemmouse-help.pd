@@ -1,0 +1,36 @@
+#N canvas 225 51 440 568 10;
+#X msg 150 200 dimen 800 600 \, create \, 1;
+#X msg 79 230 0 \, destroy;
+#X obj 150 269 gemwin;
+#X obj 224 240 route dimen;
+#X text 129 174 click here to create GEM window;
+#X obj 224 276 gil_gemmouse 800 600;
+#X text 19 21 gil_gemmouse <dimen x> <dimen y>;
+#X obj 224 308 unpack f f f f f;
+#X floatatom 224 380 5 0 0 0 x - -;
+#X floatatom 247 360 5 0 0 0 y - -;
+#X text 23 370 Cursor position in GEM units:;
+#X obj 270 468 tgl 15 0 empty empty left 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 293 448 tgl 15 0 empty empty center 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 317 428 tgl 15 0 empty empty right 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 129 438 Mouse buttons status:;
+#X text 30 126 [gil_gemmouse] needs to know the current gemwin resolution
+\, given by creation arguments or inlet.;
+#X text 30 66 [gil_gemmouse] consists of the classic gemmouse object
+whose output is scaled to gem units and packed to one "cursor list"
+at the outlet. This list can then be further processed via other GIL
+objects.;
+#X text 112 519 (c) 2012 Marian Weger;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 5 0;
+#X connect 5 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 9 0;
+#X connect 7 2 11 0;
+#X connect 7 3 12 0;
+#X connect 7 4 13 0;
