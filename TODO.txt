@@ -25,15 +25,17 @@ Communication:
 
 New modules:
 ------------
-*   [ev_glslbuf] module, consisting of a [ev_glsl] rendered in a framebuffer
-    (for quicker patching of shader-based effects)
-*   [ev_glslbuf2] object, containing two [ev_glslbuf] for 2-pass shaders (i.e. blur)
-*   [ev_paint] module to paint maskings for video mappings with mouse/tablet
+*   [ev_glslbuf] module, consisting of a [ev_glsl] rendered in a 
+    framebuffer (for quicker patching of shader-based effects)
+*   [ev_glslbuf2] object, containing two [ev_glslbuf] 
+    for 2-pass shaders (i.e. blur)
+*   [ev_paint] module to paint maskings for video mappings 
+    with mouse/tablet
 *   [ev_audio] module to play sound for videos in sync with [ev_vid]
-*   [ev_presenter] module to load presentation slides and provide basic 
-    functions for presentations
-*   [ev_pano_virtual] virtual panoramic camera to create panoramic live-imagery 
-    from inside a rendered 3d-scene.
+*   [ev_presenter] module to load presentation slides and 
+    provide basic functions for presentations
+*   [ev_pano_virtual] virtual panoramic camera to create 
+    panoramic live-imagery from inside a rendered 3d-scene.
 *   [ev_playlist] playlist module for media files (sound, video)
     *   save playlist in textfile
 *   [ev_audio] audioplayer for synchronised audio to [ev_vid]
@@ -46,10 +48,11 @@ New modules:
         *   panoramic kinect camera system
         *   cover big stages with multiple kinect
     *   treshold module, to set tresholds of depth-image
-*   file-pool module that watches specified folder and adds containing
-    media files automatically. with ability to send files to playlists.
-*   solution for camera that captures a full dome, and to project such spherical
-    imagery onto a dome-shaped screen.
+*   file-pool module that watches specified folder and adds 
+    containing media files automatically. 
+    with ability to send files to playlists.
+*   solution for camera that captures a full dome, and to 
+    project such spherical imagery onto a dome-shaped screen.
 *   [ev_pro_3] triangular projection module
 *   [ev_subtitles] subtitle text module
 
@@ -58,7 +61,7 @@ Changes in existing modules:
 *   match vertex behavior of [ev_pro_55] and [ev_pro_22/33]
     *   decide for one algorithm in all projection modules?
     *   toggle to select algorithm the modules?
-*   improve mouse/keyboard interaction with [ev_pro_xx] inside the gemwin
+*   improve mouse/keyboard interaction with [ev_pro_xx] inside gemwin
     *   select multiple points to be able to move them together
     *   move selected points with keyboard arrow keys
     *   add mouseover functionality for modules inside modules
@@ -68,7 +71,7 @@ Changes in existing modules:
 
 New examples:
 -------------
-*   simple VJ setup: dual videoplayer, video-mixer, video-effect, ev_pro_22easy.
+*   simple VJ setup: dual videoplayer, video-mixer, video-effect, ...
 *   midi control
 *   osc remote from other computer / other pd instance
 
