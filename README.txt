@@ -69,7 +69,7 @@ __Software:__
 
 __Operating System:__
 The abstractions have been tested on Linux (Debian/Ubuntu), 
-Mac OSX 10.6/10.7/10.8 and Microsoft Windows 7.
+Mac OSX 10.6/10.7 and Microsoft Windows 7.
 
 __Hardware:__
 Recent graphics hardware required to have access to full OpenGL 
