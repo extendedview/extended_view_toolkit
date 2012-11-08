@@ -1,4 +1,4 @@
-#N canvas 146 130 775 650 10;
+#N canvas 364 151 775 650 10;
 #X declare -path . -path .. -path data -path ../data -path ev-in -path
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
@@ -85,7 +85,7 @@ for video (0...100) \; form : adjust shape of the fade-curve (0...100)
 \; weight : fade between linear and curved fade-behaviour (0-100) \;
 show_curve: shows the fade-curve \; flip: flips content horicontal
 and vertical;
-#N canvas 1 54 470 519 parameter_list 0;
+#N canvas 1 56 470 519 parameter_list 0;
 #X text 28 13 control parameters for [ev_vid];
 #X text 25 36 /ev/vid/<id>/fadeIn_time --- fadeIn-time in frames \;
 /ev/vid/<id>/fadeOut_time --- fadeOut-time in frames \; /ev/vid/<id>/start_time
@@ -99,7 +99,7 @@ gain level of video \; /ev/vid/<id>/weight --- adjusts weight of the
 fading-curve \; /ev/vid/<id>/form --- alters the shape of the fade
 curve \; /ev/vid/<id>/loop --- play video in a loop \; /ev/vid/<id>/flip/horicontal
 --- flip video horicontally \; /ev/vid/<id>/flip/vertical --- flip
-video vertically \; /ev/vid/\$1/curve/vis --- show fade curve \;;
+video vertically \; /ev/vid/<id>/curve/vis --- show fade curve \;;
 #X restore 574 582 pd parameter_list for ev_vid;
 #X text 395 582 open subpatch for list;
 #X connect 3 0 2 0;
