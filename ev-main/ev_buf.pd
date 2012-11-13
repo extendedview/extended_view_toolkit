@@ -1,4 +1,4 @@
-#N canvas -2343 220 1055 651 10;
+#N canvas 179 295 1055 651 10;
 #X obj 590 276 gemframebuffer;
 #X obj 101 115 cnv 15 268 56 empty empty empty 20 12 0 14 -228856 -66577
 0;
@@ -71,12 +71,11 @@ y -8 8 0 10 -262130 -1 -1 0 256;
 #X obj 977 76 list prepend rectangle;
 #X obj 996 123 list prepend type;
 #X obj 1015 175 list prepend color;
-#N canvas 34 234 656 422 storage_&_osc 0;
+#N canvas 30 236 656 422 storage_&_osc 1;
 #X obj 58 85 ds_reg \$2 /ev/buf/\$1/scale/x;
 #X obj 58 105 ds_reg \$2 /ev/buf/\$1/scale/y;
 #X obj 58 145 ds_reg \$2 /ev/buf/\$1/shift/x;
 #X obj 58 165 ds_reg \$2 /ev/buf/\$1/shift/y;
-#X obj 58 265 ds_reg \$2 /ev/buf/\$1/color;
 #X obj 58 225 ds_reg \$2 /ev/buf/\$1/rectangle nomorph;
 #X obj 58 245 ds_reg \$2 /ev/buf/\$1/format nomorph;
 #X obj 58 205 ds_reg \$2 /ev/buf/\$1/type nomorph;
@@ -98,6 +97,7 @@ y -8 8 0 10 -262130 -1 -1 0 256;
 #X obj 358 225 osc_bi \$2 /ev/buf/\$1/rectangle;
 #X obj 358 245 osc_bi \$2 /ev/buf/\$1/format;
 #X obj 358 265 osc_bi \$2 /ev/buf/\$1/color;
+#X obj 58 265 ds_reg \$2 /ev/buf/\$1/color nomorph;
 #X restore 180 61 pd storage_&_osc;
 #X text 104 429 Outlet 1: gemlist \, to be connectet to input \, group
 or;
