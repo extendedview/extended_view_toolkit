@@ -1,0 +1,207 @@
+#N canvas 1 58 892 631 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 14 14 cnv 15 860 30 empty empty Example:_Mapping_on_shipping_containers
+20 12 0 14 -191407 -1 0;
+#X obj 14 47 cnv 15 80 40 empty empty empty 2 8 0 10 -261234 -262144
+0;
+#N canvas 47 306 548 468 init 0;
+#X obj 56 92 loadbang;
+#X obj 83 138 del 1000;
+#X obj 56 114 t b b;
+#X obj 56 281 del 3000;
+#X obj 44 -23 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 49 -3 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X obj 158 43 ev-main/ev_declare;
+#X text 165 266 (pathes relative to libs/kollabs);
+#X msg 83 170 \; /one/ds/loadfile ../../data/ev_example_shipping_containers_one.txt
+\; /two/ds/loadfile ../../data/ev_example_shipping_containers_two.txt
+;
+#X msg 56 345 \; /one/ds/scene 0 \; /two/ds/scene 0;
+#X text 159 140 load the preset files on startup:;
+#X text 66 322 Recall scene '0' from the loaded preset files:;
+#X connect 0 0 2 0;
+#X connect 1 0 8 0;
+#X connect 2 0 3 0;
+#X connect 2 1 1 0;
+#X connect 3 0 9 0;
+#X restore 30 59 pd init;
+#X obj 101 135 ev_storage one;
+#X obj 101 49 ev_gemwin one;
+#X obj 484 296 cnv 15 390 300 empty empty Backround_Image 20 12 0 14
+-262130 -66577 0;
+#X obj 579 451 gemhead 50;
+#X obj 579 473 ev_pic background one;
+#X obj 579 545 pix_texture;
+#X obj 579 567 rectangle 5.3333 4;
+#X text 496 322 As we can not assume that you have access to real shhipping
+containers and projectors right now \, we will just map onto a picture
+from Rotterdam.;
+#X text 496 362 As we can not assume that you have access to real shhipping
+containers and projectors right now \, we will just map onto a picture
+from Rotterdam container port.;
+#X text 496 402 Imagine \, the camera is looking from the same angle
+as the projector.;
+#X obj 14 298 cnv 15 460 300 empty empty Projection_Modules 20 12 0
+14 -261682 -66577 0;
+#X obj 29 333 gemhead 51;
+#X obj 49 369 ev_pro_22 container1 one;
+#X obj 39 429 ev_pro_22 container2 one;
+#X obj 29 489 ev_pro_22 container3 one;
+#X obj 222 320 r /ev/buf/teapot-buffer/texture_id;
+#X obj 484 607 cnv 15 390 650 empty empty Framebuffer_Contents 20 12
+0 14 -204800 -66577 0;
+#X obj 494 681 tgl 15 0 empty empty show_framebuffer_contents 17 7
+0 10 -258113 -1 -1 0 1;
+#X obj 545 1002 pix_texture;
+#X obj 494 634 loadbang;
+#X msg 494 656 0;
+#X obj 494 911 gemhead 100;
+#X obj 608 979 r /ev/buf/teapot-buffer/texture_id;
+#X obj 528 1110 ev_texhelper container1;
+#X obj 511 1160 ev_texhelper container2;
+#X obj 494 1210 ev_texhelper container3;
+#X msg 534 759 \; /ev/pro/container1/state \$1 \; /ev/pro/container2/state
+\$1 \; /ev/pro/container3/state \$1 \;;
+#X obj 534 715 == 0;
+#X msg 514 847 \; /ev/texhelper/container1/state \$1 \; /ev/texhelper/container2/state
+\$1 \; /ev/texhelper/container3/state \$1 \;;
+#X obj 545 979 separator;
+#X obj 494 938 t a a a a;
+#X text 569 957 texture framebuffer contents onto rectangle;
+#X text 538 1066 show texture positions of the projection modules \;
+and enable mouse cursor interaction.;
+#X text 531 829 1: turn on texhelper modules;
+#X text 543 739 0: turn off cursor interaction for projection modules
+;
+#X text 567 715 invert value;
+#X obj 14 607 cnv 15 460 155 empty empty Framebuffer_for_projection
+20 12 0 14 -203904 -66577 0;
+#X obj 14 766 cnv 15 460 450 empty empty 3d-scene:_the_rotating_teapot_again
+20 12 0 14 -204786 -66577 0;
+#X obj 20 633 gemhead;
+#X obj 39 951 rotateXYZ 0 0 0;
+#X obj 126 876 loadbang;
+#X msg 126 898 0 \, 360 10000;
+#X obj 126 920 line;
+#X obj 67 898 sel 360;
+#X obj 20 679 ev_buf teapot-buffer one;
+#X obj 20 1161 world_light;
+#X obj 39 826 separator;
+#X text 100 1164 light source;
+#X obj 20 655 alpha;
+#X obj 39 848 translateXYZ 0 0 0;
+#X obj 39 1134 teapot 2.5;
+#X obj 39 1110 color 1 1 1 1;
+#X text 46 547 The three projection modules all get the same texture.
+;
+#X text 46 565 In the settings dialog \, "set_alpha_to_'1'" is turned
+off \, to allow a transparent background.;
+#X obj 114 1084 pack 0 0 0 1;
+#X obj 114 986 r /teapot/color/r;
+#X obj 124 1006 r /teapot/color/g;
+#X obj 124 1028 t b f;
+#X obj 164 1050 t b f;
+#X obj 164 1028 r /teapot/color/b;
+#X obj 263 1117 ds_reg two /teapot/color/r;
+#X obj 263 1137 ds_reg two /teapot/color/g;
+#X obj 263 1157 ds_reg two /teapot/color/b;
+#X text 232 1095 register color to storage domain "two";
+#X obj 265 135 ev_storage two;
+#X obj 20 799 t a a a;
+#X obj 262 854 ev_pic grid one;
+#X obj 262 926 pix_texture;
+#X obj 545 1026 square 4;
+#X obj 262 948 translateXYZ 0 0 -4;
+#X obj 262 972 square 8;
+#X text 240 811 For adjustment of texture coordinates \; show grid
+behind teapot:;
+#X obj 755 119 vsl 15 128 0 1 0 0 /teapot/color/r /teapot/color/r R
+0 -9 0 10 -258113 -1 -1 12700 1;
+#X obj 775 119 vsl 15 128 0 1 0 0 /teapot/color/g /teapot/color/g G
+0 -9 0 10 -4034 -1 -1 12700 1;
+#X obj 795 119 vsl 15 128 0 1 0 0 /teapot/color/b /teapot/color/b B
+0 -9 0 10 -4160 -1 -1 0 1;
+#X text 724 15 (C)2012 Narian Weger;
+#X obj 489 57 loadbang;
+#X obj 489 127 tgl 15 0 empty empty change_scenes_automatically 17
+7 0 10 -260097 -1 -1 1 1;
+#X obj 489 149 metro 4000;
+#X obj 489 252 s /one/ds/scene;
+#X obj 489 211 random 7;
+#X floatatom 489 233 5 0 0 0 - - -;
+#X obj 592 189 del 2000;
+#X obj 592 211 random 4;
+#X floatatom 592 233 5 0 0 0 - - -;
+#X obj 592 252 s /two/ds/scene;
+#X obj 489 79 del 8000;
+#X msg 489 101 1;
+#X text 743 80 Teapot Color;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 14 0 15 0;
+#X connect 14 0 16 0;
+#X connect 14 0 17 0;
+#X connect 18 0 15 1;
+#X connect 18 0 16 1;
+#X connect 18 0 17 1;
+#X connect 20 0 24 0;
+#X connect 20 0 31 0;
+#X connect 20 0 30 0;
+#X connect 21 0 71 0;
+#X connect 22 0 23 0;
+#X connect 23 0 20 0;
+#X connect 24 0 33 0;
+#X connect 25 0 21 1;
+#X connect 30 0 29 0;
+#X connect 32 0 21 0;
+#X connect 33 0 28 0;
+#X connect 33 1 27 0;
+#X connect 33 2 26 0;
+#X connect 33 3 32 0;
+#X connect 41 0 51 0;
+#X connect 42 0 54 0;
+#X connect 43 0 44 0;
+#X connect 44 0 45 0;
+#X connect 45 0 46 0;
+#X connect 45 0 42 1;
+#X connect 45 0 42 2;
+#X connect 45 0 42 3;
+#X connect 46 0 44 0;
+#X connect 47 0 68 0;
+#X connect 49 0 52 0;
+#X connect 51 0 47 0;
+#X connect 52 0 42 0;
+#X connect 54 0 53 0;
+#X connect 57 0 54 1;
+#X connect 58 0 57 0;
+#X connect 59 0 60 0;
+#X connect 60 0 57 0;
+#X connect 60 1 57 1;
+#X connect 61 0 57 0;
+#X connect 61 1 57 2;
+#X connect 62 0 61 0;
+#X connect 68 0 48 0;
+#X connect 68 1 49 0;
+#X connect 68 2 69 0;
+#X connect 69 0 70 0;
+#X connect 70 0 72 0;
+#X connect 72 0 73 0;
+#X connect 79 0 89 0;
+#X connect 80 0 81 0;
+#X connect 81 0 83 0;
+#X connect 81 0 85 0;
+#X connect 83 0 84 0;
+#X connect 84 0 82 0;
+#X connect 85 0 86 0;
+#X connect 86 0 87 0;
+#X connect 87 0 88 0;
+#X connect 89 0 90 0;
+#X connect 90 0 80 0;
+#X coords 0 0 1 1 85 60 0;
