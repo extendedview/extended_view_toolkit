@@ -1,4 +1,4 @@
-#N canvas 178 22 922 756 10;
+#N canvas 440 22 922 756 10;
 #X declare -path . -path .. -path data -path ../data -path ev-in -path
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
@@ -82,7 +82,6 @@ example.;
 #X restore 212 161 pd device;
 #X obj 199 285 t a;
 #X msg 199 123 dimen 1920 1080;
-#X obj 26 260 scaleXYZ 1.33 1 1;
 #X obj 543 425 r /ev/360/0/dimen/y;
 #X obj 413 425 r /ev/360/0/dimen/x;
 #X floatatom 413 447 5 0 0 0 - - -;
@@ -103,17 +102,18 @@ example.;
 -1 0;
 #X text 32 67 This example needs a webcam and a cone-shaped mirror
 in front of it \, to get a 360 degree image in realtime.;
-#X connect 8 0 30 0;
-#X connect 9 0 16 0;
+#X obj 26 260 scaleXYZ 1 1 1;
+#X connect 8 0 29 0;
+#X connect 9 0 33 0;
 #X connect 10 0 14 0;
 #X connect 11 0 14 0;
 #X connect 12 0 14 0;
 #X connect 13 0 12 0;
 #X connect 14 0 8 1;
 #X connect 15 0 14 0;
-#X connect 16 0 8 0;
-#X connect 17 0 20 0;
-#X connect 18 0 19 0;
-#X connect 23 0 16 1;
-#X connect 24 0 16 2;
+#X connect 16 0 19 0;
+#X connect 17 0 18 0;
+#X connect 22 0 33 1;
+#X connect 23 0 33 2;
+#X connect 33 0 8 0;
 #X coords 0 756 1 755 85 60 0;
