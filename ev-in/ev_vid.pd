@@ -34,33 +34,33 @@
 #X obj 644 291 s /ev/vid/\$1/stop;
 #X obj 487 131 list prepend open;
 #N canvas 96 296 589 450 storage_&_osc 0;
-#X obj 363 278 osc_bi \$1 /ev/vid/\$1/start;
-#X obj 363 298 osc_bi \$1 /ev/vid/\$1/stop;
-#X obj 363 318 osc_bi \$1 /ev/vid/\$1/open;
-#X obj 93 178 ds_reg \$1 /ev/vid/\$1/gain;
-#X obj 363 218 osc_bi \$1 /ev/vid/\$1/weight;
-#X obj 363 198 osc_bi \$1 /ev/vid/\$1/form;
-#X obj 363 178 osc_bi \$1 /ev/vid/\$1/gain;
-#X obj 363 138 osc_bi \$1 /ev/vid/\$1/fadeOut_time;
-#X obj 363 118 osc_bi \$1 /ev/vid/\$1/fadeIn_time;
-#X obj 363 98 osc_bi \$1 /ev/vid/\$1/end_time;
-#X obj 363 78 osc_bi \$1 /ev/vid/\$1/start_time;
-#X obj 363 58 osc_bi \$1 /ev/vid/\$1/framerate;
-#X obj 363 38 osc_bi \$1 /ev/vid/\$1/filename;
-#X obj 363 18 osc_bi \$1 /ev/vid/\$1/state;
-#X obj 363 238 osc_bi \$1 /ev/vid/\$1/loop;
-#X obj 363 158 osc_bi \$1 /ev/vid/\$1/timebase;
-#X obj 93 18 ds_reg \$1 /ev/vid/\$1/state nomorph;
-#X obj 93 38 ds_reg \$1 /ev/vid/\$1/filename nomorph;
-#X obj 93 58 ds_reg \$1 /ev/vid/\$1/framerate nomorph;
-#X obj 93 78 ds_reg \$1 /ev/vid/\$1/start_time nomorph;
-#X obj 93 98 ds_reg \$1 /ev/vid/\$1/end_time nomorph;
-#X obj 93 118 ds_reg \$1 /ev/vid/\$1/fadeIn_time nomorph;
-#X obj 93 138 ds_reg \$1 /ev/vid/\$1/fadeOut_time nomorph;
-#X obj 93 158 ds_reg \$1 /ev/vid/\$1/timebase nomorph;
-#X obj 93 198 ds_reg \$1 /ev/vid/\$1/form nomorph;
-#X obj 93 218 ds_reg \$1 /ev/vid/\$1/weight nomorph;
-#X obj 93 238 ds_reg \$1 /ev/vid/\$1/loop nomorph;
+#X obj 93 18 ds_reg \$2 /ev/vid/\$1/state nomorph;
+#X obj 93 38 ds_reg \$2 /ev/vid/\$1/filename nomorph;
+#X obj 93 58 ds_reg \$2 /ev/vid/\$1/framerate nomorph;
+#X obj 93 78 ds_reg \$2 /ev/vid/\$1/start_time nomorph;
+#X obj 93 98 ds_reg \$2 /ev/vid/\$1/end_time nomorph;
+#X obj 93 118 ds_reg \$2 /ev/vid/\$1/fadeIn_time nomorph;
+#X obj 93 138 ds_reg \$2 /ev/vid/\$1/fadeOut_time nomorph;
+#X obj 93 158 ds_reg \$2 /ev/vid/\$1/timebase nomorph;
+#X obj 93 178 ds_reg \$2 /ev/vid/\$1/gain;
+#X obj 93 198 ds_reg \$2 /ev/vid/\$1/form nomorph;
+#X obj 93 218 ds_reg \$2 /ev/vid/\$1/weight nomorph;
+#X obj 93 238 ds_reg \$2 /ev/vid/\$1/loop nomorph;
+#X obj 363 18 osc_bi \$2 /ev/vid/\$1/state;
+#X obj 363 38 osc_bi \$2 /ev/vid/\$1/filename;
+#X obj 363 58 osc_bi \$2 /ev/vid/\$1/framerate;
+#X obj 363 78 osc_bi \$2 /ev/vid/\$1/start_time;
+#X obj 363 98 osc_bi \$2 /ev/vid/\$1/end_time;
+#X obj 363 118 osc_bi \$2 /ev/vid/\$1/fadeIn_time;
+#X obj 363 138 osc_bi \$2 /ev/vid/\$1/fadeOut_time;
+#X obj 363 158 osc_bi \$2 /ev/vid/\$1/timebase;
+#X obj 363 178 osc_bi \$2 /ev/vid/\$1/gain;
+#X obj 363 198 osc_bi \$2 /ev/vid/\$1/form;
+#X obj 363 218 osc_bi \$2 /ev/vid/\$1/weight;
+#X obj 363 238 osc_bi \$2 /ev/vid/\$1/loop;
+#X obj 363 278 osc_bi \$2 /ev/vid/\$1/start;
+#X obj 363 298 osc_bi \$2 /ev/vid/\$1/stop;
+#X obj 363 318 osc_bi \$2 /ev/vid/\$1/open;
 #X restore 390 -84 pd storage_&_osc;
 #X obj 462 194 r /ev/vid/\$1/filmframe;
 #N canvas 225 55 1003 672 fadelogic 0;
@@ -270,7 +270,7 @@ fps: -25 8 0 9 -262144 -1 -258113 25 256;
 #X obj 149 84 nbx 14 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/lengthNEW
 length/NEW 0 -5 0 9 -66577 -4034 -4034 351 256;
 #X obj 29 84 nbx 14 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/elapsed elapsed
-0 -5 0 9 -66577 -262144 -262144 156 256;
+0 -5 0 9 -66577 -262144 -262144 0 256;
 #N canvas 363 215 530 292 frame-to-seconds_converter 0;
 #X obj 130 236 s /ev/vid/\$1/seconds;
 #X obj 343 41 r /ev/vid/\$1/fadeOut_time;
@@ -303,7 +303,7 @@ length/NEW 0 -5 0 9 -66577 -4034 -4034 351 256;
 #X connect 13 0 3 0;
 #X restore 560 -84 pd frame-to-seconds_converter;
 #X obj 269 84 nbx 5 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/seconds sec
-35 8 0 10 -66577 -4034 -191407 7.09658 256;
+35 8 0 10 -66577 -4034 -191407 14.04 256;
 #X obj 186 44 vradio 14 1 0 2 /ev/vid/\$1/timebase /ev/vid/\$1/timebase
 empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj 417 371 pix_rgba;
@@ -311,7 +311,7 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X msg 493 414 1;
 #X msg 521 414 1 1 1;
 #X msg 560 414 0 0 0;
-#N canvas 243 494 372 243 vid_\$1 1;
+#N canvas 243 494 372 243 vid_\$1 0;
 #X obj 1 -31 cnv 15 360 230 empty empty settings_for_ev_vid_\$1 3 8
 0 12 -128992 -262144 0;
 #X obj 6 154 tgl 15 0 /ev/vid/\$1/state /ev/vid/\$1/state on/off 17
@@ -327,15 +327,15 @@ fps: -25 7 0 10 -191407 -1 -262144 25 256;
 #X obj 8 100 hsl 276 15 0 351 0 0 /ev/vid/\$1/start_time /ev/vid/\$1/start_time
 start_time 15 9 1 12 -66577 -4034 -262144 0 1;
 #X obj 8 60 hsl 276 15 0 1 0 0 /ev/vid/\$1/fadeIn_time /ev/vid/\$1/fadeIn_time
-fadeIn_time 15 9 1 12 -66577 -4034 -262144 5300 1;
+fadeIn_time 15 9 1 12 -66577 -4034 -262144 0 1;
 #X obj 8 80 hsl 276 15 1 0 0 1 /ev/vid/\$1/fadeOut_time /ev/vid/\$1/fadeOut_time
-fadeOut_time 15 9 1 12 -66577 -258113 -262144 13600 1;
+fadeOut_time 15 9 1 12 -66577 -258113 -262144 27500 1;
 #X obj 96 8 nbx 9 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/length file_length
 0 -5 0 10 -1 -262144 -1 351 256;
 #X obj 287 60 nbx 8 15 0 351 0 0 /ev/vid/\$1/fadeIn_timeFRr /ev/vid/\$1/fadeIn_timeFRs
-empty 0 -8 0 9 -262144 -1 -1 67 256;
+empty 0 -8 0 9 -262144 -1 -1 0 256;
 #X obj 287 80 nbx 8 15 0 351 0 0 /ev/vid/\$1/fadeOut_timeFRr /ev/vid/\$1/fadeOut_timeFRs
-empty 0 -8 0 9 -262144 -1 -1 177 256;
+empty 0 -8 0 9 -262144 -1 -1 0 256;
 #X obj 287 100 nbx 8 15 0 351 0 0 /ev/vid/\$1/start_time /ev/vid/\$1/start_time
 empty 0 -8 0 9 -262144 -1 -1 0 256;
 #X obj 186 8 nbx 9 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/lengthNEW
@@ -343,13 +343,13 @@ length/NEW 0 -5 0 10 -1 -4034 -1 351 256;
 #X obj 287 120 nbx 8 15 0 351 0 0 /ev/vid/\$1/end_time /ev/vid/\$1/end_time
 empty 0 -8 0 9 -262144 -1 -1 351 256;
 #X obj 5 8 nbx 9 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/elapsed elapsed
-0 -5 0 10 -1 -4034 -33289 156 256;
+0 -5 0 10 -1 -4034 -33289 0 256;
 #X obj 302 8 nbx 5 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/seconds sec:
--25 8 0 10 -33289 -4034 -262144 7.09658 256;
+-25 8 0 10 -33289 -4034 -262144 14.04 256;
 #X obj 190 139 vradio 14 1 0 2 /ev/vid/\$1/timebase /ev/vid/\$1/timebase
 empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj 88 153 tgl 14 0 /ev/vid/\$1/loop /ev/vid/\$1/loop loop_on/off
-17 7 0 10 -4160 -262144 -262144 1 1;
+17 7 0 10 -4160 -262144 -262144 0 1;
 #X text 205 138 frame acc.;
 #X text 205 151 time acc.;
 #X obj 8 120 hsl 276 15 0 351 0 0 /ev/vid/\$1/end_time /ev/vid/\$1/end_time
@@ -369,7 +369,7 @@ show_curve 17 7 0 10 -128992 -1 -262144;
 #X obj 88 177 tgl 15 0 /ev/vid/\$1/flip/horizontal /ev/vid/\$1/flip/horizontal
 <-> 17 7 0 10 -204786 -1 -1 0 1;
 #X obj 124 177 tgl 15 0 /ev/vid/\$1/flip/vertical /ev/vid/\$1/flip/vertical
-^v 17 7 0 10 -204786 -1 -1 1 1;
+^v 17 7 0 10 -204786 -1 -1 0 1;
 #X text 55 177 flip:;
 #X restore 290 199 pd vid_\$1;
 #X msg 217 178 vis 1;
@@ -533,7 +533,7 @@ and frame- \; accurate playback;
 #X connect 14 0 0 0;
 #X restore 25 157 pd for_the_data_outlet;
 #X obj 99 44 tgl 14 0 /ev/vid/\$1/loop /ev/vid/\$1/loop loop_on/off
-17 7 0 10 -262144 -1 -262144 1 1;
+17 7 0 10 -262144 -1 -262144 0 1;
 #X obj 99 60 bng 14 250 50 0 /ev/vid/\$1/settings empty settings 17
 7 0 10 -257985 -1 -257985;
 #X obj 202 46 cnv 15 100 10 empty empty frame_accurate 0 6 0 10 -1
