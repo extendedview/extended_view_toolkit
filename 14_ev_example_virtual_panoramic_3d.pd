@@ -1,0 +1,389 @@
+#N canvas 512 22 723 480 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl;
+#X obj 14 14 cnv 15 700 30 empty empty EXAMPLE:_Virtual_Panoramic_Camera_Inside_3D_Scenery
+20 12 0 14 -1 -262144 0;
+#N canvas 33 262 548 468 init 0;
+#X obj 56 92 loadbang;
+#X obj 83 138 del 1000;
+#X obj 56 114 t b b;
+#X obj 56 231 del 3000;
+#X text 159 140 load the preset file on startup:;
+#X obj 158 43 ev-main/ev_declare;
+#X text 173 232 (pathes relative to libs/kollabs);
+#X text 66 272 Recall scene '0' from the loaded preset file:;
+#X msg 56 298 \; /vpano/ds/scene 0 \; rendering 1 \; projection 1 \;
+rotation 1 \;;
+#X msg 83 169 \; /vpano/ds/loadfile ../../data/ev_example_virtual_panoramic_3d.txt
+;
+#X connect 0 0 2 0;
+#X connect 1 0 9 0;
+#X connect 2 0 3 0;
+#X connect 2 1 1 0;
+#X connect 3 0 8 0;
+#X restore 15 52 pd init;
+#X obj 182 104 loadbang;
+#N canvas 483 206 687 395 projection 0;
+#X obj 42 56 inlet gemlist;
+#X obj 235 56 inlet texture_id;
+#N canvas 56 138 1012 479 texcoords 0;
+#X obj -5 50 r /ev/buf/vpanocam/dimen/x;
+#X msg 687 200 \; /ev/pro/c/texture/top/right/x \$1 \; /ev/pro/c/texture/bottom/right/x
+\$1 \;;
+#X obj 452 174 * 2;
+#X obj 217 112 / 4;
+#X obj 687 172 * 3;
+#X obj -5 169 b;
+#X obj -5 284 r /ev/buf/vpanocam/dimen/y;
+#X msg 241 350 \; /ev/pro/a/texture/top/left/y \$1 \; /ev/pro/a/texture/top/right/y
+\$1 \; /ev/pro/b/texture/top/left/y \$1 \; /ev/pro/b/texture/top/right/y
+\$1 \; /ev/pro/c/texture/top/left/y \$1 \; /ev/pro/c/texture/top/right/y
+\$1 \;;
+#X obj -5 317 b;
+#X msg -5 350 \; /ev/pro/a/texture/bottom/left/y 0 \; /ev/pro/a/texture/bottom/right/y
+0 \; /ev/pro/b/texture/bottom/left/y 0 \; /ev/pro/b/texture/bottom/right/y
+0 \; /ev/pro/c/texture/bottom/left/y 0 \; /ev/pro/c/texture/bottom/right/y
+0 \;;
+#X msg 217 200 \; /ev/pro/a/texture/top/right/x \$1 \; /ev/pro/a/texture/bottom/right/x
+\$1 \; /ev/pro/b/texture/top/left/x \$1 \; /ev/pro/b/texture/bottom/left/x
+\$1 \;;
+#X msg 452 200 \; /ev/pro/b/texture/top/right/x \$1 \; /ev/pro/b/texture/bottom/right/x
+\$1 \; /ev/pro/c/texture/top/left/x \$1 \; /ev/pro/c/texture/bottom/left/x
+\$1 \;;
+#X msg -5 200 \; /ev/pro/a/texture/top/left/x 0 \; /ev/pro/a/texture/bottom/left/x
+0 \;;
+#X connect 0 0 3 0;
+#X connect 0 0 5 0;
+#X connect 2 0 11 0;
+#X connect 3 0 2 0;
+#X connect 3 0 4 0;
+#X connect 3 0 10 0;
+#X connect 4 0 1 0;
+#X connect 5 0 12 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;
+#X connect 8 0 9 0;
+#X restore 42 349 pd texcoords;
+#X obj 42 260 ev_pro_22 a vpano;
+#X obj 252 260 ev_pro_22 b vpano;
+#X obj 462 260 ev_pro_22 c vpano;
+#X obj 42 88 t a a a;
+#X connect 0 0 6 0;
+#X connect 1 0 3 1;
+#X connect 1 0 4 1;
+#X connect 1 0 5 1;
+#X connect 6 0 3 0;
+#X connect 6 1 4 0;
+#X connect 6 2 5 0;
+#X restore 29 414 pd projection;
+#N canvas 112 22 1208 756 vpanocam 0;
+#X obj 29 115 ev_pano_group vpanocam vpano;
+#X obj 118 334 ev_pano_stitch vcam_a vpano;
+#X obj 1147 -217 loadbang;
+#X obj 44 -111 ev_buf vcam_a vpano;
+#X obj 324 -111 ev_buf vcam_b vpano;
+#X obj 604 -111 ev_buf vcam_c vpano;
+#X obj 884 -111 ev_buf vcam_d vpano;
+#X obj 324 -32 rotateXYZ 0 90 0;
+#X obj 604 -30 rotateXYZ 0 180 0;
+#X obj 884 -29 rotateXYZ 0 270 0;
+#X msg 1147 -195 perspec -1 1 -1 1 1 1000;
+#X obj 1197 93 translateXYZ 0 -1 0;
+#X obj 1197 214 rotateXYZ 0 0 0;
+#X obj 29 28 ev_buf vpanocam vpano;
+#X obj 1226 150 r /ev/vpanocam/rot/x;
+#X obj 1255 170 r /ev/vpanocam/rot/y;
+#X obj 1284 190 r /ev/vpanocam/rot/z;
+#X obj 29 -236 inlet gemlist;
+#X obj 1234 3 r /ev/vpanocam/pos/x;
+#X obj 1271 25 r /ev/vpanocam/pos/y;
+#X obj 1308 47 r /ev/vpanocam/pos/z;
+#X obj 1315 360 outlet texture_id;
+#X obj 1234 25 * -1;
+#X obj 1271 47 * -1;
+#X obj 1308 69 * -1;
+#X obj 1197 116 rotateXYZ 90 0 0;
+#X obj 678 334 ev_pano_stitch vcam_c vpano;
+#X obj 398 334 ev_pano_stitch vcam_b vpano;
+#X obj 958 334 ev_pano_stitch vcam_d vpano;
+#N canvas 0 22 450 300 calib 0;
+#X obj 114 109 gemhead 100;
+#X obj 114 171 pix_texture;
+#X obj 114 193 square 4;
+#X obj 114 30 loadbang;
+#X msg 114 52 0;
+#X obj 130 77 r /ev/vpanocam/calib;
+#X obj 278 76 inlet texture_id;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 1 1;
+#X restore 243 115 pd calib;
+#X obj 1197 360 outlet gemlist;
+#X obj 29 -204 t a a a a a;
+#N canvas 0 22 618 385 parameters 0;
+#X obj 42 57 r /ev/buf/vpanocam/dimen/x;
+#X obj 42 79 / 4;
+#X obj 42 101 int;
+#X msg 42 126 \; /ev/buf/vcam_a/dimen/x \$1 \; /ev/buf/vcam_a/dimen/y
+\$1 \; /ev/buf/vcam_b/dimen/x \$1 \; /ev/buf/vcam_b/dimen/y \$1 \;
+/ev/buf/vcam_c/dimen/x \$1 \; /ev/buf/vcam_c/dimen/y \$1 \; /ev/buf/vcam_d/dimen/x
+\$1 \; /ev/buf/vcam_d/dimen/y \$1 \; /ev/pano/stitch/vcam_a/dimen/x
+\$1 \; /ev/pano/stitch/vcam_a/dimen/y \$1 \; /ev/pano/stitch/vcam_b/dimen/x
+\$1 \; /ev/pano/stitch/vcam_b/dimen/y \$1 \; /ev/pano/stitch/vcam_c/dimen/x
+\$1 \; /ev/pano/stitch/vcam_c/dimen/y \$1 \; /ev/pano/stitch/vcam_d/dimen/x
+\$1 \; /ev/pano/stitch/vcam_d/dimen/y \$1 \;;
+#X obj 294 73 loadbang;
+#X msg 294 95 \; /ev/buf/vcam_a/shift/z 4 \; /ev/buf/vcam_b/shift/z
+4 \; /ev/buf/vcam_c/shift/z 4 \; /ev/buf/vcam_d/shift/z 4 \;;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X restore 1240 -84 pd parameters;
+#N canvas 0 22 450 300 storage 0;
+#X obj 92 62 ds_reg vpano /ev/vpanocam/pos/x;
+#X obj 92 82 ds_reg vpano /ev/vpanocam/pos/y;
+#X obj 92 102 ds_reg vpano /ev/vpanocam/pos/z;
+#X restore 1240 -104 pd storage;
+#X obj 1197 312 scaleXYZ 27 27 1;
+#X connect 0 1 1 0;
+#X connect 0 2 27 0;
+#X connect 0 3 26 0;
+#X connect 0 4 28 0;
+#X connect 2 0 10 0;
+#X connect 3 0 11 0;
+#X connect 3 1 1 1;
+#X connect 4 0 7 0;
+#X connect 4 1 27 1;
+#X connect 5 0 8 0;
+#X connect 5 1 26 1;
+#X connect 6 0 9 0;
+#X connect 6 1 28 1;
+#X connect 7 0 11 0;
+#X connect 8 0 11 0;
+#X connect 9 0 11 0;
+#X connect 10 0 3 1;
+#X connect 10 0 4 1;
+#X connect 10 0 5 1;
+#X connect 10 0 6 1;
+#X connect 11 0 25 0;
+#X connect 12 0 34 0;
+#X connect 13 0 0 0;
+#X connect 13 1 21 0;
+#X connect 13 1 29 0;
+#X connect 14 0 12 1;
+#X connect 15 0 12 2;
+#X connect 16 0 12 3;
+#X connect 17 0 31 0;
+#X connect 18 0 22 0;
+#X connect 19 0 23 0;
+#X connect 20 0 24 0;
+#X connect 22 0 11 1;
+#X connect 23 0 11 2;
+#X connect 24 0 11 3;
+#X connect 25 0 12 0;
+#X connect 31 0 13 0;
+#X connect 31 1 3 0;
+#X connect 31 2 4 0;
+#X connect 31 3 5 0;
+#X connect 31 4 6 0;
+#X connect 34 0 30 0;
+#X restore 133 361 pd vpanocam;
+#N canvas 315 22 662 502 rendering 0;
+#X obj 35 -158 inlet gemlist;
+#X obj 203 -31 loadbang;
+#X msg 111 14 1;
+#X obj 111 -31 r /wave/reset;
+#X obj 111 -9 b;
+#X obj 304 63 * 50;
+#X obj 384 63 * 50;
+#X obj 304 105 pack 0 0 0;
+#X obj 304 127 list prepend force;
+#X obj 304 149 list trim;
+#N canvas 0 22 443 489 damping 0;
+#X obj 116 67 / 100;
+#X msg 116 86 K1 \$1;
+#X obj 147 217 / 100;
+#X obj 147 377 / 100;
+#X obj 197 117 / 100;
+#X obj 197 247 / 100;
+#X obj 197 377 / 100;
+#X msg 197 136 D1 \$1;
+#X msg 197 266 D2 \$1;
+#X msg 197 396 D3 \$1;
+#X msg 147 396 K3 \$1;
+#X msg 147 236 K2 \$1;
+#X obj 116 293 t a;
+#X obj 116 193 t a;
+#X obj 116 423 t a;
+#X obj 116 38 r /wave/k1;
+#X obj 196 91 r /wave/d1;
+#X obj 147 191 r /wave/k2;
+#X obj 197 223 r /wave/d2;
+#X obj 147 325 r /wave/k3;
+#X obj 197 354 r /wave/d3;
+#X obj 116 445 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 13 0;
+#X connect 2 0 11 0;
+#X connect 3 0 10 0;
+#X connect 4 0 7 0;
+#X connect 5 0 8 0;
+#X connect 6 0 9 0;
+#X connect 7 0 13 0;
+#X connect 8 0 12 0;
+#X connect 9 0 14 0;
+#X connect 10 0 14 0;
+#X connect 11 0 12 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 14 0 21 0;
+#X connect 15 0 0 0;
+#X connect 16 0 4 0;
+#X connect 17 0 2 0;
+#X connect 18 0 5 0;
+#X connect 19 0 3 0;
+#X connect 20 0 6 0;
+#X restore 203 149 pd damping;
+#X obj 304 -84 t b b b;
+#X obj 304 -32 random 1000;
+#X obj 304 -10 / 999;
+#X obj 462 -32 random 1000;
+#X obj 462 -10 / 999;
+#X obj 304 -131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 462 63 * -100;
+#X obj 304 -157 loadbang;
+#X obj 125 -158 inlet bang;
+#N canvas 0 22 450 300 storage 0;
+#X obj 128 112 ds_reg vpano /wave/k1;
+#X obj 128 132 ds_reg vpano /wave/k2;
+#X obj 128 152 ds_reg vpano /wave/k3;
+#X obj 128 172 ds_reg vpano /wave/d1;
+#X obj 128 192 ds_reg vpano /wave/d2;
+#X obj 128 212 ds_reg vpano /wave/d3;
+#X restore 516 132 pd storage;
+#X obj 35 -136 pix_image media/grid.png;
+#X obj 35 -114 pix_texture;
+#X msg 203 -7 draw fill;
+#X obj 304 -106 metro 3000;
+#X obj 384 -32 random 1000;
+#X obj 384 -10 / 999;
+#X obj 36 237 newWave 50 50;
+#X obj 87 -64 loadbang;
+#X connect 0 0 21 0;
+#X connect 1 0 23 0;
+#X connect 2 0 27 3;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 27 0;
+#X connect 10 0 27 0;
+#X connect 11 0 12 0;
+#X connect 11 1 25 0;
+#X connect 11 2 14 0;
+#X connect 12 0 13 0;
+#X connect 13 0 5 0;
+#X connect 14 0 15 0;
+#X connect 15 0 17 0;
+#X connect 16 0 24 0;
+#X connect 17 0 7 2;
+#X connect 18 0 16 0;
+#X connect 19 0 27 0;
+#X connect 21 0 22 0;
+#X connect 22 0 27 0;
+#X connect 23 0 27 0;
+#X connect 24 0 11 0;
+#X connect 25 0 26 0;
+#X connect 26 0 6 0;
+#X connect 28 0 4 0;
+#X coords 0 502 1 501 85 60 0;
+#X restore 133 414 pd rendering;
+#X obj 29 335 gemhead 51;
+#X obj 133 295 gemhead 50;
+#X obj 273 269 cnv 15 250 150 empty empty Virtual_Panoramic_Camera
+20 12 0 14 -228856 -66577 0;
+#X obj 289 309 tgl 15 0 /ev/vpanocam/calib /ev/vpanocam/calib calib
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 288 350 nbx 5 14 -1e+37 1e+37 0 0 /ev/buf/vpanocam/dimen/x /ev/buf/vpanocam/dimen/x
+dimen/x 0 -8 0 10 -262144 -1 -1 1024 256;
+#X obj 288 380 nbx 5 14 -1e+37 1e+37 0 0 /ev/buf/vpanocam/dimen/y /ev/buf/vpanocam/dimen/y
+dimen/y 0 -8 0 10 -262144 -1 -1 512 256;
+#X obj 354 320 nbx 5 14 -1e+37 1e+37 0 0 /ev/vpanocam/pos/x /ev/vpanocam/pos/x
+pos/x 0 -8 0 10 -262144 -1 -1 0 256;
+#X obj 354 350 nbx 5 14 -1e+37 1e+37 0 0 /ev/vpanocam/pos/y /ev/vpanocam/pos/y
+pos/y 0 -8 0 10 -262144 -1 -1 3 256;
+#X obj 354 380 nbx 5 14 -1e+37 1e+37 0 0 /ev/vpanocam/pos/z /ev/vpanocam/pos/z
+pos/z 0 -8 0 10 -262144 -1 -1 0 256;
+#X obj 424 380 nbx 5 14 -1e+37 1e+37 0 0 /ev/vpanocam/rot/z /ev/vpanocam/rot/z
+rot/z 0 -8 0 10 -262144 -1 -1 264.24 256;
+#X obj 29 312 tgl 15 0 empty projection projection 17 7 0 10 -262144
+-1 -1 1 1;
+#X obj 133 272 tgl 15 0 empty rendering rendering 17 7 0 10 -262144
+-1 -1 1 1;
+#X obj 537 269 cnv 15 150 150 empty empty Wave 20 12 0 14 -228856 -66577
+0;
+#X obj 556 332 nbx 5 14 -1e+37 1e+37 0 0 /wave/k1 /wave/k1 K1 0 -8
+0 10 -262144 -1 -1 5 256;
+#X obj 556 362 nbx 5 14 -1e+37 1e+37 0 0 /wave/k2 /wave/k2 K2 0 -8
+0 10 -262144 -1 -1 3 256;
+#X obj 556 392 nbx 5 14 -1e+37 1e+37 0 0 /wave/k3 /wave/k3 K3 0 -8
+0 10 -262144 -1 -1 0 256;
+#X obj 616 332 nbx 5 14 -1e+37 1e+37 0 0 /wave/d1 /wave/d1 D1 0 -8
+0 10 -262144 -1 -1 2 256;
+#X obj 616 362 nbx 5 14 -1e+37 1e+37 0 0 /wave/d2 /wave/d2 D2 0 -8
+0 10 -262144 -1 -1 1 256;
+#X obj 616 392 nbx 5 14 -1e+37 1e+37 0 0 /wave/d3 /wave/d3 D3 0 -8
+0 10 -262144 -1 -1 1 256;
+#X obj 624 282 bng 15 250 50 0 /wave/reset /wave/reset reset 17 7 0
+10 -262144 -1 -1;
+#X obj 182 155 ev_gemwin vpano;
+#X msg 182 128 perspec -1 1 -1 1 1 1000 \, color 0.5 0.5 0.5;
+#X obj 133 317 t a b;
+#X text 554 60 (c)2013 Marian Weger;
+#N canvas 0 22 450 300 rotation 0;
+#X obj 138 58 inlet;
+#X obj 197 133 loadbang;
+#X obj 197 177 line 0 40;
+#X obj 197 223 s /ev/vpanocam/rot/z;
+#X obj 158 202 sel 360;
+#X obj 138 80 sel 0 1;
+#X msg 138 102 stop;
+#X msg 197 155 0 \, 360 20000;
+#X connect 0 0 5 0;
+#X connect 1 0 7 0;
+#X connect 2 0 4 0;
+#X connect 4 0 7 0;
+#X connect 4 1 3 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 6 0 2 0;
+#X connect 7 0 2 0;
+#X restore 424 341 pd rotation;
+#X obj 424 318 tgl 15 0 empty rotation rotation 17 7 0 10 -262144 -1
+-1 1 1;
+#X obj 15 89 ev_storage vpano;
+#X text 546 177 <-- click here to start!;
+#X text 97 52 OpenGL does not allow a 360 degrees camera. So you need
+to build a virtual camera array...;
+#X connect 2 0 27 0;
+#X connect 4 0 5 0;
+#X connect 4 1 3 1;
+#X connect 6 0 3 0;
+#X connect 7 0 28 0;
+#X connect 16 0 6 0;
+#X connect 17 0 7 0;
+#X connect 27 0 26 0;
+#X connect 28 0 4 0;
+#X connect 28 1 5 1;
+#X connect 31 0 30 0;
+#X coords 0 0 1 1 85 60 0;
