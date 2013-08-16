@@ -1,13 +1,13 @@
-#N canvas 42 310 416 198 10;
+#N canvas 40 311 416 198 10;
 #X declare -path . -path .. -path data -path ../data -path ev-in -path
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
 libs/kollabs -path ../libs/kollabs -path media -path ../media -path
-ev-glsl -path ../ev-glsl;
+ev-glsl -path ../ev-glsl -lib Gem;
 #X text 23 21 ev_declare;
 #X text 34 147 part of Extended View Toolkit;
 #X obj 23 52 declare -path . -path .. -path data -path ../data -path
 ev-in -path ../ev-in -path ev-main -path ../ev-main -path ev-pano -path
 ../ev-pano -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil
 -path libs/kollabs -path ../libs/kollabs -path media -path ../media
--path ev-glsl -path ../ev-glsl;
+-path ev-glsl -path ../ev-glsl -lib Gem;
