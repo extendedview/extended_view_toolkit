@@ -23,7 +23,7 @@ VIEW toolkit/ gpl v3;
 #X obj 402 608 del 1000;
 #X obj 402 630 t b b;
 #X obj 402 661 del 2000;
-#X msg 402 684 \; /main/ds/scene 0 \; /special/ds/scene 0 \;;
+#X msg 402 684 \; /ds/main/scene 0 \; /ds/special/scene 0 \;;
 #X obj 14 -9 cnv 15 450 100 empty empty Patch_domain_"main" 20 12 0
 14 -262130 -66577 0;
 #X obj 74 13 gemhead 50;
@@ -44,12 +44,12 @@ argument.;
 #X msg 277 328 1;
 #X msg 307 328 2;
 #X text 187 301 Change scene by clicking these message boxes;
-#X obj 247 370 s /main/ds/scene;
+#X obj 247 370 s /ds/main/scene;
 #X msg 711 327 0;
 #X msg 741 327 1;
 #X msg 771 327 2;
 #X text 651 300 Change scene by clicking these message boxes;
-#X obj 711 369 s /special/ds/scene;
+#X obj 711 369 s /ds/special/scene;
 #X obj 74 36 ev_pro_22easy projection_a main;
 #X obj 672 37 ev_pro_22easy projection_b special;
 #X obj 14 98 cnv 15 910 110 empty empty Gemwin 20 12 0 14 -261682 -66577
@@ -60,8 +60,8 @@ by the first creation argument.;
 #X text 27 173 Here \, it is also associated with domain "main".;
 #X obj 14 740 cnv 15 910 25 empty empty More_information_can_be_found_in_"ev_storage-help"
 20 12 0 14 -261234 -258113 0;
-#X msg 547 655 \; /main/ds/loadfile ../../data/ev_example_multiple_storage_domains_main.txt
-\; /special/ds/loadfile ../../data/ev_example_multiple_storage_domains_special.txt
+#X msg 547 655 \; /ds/main/loadfile ../../data/ev_example_multiple_storage_domains_main.txt
+\; /ds/special/loadfile ../../data/ev_example_multiple_storage_domains_special.txt
 \;;
 #X obj 14 -137 cnv 15 910 120 empty empty general 20 12 0 14 -228856
 -66577 0;
@@ -86,8 +86,8 @@ loaded on startup.;
 the presetfile;
 #X obj 14 433 cnv 15 910 135 empty empty Synchronize_multiple_storage_domains
 20 12 0 14 -204786 -1 0;
-#X obj 37 471 r /main/ds/scene/current;
-#X obj 37 543 s /special/ds/scene/current;
+#X obj 37 471 r /ds/main/scene/current;
+#X obj 37 543 s /ds/special/scene/current;
 #X obj 37 523 spigot;
 #X obj 70 500 tgl 15 0 empty empty sync_"special"_to_"main" 17 7 0
 10 -262144 -1 -1 0 1;

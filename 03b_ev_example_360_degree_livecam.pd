@@ -25,8 +25,8 @@ load the still image files.;
 #X obj 56 231 del 3000;
 #X text 127 93 The DATA STORAGE SYSTEM will be explained in a later
 example.;
-#X msg 56 308 \; /0/ds/scene 0 \;;
-#X msg 83 179 \; /0/ds/loadfile ../../data/ev_example_360_degree_livecam.txt
+#X msg 56 308 \; /ds/0/scene 0 \;;
+#X msg 83 179 \; /ds/0/loadfile ../../data/ev_example_360_degree_livecam.txt
 \;;
 #X text 166 226 (pathes relative to "./libs/kollabs");
 #X connect 0 0 6 0;

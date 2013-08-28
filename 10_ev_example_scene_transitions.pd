@@ -37,12 +37,12 @@ argument.;
 #X msg 277 430 1;
 #X msg 307 430 2;
 #X text 187 403 Change scene by clicking these message boxes;
-#X obj 247 472 s /main/ds/scene;
+#X obj 247 472 s /ds/main/scene;
 #X msg 711 429 0;
 #X msg 741 429 1;
 #X msg 771 429 2;
 #X text 651 402 Change scene by clicking these message boxes;
-#X obj 711 471 s /special/ds/scene;
+#X obj 711 471 s /ds/special/scene;
 #X obj 23 121 ev_pro_22easy projection_a main;
 #X obj 611 174 ev_pro_22easy projection_b special;
 #N canvas 0 22 493 355 load_preset_files 0;
@@ -52,11 +52,11 @@ argument.;
 #X obj 57 65 del 1000;
 #X obj 57 87 t b b;
 #X obj 57 221 del 2000;
-#X msg 57 244 \; /main/ds/scene 0 \; /special/ds/scene 0 \;;
+#X msg 57 244 \; /ds/main/scene 0 \; /ds/special/scene 0 \;;
 #X text 145 43 Both domains must be initialized to get automatically
 loaded on startup.;
-#X msg 84 115 \; /main/ds/loadfile ../../data/ev_example_scene_transitions_main.txt
-\; /special/ds/loadfile ../../data/ev_example_scene_transitions_special.txt
+#X msg 84 115 \; /ds/main/loadfile ../../data/ev_example_scene_transitions_main.txt
+\; /ds/special/loadfile ../../data/ev_example_scene_transitions_special.txt
 \;;
 #X text 130 188 (pathes relative to "./libs/kollabs");
 #X connect 0 0 2 0;
@@ -71,19 +71,19 @@ loaded on startup.;
 14 -261682 -66577 0;
 #X text 183 560 Click on "advanced" to get to the advanced settings.
 ;
-#X obj 34 570 bng 15 250 50 0 /special/ds/advanced/vis /special/ds/advanced/vis
+#X obj 34 570 bng 15 250 50 0 /ds/special/advanced/vis /ds/special/advanced/vis
 advanced 17 7 0 10 -262144 -1 -1;
 #X text 183 575 A dialog will open \, that gives you some cryptic options:
 ;
 #X obj 14 597 cnv 15 910 230 empty empty empty 20 12 0 14 -228856 -66577
 0;
-#X obj 33 644 tgl 15 1 /special/ds/settings/state /special/ds/settings/state
+#X obj 33 644 tgl 15 1 /ds/special/settings/state /ds/special/settings/state
 recall_settings 17 7 0 10 -262144 -1 -1 1 1;
-#X obj 33 604 tgl 15 1 /special/ds/data/state /special/ds/data/state
+#X obj 33 604 tgl 15 1 /ds/special/data/state /ds/special/data/state
 recall_data 17 7 0 10 -262144 -1 -1 1 1;
-#X obj 33 726 bng 15 250 50 0 /special/ds/reg/dialog /special/ds/reg/dialog
+#X obj 33 726 bng 15 250 50 0 /ds/special/reg/dialog /ds/special/reg/dialog
 register_settings 17 7 0 10 -4032 -1 -1;
-#X obj 33 690 tgl 15 1 /special/ds/global/state /special/ds/global/state
+#X obj 33 690 tgl 15 1 /ds/special/global/state /ds/special/global/state
 recall_global 17 7 0 10 -262144 -1 -1 0 1;
 #X text 183 602 "recall_data" must be enabled to load the saved data
 on a recall.;
@@ -184,9 +184,9 @@ dialog.;
 COPY_to_buffer 17 7 0 10 -4160 -1 -1;
 #X obj 33 1449 bng 15 250 50 0 \$2/ds/settings/paste \$2/ds/settings/paste
 PASTE_from_buffer 17 7 0 10 -260097 -1 -1;
-#X obj 33 803 bng 15 250 50 0 /special/ds/edit/dialog /special/ds/edit/dialog
+#X obj 33 803 bng 15 250 50 0 /ds/special/edit/dialog /ds/special/edit/dialog
 edit 17 7 0 10 -258113 -1 -1;
-#X obj 33 783 bng 15 250 50 0 /special/ds/reg/settings/buffer /special/ds/reg/settings/buffer
+#X obj 33 783 bng 15 250 50 0 /ds/special/reg/settings/buffer /ds/special/reg/settings/buffer
 register_settings_buffer 17 7 0 10 -257985 -1 -1;
 #X text 214 796 These two buttons will get explained later :-(;
 #X text 183 1425 There is also a buffer for scene transition settings
@@ -194,10 +194,10 @@ register_settings_buffer 17 7 0 10 -257985 -1 -1;
 buffer and pasted from it.;
 #X text 183 1585 The Register Settings Buffer has the same controls
 \, as the scene transition dialog for the individual variables.;
-#X obj 270 1544 bng 15 250 50 0 /special/ds/reg/settings/buffer /special/ds/reg/settings/buffer
+#X obj 270 1544 bng 15 250 50 0 /ds/special/reg/settings/buffer /ds/special/reg/settings/buffer
 register_settings_buffer 17 7 0 10 -257985 -1 -1;
-#X obj 271 1689 bng 15 250 50 0 /special/ds/reg/settings/buffer/paste/all
-/special/ds/reg/settings/buffer/paste/all send_to_all_registers 17
+#X obj 271 1689 bng 15 250 50 0 /ds/special/reg/settings/buffer/paste/all
+/ds/special/reg/settings/buffer/paste/all send_to_all_registers 17
 7 0 10 -258113 -1 -1;
 #X text 183 1653 The buffer contents can be sent to all registered
 variables in this domain by pressing the red button:;

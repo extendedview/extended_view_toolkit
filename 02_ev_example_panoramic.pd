@@ -3,7 +3,7 @@
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
 libs/kollabs -path ../libs/kollabs -path media -path ../media -path
-ev-glsl -path ../ev-glsl;
+ev-glsl -path ../ev-glsl -lib Gem;
 #X obj 51 200 cnv 15 300 350 empty empty OUTPUT_MODULES 20 12 0 14
 -204800 -66577 0;
 #X obj 10 5 cnv 15 300 130 empty empty FRAMEBUFFER 20 12 0 14 -262130
@@ -15,7 +15,7 @@ ev-glsl -path ../ev-glsl;
 20 8 0 14 -233017 -66577 0;
 #X obj 10 -59 cnv 15 160 50 empty empty INITIALISATIONS 20 12 0 14
 -261234 -66577 0;
-#N canvas 407 127 535 539 init 0;
+#N canvas 407 127 535 539 init 1;
 #X obj 56 92 loadbang;
 #X obj 44 -23 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
 -66577 0;
@@ -28,19 +28,19 @@ of your project \, to set the pathes to the abstractions.;
 #X text 127 93 The DATA STORAGE SYSTEM will be explained in a later
 example.;
 #X obj 158 43 ev-main/ev_declare;
-#X msg 83 180 \; /0/ds/loadfile ../../data/ev_example_panoramic_preset.txt
-;
 #X text 177 213 (pathes relative to "./libs/kollabs");
 #X obj 34 94 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 56 285 \; /0/ds/scene 0;
 #X text 66 262 Recall scene '0' from the loaded preset file;
+#X msg 83 180 \; /ds/0/loadfile ../../data/ev_example_panoramic_preset.txt
+;
+#X msg 56 285 \; /ds/0/scene 0;
 #X connect 0 0 4 0;
 #X connect 4 0 6 0;
 #X connect 4 1 5 0;
-#X connect 5 0 9 0;
-#X connect 6 0 12 0;
-#X connect 11 0 4 0;
+#X connect 5 0 12 0;
+#X connect 6 0 13 0;
+#X connect 10 0 4 0;
 #X restore 106 -33 pd init;
 #X text 180 -64 This example uses one panorama image \, consisting
 of four photographs \, and projects it on an immersive screen made

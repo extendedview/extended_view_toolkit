@@ -37,7 +37,7 @@ VIEW toolkit/ gpl v3;
 #X obj 231 881 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 251 905 del 1000;
-#X msg 251 1077 \; /0/ds/scene 0 \;;
+#X msg 251 1077 \; /ds/0/scene 0 \;;
 #X text 396 847 If you want the storage to recall a scene from a textfile
 on startup \, you can specify it as follows:;
 #X text 396 942 use the "/<domain>/ds/loadfile" message to load a given
@@ -54,35 +54,35 @@ the textfile got fully loaded to RAM.;
 #X text 352 1077 <----;
 #X obj 14 492 cnv 15 750 340 empty empty CONTROLS 20 12 0 14 -232576
 -66577 0;
-#X obj 242 517 nbx 3 15 0 999 0 0 /0/ds/scene/current /0/ds/scene/current
+#X obj 242 517 nbx 3 15 0 999 0 0 /ds/0/scene/current /ds/0/scene/current
 scene 0 -8 0 12 -204786 -1 -1 0 256;
-#X obj 223 517 bng 15 250 50 0 /0/ds/scene/current/prev /0/ds/scene/current/prev
+#X obj 223 517 bng 15 250 50 0 /ds/0/scene/current/prev /ds/0/scene/current/prev
 < 4 7 0 10 -204786 -1 -1;
-#X obj 293 517 bng 15 250 50 0 /0/ds/scene/current/next /0/ds/scene/current/next
+#X obj 293 517 bng 15 250 50 0 /ds/0/scene/current/next /ds/0/scene/current/next
 > 5 7 0 10 -204786 -1 -1;
-#X obj 316 517 bng 15 250 50 0 /0/ds/recall /0/ds/recall recall 17
+#X obj 316 517 bng 15 250 50 0 /ds/0/recall /ds/0/recall recall 17
 7 0 10 -4034 -1 -1;
 #X obj 14 1349 cnv 15 750 90 empty empty Access_controls_from_"outside"
 20 12 0 14 -204786 -66577 0;
 #X msg 299 1363 0;
 #X msg 329 1363 1;
 #X msg 359 1363 2;
-#X obj 299 1405 s /0/ds/scene;
-#X obj 225 678 bng 15 250 50 0 /0/ds/save /0/ds/save save 17 7 0 10
+#X obj 299 1405 s /ds/0/scene;
+#X obj 225 678 bng 15 250 50 0 /ds/0/save /ds/0/save save 17 7 0 10
 -258113 -1 -1;
 #X obj 225 742 bng 15 250 50 0 /\$1/ds/load /\$1/ds/load load 17 7
 0 10 -4034 -1 -1;
-#X obj 295 678 bng 15 250 50 0 /0/ds/resave /0/ds/resave resave 17
+#X obj 295 678 bng 15 250 50 0 /ds/0/resave /ds/0/resave resave 17
 7 0 10 -258113 -1 -1;
 #X obj 295 742 bng 15 250 50 0 /\$1/ds/reload /\$1/ds/reload reload
 17 7 0 10 -4034 -1 -1;
-#X obj 315 601 bng 15 250 50 0 /0/ds/store /0/ds/store store 17 7 0
+#X obj 315 601 bng 15 250 50 0 /ds/0/store /ds/0/store store 17 7 0
 10 -258113 -1 -1;
-#X obj 242 601 nbx 3 15 0 999 0 0 /0/ds/scene/selected /0/ds/scene/selected
+#X obj 242 601 nbx 3 15 0 999 0 0 /ds/0/scene/selected /ds/0/scene/selected
 empty 0 -8 0 12 -261234 -1 -1 0 256;
-#X obj 223 601 bng 15 250 50 0 /0/ds/scene/selected/prev /0/ds/scene/selected/prev
+#X obj 223 601 bng 15 250 50 0 /ds/0/scene/selected/prev /ds/0/scene/selected/prev
 < 4 7 0 10 -261234 -1 -1;
-#X obj 293 601 bng 15 250 50 0 /0/ds/scene/selected/next /0/ds/scene/selected/next
+#X obj 293 601 bng 15 250 50 0 /ds/0/scene/selected/next /ds/0/scene/selected/next
 > 5 7 0 10 -261234 -1 -1;
 #X text 396 666 The SAVE section lets you save all scenes from RAM
 to a textfile on the HDD. Click "save" to open a save dialog. "resave"
@@ -110,7 +110,7 @@ first save it...;
 ;
 #X obj 14 1445 cnv 15 750 25 empty empty More_information_can_be_found_in_"ev_storage-help"
 20 12 0 14 -261234 -258113 0;
-#X msg 278 975 \; /0/ds/loadfile ../../data/ev_example_data_storage_system.txt
+#X msg 278 975 \; /ds/0/loadfile ../../data/ev_example_data_storage_system.txt
 ;
 #X text 374 1009 (pathes relative to "./libs/kollabs");
 #X obj 14 50 cnv 15 750 100 empty empty General 20 12 0 14 -204800

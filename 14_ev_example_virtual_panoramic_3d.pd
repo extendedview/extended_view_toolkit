@@ -15,9 +15,9 @@ ev-glsl -path ../ev-glsl;
 #X obj 158 43 ev-main/ev_declare;
 #X text 173 232 (pathes relative to libs/kollabs);
 #X text 66 272 Recall scene '0' from the loaded preset file:;
-#X msg 56 298 \; /vpano/ds/scene 0 \; rendering 1 \; projection 1 \;
+#X msg 56 298 \; /ds/vpano/scene 0 \; rendering 1 \; projection 1 \;
 rotation 1 \;;
-#X msg 83 169 \; /vpano/ds/loadfile ../../data/ev_example_virtual_panoramic_3d.txt
+#X msg 83 169 \; /ds/vpano/loadfile ../../data/ev_example_virtual_panoramic_3d.txt
 ;
 #X connect 0 0 2 0;
 #X connect 1 0 9 0;

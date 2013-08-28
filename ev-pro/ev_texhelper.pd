@@ -208,32 +208,32 @@
 -1 -1;
 #N canvas 208 249 532 366 init 0;
 #X obj 51 -166 loadbang;
-#X obj 51 18 list append \$1;
 #X obj 24 -2 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 51 -24 del 3000;
 #X obj 145 -32 gemhead;
 #X obj 145 -8 t b b;
 #X msg 196 -5 0;
-#X msg 51 45 \; /ev/pro/\$1/texture/top/left/x/resend bang \; /ev/pro/\$1/texture/top/left/y/resend
-bang \; /ev/pro/\$1/texture/top/right/x/resend bang \; /ev/pro/\$1/texture/top/right/y/resend
-bang \; /ev/pro/\$1/texture/bottom/left/x/resend bang \; /ev/pro/\$1/texture/bottom/left/y/resend
-bang \; /ev/pro/\$1/texture/bottom/right/x/resend bang \; /ev/pro/\$1/texture/bottom/right/y/resend
-bang \;;
 #X msg 102 -102 \; /ev/texhelper/\$1/state 1 \;;
 #X text 199 -29 get coordinates again \, when rendering has started
 ;
 #X obj 102 -127 list append \$1;
-#X connect 0 0 3 0;
-#X connect 0 0 10 0;
-#X connect 1 0 7 0;
-#X connect 2 0 1 0;
-#X connect 3 0 1 0;
-#X connect 4 0 5 0;
+#X obj 51 18 list append \$1 \$2;
+#X msg 51 45 \; /ds/\$2/ev/pro/\$1/texture/top/left/x/resend bang \;
+/ds/\$2/ev/pro/\$1/texture/top/left/y/resend bang \; /ds/\$2/ev/pro/\$1/texture/top/right/x/resend
+bang \; /ds/\$2/ev/pro/\$1/texture/top/right/y/resend bang \; /ds/\$2/ev/pro/\$1/texture/bottom/left/x/resend
+bang \; /ds/\$2/ev/pro/\$1/texture/bottom/left/y/resend bang \; /ds/\$2/ev/pro/\$1/texture/bottom/right/x/resend
+bang \; /ds/\$2/ev/pro/\$1/texture/bottom/right/y/resend bang \;;
+#X connect 0 0 2 0;
+#X connect 0 0 8 0;
+#X connect 1 0 9 0;
+#X connect 2 0 9 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 1 5 0;
 #X connect 5 0 3 0;
-#X connect 5 1 6 0;
-#X connect 6 0 4 0;
-#X connect 10 0 8 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
 #X restore 305 207 pd init;
 #N canvas 383 54 386 203 mouseover 0;
 #X obj 48 42 abs/ev_mouseover_texhelper /ev/texhelper/\$1 /top/left
@@ -246,7 +246,7 @@ bang \;;
 ;
 #X restore 305 184 pd mouseover;
 #X obj 183 119 tgl 15 1 /ev/texhelper/\$1/state /ev/texhelper/\$1/state
-on/off 17 7 0 10 -4034 -1 -1 1 1;
+on/off 17 7 0 10 -4034 -1 -1 0 1;
 #X obj 105 176 s pd-tex_\$1;
 #N canvas 487 82 184 118 tex_\$1 0;
 #X obj -7 -3 cnv 15 170 100 empty empty empty 20 12 0 14 -228856 -262144
@@ -254,25 +254,25 @@ on/off 17 7 0 10 -4034 -1 -1 1 1;
 #X obj 8 20 nbx 5 14 0 100000 0 0 /ev/pro/\$1/texture/top/left/x /ev/pro/\$1/texture/top/left/x
 x -10 7 0 10 -204800 -1 -1 0 256;
 #X obj 8 36 nbx 5 14 0 100000 0 0 /ev/pro/\$1/texture/top/left/y /ev/pro/\$1/texture/top/left/y
-y -10 7 0 10 -204800 -1 -1 480 256;
+y -10 7 0 10 -204800 -1 -1 1024 256;
 #X obj 78 20 nbx 5 14 0 100000 0 0 /ev/pro/\$1/texture/top/right/x
-/ev/pro/\$1/texture/top/right/x x -10 7 0 10 -204800 -1 -1 640 256
+/ev/pro/\$1/texture/top/right/x x -10 7 0 10 -204800 -1 -1 1024 256
 ;
 #X obj 78 36 nbx 5 14 0 100000 0 0 /ev/pro/\$1/texture/top/right/y
-/ev/pro/\$1/texture/top/right/y y -10 7 0 10 -204800 -1 -1 480 256
+/ev/pro/\$1/texture/top/right/y y -10 7 0 10 -204800 -1 -1 1024 256
 ;
 #X obj 8 56 nbx 5 14 0 100000 0 0 /ev/pro/\$1/texture/bottom/left/x
 /ev/pro/\$1/texture/bottom/left/x x -10 7 0 10 -204800 -1 -1 0 256
 ;
 #X obj 8 72 nbx 5 14 0 100000 0 0 /ev/pro/\$1/texture/bottom/left/y
-/ev/pro/\$1/texture/bottom/left/y y -10 7 0 10 -204800 -1 -1 0 256
-;
+/ev/pro/\$1/texture/bottom/left/y y -10 7 0 10 -204800 -1 -1 713.72
+256;
 #X obj 78 56 nbx 5 14 0 100000 0 0 /ev/pro/\$1/texture/bottom/right/x
-/ev/pro/\$1/texture/bottom/right/x x -10 7 0 10 -204800 -1 -1 640 256
-;
+/ev/pro/\$1/texture/bottom/right/x x -10 7 0 10 -204800 -1 -1 1024
+256;
 #X obj 78 72 nbx 5 14 0 100000 0 0 /ev/pro/\$1/texture/bottom/right/y
-/ev/pro/\$1/texture/bottom/right/y y -10 7 0 10 -204800 -1 -1 0 256
-;
+/ev/pro/\$1/texture/bottom/right/y y -10 7 0 10 -204800 -1 -1 712.013
+256;
 #X text -4 2 texture position (Pixel);
 #X coords 0 0 1 1 155 300 0;
 #X restore 105 198 pd tex_\$1;
