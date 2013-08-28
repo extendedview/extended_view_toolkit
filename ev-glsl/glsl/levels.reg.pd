@@ -15,5 +15,7 @@
 #X msg 530 227 \; /ev/glsl/\$1/gamma 1 \; /ev/glsl/\$1/minInput 0 0
 0 \; /ev/glsl/\$1/maxInput 1 1 1 \; /ev/glsl/\$1/minOutput 0 0 0 \;
 /ev/glsl/\$1/maxOutput 1 1 1 \;;
+#X obj 145 160 ds_reg \$2 /ev/glsl/\$1/state;
+#X obj 407 161 osc_bi \$2 /ev/glsl/\$1/state;
 #X connect 1 0 2 0;
 #X connect 2 0 13 0;
