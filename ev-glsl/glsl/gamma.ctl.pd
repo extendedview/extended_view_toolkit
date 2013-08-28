@@ -7,9 +7,11 @@
 #X msg 155 173 gamma \$1;
 #X obj 152 65 route gamma;
 #X obj 152 133 f 1;
+#X obj 184 95 r /ev/glsl/\$1/gamma;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 3 0 6 0;
 #X connect 5 0 2 0;
 #X connect 6 0 7 0;
 #X connect 7 0 5 0;
+#X connect 8 0 7 0;

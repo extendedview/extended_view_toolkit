@@ -7,9 +7,11 @@
 #X obj 152 65 route desaturation;
 #X msg 155 173 desaturation \$1;
 #X obj 152 133 f 0;
+#X obj 169 97 r /ev/glsl/\$1/desaturation;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 3 0 5 0;
 #X connect 5 0 7 0;
 #X connect 6 0 2 0;
 #X connect 7 0 6 0;
+#X connect 8 0 7 0;

@@ -51,7 +51,7 @@ vec4 color_old = texture2DRect(MyTex, vec2(pos.x, pos.y));
 	vec3 satColor = mix(intensity, brtColor, sat);
 	vec3 conColor = mix(AvgLumin, satColor, con);
 
-vec4 color_new = vec4(conColor, color_old.a);
+vec4 color_new = vec4(conColor.rgb, color_old.a);
 
 gl_FragColor = color_new;
 

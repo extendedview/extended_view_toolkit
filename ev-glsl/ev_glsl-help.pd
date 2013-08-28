@@ -3,7 +3,7 @@
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
 libs/kollabs -path ../libs/kollabs -path media -path ../media -path
-ev-glsl -path ../ev-glsl;
+ev-glsl -path ../ev-glsl -lib Gem;
 #X obj 372 159 cnv 15 250 500 empty empty patch 20 12 0 14 -262130
 -66577 0;
 #X obj 6 -2 cnv 15 925 16 empty empty EXTENDED_VIEW_GLSL-MODULE 2 8
@@ -17,18 +17,18 @@ gpl v3;
 -1 -1;
 #X obj 389 380 pix_image;
 #X obj 650 255 vsl 15 128 0 2 0 0 empty empty empty 0 -9 0 10 -258113
--1 -1 6800 1;
+-1 -1 7000 1;
 #X obj 670 255 vsl 15 128 0 2 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 5900 1;
+-1 -1 6350 1;
 #X obj 690 255 vsl 15 128 0 2 0 0 empty empty empty 0 -9 0 10 -4160
--1 -1 4900 1;
+-1 -1 6350 1;
 #X msg 417 344 open ../media/cam2.jpg;
 #X obj 389 225 gemhead;
 #X obj 650 195 loadbang;
 #X msg 650 428 gain \$1 \$2 \$3 \$4;
 #X obj 389 268 alpha;
 #X obj 710 255 vsl 15 128 0 2 0 0 empty empty empty 0 -9 0 10 -1 -262144
--1 5900 1;
+-1 6350 1;
 #X msg 650 217 1;
 #N canvas 0 22 450 300 pack4 0;
 #X obj 141 102 t b f;
@@ -109,7 +109,7 @@ the texture.;
 7 0 10 -262144 -1 -1;
 #X obj 151 236 glsl/name.ctl;
 #X text 69 236 Look inside:;
-#X obj 389 481 ev_glsl gain;
+#X obj 389 481 ev_glsl mygain dummy gain;
 #X connect 4 0 10 0;
 #X connect 5 0 10 0;
 #X connect 6 0 61 0;
@@ -119,7 +119,7 @@ the texture.;
 #X connect 10 0 6 0;
 #X connect 11 0 14 0;
 #X connect 12 0 16 0;
-#X connect 13 0 61 1;
+#X connect 13 0 61 2;
 #X connect 14 0 6 0;
 #X connect 15 0 17 3;
 #X connect 16 0 9 0;

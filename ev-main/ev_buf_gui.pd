@@ -1,0 +1,37 @@
+#N canvas 113 37 694 524 10;
+#X obj 101 101 cnv 15 268 54 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 245 118 nbx 5 14 -1e+37 1e+37 0 0 /ev/buf/\$1/scale/x /ev/buf/\$1/scale/x
+x -8 8 0 10 -261682 -1 -1 1 256;
+#X obj 310 118 nbx 5 14 -1e+37 1e+37 0 0 /ev/buf/\$1/dimen/x /ev/buf/\$1/dimen/x
+x -8 8 0 10 -204800 -1 -1 1024 256;
+#X obj 310 136 nbx 5 14 -1e+37 1e+37 0 0 /ev/buf/\$1/dimen/y /ev/buf/\$1/dimen/y
+y -8 8 0 10 -204800 -1 -1 1024 256;
+#X obj 245 136 nbx 5 14 -1e+37 1e+37 0 0 /ev/buf/\$1/scale/y /ev/buf/\$1/scale/y
+y -8 8 0 10 -261682 -1 -1 1 256;
+#X obj 180 118 nbx 5 14 -1e+37 1e+37 0 0 /ev/buf/\$1/shift/x /ev/buf/\$1/shift/x
+x -8 8 0 10 -262130 -1 -1 0 256;
+#X obj 180 135 nbx 5 14 -1e+37 1e+37 0 0 /ev/buf/\$1/shift/y /ev/buf/\$1/shift/y
+y -8 8 0 10 -262130 -1 -1 0 256;
+#X obj 104 118 tgl 15 1 /ev/buf/\$1/state /ev/buf/\$1/state on/off
+17 7 0 10 -4034 -1 -1 1 1;
+#X text 178 102 shift;
+#X text 243 102 scale;
+#X text 308 101 dimen;
+#X obj 100 10 cnv 15 850 16 empty empty EXTENDED_VIEW_FRAMEBUFFER 20
+8 0 14 -233017 -66577 0;
+#X obj 99 318 cnv 15 360 60 empty empty creation_arguments: 5 12 0
+12 -162280 -1 0;
+#X text 102 334 1st: module ID;
+#X obj 102 200 cnv 15 200 100 empty empty gui_controls 5 8 0 12 -204800
+-66577 0;
+#X text 102 239 scale x/y: scales the buffers;
+#X text 168 228 content;
+#X text 102 217 shift x/y: translates the buffers;
+#X text 168 248 content;
+#X text 102 261 dimen x/y: dimension of the FB;
+#X text 102 273 on/off: toggles state;
+#X text 102 286 rotate: rotate content;
+#X text 149 428 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X coords 0 -1 1 1 270 56 2 100 100;
