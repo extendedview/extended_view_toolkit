@@ -1,0 +1,15 @@
+#N canvas 129 88 963 499 10;
+#X obj 30 65 t b;
+#X obj 30 43 inlet shader_init;
+#X obj 152 278 outlet shader_data;
+#X obj 152 43 inlet shader_control;
+#X text 325 263 (c)2013 Marian Weger;
+#X msg 155 173 gamma \$1;
+#X obj 152 65 route gamma;
+#X obj 152 133 f 1;
+#X connect 0 0 7 0;
+#X connect 1 0 0 0;
+#X connect 3 0 6 0;
+#X connect 5 0 2 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
