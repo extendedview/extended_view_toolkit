@@ -1,9 +1,9 @@
-#N canvas 131 55 794 756 10;
+#N canvas 434 22 794 756 10;
 #X declare -path . -path .. -path data -path ../data -path ev-in -path
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
 libs/kollabs -path ../libs/kollabs -path media -path ../media -path
-ev-glsl -path ../ev-glsl;
+ev-glsl -path ../ev-glsl -lib Gem;
 #X obj 6 164 cnv 15 380 750 empty empty Two-pass_Gaussian_Blur 20 12
 0 14 -262130 -66577 0;
 #X obj 36 236 cnv 15 340 340 empty empty Horizontal_blur 20 12 0 14
@@ -32,11 +32,9 @@ gpl v3;
 #X msg 417 269 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
 #X text 460 251 CLICK HERE TO START:;
 #X obj 476 194 ../ev-main/ev_declare;
-#X obj 45 447 ev_glsl gaussian_blur_horizontal;
 #X obj 18 211 t a a;
-#X msg 410 405 blur_size \$1;
 #X obj 413 381 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 7200 1;
 #X text 427 503 "gaussian_blur" shader \, loaded;
 #X text 429 516 in this example.;
 #X obj 410 650 t a;
@@ -50,50 +48,52 @@ with Extended View Toolkit.;
 #X msg 73 380 open media/cam2.jpg;
 #X text 57 489 apply the "gaussian_blur_horizontal" shader \, that
 is specified by 1st creation argument.;
-#X text 31 760 apply the "gaussian_blur_vertical" shader \, that is
+#X text 31 820 apply the "gaussian_blur_vertical" shader \, that is
 specified by 1st creation argument.;
-#X obj 45 264 ev_buf horizontal;
-#X obj 18 610 ev_buf vertical;
-#X obj 91 830 r /ev/buf/horizontal/texture_id;
 #X obj 497 776 r /ev/buf/vertical/texture_id;
 #X text 118 215 should use the same settings.;
 #X text 9 109 Here \, the implementation of a 2-pass gaussian blur
 is shown. It consists of two indidual shaders \, that are computed
 one after another.;
-#X text 89 798 The result of buffer 1 (horizontal) \; is used in buffer
+#X text 153 695 The result of buffer 1 (horizontal) \; is used in buffer
 2 (vertical);
 #X text 487 727 The result of buffer 2 (vertical) \; containing the
 final blurred image \; is rendered onto a rectangle.;
 #X text 430 432 both \, "gaussian_blur_horizontal" and "gaussian_blur_vertical"
 \; use the same control variable "blur_size".;
 #X text 123 408 load image;
-#X obj 18 716 ev_glsl gaussian_blur_vertical;
 #X obj 416 741 gemhead 49;
 #X obj 18 189 gemhead 48;
 #X text 118 201 both [ev_buf] ("horizontal" and "vertical");
 #X text 402 906 Source of fragment shader: http://www.gamerendering.com/2008/10/11/gaussian-blur-filter-shader/
 ;
-#X obj 45 529 ev_rectangle horizontal;
-#X obj 18 858 ev_rectangle vertical;
 #X obj 416 809 ev_rectangle result;
-#X connect 6 0 30 0;
-#X connect 7 0 30 0;
-#X connect 8 0 19 0;
+#X obj 45 530 rectangle 4 3;
+#X msg 410 405 blur \$1;
+#X obj 45 264 ev_buf horizontal;
+#X obj 18 859 square 4;
+#X obj 45 447 ev_glsl horizontal dummy gaussian_blur.h;
+#X obj 18 610 ev_buf vertical;
+#X obj 18 776 ev_glsl vertical dummy gaussian_blur.v;
+#X obj 130 746 r /ev/buf/horizontal/texture_id;
+#X connect 6 0 28 0;
+#X connect 7 0 28 0;
+#X connect 8 0 47 0;
 #X connect 15 0 14 0;
 #X connect 16 0 14 0;
 #X connect 19 0 48 0;
-#X connect 20 0 34 0;
-#X connect 20 1 33 0;
-#X connect 21 0 25 0;
-#X connect 21 0 19 1;
-#X connect 22 0 21 0;
-#X connect 25 0 43 1;
-#X connect 30 0 8 0;
-#X connect 33 0 8 0;
-#X connect 34 0 43 0;
-#X connect 35 0 49 1;
-#X connect 36 0 50 1;
-#X connect 43 0 49 0;
-#X connect 44 0 50 0;
-#X connect 45 0 20 0;
+#X connect 19 1 45 0;
+#X connect 20 0 44 0;
+#X connect 23 0 49 2;
+#X connect 28 0 8 0;
+#X connect 31 0 42 1;
+#X connect 38 0 42 0;
+#X connect 39 0 19 0;
+#X connect 44 0 23 0;
+#X connect 44 0 47 2;
+#X connect 45 0 8 0;
+#X connect 47 0 43 0;
+#X connect 48 0 49 0;
+#X connect 49 0 46 0;
+#X connect 50 0 49 1;
 #X coords 0 756 1 755 85 60 0;

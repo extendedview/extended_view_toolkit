@@ -4,8 +4,11 @@
 #X obj 530 205 list prepend \$1 \$2;
 #X obj 169 97 ds_reg \$2 /ev/glsl/\$1/gain;
 #X obj 399 97 osc_bi \$2 /ev/glsl/\$1/gain;
-#X msg 530 227 \; /ev/glsl/\$1/gain 1 1 1 1 \;;
-#X obj 136 122 ds_reg \$2 /ev/glsl/\$1/state;
 #X obj 398 123 osc_bi \$2 /ev/glsl/\$1/state;
+#X obj 136 122 ds_reg \$2 /ev/glsl/\$1/state nomorph;
+#X obj 136 152 ds_reg \$2 /ev/glsl/\$1/tex0 nomorph;
+#X obj 398 153 osc_bi \$2 /ev/glsl/\$1/tex0;
+#X msg 530 227 \; /ev/glsl/\$1/gain 1 1 1 1 \; /ev/glsl/\$1/tex0 0
+\;;
 #X connect 1 0 2 0;
-#X connect 2 0 5 0;
+#X connect 2 0 9 0;

@@ -1,69 +1,70 @@
-#N canvas 231 83 1082 620 10;
+#N canvas 397 22 807 706 10;
 #X declare -path . -path .. -path data -path ../data -path ev-in -path
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
 libs/kollabs -path ../libs/kollabs -path media -path ../media -path
 ev-glsl -path ../ev-glsl -lib Gem;
-#X obj 372 71 cnv 15 300 400 empty empty media_input 20 12 0 14 -262130
+#X obj 372 157 cnv 15 380 400 empty empty media_input 20 12 0 14 -262130
 -66577 0;
-#X obj 6 -90 cnv 15 1000 16 empty empty EXTENDED_VIEW_GLSL-BUFFER-MODULE
+#X obj 6 -4 cnv 15 800 16 empty empty EXTENDED_VIEW_GLSL-BUFFER-MODULE
 2 8 0 14 -99865 -262144 0;
-#X obj 426 225 loadbang;
-#X obj 404 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 426 311 loadbang;
+#X obj 404 312 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 389 282 pix_image;
-#X obj 389 107 gemhead;
-#X obj 683 -56 cnv 15 380 300 empty empty chained_GLSL_operations 20
+#X obj 389 368 pix_image;
+#X obj 389 193 gemhead;
+#X obj 373 567 cnv 15 380 400 empty empty chained_GLSL_operations 20
 12 0 14 -261682 -66577 0;
-#X obj 6 -64 cnv 15 360 100 empty empty description 5 12 0 12 -233017
+#X obj 6 22 cnv 15 360 100 empty empty description 5 12 0 12 -233017
 -66577 0;
-#X obj 6 48 cnv 15 360 60 empty empty creation_arguments: 5 12 0 12
+#X obj 6 134 cnv 15 360 60 empty empty creation_arguments: 5 12 0 12
 -162280 -1 0;
-#X obj 6 121 cnv 15 360 70 empty empty inlets/outlets 5 12 0 12 -233017
+#X obj 6 207 cnv 15 360 70 empty empty inlets/outlets 5 12 0 12 -233017
 -66577 0;
-#X obj 373 -56 cnv 15 300 120 empty empty Create_Gem_Window 20 12 0
+#X obj 373 30 cnv 15 380 120 empty empty Create_Gem_Window 20 12 0
 14 -204786 -66577 0;
-#X obj 394 39 gemwin 20;
-#X msg 430 15 0 \, destroy;
-#X msg 394 -11 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
-#X text 437 -29 CLICK HERE TO START:;
-#X obj 79 379 ../ev-main/ev_declare;
-#X text 81 358 load required pathes;
-#X obj 6 207 cnv 15 360 70 empty empty GUI_controls 5 12 0 12 -204800
+#X obj 394 125 gemwin 20;
+#X msg 430 101 0 \, destroy;
+#X msg 394 75 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
+#X text 437 57 CLICK HERE TO START:;
+#X obj 79 465 ../ev-main/ev_declare;
+#X text 81 444 load required pathes;
+#X obj 6 293 cnv 15 360 70 empty empty GUI_controls 5 12 0 12 -204800
 -66577 0;
-#X obj 727 37 bng 15 250 50 0 empty empty reload_shaders 17 7 0 10
+#X obj 417 640 bng 15 250 50 0 empty empty reload_shaders 17 7 0 10
 -262144 -1 -1;
-#X obj 389 304 pix_texture;
-#X obj 699 -6 gemhead 51;
-#X msg 464 327 \$3 \$2;
-#X obj 464 349 /;
-#X obj 464 371 * 4;
-#X obj 389 396 rectangle 4 3;
-#X text 493 352 calculate aspect ratio;
-#X obj 847 -6 r /ev/buf/inputbuffer/texture_id;
-#X text 9 -47 This abstraction creates a framebuffer and applies a
-specified shader to it.;
-#X obj 683 271 cnv 15 250 200 empty empty draw_result_into_gem_window
+#X obj 389 390 pix_texture;
+#X obj 389 597 gemhead 51;
+#X msg 464 413 \$3 \$2;
+#X obj 464 435 /;
+#X obj 464 457 * 4;
+#X obj 389 482 rectangle 4 3;
+#X text 493 438 calculate aspect ratio;
+#X obj 537 597 r /ev/buf/inputbuffer/texture_id;
+#X text 9 39 This abstraction creates a framebuffer and applies a specified
+shader to it.;
+#X obj 373 974 cnv 15 380 200 empty empty draw_result_into_gem_window
 20 12 0 14 -204786 -66577 0;
-#X obj 781 321 gemhead;
-#X obj 781 387 pix_texture;
-#X obj 781 419 rectangle 4 4;
-#X text 391 417 draw content in right aspect ratio \; into square framebuffer
+#X obj 589 1024 gemhead;
+#X obj 589 1090 pix_texture;
+#X obj 589 1122 rectangle 4 4;
+#X text 391 503 draw content in right aspect ratio \; into square framebuffer
 ;
-#X text 61 302 (c)2013 Marian Weger \; part of EXTENDEDVIEW toolkit/
+#X text 61 388 (c)2013 Marian Weger \; part of EXTENDEDVIEW toolkit/
 gpl v3;
-#X obj 389 129 ev_buf inputbuffer dummy;
-#X text 9 70 1st: id;
-#X text 9 83 2nd: domain;
-#X text 9 96 3rd: shader name;
-#X obj 747 165 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/contrast /ev/glsl/colorbuf/contrast
-contrast -2 -8 0 10 -203904 -1 -1 7540 1;
-#X obj 699 66 ev_glsl_buf colorbuf dummy contrast;
-#X obj 747 195 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/saturation /ev/glsl/colorbuf/saturation
-saturation -2 -8 0 10 -203904 -1 -1 2540 1;
-#X obj 747 225 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/brightness /ev/glsl/colorbuf/brightness
-brightness -2 -8 0 10 -203904 -1 -1 2540 1;
-#X msg 404 253 open ../media/cam2.jpg;
+#X obj 389 215 ev_buf inputbuffer dummy;
+#X text 9 156 1st: id;
+#X text 9 169 2nd: domain;
+#X text 9 182 3rd: shader name;
+#X obj 445 768 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/contrast /ev/glsl/colorbuf/contrast
+contrast -2 -8 0 10 -203904 -1 -1 10040 1;
+#X obj 389 669 ev_glsl_buf colorbuf dummy contrast;
+#X obj 445 798 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/saturation /ev/glsl/colorbuf/saturation
+saturation -2 -8 0 10 -203904 -1 -1 0 1;
+#X obj 445 828 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/brightness /ev/glsl/colorbuf/brightness
+brightness -2 -8 0 10 -203904 -1 -1 8640 1;
+#X msg 404 339 open ../media/cam2.jpg;
+#X obj 389 862 ev_glsl_buf colorbuf dummy invert;
 #X connect 2 0 42 0;
 #X connect 3 0 42 0;
 #X connect 4 0 19 0;
@@ -81,6 +82,8 @@ brightness -2 -8 0 10 -203904 -1 -1 2540 1;
 #X connect 29 0 30 0;
 #X connect 30 0 31 0;
 #X connect 34 0 4 0;
-#X connect 39 1 30 1;
+#X connect 39 0 43 0;
+#X connect 39 1 43 1;
 #X connect 42 0 4 0;
-#X coords 0 620 1 619 85 60 0;
+#X connect 43 1 30 1;
+#X coords 0 706 1 705 85 60 0;

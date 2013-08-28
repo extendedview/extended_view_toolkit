@@ -14,10 +14,12 @@
 #X obj 378 113 osc_bi \$2 /ev/glsl/\$1/AvgLumR;
 #X obj 378 133 osc_bi \$2 /ev/glsl/\$1/AvgLumG;
 #X obj 378 153 osc_bi \$2 /ev/glsl/\$1/AvgLumB;
+#X obj 378 173 osc_bi \$2 /ev/glsl/\$1/state;
+#X obj 116 172 ds_reg \$2 /ev/glsl/\$1/state nomorph;
+#X obj 116 192 ds_reg \$2 /ev/glsl/\$1/tex0 nomorph;
+#X obj 378 193 osc_bi \$2 /ev/glsl/\$1/tex0;
 #X msg 515 266 \; /ev/glsl/\$1/contrast 1 \; /ev/glsl/\$1/saturation
 1 \; /ev/glsl/\$1/brightness 1 \; /ev/glsl/\$1/AvgLumR 0.5 \; /ev/glsl/\$1/AvgLumG
-0.5 \; /ev/glsl/\$1/AvgLumB 0.5 \;;
-#X obj 116 172 ds_reg \$2 /ev/glsl/\$1/state;
-#X obj 378 173 osc_bi \$2 /ev/glsl/\$1/state;
+0.5 \; /ev/glsl/\$1/AvgLumB 0.5 \; /ev/glsl/\$1/tex0 0 \;;
 #X connect 1 0 2 0;
-#X connect 2 0 15 0;
+#X connect 2 0 19 0;
