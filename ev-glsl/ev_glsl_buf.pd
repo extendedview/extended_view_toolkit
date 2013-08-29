@@ -32,7 +32,7 @@
 gpl v3;
 #X obj 595 241 ev_glsl_buf_dsp \$1 \$2 \$3;
 #X obj 784 282 glsl/\$3.reg \$1 \$2 \$3;
-#X obj 100 115 ev_buf_gui \$1 \$2;
+#X obj 100 115 ev_glsl_buf_gui \$1 \$2 \$3;
 #X connect 15 0 22 0;
 #X connect 18 0 22 1;
 #X connect 22 0 12 0;

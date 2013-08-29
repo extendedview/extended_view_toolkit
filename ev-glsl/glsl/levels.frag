@@ -31,7 +31,7 @@
 
 #extension GL_ARB_texture_rectangle : enable
 
-uniform sampler2DRect MyTex; 
+uniform sampler2DRect tex0; 
 
 uniform float gamma;
 uniform vec3 minInput;
@@ -44,7 +44,7 @@ void main(void)
 {
 
 vec2 pos = (gl_TextureMatrix[0] * gl_TexCoord[0]).st;
-vec4 color_old = texture2DRect(MyTex, vec2(pos.x, pos.y));
+vec4 color_old = texture2DRect(tex0, vec2(pos.x, pos.y));
 	
 vec3 LevelsControlInputRange = min(max(color_old.rgb - minInput, vec3(0.0)) / (maxInput - minInput), vec3(1.0));
 

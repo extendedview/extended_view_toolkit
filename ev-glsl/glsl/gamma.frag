@@ -26,7 +26,7 @@
 
 #extension GL_ARB_texture_rectangle : enable
 
-uniform sampler2DRect MyTex; 
+uniform sampler2DRect tex0; 
 
 uniform float gamma;
 
@@ -36,7 +36,7 @@ void main(void)
 {
 
 vec2 pos = (gl_TextureMatrix[0] * gl_TexCoord[0]).st;
-vec4 color_old = texture2DRect(MyTex, vec2(pos.x, pos.y));
+vec4 color_old = texture2DRect(tex0, vec2(pos.x, pos.y));
 
 
 vec4 color_new = vec4(pow(color_old.r, 1.0 / gamma), pow(color_old.g, 1.0 / gamma), pow(color_old.b, 1.0 / gamma), color_old.a);
