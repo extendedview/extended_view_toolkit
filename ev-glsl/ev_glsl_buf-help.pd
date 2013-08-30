@@ -1,4 +1,4 @@
-#N canvas 313 120 807 706 10;
+#N canvas 367 54 807 706 10;
 #X declare -path . -path .. -path data -path ../data -path ev-in -path
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
@@ -56,35 +56,35 @@ gpl v3;
 #X text 9 169 2nd: domain;
 #X text 9 182 3rd: shader name;
 #X obj 515 768 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/contrast /ev/glsl/colorbuf/contrast
-contrast -2 -8 0 10 -203904 -1 -1 2540 1;
+contrast -2 -8 0 10 -203904 -1 -1 7420 1;
 #X obj 515 798 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/saturation /ev/glsl/colorbuf/saturation
-saturation -2 -8 0 10 -203904 -1 -1 2540 1;
+saturation -2 -8 0 10 -203904 -1 -1 3820 1;
 #X obj 515 828 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/brightness /ev/glsl/colorbuf/brightness
-brightness -2 -8 0 10 -203904 -1 -1 2540 1;
+brightness -2 -8 0 10 -203904 -1 -1 7180 1;
 #X msg 404 339 open ../media/cam2.jpg;
 #X text 409 784 play around:;
+#X obj 389 368 pix_image;
 #X obj 389 669 ev_glsl_buf colorbuf dummy contrast;
 #X obj 389 862 ev_glsl_buf colorbuf2 dummy invert;
-#X obj 389 368 pix_image;
 #X connect 2 0 40 0;
 #X connect 3 0 40 0;
 #X connect 4 0 33 0;
 #X connect 11 0 10 0;
 #X connect 12 0 10 0;
-#X connect 17 0 42 0;
+#X connect 17 0 43 0;
 #X connect 18 0 23 0;
 #X connect 18 1 20 0;
-#X connect 19 0 42 0;
+#X connect 19 0 43 0;
 #X connect 20 0 21 0;
 #X connect 21 0 22 0;
 #X connect 22 0 23 2;
-#X connect 25 0 42 1;
+#X connect 25 0 43 1;
 #X connect 28 0 29 0;
 #X connect 29 0 30 0;
-#X connect 33 0 44 0;
-#X connect 40 0 44 0;
-#X connect 42 0 43 0;
-#X connect 42 1 43 1;
-#X connect 43 1 29 1;
-#X connect 44 0 18 0;
+#X connect 33 0 42 0;
+#X connect 40 0 42 0;
+#X connect 42 0 18 0;
+#X connect 43 0 44 0;
+#X connect 43 1 44 1;
+#X connect 44 1 29 1;
 #X coords 0 706 1 705 85 60 0;

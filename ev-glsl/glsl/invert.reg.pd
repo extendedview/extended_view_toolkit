@@ -1,11 +1,19 @@
-#N canvas 454 159 963 499 10;
-#X text 325 263 (c)2013 Marian Weger;
-#X obj 530 183 loadbang;
-#X obj 530 205 list prepend \$1 \$2;
-#X obj 169 97 ds_reg \$2 /ev/glsl/\$1/invert;
-#X obj 399 97 osc_bi \$2 /ev/glsl/\$1/invert;
-#X msg 530 227 \; /ev/glsl/\$1/invert 1 1 1 \;;
-#X obj 157 135 ds_reg \$2 /ev/glsl/\$1/state;
-#X obj 419 136 osc_bi \$2 /ev/glsl/\$1/state;
+#N canvas 240 173 963 499 10;
+#X text 325 403 (c)2013 Marian Weger;
+#X obj 530 323 loadbang;
+#X obj 530 345 list prepend \$1 \$2;
+#X obj 167 205 ds_reg \$2 /ev/glsl/\$1/state;
+#X obj 429 206 osc_bi \$2 /ev/glsl/\$1/state;
+#X obj 169 97 ds_reg \$2 /ev/glsl/\$1/invert/r;
+#X obj 169 117 ds_reg \$2 /ev/glsl/\$1/invert/g;
+#X obj 169 137 ds_reg \$2 /ev/glsl/\$1/invert/g;
+#X obj 169 157 ds_reg \$2 /ev/glsl/\$1/invert/a;
+#X obj 399 97 osc_bi \$2 /ev/glsl/\$1/invert/r;
+#X obj 399 117 osc_bi \$2 /ev/glsl/\$1/invert/g;
+#X obj 399 137 osc_bi \$2 /ev/glsl/\$1/invert/b;
+#X obj 399 157 osc_bi \$2 /ev/glsl/\$1/invert/a;
+#X msg 530 367 \; /ev/glsl/\$1/invert/r 1 \; /ev/glsl/\$1/invert/g
+1 \; /ev/glsl/\$1/invert/b 1 \; /ev/glsl/\$1/invert/a 0 \; /ev/glsl/\$1/rectangle
+1 \;;
 #X connect 1 0 2 0;
-#X connect 2 0 5 0;
+#X connect 2 0 13 0;

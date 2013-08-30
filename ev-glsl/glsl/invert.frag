@@ -1,5 +1,5 @@
 /*
-** Invert RGB
+** Invert RGBA
 ** (c)2013 Marian Weger
 */
 
@@ -8,7 +8,7 @@
 
 uniform sampler2DRect tex0; 
 
-uniform vec3 invert;
+uniform vec4 invert;
 
 void main(void)
 {
@@ -30,6 +30,11 @@ color_new.g = 1.0 - color_old.g;
 if(invert.b == 1.0)
 {
 color_new.b = 1.0 - color_old.b;
+}
+
+if(invert.a == 1.0)
+{
+color_new.a = 1.0 - color_old.a;
 }
 
 gl_FragColor = color_new;

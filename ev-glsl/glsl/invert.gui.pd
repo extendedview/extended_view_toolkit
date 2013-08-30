@@ -1,0 +1,12 @@
+#N canvas 77 123 498 334 10;
+#X text 67 211 (c)2013 Marian Weger /part of EXTENDED VIEW toolkit/
+gpl v3;
+#X obj 100 100 tgl 15 0 /ev/glsl/\$1/invert/r /ev/glsl/\$1/invert/r
+empty 17 7 0 10 -258113 -1 -1 0 1;
+#X obj 115 100 tgl 15 0 /ev/glsl/\$1/invert/g /ev/glsl/\$1/invert/g
+empty 17 7 0 10 -4034 -1 -1 0 1;
+#X obj 130 100 tgl 15 0 /ev/glsl/\$1/invert/b /ev/glsl/\$1/invert/b
+empty 17 7 0 10 -4160 -1 -1 0 1;
+#X obj 145 100 tgl 15 0 /ev/glsl/\$1/invert/a /ev/glsl/\$1/invert/a
+empty 17 7 0 10 -262144 -1 -1 0 1;
+#X coords 0 -1 1 1 60 15 2 100 100;

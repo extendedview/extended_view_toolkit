@@ -5,7 +5,7 @@
 x -8 8 0 10 -204800 -1 -1 1024 256;
 #X obj 310 136 nbx 5 14 -1e+37 1e+37 0 0 /ev/buf/\$1/dimen/y /ev/buf/\$1/dimen/y
 y -8 8 0 10 -204800 -1 -1 1024 256;
-#X obj 104 102 tgl 15 1 /ev/buf/\$1/state /ev/buf/\$1/state on/off
+#X obj 104 102 tgl 15 0 /ev/buf/\$1/state /ev/buf/\$1/state on/off
 17 7 0 10 -4034 -1 -1 1 1;
 #X text 308 101 dimen;
 #X obj 100 10 cnv 15 850 16 empty empty EXTENDED_VIEW_FRAMEBUFFER 20
@@ -14,11 +14,11 @@ y -8 8 0 10 -204800 -1 -1 1024 256;
 12 -162280 -1 0;
 #X obj 102 200 cnv 15 200 100 empty empty gui_controls 5 8 0 12 -204800
 -66577 0;
-#X obj 104 120 tgl 15 1 /ev/glsl/\$1/state /ev/glsl/\$1/state shader_on/off
+#X obj 104 120 tgl 15 0 /ev/glsl/\$1/state /ev/glsl/\$1/state shader_on/off
 17 7 0 10 -257985 -1 -1 1 1;
-#X obj 224 123 tgl 15 1 /ev/glsl/\$1/rectangle /ev/glsl/\$1/rectangle
+#X obj 224 123 tgl 15 0 /ev/glsl/\$1/rectangle /ev/glsl/\$1/rectangle
 tex_rect 17 7 0 10 -232576 -1 -1 1 1;
-#X obj 224 104 tgl 15 1 /ev/buf/\$1/rectangle /ev/buf/\$1/rectangle
+#X obj 224 104 tgl 15 0 /ev/buf/\$1/rectangle /ev/buf/\$1/rectangle
 buf_rect 17 7 0 10 -232576 -1 -1 1 1;
 #X text 111 424 (c)2013 Marian Weger /part of EXTENDED VIEW toolkit/
 gpl v3;
