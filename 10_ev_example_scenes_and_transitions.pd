@@ -1,0 +1,111 @@
+#N canvas 129 22 944 756 10;
+#X declare -path . -path .. -path data -path ../data -path ev-in -path
+../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
+-path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
+libs/kollabs -path ../libs/kollabs -path media -path ../media -path
+ev-glsl -path ../ev-glsl -lib Gem;
+#X obj 14 -26 cnv 15 700 30 empty empty Example:_Scenes_and_Transitions
+20 12 0 14 -233017 -66577 0;
+#X obj 13 441 cnv 15 910 30 empty empty INITIALIZE 20 12 0 14 -261234
+-66577 0;
+#N canvas 579 25 509 161 init 0;
+#X obj 44 27 cnv 15 400 100 empty empty IMPORTANT 20 12 0 14 -261234
+-66577 0;
+#X text 49 47 Such a declare object should always be in the main patch
+of your project \, to set the pathes to the abstractions.;
+#X obj 158 93 ev-main/ev_declare;
+#X restore 752 -12 pd init;
+#X obj 13 244 cnv 15 450 190 empty empty Patch_domain_"main" 280 12
+0 14 -262130 -66577 0;
+#X obj 23 252 gemhead 50;
+#X obj 473 244 cnv 15 450 190 empty empty Patch_domain_"special" 20
+12 0 14 -262130 -66577 0;
+#X obj 14 478 cnv 15 450 350 empty empty Storage_domain_"main" 20 12
+0 14 -204800 -66577 0;
+#X obj 474 478 cnv 15 450 350 empty empty Storage_domain_"special"
+20 12 0 14 -204800 -66577 0;
+#X text 488 504 Here \, domain "special" is specified by first creation
+argument.;
+#X obj 489 297 gemhead 51;
+#X text 26 511 Here \, domain "main" is specified by first creation
+argument.;
+#X msg 247 590 0;
+#X msg 277 590 1;
+#X msg 307 590 2;
+#X text 187 563 Change scene by clicking these message boxes;
+#X obj 247 632 s /ds/main/scene;
+#X msg 711 589 0;
+#X msg 741 589 1;
+#X msg 771 589 2;
+#X text 651 562 Change scene by clicking these message boxes;
+#X obj 711 631 s /ds/special/scene;
+#X obj 23 281 ev_pro_22easy projection_a main;
+#X obj 489 326 ev_pro_22easy projection_b special;
+#N canvas 0 22 493 355 load_preset_files 0;
+#X obj 57 41 loadbang;
+#X obj 37 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 57 65 del 1000;
+#X obj 57 87 t b b;
+#X obj 57 221 del 2000;
+#X msg 57 244 \; /ds/main/scene 0 \; /ds/special/scene 0 \;;
+#X text 145 43 Both domains must be initialized to get automatically
+loaded on startup.;
+#X msg 84 115 \; /ds/main/loadfile ../../data/ev_example_scene_transitions_main.txt
+\; /ds/special/loadfile ../../data/ev_example_scene_transitions_special.txt
+\;;
+#X text 130 188 (pathes relative to "./libs/kollabs");
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 7 0;
+#X connect 4 0 5 0;
+#X coords 0 355 1 354 85 60 0;
+#X restore 163 447 pd load_preset_files;
+#X obj 14 9 cnv 15 910 25 empty empty This_is_only_a_short_introduction._A_comprehensive_help_file_is_provided_in_"./libs/kollabs/ds_help.pd"
+20 12 0 14 -260183 -1 0;
+#X obj 23 348 ev_gemwin main;
+#X text 472 -25 (c)2013 Marian Weger \; /part of EXTENDED VIEW toolkit/
+gpl v3;
+#X obj 484 706 ds_transition special;
+#X obj 484 732 ds_transition_gui special;
+#X obj 485 540 ds_logic special;
+#X obj 485 562 ds_gui special;
+#X text 621 703 transition module to enable scene transitions;
+#X text 679 755 corresponding gui;
+#X obj 14 38 cnv 15 910 200 empty empty About_Kollabs_state-saving_system
+20 12 0 14 -232576 -66577 0;
+#X text 34 64 Extended View Toolkit relies on the Kollabs state-saving
+system. With Kollabs \, it is possible to save snapshots (=scenes)
+of all the parameters (=variables) in the patch. For every scene and
+variable \, an individual transition can be set to morph between scenes.
+The variables can be assigned to different storage domains to be saved
+with (first creation argument). If no argument is given \, domain "0"
+is assumed.;
+#X text 37 173 In this example \, a scene transition is introduced
+for domain "special".;
+#X text 37 205 The following steps show \, how scene transitions work
+and how to get them.;
+#X text 491 131 IMPORTANT NOTE \; A transition is saved with the DESTINATION
+value. So \, if a fade between scene 3 and 4 is desired \, it needs
+to be set in scene 4 \; Transitions only have influence on variables
+of type float.;
+#X text 234 281 2nd creation argument: storage domain;
+#X text 525 387 2nd creation argument: storage domain (here: "special")
+;
+#X text 244 294 (here: "main");
+#X text 311 447 Look inside to see how to load preset files on startup
+;
+#X obj 26 549 ev_storage main;
+#X text 27 700 [ev_storage] is a shortcut for [ds_logic] & [ds_gui]
+combined.;
+#X connect 4 0 21 0;
+#X connect 9 0 22 0;
+#X connect 11 0 15 0;
+#X connect 12 0 15 0;
+#X connect 13 0 15 0;
+#X connect 16 0 20 0;
+#X connect 17 0 20 0;
+#X connect 18 0 20 0;
+#X coords 0 0 1 1 85 60 0;

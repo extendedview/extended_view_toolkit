@@ -3,7 +3,7 @@
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
 libs/kollabs -path ../libs/kollabs -path media -path ../media -path
-ev-glsl -path ../ev-glsl;
+ev-glsl -path ../ev-glsl -lib Gem;
 #X obj 14 14 cnv 15 700 30 empty empty EXAMPLE:_Virtual_Panoramic_Camera_Inside_3D_Scenery
 20 12 0 14 -1 -262144 0;
 #N canvas 33 262 548 468 init 0;
@@ -325,7 +325,7 @@ pos/y 0 -8 0 10 -262144 -1 -1 3 256;
 #X obj 354 380 nbx 5 14 -1e+37 1e+37 0 0 /ev/vpanocam/pos/z /ev/vpanocam/pos/z
 pos/z 0 -8 0 10 -262144 -1 -1 0 256;
 #X obj 424 380 nbx 5 14 -1e+37 1e+37 0 0 /ev/vpanocam/rot/z /ev/vpanocam/rot/z
-rot/z 0 -8 0 10 -262144 -1 -1 264.24 256;
+rot/z 0 -8 0 10 -262144 -1 -1 228.96 256;
 #X obj 29 312 tgl 15 0 empty projection projection 17 7 0 10 -262144
 -1 -1 1 1;
 #X obj 133 272 tgl 15 0 empty rendering rendering 17 7 0 10 -262144
@@ -371,10 +371,11 @@ rot/z 0 -8 0 10 -262144 -1 -1 264.24 256;
 #X restore 424 341 pd rotation;
 #X obj 424 318 tgl 15 0 empty rotation rotation 17 7 0 10 -262144 -1
 -1 1 1;
-#X obj 15 89 ev_storage vpano;
 #X text 546 177 <-- click here to start!;
 #X text 97 52 OpenGL does not allow a 360 degrees camera. So you need
 to build a virtual camera array...;
+#X obj 14 101 ds_logic vpano;
+#X obj 14 124 ds_gui vpano;
 #X connect 2 0 27 0;
 #X connect 4 0 5 0;
 #X connect 4 1 3 1;

@@ -16,7 +16,7 @@ ev-glsl -path ../ev-glsl -lib Gem;
 12 0 14 -261682 -66577 0;
 #X obj 6 22 cnv 15 360 100 empty empty description 5 12 0 12 -233017
 -66577 0;
-#X obj 6 134 cnv 15 360 60 empty empty creation_arguments: 5 12 0 12
+#X obj 6 134 cnv 15 360 70 empty empty creation_arguments: 5 12 0 12
 -162280 -1 0;
 #X obj 6 207 cnv 15 360 70 empty empty inlets/outlets 5 12 0 12 -233017
 -66577 0;
@@ -56,11 +56,11 @@ gpl v3;
 #X text 9 169 2nd: domain;
 #X text 9 182 3rd: shader name;
 #X obj 515 768 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/contrast /ev/glsl/colorbuf/contrast
-contrast -2 -8 0 10 -203904 -1 -1 7420 1;
+contrast -2 -8 0 10 -203904 -1 -1 2540 1;
 #X obj 515 798 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/saturation /ev/glsl/colorbuf/saturation
-saturation -2 -8 0 10 -203904 -1 -1 3820 1;
+saturation -2 -8 0 10 -203904 -1 -1 2540 1;
 #X obj 515 828 hsl 128 15 0 5 0 0 /ev/glsl/colorbuf/brightness /ev/glsl/colorbuf/brightness
-brightness -2 -8 0 10 -203904 -1 -1 7180 1;
+brightness -2 -8 0 10 -203904 -1 -1 2540 1;
 #X msg 404 339 open ../media/cam2.jpg;
 #X text 409 784 play around:;
 #X obj 389 368 pix_image;

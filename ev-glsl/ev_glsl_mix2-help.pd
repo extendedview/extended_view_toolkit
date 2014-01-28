@@ -38,7 +38,7 @@ ev-glsl -path ../ev-glsl -lib Gem;
 \, rectangle 0 \, format RGBA;
 #X obj 595 397 rectangle 4 -4;
 #X obj 315 22 vsl 15 128 0 1 0 0 empty empty mix_between_textures 0
--9 0 10 -260097 -1 -1 6700 1;
+-9 0 10 -260097 -1 -1 0 1;
 #X msg 629 168 open ../media/cam3.jpg;
 #X msg 315 158 amount \$1 \$1 \$1 \$1;
 #X text 692 400 why gets framebuffer content always flipped???;
@@ -49,7 +49,7 @@ my PD???;
 #X text 907 165 resize to next power of two;
 #X text 926 187 (no rectangle texturing!);
 #X msg 100 -68 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
-#X obj 97 327 ev_glsl_mix2 mixer1 dummy v001/mix2/heat;
+#X obj 97 327 ev_glsl_mix2 mixer1 dummy mix2;
 #X connect 1 0 0 0;
 #X connect 3 0 39 0;
 #X connect 4 0 5 0;
