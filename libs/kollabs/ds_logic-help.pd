@@ -1,7 +1,10 @@
-#N canvas 689 448 367 229 10;
-#X text 495 104 (c)2011-2012 \, Marian Weger;
-#X obj 70 114 cnv 15 200 30 empty empty see_[ds-help]_for_help 20 12
-0 14 -261234 -1 0;
-#X text 56 61 (corresponding gui: [ds_gui]);
-#X text 41 3 ds_logic <domain> <arg1> <arg2> ...;
-#X text 55 32 arguments: nodispatch \, direct;
+#N canvas 491 259 329 181 10;
+#X obj 10 62 cnv 15 300 100 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 10 41 cnv 15 300 20 empty empty HELP 5 10 0 14 -1 -262144 0
+;
+#X obj 10 10 cnv 15 300 20 empty empty Kollabs/DS 5 10 0 14 -258113
+-1 0;
+#X text 181 12 (c)2013 Marian Weger;
+#X obj 164 98 ds_help;
+#X text 50 98 Look inside here:;

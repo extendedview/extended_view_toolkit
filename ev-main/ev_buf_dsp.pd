@@ -1,0 +1,131 @@
+#N canvas 100 66 1055 651 10;
+#X obj 590 276 gemframebuffer;
+#X obj 669 194 pack;
+#X obj 685 167 t b f;
+#X msg 669 217 dimen \$1 \$2;
+#X obj 590 549 scaleXYZ 1 1 1;
+#X obj 536 125 r /ev/buf/\$1/state;
+#X obj 627 356 r /ev/buf/\$1/shift/x;
+#X obj 664 377 r /ev/buf/\$1/shift/y;
+#X obj 701 401 r /ev/buf/\$1/shift/z;
+#X obj 669 122 r /ev/buf/\$1/dimen/x;
+#X obj 685 145 r /ev/buf/\$1/dimen/y;
+#X obj 671 303 s /ev/buf/\$1/texture_id;
+#X obj 100 10 cnv 15 850 16 empty empty EXTENDED_VIEW_FRAMEBUFFER 20
+8 0 14 -233017 -66577 0;
+#X obj 99 318 cnv 15 360 60 empty empty creation_arguments: 5 12 0
+12 -162280 -1 0;
+#X obj 99 381 cnv 15 360 90 empty empty inlets/outlets 5 12 0 12 -233017
+-66577 0;
+#X text 231 441 other content;
+#X text 102 334 1st: module ID;
+#N canvas 354 176 247 337 init 0;
+#X obj 11 13 loadbang;
+#X obj 11 37 list append \$1;
+#X msg 11 64 \; /ev/buf/\$1/color 0 0 0 0 \; /ev/buf/\$1/format RGBA
+\; /ev/buf/\$1/rectangle 1 \; /ev/buf/\$1/type BYTE \; /ev/buf/\$1/shift/x
+0 \; /ev/buf/\$1/shift/y 0 \; /ev/buf/\$1/shift/z 0 \; /ev/buf/\$1/scale/x
+1 \; /ev/buf/\$1/scale/y 1 \; /ev/buf/\$1/scale/z 1 \; /ev/buf/\$1/dimen/x
+1024 \; /ev/buf/\$1/dimen/y 1024 \; /ev/buf/\$1/state 1 \;;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X coords 0 337 1 336 85 60 0;
+#X restore 111 61 pd init;
+#X obj 996 98 r /ev/buf/\$1/type;
+#X obj 977 53 r /ev/buf/\$1/rectangle;
+#X obj 850 52 r /ev/buf/\$1/format;
+#X obj 1015 153 r /ev/buf/\$1/color;
+#X obj 788 222 list trim;
+#X obj 617 478 r /ev/buf/\$1/scale/x;
+#X obj 644 498 r /ev/buf/\$1/scale/y;
+#X text 682 591 outlet 1: gemlist outlet;
+#X text 895 568 outlet 2: texture id;
+#X obj 850 77 list prepend format;
+#X obj 977 76 list prepend rectangle;
+#X obj 996 123 list prepend type;
+#X obj 1015 175 list prepend color;
+#N canvas 30 236 656 422 storage_&_osc 0;
+#X obj 58 85 ds_reg \$2 /ev/buf/\$1/scale/x;
+#X obj 58 105 ds_reg \$2 /ev/buf/\$1/scale/y;
+#X obj 58 145 ds_reg \$2 /ev/buf/\$1/shift/x;
+#X obj 58 165 ds_reg \$2 /ev/buf/\$1/shift/y;
+#X obj 58 225 ds_reg \$2 /ev/buf/\$1/rectangle nomorph;
+#X obj 58 245 ds_reg \$2 /ev/buf/\$1/format nomorph;
+#X obj 58 205 ds_reg \$2 /ev/buf/\$1/type nomorph;
+#X obj 58 45 ds_reg \$2 /ev/buf/\$1/dimen/x nomorph;
+#X obj 58 65 ds_reg \$2 /ev/buf/\$1/dimen/y nomorph;
+#X obj 58 25 ds_reg \$2 /ev/buf/\$1/state nomorph;
+#X obj 58 125 ds_reg \$2 /ev/buf/\$1/scale/z;
+#X obj 58 185 ds_reg \$2 /ev/buf/\$1/shift/z;
+#X obj 358 25 osc_bi \$2 /ev/buf/\$1/state;
+#X obj 358 45 osc_bi \$2 /ev/buf/\$1/dimen/x;
+#X obj 358 65 osc_bi \$2 /ev/buf/\$1/dimen/y;
+#X obj 358 85 osc_bi \$2 /ev/buf/\$1/scale/x;
+#X obj 358 105 osc_bi \$2 /ev/buf/\$1/scale/y;
+#X obj 358 125 osc_bi \$2 /ev/buf/\$1/scale/z;
+#X obj 358 145 osc_bi \$2 /ev/buf/\$1/shift/x;
+#X obj 358 165 osc_bi \$2 /ev/buf/\$1/shift/y;
+#X obj 358 185 osc_bi \$2 /ev/buf/\$1/shift/z;
+#X obj 358 205 osc_bi \$2 /ev/buf/\$1/type;
+#X obj 358 225 osc_bi \$2 /ev/buf/\$1/rectangle;
+#X obj 358 245 osc_bi \$2 /ev/buf/\$1/format;
+#X obj 358 265 osc_bi \$2 /ev/buf/\$1/color;
+#X obj 58 265 ds_reg \$2 /ev/buf/\$1/color nomorph;
+#X restore 180 61 pd storage_&_osc;
+#X text 104 429 Outlet 1: gemlist \, to be connectet to input \, group
+or;
+#X text 104 455 Outlet 2: texture id of the framebuffer;
+#X obj 590 591 outlet gemlist;
+#X obj 894 596 outlet texture_id;
+#X text 104 413 Inlet 2: gemframebuffer settings (see gemframebuffer-help)
+;
+#X text 105 400 Inlet 1: gemlist to be connected to gemhead;
+#X obj 503 174 spigot;
+#X obj 492 60 cnv 15 200 40 empty empty inlets 1 8 0 12 -260097 -66577
+0;
+#X obj 503 78 inlet gemlist;
+#X obj 590 78 inlet settings;
+#X text 932 451 [gemframebuffer] viewpoint: 0/0/0 \; [gemwin] viewpoint:
+0/0/4;
+#X text 716 451 "-4" because of viewpoint mismatch:;
+#X text 102 346 2nd: storage domain;
+#X obj 671 518 r /ev/buf/\$1/scale/z;
+#X obj 701 423 - 4;
+#X obj 590 450 translateXYZ 0 0 -4;
+#X text 103 492 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X obj 590 100 s /ev/buf/\$1/settings;
+#X obj 590 245 r /ev/buf/\$1/settings;
+#X connect 0 0 47 0;
+#X connect 0 1 11 0;
+#X connect 0 1 35 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 1 1 1;
+#X connect 3 0 0 0;
+#X connect 4 0 34 0;
+#X connect 5 0 38 1;
+#X connect 6 0 47 1;
+#X connect 7 0 47 2;
+#X connect 8 0 46 0;
+#X connect 9 0 1 0;
+#X connect 10 0 2 0;
+#X connect 18 0 29 0;
+#X connect 19 0 28 0;
+#X connect 20 0 27 0;
+#X connect 21 0 30 0;
+#X connect 22 0 0 0;
+#X connect 23 0 4 1;
+#X connect 24 0 4 2;
+#X connect 27 0 22 0;
+#X connect 28 0 22 0;
+#X connect 29 0 22 0;
+#X connect 30 0 22 0;
+#X connect 38 0 0 0;
+#X connect 40 0 38 0;
+#X connect 41 0 49 0;
+#X connect 45 0 4 3;
+#X connect 46 0 47 3;
+#X connect 47 0 4 0;
+#X connect 50 0 0 0;
+#X coords 0 651 1 650 270 75 0;

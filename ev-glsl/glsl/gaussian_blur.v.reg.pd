@@ -1,0 +1,11 @@
+#N canvas 454 159 963 499 10;
+#X text 325 263 (c)2013 Marian Weger;
+#X obj 530 183 loadbang;
+#X obj 530 205 list prepend \$1 \$2;
+#X obj 169 97 ds_reg \$2 /ev/glsl/\$1/blur;
+#X obj 399 97 osc_bi \$2 /ev/glsl/\$1/blur;
+#X msg 530 227 \; /ev/glsl/\$1/blur 0.5 \;;
+#X obj 156 139 ds_reg \$2 /ev/glsl/\$1/state;
+#X obj 418 140 osc_bi \$2 /ev/glsl/\$1/state;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;

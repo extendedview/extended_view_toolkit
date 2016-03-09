@@ -3,7 +3,7 @@
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
 libs/kollabs -path ../libs/kollabs -path media -path ../media -path
-ev-glsl -path ../ev-glsl;
+ev-glsl -path ../ev-glsl -lib Gem;
 #X obj 466 248 cnv 15 400 350 empty empty OUTPUT_MODULES 20 12 0 14
 -204800 -66577 0;
 #X obj 10 40 cnv 15 500 180 empty empty FRAMEBUFFER 20 12 0 14 -262130
@@ -28,16 +28,16 @@ of your project \, to set the pathes to the abstractions.;
 #X text 127 93 The DATA STORAGE SYSTEM will be explained in a later
 example.;
 #X obj 158 43 ev-main/ev_declare;
-#X msg 83 180 \; /0/ds/loadfile ../../data/ev_example_panoramic_360_preset.txt
-;
 #X text 156 229 (pathes relative to "./libs/kollabs");
-#X msg 56 302 \; /0/ds/scene 0;
 #X text 66 282 Recall scene '0' from the loaded preset file;
+#X msg 83 180 \; /ds/0/loadfile ../../data/ev_example_panoramic_360_preset.txt
+;
+#X msg 56 302 \; /ds/0/scene 0;
 #X connect 0 0 4 0;
 #X connect 4 0 6 0;
 #X connect 4 1 5 0;
-#X connect 5 0 9 0;
-#X connect 6 0 11 0;
+#X connect 5 0 11 0;
+#X connect 6 0 12 0;
 #X restore 620 117 pd init;
 #X text 541 115 look inside:;
 #X obj 490 275 gemhead 50;

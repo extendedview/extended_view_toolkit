@@ -1,0 +1,33 @@
+#N canvas 104 257 891 378 10;
+#X obj 10 11 cnv 15 600 18 empty empty EXTENDED_VIEW_GLSL_MODULE 3
+10 0 14 -99865 -262144 0;
+#X text 383 312 (c)2012 Marian Weger \; /part of EXTENDED VIEW toolkit/
+gpl v3;
+#X obj 380 62 inlet gemlist;
+#X obj 380 257 outlet gemlist;
+#X obj 10 102 cnv 15 360 60 empty empty creation_arguments: 5 12 0
+12 -162280 -1 0;
+#X text 13 124 1st: shader name;
+#X obj 10 175 cnv 15 360 70 empty empty inlets/outlets 5 12 0 12 -233017
+-66577 0;
+#X text 15 195 Inlet 1: GEMlist;
+#X text 205 195 Outlet 1: GEMlist;
+#X text 15 210 Inlet 2: Shader controls;
+#X obj 10 255 cnv 15 360 70 empty empty GUI_controls 5 12 0 12 -204800
+-66577 0;
+#X text 15 285 on/off --- on (shader active) \, off (shader inactive)
+;
+#X obj 809 62 inlet ctl;
+#X text 13 138 2nd: id;
+#X obj 40 55 ev_glsl_gui \$1 \$2;
+#X obj 475 62 inlet texture-id;
+#X obj 585 62 inlet texture-id;
+#X obj 380 144 ev_glsl_mix3_dsp \$1 \$2 \$3;
+#X obj 695 62 inlet texture-id;
+#X connect 2 0 17 0;
+#X connect 12 0 17 4;
+#X connect 15 0 17 1;
+#X connect 16 0 17 2;
+#X connect 17 0 3 0;
+#X connect 18 0 17 3;
+#X coords 0 -1 1 1 225 38 1 40 40;

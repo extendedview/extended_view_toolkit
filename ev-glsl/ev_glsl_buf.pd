@@ -1,0 +1,40 @@
+#N canvas 387 22 1055 651 10;
+#X obj 99 318 cnv 15 360 60 empty empty creation_arguments: 5 12 0
+12 -162280 -1 0;
+#X obj 99 381 cnv 15 360 90 empty empty inlets/outlets 5 12 0 12 -233017
+-66577 0;
+#X text 102 334 1st: module ID;
+#X obj 102 200 cnv 15 200 100 empty empty gui_controls 5 8 0 12 -204800
+-66577 0;
+#X text 102 239 scale x/y: scales the buffers;
+#X text 168 228 content;
+#X text 102 217 shift x/y: translates the buffers;
+#X text 168 248 content;
+#X text 102 261 dimen x/y: dimension of the FB;
+#X text 102 273 on/off: toggles state;
+#X text 642 538 outlet 1: gemlist outlet;
+#X text 812 515 outlet 2: texture id;
+#X obj 550 538 outlet gemlist;
+#X obj 811 543 outlet texture_id;
+#X obj 538 60 cnv 15 200 40 empty empty inlets 1 8 0 12 -260097 -66577
+0;
+#X obj 549 78 inlet gemlist;
+#X text 102 286 rotate: rotate content;
+#X text 102 346 2nd: storage domain;
+#X obj 755 71 inlet texture_id;
+#N canvas 0 22 450 300 init 0;
+#X obj 147 59 loadbang;
+#X obj 147 81 list prepend \$1 \$2 \$3;
+#X connect 0 0 1 0;
+#X restore 387 230 pd init;
+#X text 102 359 3rd: shader name;
+#X text 103 492 (c)2013 Marian Weger \; /part of EXTENDED VIEW toolkit/
+gpl v3;
+#X obj 595 241 ev_glsl_buf_dsp \$1 \$2 \$3;
+#X obj 784 282 glsl/\$3.reg \$1 \$2 \$3;
+#X obj 100 115 ev_glsl_buf_gui \$1 \$2 \$3;
+#X connect 15 0 22 0;
+#X connect 18 0 22 1;
+#X connect 22 0 12 0;
+#X connect 22 1 13 0;
+#X coords 0 -1 1 1 270 75 1 100 100;

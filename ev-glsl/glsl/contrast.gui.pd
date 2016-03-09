@@ -1,0 +1,10 @@
+#N canvas 77 123 498 334 10;
+#X text 67 211 (c)2013 Marian Weger /part of EXTENDED VIEW toolkit/
+gpl v3;
+#X obj 103 100 hsl 128 15 0 4 0 0 /ev/glsl/\$1/contrast /ev/glsl/\$1/contrast
+contrast 8 7 0 10 -232576 -1 -1 0 1;
+#X obj 103 115 hsl 128 15 0 4 0 0 /ev/glsl/\$1/saturation /ev/glsl/\$1/saturation
+saturation 8 7 0 10 -204786 -1 -1 0 1;
+#X obj 103 130 hsl 128 15 0 4 0 0 /ev/glsl/\$1/brightness /ev/glsl/\$1/brightness
+brightness 8 7 0 10 -262130 -1 -1 0 1;
+#X coords 0 -1 1 1 133 45 2 100 100;

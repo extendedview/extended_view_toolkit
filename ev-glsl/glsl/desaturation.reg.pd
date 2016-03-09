@@ -1,0 +1,14 @@
+#N canvas 129 88 963 499 10;
+#X text 325 303 (c)2013 Marian Weger;
+#X obj 169 97 ds_reg \$2 /ev/glsl/\$1/desaturation;
+#X obj 399 97 osc_bi \$2 /ev/glsl/\$1/desaturation;
+#X obj 530 223 loadbang;
+#X obj 530 245 list prepend \$1 \$2;
+#X obj 418 133 osc_bi \$2 /ev/glsl/\$1/state;
+#X obj 156 132 ds_reg \$2 /ev/glsl/\$1/state nomorph;
+#X obj 156 152 ds_reg \$2 /ev/glsl/\$1/tex0 nomorph;
+#X obj 418 153 osc_bi \$2 /ev/glsl/\$1/tex0;
+#X msg 530 267 \; /ev/glsl/\$1/desaturation 0.5 \; /ev/glsl/\$1/tex0
+0 \;;
+#X connect 3 0 4 0;
+#X connect 4 0 9 0;
