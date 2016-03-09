@@ -15,32 +15,32 @@ void main()
     position.xy += 1.;
     position.xy /= 2.;
 
-    pos = position.xy;
+    pos = (gl_Vertex.xy+vec2(1.))/2.;
 
     vec2 tex_position = position.xy;
 
-    tex_position.x = (tex_position.x+1.)/2.;
-    tex_position.y = (tex_position.y+1.)/2.;
+//    tex_position.x = (tex_position.x+1.)/2.;
+//    tex_position.y = (tex_position.y+1.)/2.;
 
 
-if (weight.x >= 0.)
-    {
-    tex_position.x = (tex_position.x - (weight.x * tex_position.x)) / (1. - (weight.x * tex_position.x));
-    }
-else
-    {
-    tex_position.x = 1. - (((1. - tex_position.x) + (weight.x * (1. - tex_position.x))) / (1. + (weight.x * (1. - tex_position.x))));
-    }
+ if (weight.x >= 0.)
+     {
+     tex_position.x = (tex_position.x - (weight.x * tex_position.x)) / (1. - (weight.x * tex_position.x));
+     }
+ else
+     {
+     tex_position.x = 1. - (((1. - tex_position.x) + (weight.x * (1. - tex_position.x))) / (1. + (weight.x * (1. - tex_position.x))));
+     }
 
 
-if (weight.y <= 0.)
-    {
-    tex_position.y = (tex_position.y + (weight.y * tex_position.y)) / (1. + (weight.y * tex_position.y));
-    }
-else
-    {
-    tex_position.y = 1. - (((1. - tex_position.y) - (weight.y * (1. - tex_position.y))) / (1. - (weight.y * (1. - tex_position.y))));
-    }
+ if (weight.y <= 0.)
+     {
+     tex_position.y = (tex_position.y + (weight.y * tex_position.y)) / (1. + (weight.y * tex_position.y));
+     }
+ else
+     {
+     tex_position.y = 1. - (((1. - tex_position.y) - (weight.y * (1. - tex_position.y))) / (1. - (weight.y * (1. - tex_position.y))));
+     }
 
 
     vec2 tex_top = mix(Ttl,Ttr,tex_position.x);
