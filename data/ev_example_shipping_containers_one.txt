@@ -964,7 +964,7 @@
 # DATA
 /ev/pic/grid/flip/vertical 0
 /ev/pic/grid/flip/horizontal 0
-/ev/pic/grid/filename ../media/grid.png
+/ev/pic/grid/filename ../media/grid.jpg
 /ev/pic/grid/state 0
 /ev/buf/teapot-buffer/color 0 0 0 0
 /ev/buf/teapot-buffer/shift/z 0
@@ -989,7 +989,7 @@
 /ev/pro/container3/grid/state 0
 /ev/pro/container3/grid/tex/flip/vertical 0
 /ev/pro/container3/grid/tex/flip/horizontal 0
-/ev/pro/container3/grid/tex/filename ../../media/grid.png
+/ev/pro/container3/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container3/grid/tex/state 0
 /ev/pro/container3/set_alpha 0
 /ev/pro/container3/cursor/mode 1
@@ -1026,7 +1026,7 @@
 /ev/pro/container2/grid/state 0
 /ev/pro/container2/grid/tex/flip/vertical 0
 /ev/pro/container2/grid/tex/flip/horizontal 0
-/ev/pro/container2/grid/tex/filename ../../media/grid.png
+/ev/pro/container2/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container2/grid/tex/state 0
 /ev/pro/container2/set_alpha 0
 /ev/pro/container2/cursor/mode 1
@@ -1063,7 +1063,7 @@
 /ev/pro/container1/grid/state 0
 /ev/pro/container1/grid/tex/flip/vertical 0
 /ev/pro/container1/grid/tex/flip/horizontal 0
-/ev/pro/container1/grid/tex/filename ../../media/grid.png
+/ev/pro/container1/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container1/grid/tex/state 0
 /ev/pro/container1/set_alpha 0
 /ev/pro/container1/cursor/mode 1
@@ -2039,7 +2039,7 @@
 # DATA
 /ev/pic/grid/flip/vertical 0
 /ev/pic/grid/flip/horizontal 0
-/ev/pic/grid/filename ../media/grid.png
+/ev/pic/grid/filename ../media/grid.jpg
 /ev/pic/grid/state 0
 /ev/buf/teapot-buffer/color 0 0 0 0
 /ev/buf/teapot-buffer/shift/z 0
@@ -2064,7 +2064,7 @@
 /ev/pro/container3/grid/state 0
 /ev/pro/container3/grid/tex/flip/vertical 0
 /ev/pro/container3/grid/tex/flip/horizontal 0
-/ev/pro/container3/grid/tex/filename ../../media/grid.png
+/ev/pro/container3/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container3/grid/tex/state 0
 /ev/pro/container3/set_alpha 0
 /ev/pro/container3/cursor/mode 1
@@ -2101,7 +2101,7 @@
 /ev/pro/container2/grid/state 0
 /ev/pro/container2/grid/tex/flip/vertical 0
 /ev/pro/container2/grid/tex/flip/horizontal 0
-/ev/pro/container2/grid/tex/filename ../../media/grid.png
+/ev/pro/container2/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container2/grid/tex/state 0
 /ev/pro/container2/set_alpha 0
 /ev/pro/container2/cursor/mode 1
@@ -2138,7 +2138,7 @@
 /ev/pro/container1/grid/state 0
 /ev/pro/container1/grid/tex/flip/vertical 0
 /ev/pro/container1/grid/tex/flip/horizontal 0
-/ev/pro/container1/grid/tex/filename ../../media/grid.png
+/ev/pro/container1/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container1/grid/tex/state 0
 /ev/pro/container1/set_alpha 0
 /ev/pro/container1/cursor/mode 1
@@ -3114,7 +3114,7 @@
 # DATA
 /ev/pic/grid/flip/vertical 0
 /ev/pic/grid/flip/horizontal 0
-/ev/pic/grid/filename ../media/grid.png
+/ev/pic/grid/filename ../media/grid.jpg
 /ev/pic/grid/state 0
 /ev/buf/teapot-buffer/color 0 0 0 0
 /ev/buf/teapot-buffer/shift/z 0
@@ -3139,7 +3139,7 @@
 /ev/pro/container3/grid/state 0
 /ev/pro/container3/grid/tex/flip/vertical 0
 /ev/pro/container3/grid/tex/flip/horizontal 0
-/ev/pro/container3/grid/tex/filename ../../media/grid.png
+/ev/pro/container3/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container3/grid/tex/state 0
 /ev/pro/container3/set_alpha 0
 /ev/pro/container3/cursor/mode 1
@@ -3176,7 +3176,7 @@
 /ev/pro/container2/grid/state 0
 /ev/pro/container2/grid/tex/flip/vertical 0
 /ev/pro/container2/grid/tex/flip/horizontal 0
-/ev/pro/container2/grid/tex/filename ../../media/grid.png
+/ev/pro/container2/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container2/grid/tex/state 0
 /ev/pro/container2/set_alpha 0
 /ev/pro/container2/cursor/mode 1
@@ -3213,7 +3213,7 @@
 /ev/pro/container1/grid/state 0
 /ev/pro/container1/grid/tex/flip/vertical 0
 /ev/pro/container1/grid/tex/flip/horizontal 0
-/ev/pro/container1/grid/tex/filename ../../media/grid.png
+/ev/pro/container1/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container1/grid/tex/state 0
 /ev/pro/container1/set_alpha 0
 /ev/pro/container1/cursor/mode 1
@@ -4189,7 +4189,7 @@
 # DATA
 /ev/pic/grid/flip/vertical 0
 /ev/pic/grid/flip/horizontal 0
-/ev/pic/grid/filename ../media/grid.png
+/ev/pic/grid/filename ../media/grid.jpg
 /ev/pic/grid/state 0
 /ev/buf/teapot-buffer/color 0 0 0 0
 /ev/buf/teapot-buffer/shift/z 0
@@ -4214,7 +4214,7 @@
 /ev/pro/container3/grid/state 0
 /ev/pro/container3/grid/tex/flip/vertical 0
 /ev/pro/container3/grid/tex/flip/horizontal 0
-/ev/pro/container3/grid/tex/filename ../../media/grid.png
+/ev/pro/container3/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container3/grid/tex/state 0
 /ev/pro/container3/set_alpha 0
 /ev/pro/container3/cursor/mode 1
@@ -4251,7 +4251,7 @@
 /ev/pro/container2/grid/state 0
 /ev/pro/container2/grid/tex/flip/vertical 0
 /ev/pro/container2/grid/tex/flip/horizontal 0
-/ev/pro/container2/grid/tex/filename ../../media/grid.png
+/ev/pro/container2/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container2/grid/tex/state 0
 /ev/pro/container2/set_alpha 0
 /ev/pro/container2/cursor/mode 1
@@ -4288,7 +4288,7 @@
 /ev/pro/container1/grid/state 0
 /ev/pro/container1/grid/tex/flip/vertical 0
 /ev/pro/container1/grid/tex/flip/horizontal 0
-/ev/pro/container1/grid/tex/filename ../../media/grid.png
+/ev/pro/container1/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container1/grid/tex/state 0
 /ev/pro/container1/set_alpha 0
 /ev/pro/container1/cursor/mode 1
@@ -5264,7 +5264,7 @@
 # DATA
 /ev/pic/grid/flip/vertical 0
 /ev/pic/grid/flip/horizontal 0
-/ev/pic/grid/filename ../media/grid.png
+/ev/pic/grid/filename ../media/grid.jpg
 /ev/pic/grid/state 0
 /ev/buf/teapot-buffer/color 0 0 0 0
 /ev/buf/teapot-buffer/shift/z 0
@@ -5289,7 +5289,7 @@
 /ev/pro/container3/grid/state 0
 /ev/pro/container3/grid/tex/flip/vertical 0
 /ev/pro/container3/grid/tex/flip/horizontal 0
-/ev/pro/container3/grid/tex/filename ../../media/grid.png
+/ev/pro/container3/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container3/grid/tex/state 0
 /ev/pro/container3/set_alpha 0
 /ev/pro/container3/cursor/mode 1
@@ -5326,7 +5326,7 @@
 /ev/pro/container2/grid/state 0
 /ev/pro/container2/grid/tex/flip/vertical 0
 /ev/pro/container2/grid/tex/flip/horizontal 0
-/ev/pro/container2/grid/tex/filename ../../media/grid.png
+/ev/pro/container2/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container2/grid/tex/state 0
 /ev/pro/container2/set_alpha 0
 /ev/pro/container2/cursor/mode 1
@@ -5363,7 +5363,7 @@
 /ev/pro/container1/grid/state 0
 /ev/pro/container1/grid/tex/flip/vertical 0
 /ev/pro/container1/grid/tex/flip/horizontal 0
-/ev/pro/container1/grid/tex/filename ../../media/grid.png
+/ev/pro/container1/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container1/grid/tex/state 0
 /ev/pro/container1/set_alpha 0
 /ev/pro/container1/cursor/mode 1
@@ -6339,7 +6339,7 @@
 # DATA
 /ev/pic/grid/flip/vertical 0
 /ev/pic/grid/flip/horizontal 0
-/ev/pic/grid/filename ../media/grid.png
+/ev/pic/grid/filename ../media/grid.jpg
 /ev/pic/grid/state 0
 /ev/buf/teapot-buffer/color 0 0 0 0
 /ev/buf/teapot-buffer/shift/z 0
@@ -6364,7 +6364,7 @@
 /ev/pro/container3/grid/state 0
 /ev/pro/container3/grid/tex/flip/vertical 0
 /ev/pro/container3/grid/tex/flip/horizontal 0
-/ev/pro/container3/grid/tex/filename ../../media/grid.png
+/ev/pro/container3/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container3/grid/tex/state 0
 /ev/pro/container3/set_alpha 0
 /ev/pro/container3/cursor/mode 1
@@ -6401,7 +6401,7 @@
 /ev/pro/container2/grid/state 0
 /ev/pro/container2/grid/tex/flip/vertical 0
 /ev/pro/container2/grid/tex/flip/horizontal 0
-/ev/pro/container2/grid/tex/filename ../../media/grid.png
+/ev/pro/container2/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container2/grid/tex/state 0
 /ev/pro/container2/set_alpha 0
 /ev/pro/container2/cursor/mode 1
@@ -6438,7 +6438,7 @@
 /ev/pro/container1/grid/state 0
 /ev/pro/container1/grid/tex/flip/vertical 0
 /ev/pro/container1/grid/tex/flip/horizontal 0
-/ev/pro/container1/grid/tex/filename ../../media/grid.png
+/ev/pro/container1/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container1/grid/tex/state 0
 /ev/pro/container1/set_alpha 0
 /ev/pro/container1/cursor/mode 1
@@ -7414,7 +7414,7 @@
 # DATA
 /ev/pic/grid/flip/vertical 0
 /ev/pic/grid/flip/horizontal 0
-/ev/pic/grid/filename ../media/grid.png
+/ev/pic/grid/filename ../media/grid.jpg
 /ev/pic/grid/state 0
 /ev/buf/teapot-buffer/color 0 0 0 0
 /ev/buf/teapot-buffer/shift/z 0
@@ -7439,7 +7439,7 @@
 /ev/pro/container3/grid/state 0
 /ev/pro/container3/grid/tex/flip/vertical 0
 /ev/pro/container3/grid/tex/flip/horizontal 0
-/ev/pro/container3/grid/tex/filename ../../media/grid.png
+/ev/pro/container3/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container3/grid/tex/state 0
 /ev/pro/container3/set_alpha 0
 /ev/pro/container3/cursor/mode 1
@@ -7476,7 +7476,7 @@
 /ev/pro/container2/grid/state 0
 /ev/pro/container2/grid/tex/flip/vertical 0
 /ev/pro/container2/grid/tex/flip/horizontal 0
-/ev/pro/container2/grid/tex/filename ../../media/grid.png
+/ev/pro/container2/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container2/grid/tex/state 0
 /ev/pro/container2/set_alpha 0
 /ev/pro/container2/cursor/mode 1
@@ -7513,7 +7513,7 @@
 /ev/pro/container1/grid/state 0
 /ev/pro/container1/grid/tex/flip/vertical 0
 /ev/pro/container1/grid/tex/flip/horizontal 0
-/ev/pro/container1/grid/tex/filename ../../media/grid.png
+/ev/pro/container1/grid/tex/filename ../../media/grid.jpg
 /ev/pro/container1/grid/tex/state 0
 /ev/pro/container1/set_alpha 0
 /ev/pro/container1/cursor/mode 1

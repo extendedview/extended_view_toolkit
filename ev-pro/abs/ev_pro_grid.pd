@@ -22,7 +22,7 @@
 #X obj 105 24 loadbang;
 #X obj 105 66 list prepend \$1;
 #X msg 105 96 \; /ev/pro/\$1/grid/tex/state 0 \; /ev/pro/\$1/grid/tex/filename
-../../media/grid.png \; /ev/pro/\$1/grid/tex/flip/horizontal 0 \; /ev/pro/\$1/grid/tex/flip/vertical
+../../media/grid.jpg \; /ev/pro/\$1/grid/tex/flip/horizontal 0 \; /ev/pro/\$1/grid/tex/flip/vertical
 0 \;;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
@@ -85,7 +85,7 @@ gpl v3;
 #X msg 279 183 0;
 #X obj 202 163 spigot 1;
 #X text 74 18 ev_pro_grid <id> <domain>;
-#X obj 535 116 list append ../../media/grid.png;
+#X obj 535 116 list append ../../media/grid.jpg;
 #X obj 535 138 list prepend open;
 #X obj 697 60 t b a;
 #X msg 279 137 1;

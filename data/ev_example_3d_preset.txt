@@ -922,7 +922,7 @@
 /ev/pro/r/grid/state 0
 /ev/pro/r/grid/tex/flip/vertical 0
 /ev/pro/r/grid/tex/flip/horizontal 0
-/ev/pro/r/grid/tex/filename ../../media/grid.png
+/ev/pro/r/grid/tex/filename ../../media/grid.jpg
 /ev/pro/r/grid/tex/state 0
 /ev/pro/r/set_alpha 1
 /ev/pro/r/cursor/mode 2
@@ -968,7 +968,7 @@
 /ev/pro/c/grid/state 0
 /ev/pro/c/grid/tex/flip/vertical 0
 /ev/pro/c/grid/tex/flip/horizontal 0
-/ev/pro/c/grid/tex/filename ../../media/grid.png
+/ev/pro/c/grid/tex/filename ../../media/grid.jpg
 /ev/pro/c/grid/tex/state 0
 /ev/pro/c/set_alpha 1
 /ev/pro/c/cursor/mode 2
@@ -1005,7 +1005,7 @@
 /ev/pro/l/grid/state 0
 /ev/pro/l/grid/tex/flip/vertical 0
 /ev/pro/l/grid/tex/flip/horizontal 0
-/ev/pro/l/grid/tex/filename ../../media/grid.png
+/ev/pro/l/grid/tex/filename ../../media/grid.jpg
 /ev/pro/l/grid/tex/state 0
 /ev/pro/l/set_alpha 1
 /ev/pro/l/cursor/mode 2
@@ -1155,7 +1155,7 @@
 /ev/buf/0/dimen/y 1024
 /ev/buf/0/dimen/x 1024
 /ev/buf/0/state 1
-/ev/pro/grid/filename ../data/grid.png
+/ev/pro/grid/filename ../data/grid.jpg
 /ev/pro/grid/state 1
 /ev/mouse/texture/sensitivity 300
 /ev/mouse/texture/state 0

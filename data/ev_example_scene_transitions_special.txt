@@ -167,7 +167,7 @@
 /ev/pro/projection_b/grid/state 1
 /ev/pro/projection_b/grid/tex/flip/vertical 0
 /ev/pro/projection_b/grid/tex/flip/horizontal 0
-/ev/pro/projection_b/grid/tex/filename ../media/grid.png
+/ev/pro/projection_b/grid/tex/filename ../media/grid.jpg
 /ev/pro/projection_b/grid/tex/state 0
 /ev/pro/projection_b/cursor/mode 2
 /ev/pro/projection_b/state 1
@@ -318,7 +318,7 @@
 /ev/pro/projection_b/grid/state 1
 /ev/pro/projection_b/grid/tex/flip/vertical 0
 /ev/pro/projection_b/grid/tex/flip/horizontal 0
-/ev/pro/projection_b/grid/tex/filename ../media/grid.png
+/ev/pro/projection_b/grid/tex/filename ../media/grid.jpg
 /ev/pro/projection_b/grid/tex/state 0
 /ev/pro/projection_b/cursor/mode 2
 /ev/pro/projection_b/state 1
@@ -469,7 +469,7 @@
 /ev/pro/projection_b/grid/state 1
 /ev/pro/projection_b/grid/tex/flip/vertical 0
 /ev/pro/projection_b/grid/tex/flip/horizontal 0
-/ev/pro/projection_b/grid/tex/filename ../media/grid.png
+/ev/pro/projection_b/grid/tex/filename ../media/grid.jpg
 /ev/pro/projection_b/grid/tex/state 0
 /ev/pro/projection_b/cursor/mode 2
 /ev/pro/projection_b/state 1

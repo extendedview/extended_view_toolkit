@@ -42,7 +42,7 @@ the module. There are two types of grids to choose from:;
 #X text 412 422 RENDERED_GRID:;
 #X text 412 492 GRID_TEXTURE:;
 #X text 502 492 This grid gets textured onto the module instead of
-the original texture. Per default \, the image file is located in "./media/grid.png".
+the original texture. Per default \, the image file is located in "./media/grid.jpg".
 But it is possible to load your own image by using the open dialog.
 This grid is most suitable for calibrating the "distance weight".;
 #X text 502 422 This grid gets always rendered on top of the projection

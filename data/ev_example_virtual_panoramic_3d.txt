@@ -1543,7 +1543,7 @@
 /ev/pro/c/grid/state 0
 /ev/pro/c/grid/tex/flip/vertical 0
 /ev/pro/c/grid/tex/flip/horizontal 0
-/ev/pro/c/grid/tex/filename ../../media/grid.png
+/ev/pro/c/grid/tex/filename ../../media/grid.jpg
 /ev/pro/c/grid/tex/state 0
 /ev/pro/c/set_alpha 1
 /ev/pro/c/cursor/mode 1
@@ -1580,7 +1580,7 @@
 /ev/pro/b/grid/state 0
 /ev/pro/b/grid/tex/flip/vertical 0
 /ev/pro/b/grid/tex/flip/horizontal 0
-/ev/pro/b/grid/tex/filename ../../media/grid.png
+/ev/pro/b/grid/tex/filename ../../media/grid.jpg
 /ev/pro/b/grid/tex/state 0
 /ev/pro/b/set_alpha 1
 /ev/pro/b/cursor/mode 1
@@ -1617,7 +1617,7 @@
 /ev/pro/a/grid/state 0
 /ev/pro/a/grid/tex/flip/vertical 0
 /ev/pro/a/grid/tex/flip/horizontal 0
-/ev/pro/a/grid/tex/filename ../../media/grid.png
+/ev/pro/a/grid/tex/filename ../../media/grid.jpg
 /ev/pro/a/grid/tex/state 0
 /ev/pro/a/set_alpha 1
 /ev/pro/a/cursor/mode 1

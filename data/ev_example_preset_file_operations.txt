@@ -306,7 +306,7 @@
 /i/am/a/variable 1
 /ev/pro/projection/grid/tex/flip/vertical 0
 /ev/pro/projection/grid/tex/flip/horizontal 0
-/ev/pro/projection/grid/tex/filename ../media/grid.png
+/ev/pro/projection/grid/tex/filename ../media/grid.jpg
 /ev/pro/projection/grid/tex/state 0
 /ev/pro/projection/grid/res/y 16
 /ev/pro/projection/grid/res/x 16
@@ -639,7 +639,7 @@
 /i/am/a/variable 3
 /ev/pro/projection/grid/tex/flip/vertical 0
 /ev/pro/projection/grid/tex/flip/horizontal 0
-/ev/pro/projection/grid/tex/filename ../media/grid.png
+/ev/pro/projection/grid/tex/filename ../media/grid.jpg
 /ev/pro/projection/grid/tex/state 0
 /ev/pro/projection/grid/res/y 16
 /ev/pro/projection/grid/res/x 16
@@ -972,7 +972,7 @@
 /i/am/a/variable 66
 /ev/pro/projection/grid/tex/flip/vertical 0
 /ev/pro/projection/grid/tex/flip/horizontal 0
-/ev/pro/projection/grid/tex/filename ../media/grid.png
+/ev/pro/projection/grid/tex/filename ../media/grid.jpg
 /ev/pro/projection/grid/tex/state 0
 /ev/pro/projection/grid/res/y 16
 /ev/pro/projection/grid/res/x 16

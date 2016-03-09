@@ -291,7 +291,7 @@
 /ev/gemwin/border 1
 /ev/pro/projection_a/grid/tex/flip/vertical 0
 /ev/pro/projection_a/grid/tex/flip/horizontal 0
-/ev/pro/projection_a/grid/tex/filename ../media/grid.png
+/ev/pro/projection_a/grid/tex/filename ../media/grid.jpg
 /ev/pro/projection_a/grid/tex/state 0
 /ev/pro/projection_a/grid/res/y 16
 /ev/pro/projection_a/grid/res/x 16
@@ -524,7 +524,7 @@
 /ev/gemwin/dimen/x 800
 /ev/pro/projection_a/grid/tex/flip/vertical 0
 /ev/pro/projection_a/grid/tex/flip/horizontal 0
-/ev/pro/projection_a/grid/tex/filename ../media/grid.png
+/ev/pro/projection_a/grid/tex/filename ../media/grid.jpg
 /ev/pro/projection_a/grid/tex/state 0
 /ev/pro/projection_a/grid/res/y 16
 /ev/pro/projection_a/grid/res/x 16
@@ -835,7 +835,7 @@
 /ev/gemwin/border 1
 /ev/pro/projection_a/grid/tex/flip/vertical 0
 /ev/pro/projection_a/grid/tex/flip/horizontal 0
-/ev/pro/projection_a/grid/tex/filename ../media/grid.png
+/ev/pro/projection_a/grid/tex/filename ../media/grid.jpg
 /ev/pro/projection_a/grid/tex/state 0
 /ev/pro/projection_a/grid/res/y 16
 /ev/pro/projection_a/grid/res/x 16
