@@ -1,4 +1,4 @@
-#N canvas 429 141 1083 565 10;
+#N canvas 1394 255 1083 565 10;
 #X declare -path . -path .. -path data -path ../data -path ev-in -path
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
@@ -38,20 +38,19 @@ ev-glsl -path ../ev-glsl -lib Gem;
 \, rectangle 0 \, format RGBA;
 #X obj 595 397 rectangle 4 -4;
 #X obj 315 22 vsl 15 128 0 1 0 0 empty empty mix_between_textures 0
--9 0 10 -260097 -1 -1 0 1;
+-9 0 10 -260097 -1 -1 12700 1;
 #X msg 629 168 open ../media/cam3.jpg;
 #X msg 315 158 amount \$1 \$1 \$1 \$1;
-#X text 692 400 why gets framebuffer content always flipped???;
 #X obj 621 255 loadbang;
 #X msg 621 279 rectangle 0;
-#X text 201 433 Why does this &#!§% [pix_multitexture] always crash
-my PD???;
 #X text 907 165 resize to next power of two;
 #X text 926 187 (no rectangle texturing!);
 #X msg 100 -68 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
 #X obj 97 327 ev_glsl_mix2 mixer1 dummy mix2;
+#X text 201 433 Bug: [pix_multitexture] sometimes crashes PD;
+#X text 692 400 Bug: framebuffer content gets flipped???;
 #X connect 1 0 0 0;
-#X connect 3 0 39 0;
+#X connect 3 0 37 0;
 #X connect 4 0 5 0;
 #X connect 6 0 19 0;
 #X connect 7 0 19 0;
@@ -62,15 +61,15 @@ my PD???;
 #X connect 13 0 30 0;
 #X connect 14 0 30 0;
 #X connect 15 1 9 0;
-#X connect 15 1 39 2;
+#X connect 15 1 37 2;
 #X connect 16 0 8 0;
-#X connect 17 0 39 0;
+#X connect 17 0 37 0;
 #X connect 19 0 8 0;
 #X connect 20 0 15 0;
 #X connect 21 0 23 0;
 #X connect 22 0 12 0;
 #X connect 23 0 22 0;
-#X connect 23 1 39 1;
+#X connect 23 1 37 1;
 #X connect 24 0 15 0;
 #X connect 25 0 28 0;
 #X connect 25 1 4 0;
@@ -78,9 +77,9 @@ my PD???;
 #X connect 27 0 23 0;
 #X connect 29 0 31 0;
 #X connect 30 0 12 0;
-#X connect 31 0 39 3;
-#X connect 33 0 34 0;
-#X connect 34 0 25 0;
-#X connect 38 0 0 0;
-#X connect 39 0 18 0;
+#X connect 31 0 37 3;
+#X connect 32 0 33 0;
+#X connect 33 0 25 0;
+#X connect 36 0 0 0;
+#X connect 37 0 18 0;
 #X coords 0 565 1 564 85 60 0;

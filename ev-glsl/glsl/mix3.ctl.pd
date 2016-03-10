@@ -1,4 +1,4 @@
-#N canvas 129 88 963 499 10;
+#N canvas 273 173 963 499 10;
 #X obj 30 65 t b;
 #X obj 30 43 inlet shader_init;
 #X obj 152 278 outlet shader_data;
