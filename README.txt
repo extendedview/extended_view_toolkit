@@ -13,7 +13,7 @@ Description
 
 Extended View Toolkit is a set of abstractions for combining multiple 
 video or image sources into a panoramic image and for projection
-setups with mutliple projectors or projection environments with 
+setups with multiple projectors or projection environments with 
 challenging geometric forms, better known as video mapping.
 
 Multiple input media (e.g. camera input, video files, image files, 
