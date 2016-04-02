@@ -1,0 +1,24 @@
+#N canvas 298 69 991 651 10;
+#X obj 42 28 cnv 15 500 16 empty empty EXTENDED_VIEW_Camera/VideoInput_MODULE_REMOTE_CONTROl_UNIT
+2 8 0 14 -233017 -66577 0;
+#X obj 99 178 cnv 15 360 60 empty empty creation_arguments: 5 12 0
+12 -162280 -1 0;
+#X obj 101 119 cnv 15 178 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 105 125 tgl 15 0 /ev/cam/\$1/state /ev/cam/\$1/state on/off
+17 7 0 10 -4034 -1 -1 0 1;
+#X obj 203 125 tgl 15 0 /ev/cam/\$1/flip/horizontal /ev/cam/\$1/flip/horizontal
+<-> 17 7 0 10 -204786 -1 -1 0 1;
+#X obj 239 125 tgl 15 0 /ev/cam/\$1/flip/vertical /ev/cam/\$1/flip/vertical
+^v 17 7 0 10 -204786 -1 -1 0 1;
+#X text 170 125 flip:;
+#X obj 393 49 cnv 15 150 110 empty empty GUI_controls 5 8 0 12 -204800
+-66577 0;
+#X text 395 125 on/off: toggles state;
+#X text 395 66 flip: flip image;
+#X text 432 81 <-> horizontal;
+#X text 432 94 ^v vertical;
+#X text 39 47 (c)2016 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X text 102 194 1st: module ID \; 2nd: storgae domain;
+#X coords 0 -1 1 1 180 37 1 100 118;

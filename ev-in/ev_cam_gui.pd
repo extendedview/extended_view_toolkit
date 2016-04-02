@@ -1,0 +1,17 @@
+#N canvas 298 69 382 300 10;
+#X obj 12 28 cnv 15 360 16 empty empty EXTENDED_VIEW_Camera/VideoInput_GUI_MODULE
+2 8 0 14 -233017 -66577 0;
+#X obj 194 118 cnv 15 180 60 empty empty creation_arguments: 5 12 0
+12 -162280 -1 0;
+#X obj 11 178 cnv 15 150 110 empty empty GUI_controls 5 8 0 12 -204800
+-66577 0;
+#X text 13 254 on/off: toggles state;
+#X text 13 195 flip: flip image;
+#X text 50 210 <-> horizontal;
+#X text 50 223 ^v vertical;
+#X obj 11 48 abs/ev_cam_osc \$1 \$2;
+#X obj 10 132 abs/ev_cam_rcu \$1 \$2;
+#X text 140 51 (c)2016 Peter Venus & Marian Weger \; /part of EXTENDED
+VIEW toolkit/ gpl v3;
+#X text 197 137 1st: module ID \; 2nd: storage domain;
+#X coords 0 -1 1 1 180 54 1 10 118;
