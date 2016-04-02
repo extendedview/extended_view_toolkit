@@ -1,141 +1,29 @@
-#N canvas 224 94 1023 663 10;
-#X obj 500 115 spigot 1;
-#X text 126 327 creation argument: id;
-#X obj 704 130 openpanel;
-#X obj 696 276 list trim;
-#X obj 100 18 cnv 15 820 16 empty empty EXTENDED_VIEW_IMAGE_MODULE
+#N canvas 220 90 709 369 10;
+#X text 127 284 creation argument: id;
+#X obj 100 18 cnv 15 600 16 empty empty EXTENDED_VIEW_IMAGE_MODULE
 2 8 0 14 -233017 -66577 0;
 #X obj 100 39 cnv 15 360 60 empty empty creation_arguments: 5 12 0
 12 -162280 -1 0;
-#X obj 100 312 cnv 15 360 110 empty empty inlets/outlets 5 12 0 12
--233017 -66577 0;
-#X text 105 332 Inlet 1: GEMlist;
-#X obj 316 118 cnv 15 150 145 empty empty GUI_controls 5 8 0 12 -204800
+#X obj 101 269 cnv 15 360 40 empty empty inlets/outlets 5 12 0 12 -233017
 -66577 0;
-#X text 318 194 on/off: toggles state;
-#X text 318 222 open / reload:;
-#X text 356 232 load/reload image;
-#N canvas 187 362 392 196 init 0;
-#X obj 81 -236 loadbang;
-#X obj 81 -212 list append \$1;
-#X msg 81 -185 \; /ev/pic/\$1/filename <no_file_specified> \; /ev/pic/\$1/flip/horizontal
-0 \; /ev/pic/\$1/flip/vertical 0 \; /ev/pic/\$1/state 1 \;;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X restore 147 254 pd init;
-#X obj 101 133 cnv 15 178 48 empty empty empty 20 12 0 14 -162280 -66577
-0;
-#X obj 105 139 tgl 15 0 /ev/pic/\$1/state /ev/pic/\$1/state on/off
-17 7 0 10 -4034 -1 -1 1 1;
-#X obj 105 161 bng 15 250 50 0 /ev/pic/\$1/open /ev/pic/\$1/open open
-17 7 0 10 -262130 -1 -1;
-#X obj 155 161 bng 15 250 50 0 /ev/pic/\$1/load /ev/pic/\$1/load reload
-17 7 0 10 -204800 -1 -1;
-#X obj 696 254 list prepend set open;
-#N canvas 145 22 633 305 storage_&_osc 0;
-#X obj 343 98 osc_bi \$2 /ev/pic/\$1/state;
-#X obj 343 118 osc_bi \$2 /ev/pic/\$1/filename;
-#X obj 63 98 ds_reg \$2 /ev/pic/\$1/state nomorph;
-#X obj 63 118 ds_reg \$2 /ev/pic/\$1/filename nomorph;
-#X obj 63 58 ds_reg \$2 /ev/pic/\$1/flip/horizontal nomorph;
-#X obj 63 78 ds_reg \$2 /ev/pic/\$1/flip/vertical nomorph;
-#X obj 343 58 osc_bi \$2 /ev/pic/\$1/flip/horizontal;
-#X obj 343 78 osc_bi \$2 /ev/pic/\$1/flip/vertical;
-#X obj 343 138 osc_bi \$2 /ev/pic/\$1/open;
-#X obj 343 158 osc_bi \$2 /ev/pic/\$1/load;
-#X restore 147 230 pd storage_&_osc;
-#X text 318 135 flip: flip image;
-#X obj 500 555 outlet gemlist;
-#X obj 195 139 tgl 15 0 /ev/pic/\$1/flip/horizontal /ev/pic/\$1/flip/horizontal
-<-> 17 7 0 10 -204786 -1 -1 0 1;
-#X obj 231 139 tgl 15 0 /ev/pic/\$1/flip/vertical /ev/pic/\$1/flip/vertical
-^v 17 7 0 10 -204786 -1 -1 0 1;
-#X text 162 139 flip:;
-#X text 355 150 <-> horizontal;
-#X text 355 163 ^v vertical;
-#X obj 545 93 r /ev/pic/\$1/state;
-#N canvas 46 408 499 288 flip_logic 0;
-#X obj 93 109 t b f;
-#X msg 73 201 both;
-#X obj 244 237 outlet;
-#X obj 194 109 t b f;
-#X obj 174 131 <;
-#X obj 174 153 sel 1;
-#X msg 174 175 vertical;
-#X obj 264 109 t b f;
-#X obj 244 153 sel 1;
-#X obj 244 131 >;
-#X msg 244 175 horizontal;
-#X obj 73 131 +;
-#X obj 73 153 sel 2 0;
-#X msg 92 176 none;
-#X obj 73 47 r /ev/pic/\$1/flip/horizontal;
-#X obj 194 73 r /ev/pic/\$1/flip/vertical;
-#X connect 0 0 11 0;
-#X connect 0 1 11 1;
-#X connect 1 0 2 0;
-#X connect 3 0 4 0;
-#X connect 3 1 4 1;
-#X connect 4 0 5 0;
-#X connect 5 0 6 0;
-#X connect 6 0 2 0;
-#X connect 7 0 9 0;
-#X connect 7 1 9 1;
-#X connect 8 0 10 0;
-#X connect 9 0 8 0;
-#X connect 10 0 2 0;
-#X connect 11 0 12 0;
-#X connect 12 0 1 0;
-#X connect 12 1 13 0;
-#X connect 13 0 2 0;
-#X connect 14 0 11 0;
-#X connect 14 0 4 0;
-#X connect 14 0 9 0;
-#X connect 15 0 0 0;
-#X connect 15 0 3 0;
-#X connect 15 0 7 0;
-#X restore 626 442 pd flip_logic;
-#X obj 522 178 r /ev/pic/\$1/filename;
-#X obj 711 297 r /ev/pic/\$1/load;
-#X obj 704 153 s /ev/pic/\$1/filename;
-#X obj 704 108 r /ev/pic/\$1/open;
-#X obj 500 56 inlet gemlist;
-#X text 235 332 Outlet 1: GEMlist;
+#X text 106 289 Inlet 1: GEMlist;
+#X obj 311 118 cnv 15 150 145 empty empty GUI_controls 5 8 0 12 -204800
+-66577 0;
+#X text 313 194 on/off: toggles state;
+#X text 313 222 open / reload:;
+#X text 351 232 load/reload image;
+#X text 313 135 flip: flip image;
+#X obj 471 101 outlet gemlist;
+#X text 350 150 <-> horizontal;
+#X text 350 163 ^v vertical;
+#X obj 471 39 inlet gemlist;
+#X text 236 289 Outlet 1: GEMlist;
 #X text 103 61 1st: unique module ID;
 #X text 103 77 2nd: save domain;
-#X text 106 449 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+#X obj 100 132 abs/ev_pic_rcu \$1 \$2;
+#X text 99 322 (c)2016 Peter Venus & Marian Weger \; /part of EXTENDED
 VIEW toolkit/ gpl v3;
-#X obj 500 388 pix_image;
-#X msg 669 353 open ../media/cam1.jpg;
-#X obj 500 410 pix_separator;
-#X obj 500 137 separator;
-#X obj 500 523 pix_flip;
-#X obj 500 442 t a b;
-#X obj 527 469 list prepend none;
-#X text 636 471 Workaround for GEM bug.;
-#X obj 527 491 list trim;
-#X obj 669 230 t b a;
-#X obj 522 200 route <no_file_specified>;
-#X connect 0 0 40 0;
-#X connect 2 0 30 0;
-#X connect 3 0 38 0;
-#X connect 17 0 3 0;
-#X connect 26 0 0 1;
-#X connect 27 0 43 1;
-#X connect 28 0 47 0;
-#X connect 29 0 38 0;
-#X connect 31 0 2 0;
-#X connect 32 0 0 0;
-#X connect 37 0 39 0;
-#X connect 38 0 37 0;
-#X connect 39 0 42 0;
-#X connect 40 0 37 0;
-#X connect 41 0 20 0;
-#X connect 42 0 41 0;
-#X connect 42 1 43 0;
-#X connect 43 0 45 0;
-#X connect 45 0 41 0;
-#X connect 46 0 38 0;
-#X connect 46 1 17 0;
-#X connect 47 1 46 0;
+#X obj 471 70 ev_pic_dsp \$1 \$2;
+#X connect 13 0 19 0;
+#X connect 19 0 10 0;
 #X coords 0 -1 1 1 180 67 1 100 118;

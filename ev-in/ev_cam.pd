@@ -1,17 +1,14 @@
-#N canvas 302 49 991 651 10;
-#X text 425 48 inlet 1: gemlist;
-#X obj 427 116 spigot 1;
-#X obj 427 296 pix_video;
-#X obj 42 28 cnv 15 920 16 empty empty EXTENDED_VIEW_Camera/VideoInput_MODULE
+#N canvas 296 69 650 498 10;
+#X text 296 47 inlet 1: gemlist;
+#X obj 42 28 cnv 15 600 16 empty empty EXTENDED_VIEW_Camera/VideoInput_MODULE
 2 8 0 14 -233017 -66577 0;
-#X obj 42 339 cnv 15 360 60 empty empty creation_arguments: 5 12 0
+#X obj 42 299 cnv 15 240 60 empty empty creation_arguments: 5 12 0
 12 -162280 -1 0;
-#X obj 42 402 cnv 15 360 120 empty empty inlets/outlets 5 12 0 12 -233017
+#X obj 42 362 cnv 15 240 120 empty empty inlets/outlets 5 12 0 12 -233017
 -66577 0;
-#X text 47 422 Inlet 1: GEMlist;
-#X text 45 355 1st: module ID;
-#X text 47 474 Inlet 2: settings for [pix_video];
-#X text 634 49 inlet 2: pix_video settings;
+#X text 47 382 Inlet 1: GEMlist;
+#X text 47 397 Inlet 2: settings for [pix_video];
+#X text 418 46 inlet 2: pix_video settings;
 #N canvas 499 138 387 328 init 0;
 #X obj 31 24 loadbang;
 #X obj 31 48 list append \$1;
@@ -20,98 +17,29 @@
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X coords 0 328 1 327 85 60 0;
-#X restore 297 233 pd init;
-#X obj 101 133 cnv 15 178 35 empty empty empty 20 12 0 14 -228856 -66577
-0;
-#X obj 105 139 tgl 15 0 /ev/cam/\$1/state /ev/cam/\$1/state on/off
-17 7 0 10 -4034 -1 -1 1 1;
-#N canvas 292 79 638 358 storage_&_osc 0;
-#X obj 373 138 osc_bi \$2 /ev/cam/\$1/state;
-#X obj 373 158 osc_bi \$2 /ev/cam/\$1/flip/horizontal;
-#X obj 373 178 osc_bi \$2 /ev/cam/\$1/flip/vertical;
+#X restore 179 68 pd init;
+#X obj 297 65 inlet gemlist;
+#X obj 297 149 outlet gemlist;
+#X obj 420 65 inlet settings;
+#X obj 42 184 cnv 15 240 110 empty empty GUI_controls 5 8 0 12 -204800
+-66577 0;
+#X text 44 260 on/off: toggles state;
+#X text 44 201 flip: flip image;
+#X text 81 216 <-> horizontal;
+#X text 81 229 ^v vertical;
+#X text 48 410 Outlet 1: GEMlist;
+#X obj 101 48 abs/ev_cam_osc \$1 \$2;
+#N canvas 288 75 638 358 storage 0;
 #X obj 93 158 ds_reg \$2 /ev/cam/\$1/flip/horizontal nomorph;
 #X obj 93 178 ds_reg \$2 /ev/cam/\$1/flip/vertical nomorph;
 #X obj 93 138 ds_reg \$2 /ev/cam/\$1/state nomorph;
-#X restore 278 197 pd storage_&_osc;
-#X obj 472 94 r /ev/cam/\$1/state;
-#X obj 203 139 tgl 15 0 /ev/cam/\$1/flip/horizontal /ev/cam/\$1/flip/horizontal
-<-> 17 7 0 10 -204786 -1 -1 0 1;
-#X obj 239 139 tgl 15 0 /ev/cam/\$1/flip/vertical /ev/cam/\$1/flip/vertical
-^v 17 7 0 10 -204786 -1 -1 0 1;
-#X text 170 139 flip:;
-#X obj 427 67 inlet gemlist;
-#X obj 427 538 outlet gemlist;
-#X obj 427 397 pix_flip;
-#X obj 642 153 loadbang;
-#X obj 642 175 list prepend \$1;
-#X obj 642 197 route float;
-#X msg 642 239 device \$1;
-#X obj 636 67 inlet settings;
-#X obj 100 184 cnv 15 150 110 empty empty GUI_controls 5 8 0 12 -204800
--66577 0;
-#X text 102 260 on/off: toggles state;
-#X text 102 201 flip: flip image;
-#X text 139 216 <-> horizontal;
-#X text 139 229 ^v vertical;
-#N canvas 46 408 499 288 flip_logic 0;
-#X obj 93 109 t b f;
-#X msg 73 201 both;
-#X obj 244 237 outlet;
-#X obj 194 109 t b f;
-#X obj 174 131 <;
-#X obj 174 153 sel 1;
-#X msg 174 175 vertical;
-#X obj 264 109 t b f;
-#X obj 244 153 sel 1;
-#X obj 244 131 >;
-#X msg 244 175 horizontal;
-#X obj 73 131 +;
-#X obj 73 153 sel 2 0;
-#X msg 92 176 none;
-#X obj 73 47 r /ev/cam/\$1/flip/horizontal;
-#X obj 194 73 r /ev/cam/\$1/flip/vertical;
-#X connect 0 0 11 0;
-#X connect 0 1 11 1;
-#X connect 1 0 2 0;
-#X connect 3 0 4 0;
-#X connect 3 1 4 1;
-#X connect 4 0 5 0;
-#X connect 5 0 6 0;
-#X connect 6 0 2 0;
-#X connect 7 0 9 0;
-#X connect 7 1 9 1;
-#X connect 8 0 10 0;
-#X connect 9 0 8 0;
-#X connect 10 0 2 0;
-#X connect 11 0 12 0;
-#X connect 12 0 1 0;
-#X connect 12 1 13 0;
-#X connect 13 0 2 0;
-#X connect 14 0 11 0;
-#X connect 14 0 4 0;
-#X connect 14 0 9 0;
-#X connect 15 0 0 0;
-#X connect 15 0 3 0;
-#X connect 15 0 7 0;
-#X restore 443 371 pd flip_logic;
-#X obj 642 219 moses 999;
-#X obj 478 319 s /ev/cam/\$1/info;
-#X text 177 422 Outlet 1: GEMlist;
-#X obj 427 343 pix_separator;
-#X text 46 547 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
+#X restore 101 67 pd storage;
+#X obj 100 132 abs/ev_cam_rcu \$1 \$2;
+#X text 45 447 (c)2016 Peter Venus & Marian Weger \; /part of EXTENDED
 VIEW toolkit/ gpl v3;
-#X connect 1 0 2 0;
-#X connect 2 0 35 0;
-#X connect 2 1 33 0;
-#X connect 14 0 1 1;
-#X connect 18 0 1 0;
-#X connect 20 0 19 0;
-#X connect 21 0 22 0;
-#X connect 22 0 23 0;
-#X connect 23 0 32 0;
-#X connect 24 0 2 0;
-#X connect 25 0 2 0;
-#X connect 31 0 20 0;
-#X connect 32 0 24 0;
-#X connect 35 0 20 0;
+#X text 45 315 1st: module ID \; 2nd: storage domain;
+#X obj 297 100 ev_cam_dsp \$1 \$2;
+#X connect 8 0 22 0;
+#X connect 10 0 22 1;
+#X connect 22 0 9 0;
 #X coords 0 -1 1 1 180 54 1 100 118;
