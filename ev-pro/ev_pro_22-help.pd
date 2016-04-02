@@ -1,37 +1,37 @@
-#N canvas 43 185 825 756 10;
-#X declare -path . -path .. -path data -path ../data -path ev-in -path
-../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
--path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
-libs/kollabs -path ../libs/kollabs -path media -path ../media -path
-ev-glsl -path ../ev-glsl;
-#X obj 416 609 cnv 15 380 60 empty empty inlets/outlets 5 8 0 12 -233017
+#N canvas 211 52 825 685 10;
+#X declare -lib Gem -path . -path .. -path data -path ../data -path
+ev-in -path ../ev-in -path ev-main -path ../ev-main -path ev-pano -path
+../ev-pano -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil
+-path libs/kollabs -path ../libs/kollabs -path media -path ../media
+-path ev-glsl -path ../ev-glsl;
+#X obj 416 538 cnv 15 380 60 empty empty inlets/outlets 5 8 0 12 -233017
 -66577 0;
-#X obj 9 10 cnv 15 785 32 empty empty EXTENDED_VIEW_2x2_projection_module
+#X obj 9 -61 cnv 15 785 32 empty empty EXTENDED_VIEW_2x2_projection_module
 20 8 0 14 -233017 -66577 0;
-#X text 421 643 Inlet 2: texture ID;
-#X text 421 627 Inlet 1: gemlist;
-#X obj 416 538 cnv 15 380 60 empty empty creation_arguments: 3 8 0
+#X text 421 572 Inlet 2: texture ID;
+#X text 421 556 Inlet 1: gemlist;
+#X obj 416 467 cnv 15 380 60 empty empty creation_arguments: 3 8 0
 12 -191407 -1 0;
-#X text 421 557 1st: module ID \, needs to be unique \; 2nd: storage
+#X text 421 486 1st: module ID \, needs to be unique \; 2nd: storage
 domain \, see [ev_storage-help] for details;
-#X obj 414 48 cnv 15 380 475 empty empty empty 20 12 0 14 -204786 -66577
-0;
-#X obj 555 62 gemhead;
-#X obj 555 122 pix_image;
-#X obj 555 206 pix_texture;
-#X obj 611 62 loadbang;
-#X obj 425 61 gemhead;
-#X msg 640 92 open ../media/cam2.jpg;
-#X obj 555 164 pix_flip;
-#X msg 640 122 none;
-#X obj 424 407 ev_gemwin;
-#X obj 425 232 ev_pro_22 \$0;
-#X text 429 385 [ev_gemwin] module is needed for mouse interaction
-support;
-#X text 429 318 [ev_declare] loads all the needed pathes.;
-#X obj 416 679 cnv 15 380 60 empty empty parameter_list 5 8 0 12 -233017
+#X obj 414 -23 cnv 15 380 475 empty empty empty 20 12 0 14 -204786
 -66577 0;
-#N canvas 0 22 378 556 parameter_list 0;
+#X obj 555 -9 gemhead;
+#X obj 555 51 pix_image;
+#X obj 555 135 pix_texture;
+#X obj 611 -9 loadbang;
+#X obj 425 -10 gemhead;
+#X msg 640 21 open ../media/cam2.jpg;
+#X obj 555 93 pix_flip;
+#X msg 640 51 none;
+#X obj 424 336 ev_gemwin;
+#X obj 425 161 ev_pro_22 \$0;
+#X text 429 314 [ev_gemwin] module is needed for mouse interaction
+support;
+#X text 429 247 [ev_declare] loads all the needed pathes.;
+#X obj 416 608 cnv 15 380 60 empty empty parameter_list 5 8 0 12 -233017
+-66577 0;
+#N canvas 0 50 378 556 parameter_list 0;
 #X obj -42 3 cnv 15 360 540 empty empty PARAMETER_LIST 20 8 0 14 -233017
 -66577 0;
 #X text -35 29 /ev/pro/<id>/vertex/top/left/x ---- top left x \; /ev/pro/<id>/vertex/top/left/y
@@ -61,74 +61,74 @@ texture state \; /ev/pro/<id>/grid/tex/open --- grid texture open dialog
 \; /ev/pro/<id>/grid/tex/load --- reload grid texture \; /ev/pro/<id>/grid/tex/flip/horizontal
 --- flip grid tex \; /ev/pro/<id>/grid/tex/flip/vertical --- flip grid
 tex \; /ev/pro/<id>/cursor/mode --- mouse interaction mode \; \;;
-#X restore 481 709 pd parameter_list;
-#X text 632 498 click "create" to start;
-#X obj 446 347 ../ev-main/ev_declare;
-#X msg 640 164 rectangle 1;
-#X obj 9 48 cnv 15 400 480 empty empty gui_controls 5 8 0 12 -204800
+#X restore 481 638 pd parameter_list;
+#X text 632 427 click "create" to start;
+#X obj 446 276 ../ev-main/ev_declare;
+#X msg 640 93 rectangle 1;
+#X obj 9 -23 cnv 15 400 480 empty empty gui_controls 5 8 0 12 -204800
 -66577 0;
-#X text 12 68 on/off: toggles projection plane state;
-#X text 12 80 settings: opens settings window;
-#X text 12 106 settings window;
-#X text 13 130 vertex position parameters: control the x/y position
+#X text 12 -3 on/off: toggles projection plane state;
+#X text 12 9 settings: opens settings window;
+#X text 12 35 settings window;
+#X text 13 59 vertex position parameters: control the x/y position
 of the;
-#X text 13 152 texture position parameters: control the x/y position
+#X text 13 81 texture position parameters: control the x/y position
 of the;
-#X text 183 163 texture corners \, can be outside the;
-#X text 184 174 visible area;
-#X text 12 186 shade size: set the size of the softedge on the edges
+#X text 183 92 texture corners \, can be outside the;
+#X text 184 103 visible area;
+#X text 12 115 shade size: set the size of the softedge on the edges
 of the visible area(vertex);
-#X text 12 256 grid_texture:;
-#X text 12 259 _____________;
-#X text 12 276 state: turn on grid to replace the texture \; open_new_file:
+#X text 12 185 grid_texture:;
+#X text 12 188 _____________;
+#X text 12 205 state: turn on grid to replace the texture \; open_new_file:
 load your own grid image \; reload: reload the given image file \;
 flip: flip grid horizontal(<->) or vertical(^v).;
-#X text 12 336 cursor_interaction:;
-#X text 11 339 ___________________;
-#X text 12 357 cursor_mode:;
-#X text 43 374 vertex_mouseover: show vertex control points if hovered
+#X text 12 265 cursor_interaction:;
+#X text 11 268 ___________________;
+#X text 12 286 cursor_mode:;
+#X text 43 303 vertex_mouseover: show vertex control points if hovered
 \; vertex_permanent: show vertex control points permanently \; texture_mouseover:
 show texture control points if hovered \; texture_permanent: show texture
 control points permanently \;;
-#X text 12 222 set_alpha_to_'1': If selected \, alpha channel is set
+#X text 12 151 set_alpha_to_'1': If selected \, alpha channel is set
 to 1 If not selected \, alpha channel remains as it gets in.;
-#X text 12 436 rendered_grid:;
-#X text 11 439 ______________;
-#X text 12 457 state: turn grid on/off;
-#X text 12 470 Resolution:;
-#X text 85 470 set vertical (y) and horizontal (x) grid resolution.
+#X text 12 365 rendered_grid:;
+#X text 11 368 ______________;
+#X text 12 386 state: turn grid on/off;
+#X text 12 399 Resolution:;
+#X text 85 399 set vertical (y) and horizontal (x) grid resolution.
 ;
-#X text 12 484 line_width: set thickness of the grid lines;
-#X text 12 497 COLOR: set the color of the grid;
-#X text 54 510 (H = hue \, S = saturation \, V = Value \, A = alpha)
+#X text 12 413 line_width: set thickness of the grid lines;
+#X text 12 426 COLOR: set the color of the grid;
+#X text 54 439 (H = hue \, S = saturation \, V = Value \, A = alpha)
 ;
-#X obj 9 534 cnv 15 400 450 empty empty description 5 8 0 12 -233017
+#X obj 9 463 cnv 15 400 450 empty empty description 5 8 0 12 -233017
 -66577 0;
-#X obj 21 843 cnv 15 150 120 empty empty texture 10 10 0 10 -261234
+#X obj 21 772 cnv 15 150 120 empty empty texture 10 10 0 10 -261234
 -66577 0;
-#X text 44 897 /;
-#X text 26 928 /;
-#X text 156 919 |;
-#X text 38 907 /;
-#X text 156 909 |;
-#X text 42 886 x/y---------------x/y;
-#X text 32 918 /;
-#X text 156 897 |;
-#X text 156 929 |;
-#X text 21 941 x/y------------------x/y;
-#X text 188 905 ==>;
-#X text 49 911 Texture positions;
-#X obj 231 843 cnv 15 150 120 empty empty gem_window 10 10 0 10 -191407
+#X text 44 826 /;
+#X text 26 857 /;
+#X text 156 848 |;
+#X text 38 836 /;
+#X text 156 838 |;
+#X text 42 815 x/y---------------x/y;
+#X text 32 847 /;
+#X text 156 826 |;
+#X text 156 858 |;
+#X text 21 870 x/y------------------x/y;
+#X text 188 834 ==>;
+#X text 49 840 Texture positions;
+#X obj 231 772 cnv 15 150 120 empty empty gem_window 10 10 0 10 -191407
 -66577 0;
-#X text 346 884 /;
-#X text 322 926 /;
-#X text 241 926 |;
-#X text 340 894 /;
-#X text 241 918 |;
-#X text 242 896 |;
-#X text 241 906 | Vertex;
-#X text 181 141 projection primitives 4 corners;
-#X text 20 555 This abstraction aims on video mapping onto flat surfaces.
+#X text 346 813 /;
+#X text 322 855 /;
+#X text 241 855 |;
+#X text 340 823 /;
+#X text 241 847 |;
+#X text 242 825 |;
+#X text 241 835 | Vertex;
+#X text 181 70 projection primitives 4 corners;
+#X text 20 484 This abstraction aims on video mapping onto flat surfaces.
 It can map a specified part of a texture onto a square plane \, which
 can then be distorted by a matrix of 3x3=9 control points \; The source
 is specified by a texture id \, and can be a framebuffer or any other
@@ -145,22 +145,22 @@ to display just a portion of the complete content of a framebuffer.
 This is useful if you build a big projection area out of multiple [ev_pro_xx]
 abstractions \, which cut their individual part out of the same texture.
 ;
-#X text 334 906 /;
-#X text 329 915 /;
-#X text 242 874 x/y---------------x/y;
-#X text 241 936 x/y---------x/y;
-#X text 240 887 |;
-#X obj 416 751 cnv 15 380 140 empty empty additional_information 5
+#X text 334 835 /;
+#X text 329 844 /;
+#X text 242 803 x/y---------------x/y;
+#X text 241 865 x/y---------x/y;
+#X text 240 816 |;
+#X obj 416 680 cnv 15 380 140 empty empty additional_information 5
 8 0 12 -233017 -66577 0;
-#X text 430 769 Can be controlled via OSC \, which uses the same syntax
+#X text 430 698 Can be controlled via OSC \, which uses the same syntax
 as the EV internal send/recieve message system see paramter-list below
 for additional information about the specific parameter-names.;
-#X text 428 834 This Object is connected to the Data Storage System.
+#X text 428 763 This Object is connected to the Data Storage System.
 All the vertex and texture coordinates and the softedge settings can
 be morphed between scenes individually.;
-#X text 437 11 (c)2011 Cyrille Henry \, Peter Venus & Marian Weger
+#X text 437 -60 (c)2011 Cyrille Henry \, Peter Venus & Marian Weger
 \; /part of EXTENDED VIEW toolkit/ gpl v3;
-#X text 11 115 ===============;
+#X text 11 44 ===============;
 #X connect 7 0 8 0;
 #X connect 8 0 13 0;
 #X connect 9 1 16 1;
@@ -172,4 +172,4 @@ be morphed between scenes individually.;
 #X connect 13 0 9 0;
 #X connect 14 0 13 0;
 #X connect 23 0 9 0;
-#X coords 0 756 1 755 85 60 0;
+#X coords 0 685 1 684 85 60 0;
