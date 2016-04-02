@@ -1,0 +1,6 @@
+#N canvas 77 118 498 334 10;
+#X obj 103 100 hsl 128 15 0 1 0 0 /ev/glsl/\$1/blur /ev/glsl/\$1/blur
+blur 8 7 0 10 -262130 -1 -1 3500 1;
+#X text 67 211 (c)2016 Marian Weger /part of EXTENDED VIEW toolkit/
+gpl v3;
+#X coords 0 -1 1 1 133 15 2 100 100;

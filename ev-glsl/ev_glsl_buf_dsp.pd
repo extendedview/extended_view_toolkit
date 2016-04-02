@@ -1,4 +1,4 @@
-#N canvas 207 22 1055 651 10;
+#N canvas 207 52 1055 651 10;
 #X obj 99 318 cnv 15 360 60 empty empty creation_arguments: 5 12 0
 12 -162280 -1 0;
 #X obj 99 381 cnv 15 360 90 empty empty inlets/outlets 5 12 0 12 -233017
@@ -8,12 +8,12 @@
 #X text 812 515 outlet 2: texture id;
 #X obj 550 538 outlet gemlist;
 #X obj 811 543 outlet texture_id;
-#X obj 538 60 cnv 15 200 40 empty empty inlets 1 8 0 12 -260097 -66577
+#X obj 471 60 cnv 15 200 40 empty empty inlets 1 8 0 12 -260097 -66577
 0;
-#X obj 549 78 inlet gemlist;
+#X obj 482 78 inlet gemlist;
 #X text 102 346 2nd: storage domain;
 #X obj 755 71 inlet texture_id;
-#N canvas 0 22 450 300 init 0;
+#N canvas 0 50 450 300 init 0;
 #X obj 147 59 loadbang;
 #X obj 147 81 list prepend \$1 \$2 \$3;
 #X connect 0 0 1 0;
@@ -22,11 +22,12 @@
 #X text 103 492 (c)2013 Marian Weger \; /part of EXTENDED VIEW toolkit/
 gpl v3;
 #X obj 579 432 square 4;
-#X obj 549 100 t a a;
-#X obj 578 131 separator;
+#X obj 549 140 t a a;
+#X obj 579 171 separator;
 #X obj 579 410 ev_glsl_dsp \$1 \$2 \$3;
 #X obj 579 237 ev_buf_dsp \$1 \$2;
-#X connect 8 0 15 0;
+#X obj 482 110 route bang;
+#X connect 8 0 19 0;
 #X connect 10 0 17 1;
 #X connect 15 0 5 0;
 #X connect 15 1 16 0;
@@ -34,4 +35,7 @@ gpl v3;
 #X connect 17 0 14 0;
 #X connect 18 0 17 0;
 #X connect 18 1 6 0;
+#X connect 19 0 5 0;
+#X connect 19 0 17 0;
+#X connect 19 1 15 0;
 #X coords 0 651 1 650 270 75 0;
