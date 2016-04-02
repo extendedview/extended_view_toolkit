@@ -1,0 +1,14 @@
+#N canvas 3 52 450 300 10;
+#X obj 95 37 osc_bi \$2 /ev/buf/\$1/state;
+#X obj 95 57 osc_bi \$2 /ev/buf/\$1/dimen/x;
+#X obj 95 77 osc_bi \$2 /ev/buf/\$1/dimen/y;
+#X obj 95 97 osc_bi \$2 /ev/buf/\$1/scale/x;
+#X obj 95 117 osc_bi \$2 /ev/buf/\$1/scale/y;
+#X obj 95 137 osc_bi \$2 /ev/buf/\$1/scale/z;
+#X obj 95 157 osc_bi \$2 /ev/buf/\$1/shift/x;
+#X obj 95 177 osc_bi \$2 /ev/buf/\$1/shift/y;
+#X obj 95 197 osc_bi \$2 /ev/buf/\$1/shift/z;
+#X obj 95 217 osc_bi \$2 /ev/buf/\$1/type;
+#X obj 95 237 osc_bi \$2 /ev/buf/\$1/rectangle;
+#X obj 95 257 osc_bi \$2 /ev/buf/\$1/format;
+#X obj 95 277 osc_bi \$2 /ev/buf/\$1/color;

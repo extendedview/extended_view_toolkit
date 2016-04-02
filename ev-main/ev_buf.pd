@@ -1,4 +1,4 @@
-#N canvas 200 62 1055 651 10;
+#N canvas 200 61 1055 651 10;
 #X obj 100 10 cnv 15 850 16 empty empty EXTENDED_VIEW_FRAMEBUFFER 20
 8 0 14 -233017 -66577 0;
 #X obj 99 318 cnv 15 360 60 empty empty creation_arguments: 5 12 0
@@ -34,7 +34,7 @@ or;
 #X text 103 492 (c)2011 Peter Venus & Marian Weger \; /part of EXTENDED
 VIEW toolkit/ gpl v3;
 #X obj 570 216 ev_buf_dsp \$1 \$2;
-#X obj 100 115 ev_buf_gui \$1 \$2;
+#X obj 100 115 abs/ev_buf_rcu \$1 \$2;
 #X connect 21 0 26 0;
 #X connect 22 0 26 1;
 #X connect 26 0 16 0;

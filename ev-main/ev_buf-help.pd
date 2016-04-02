@@ -1,17 +1,17 @@
-#N canvas 63 54 1116 756 10;
+#N canvas 63 52 1116 685 10;
 #X declare -path . -path .. -path data -path ../data -path ev-in -path
 ../ev-in -path ev-main -path ../ev-main -path ev-pano -path ../ev-pano
 -path ev-pro -path ../ev-pro -path libs/gil -path ../libs/gil -path
 libs/kollabs -path ../libs/kollabs -path media -path ../media -path
-ev-glsl -path ../ev-glsl;
-#X obj 716 156 gemwin 20;
-#X msg 729 118 0 \, destroy;
-#X text 712 74 CLICK HERE:;
-#X obj 599 205 pix_texture;
-#X obj 599 227 rectangle 3.9 3.9;
-#X obj 17 527 cnv 15 360 220 empty empty parameter_list_for_ev_buf
+ev-glsl -path ../ev-glsl -lib Gem;
+#X obj 716 85 gemwin 20;
+#X msg 729 47 0 \, destroy;
+#X text 712 3 CLICK HERE:;
+#X obj 599 134 pix_texture;
+#X obj 599 156 rectangle 3.9 3.9;
+#X obj 17 456 cnv 15 360 220 empty empty parameter_list_for_ev_buf
 20 12 0 14 -233017 -66577 0;
-#X text 20 562 /ev/buf/<id>/color --- background color (R G B) \; /ev/buf/<id>/format
+#X text 20 491 /ev/buf/<id>/color --- background color (R G B) \; /ev/buf/<id>/format
 --- (default=RGBA) \; /ev/buf/<id>/rectangle --- (default=1) \; /ev/buf/<id>/type
 --- (default=BYTE) \; --> for further details \, see [gemframebuffer]
 help \; \; /ev/buf/<id>/shift/x --- shift content in x-direction \;
@@ -20,37 +20,37 @@ help \; \; /ev/buf/<id>/shift/x --- shift content in x-direction \;
 content in y-direction \; /ev/buf/<id>/dimen/x --- framebuffer x-dimension
 in pixels \; /ev/buf/<id>/dimen/y --- framebuffer y-dimension in pixels
 \; /ev/buf/<id>/state --- turn module on (1) and off (0) \;;
-#X obj 399 220 t a a;
-#X obj 599 183 gemhead;
-#X obj 10 10 cnv 15 850 16 empty empty EXTENDED_VIEW_FRAMEBUFFER 20
+#X obj 399 149 t a a;
+#X obj 599 112 gemhead;
+#X obj 10 -61 cnv 15 850 16 empty empty EXTENDED_VIEW_FRAMEBUFFER 20
 8 0 14 -233017 -66577 0;
-#X obj 17 360 cnv 15 360 60 empty empty creation_arguments: 5 12 0
+#X obj 17 289 cnv 15 360 60 empty empty creation_arguments: 5 12 0
 12 -162280 -1 0;
-#X obj 17 423 cnv 15 360 90 empty empty inlets/outlets 5 12 0 12 -233017
+#X obj 17 352 cnv 15 360 90 empty empty inlets/outlets 5 12 0 12 -233017
 -66577 0;
-#X obj 17 157 cnv 15 360 200 empty empty description 5 12 0 12 -233017
+#X obj 17 86 cnv 15 360 200 empty empty description 5 12 0 12 -233017
 -66577 0;
-#X text 149 481 other content;
-#X text 20 376 1st: module ID;
-#X obj 17 43 cnv 15 200 100 empty empty gui_controls 5 8 0 12 -204800
+#X text 149 410 other content;
+#X text 20 305 1st: module ID;
+#X obj 17 -28 cnv 15 200 100 empty empty gui_controls 5 8 0 12 -204800
 -66577 0;
-#X text 17 82 scale x/y: scales the buffers;
-#X text 17 60 shift x/y: translates the buffers;
-#X text 17 104 dimen x/y: dimension of the FB;
-#X text 17 116 on/off: toggles state;
-#X text 20 388 2nd: render priority;
-#X text 21 176 [gemframebuffer] renders a scene into a buffer to used
+#X text 17 11 scale x/y: scales the buffers;
+#X text 17 -11 shift x/y: translates the buffers;
+#X text 17 33 dimen x/y: dimension of the FB;
+#X text 17 45 on/off: toggles state;
+#X text 20 317 2nd: render priority;
+#X text 21 105 [gemframebuffer] renders a scene into a buffer to used
 and altered later. the EV-Framebuffer allows to combine different sources
 \, like [ev_cam] to be used as one texture within the /ev-projection
 modules. It makes it possible \, that different targets can use the
 same scene as their texture.;
-#X text 21 259 Can be controlled via OSC \, which uses the same syntax
+#X text 21 188 Can be controlled via OSC \, which uses the same syntax
 as the EV internal send/recieve message system see list below for additional
 information about the specific parameter-names.;
-#X text 19 317 Contains specific storage_&_osc-subpatch which houses
+#X text 19 246 Contains specific storage_&_osc-subpatch which houses
 abstractions to register parameters for storage and osc communication
 ;
-#N canvas 138 22 458 667 init 0;
+#N canvas 138 50 458 667 init 0;
 #X obj 38 93 loadbang;
 #X text 54 166 This is only needed for this help file.;
 #X text 48 181 To store your settings \, it is recommended;
@@ -76,28 +76,28 @@ bang \; /ev/pic/id2/load bang \; /ev/pic/id3/load bang;
 #X connect 0 0 4 0;
 #X connect 4 0 5 0;
 #X connect 7 0 4 0;
-#X restore 290 83 pd init;
-#X text 22 495 Outlet 2: texture id of the framebuffer;
-#X text 22 469 Outlet 1: gemlist \, to be connectet to input \, group
+#X restore 290 12 pd init;
+#X text 22 424 Outlet 2: texture id of the framebuffer;
+#X text 22 398 Outlet 1: gemlist \, to be connectet to input \, group
 or;
-#X obj 399 48 gemhead 20;
-#X text 22 453 Inlet 2: gemframebuffer settings (see gemframebuffer-help)
+#X obj 399 -23 gemhead 20;
+#X text 22 382 Inlet 2: gemframebuffer settings (see gemframebuffer-help)
 ;
-#X text 22 441 Inlet 1: gemlist \, to be connected to gemhead;
-#X text 416 709 (c)2011 Peter Venus & Marian Weger /part of EXTENDED
+#X text 22 370 Inlet 1: gemlist \, to be connected to gemhead;
+#X text 416 638 (c)2011 Peter Venus & Marian Weger /part of EXTENDED
 VIEW toolkit/ gpl v3;
-#X obj 399 462 ev_pic id0;
-#X obj 399 555 ev_pano_stitch id0;
-#X obj 583 555 ev_pano_stitch id1;
-#X obj 767 555 ev_pano_stitch id2;
-#X obj 951 555 ev_pano_stitch id3;
-#X obj 399 86 ev_buf id0;
-#X obj 399 331 ev_grid id0;
-#X obj 613 331 ev_pano_group id0;
-#X obj 583 462 ev_pic id1;
-#X obj 767 462 ev_pic id2;
-#X obj 951 462 ev_pic id3;
-#X msg 716 96 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
+#X obj 399 391 ev_pic id0;
+#X obj 399 484 ev_pano_stitch id0;
+#X obj 583 484 ev_pano_stitch id1;
+#X obj 767 484 ev_pano_stitch id2;
+#X obj 951 484 ev_pano_stitch id3;
+#X obj 399 15 ev_buf id0;
+#X obj 399 260 ev_grid id0;
+#X obj 613 260 ev_pano_group id0;
+#X obj 583 391 ev_pic id1;
+#X obj 767 391 ev_pic id2;
+#X obj 951 391 ev_pic id3;
+#X msg 716 25 dimen 800 600 \, color 0.5 0.5 0.5 \, create \, 1;
 #X connect 1 0 0 0;
 #X connect 3 0 4 0;
 #X connect 7 0 37 0;
@@ -115,4 +115,4 @@ VIEW toolkit/ gpl v3;
 #X connect 40 0 34 0;
 #X connect 41 0 35 0;
 #X connect 42 0 0 0;
-#X coords 0 756 1 755 85 60 0;
+#X coords 0 685 1 684 85 60 0;
