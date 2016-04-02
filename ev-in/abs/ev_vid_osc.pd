@@ -1,0 +1,15 @@
+#N canvas 1 69 450 300 10;
+#X obj 13 18 osc_bi \$2 /ev/vid/\$1/state;
+#X obj 13 38 osc_bi \$2 /ev/vid/\$1/filename;
+#X obj 13 58 osc_bi \$2 /ev/vid/\$1/framerate;
+#X obj 13 78 osc_bi \$2 /ev/vid/\$1/start_time;
+#X obj 13 98 osc_bi \$2 /ev/vid/\$1/end_time;
+#X obj 13 118 osc_bi \$2 /ev/vid/\$1/fadeIn_time;
+#X obj 13 138 osc_bi \$2 /ev/vid/\$1/fadeOut_time;
+#X obj 13 158 osc_bi \$2 /ev/vid/\$1/timebase;
+#X obj 13 178 osc_bi \$2 /ev/vid/\$1/gain;
+#X obj 13 198 osc_bi \$2 /ev/vid/\$1/form;
+#X obj 13 218 osc_bi \$2 /ev/vid/\$1/weight;
+#X obj 13 238 osc_bi \$2 /ev/vid/\$1/loop;
+#X obj 13 258 osc_bi \$2 /ev/vid/\$1/start;
+#X obj 13 298 osc_bi \$2 /ev/vid/\$1/open;

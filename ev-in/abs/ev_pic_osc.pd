@@ -1,0 +1,7 @@
+#N canvas 1 69 450 300 10;
+#X obj 13 48 osc_bi \$2 /ev/pic/\$1/state;
+#X obj 13 68 osc_bi \$2 /ev/pic/\$1/filename;
+#X obj 13 8 osc_bi \$2 /ev/pic/\$1/flip/horizontal;
+#X obj 13 28 osc_bi \$2 /ev/pic/\$1/flip/vertical;
+#X obj 13 88 osc_bi \$2 /ev/pic/\$1/open;
+#X obj 13 108 osc_bi \$2 /ev/pic/\$1/load;

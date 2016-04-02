@@ -1,0 +1,4 @@
+#N canvas 1 69 450 300 10;
+#X obj 23 28 osc_bi \$2 /ev/cam/\$1/state;
+#X obj 23 48 osc_bi \$2 /ev/cam/\$1/flip/horizontal;
+#X obj 23 68 osc_bi \$2 /ev/cam/\$1/flip/vertical;

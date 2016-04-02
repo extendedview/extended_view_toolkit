@@ -1,0 +1,157 @@
+#N canvas 1 69 450 300 10;
+#X obj 16 16 cnv 14 358 82 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X obj 24 16 tgl 14 0 /ev/vid/\$1/state /ev/vid/\$1/state on/off 17
+7 0 10 -228856 -1 -262144 0 1;
+#X obj 24 32 bng 14 250 50 0 /ev/vid/\$1/open /ev/vid/\$1/open open
+17 7 0 10 -4034 -1 -4034;
+#X obj 345 56 nbx 2 14 1 99 0 0 /ev/vid/\$1/framerate /ev/vid/\$1/framerate
+fps: -25 8 0 9 -262144 -1 -258113 1 256;
+#X obj 144 56 nbx 14 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/lengthNEW
+length/NEW 0 -5 0 9 -66577 -4034 -4034 0 256;
+#X obj 24 56 nbx 14 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/elapsed elapsed
+0 -5 0 9 -66577 -262144 -262144 0 256;
+#X obj 264 56 nbx 5 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/seconds sec
+35 8 0 10 -66577 -4034 -191407 0 256;
+#X obj 181 16 vradio 14 1 0 2 /ev/vid/\$1/timebase /ev/vid/\$1/timebase
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X obj 94 16 tgl 14 0 /ev/vid/\$1/loop /ev/vid/\$1/loop loop_on/off
+17 7 0 10 -262144 -1 -262144 0 1;
+#X obj 94 32 bng 14 250 50 0 /ev/vid/\$1/settings empty settings 17
+7 0 10 -257985 -1 -257985;
+#X obj 197 18 cnv 15 100 10 empty empty frame_accurate 0 6 0 10 -1
+-262144 0;
+#X obj 198 32 cnv 15 100 10 empty empty time_accurate 0 6 0 10 -1 -262144
+0;
+#X obj 303 75 nbx 5 17 0 100 0 0 /ev/vid/\$1/gain /ev/vid/\$1/gain
+LVL 43 9 0 13 -99865 -257985 -262144 0 256;
+#X obj 27 75 hsl 270 17 0 100 0 0 /ev/vid/\$1/gain /ev/vid/\$1/gain
+Level 15 9 0 13 -99865 -257985 -262144 0 1;
+#X obj 335 18 tgl 35 0 /ev/vid/\$1/start /ev/vid/\$1/startbutton play
+1 16 0 14 -24198 -24198 -66577 0 1;
+#N canvas 239 490 372 243 vid_\$1 0;
+#X obj 1 -31 cnv 15 360 230 empty empty settings_for_ev_vid_\$1 3 8
+0 12 -128992 -262144 0;
+#X obj 6 154 tgl 15 0 /ev/vid/\$1/state /ev/vid/\$1/state on/off 17
+7 0 10 -228856 -1 -1 0 1;
+#X obj 6 138 bng 15 250 50 0 /ev/vid/\$1/open /ev/vid/\$1/open open
+17 7 0 10 -262130 -1 -1;
+#X obj 88 138 nbx 2 13 1 99 0 0 /ev/vid/\$1/framerate /ev/vid/\$1/framerate
+fps: -25 7 0 10 -191407 -1 -262144 1 256;
+#X obj 8 100 hsl 276 15 0 351 0 0 /ev/vid/\$1/start_time /ev/vid/\$1/start_time
+start_time 15 9 1 12 -66577 -4034 -262144 0 1;
+#X obj 8 60 hsl 276 15 0 1 0 0 /ev/vid/\$1/fadeIn_time /ev/vid/\$1/fadeIn_time
+fadeIn_time 15 9 1 12 -66577 -4034 -262144 0 1;
+#X obj 8 80 hsl 276 15 1 0 0 1 /ev/vid/\$1/fadeOut_time /ev/vid/\$1/fadeOut_time
+fadeOut_time 15 9 1 12 -66577 -258113 -262144 27500 1;
+#X obj 96 8 nbx 9 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/length file_length
+0 -5 0 10 -1 -262144 -1 0 256;
+#X obj 287 60 nbx 8 15 0 351 0 0 /ev/vid/\$1/fadeIn_timeFRr /ev/vid/\$1/fadeIn_timeFRs
+empty 0 -8 0 9 -262144 -1 -1 0 256;
+#X obj 287 80 nbx 8 15 0 351 0 0 /ev/vid/\$1/fadeOut_timeFRr /ev/vid/\$1/fadeOut_timeFRs
+empty 0 -8 0 9 -262144 -1 -1 0 256;
+#X obj 287 100 nbx 8 15 0 351 0 0 /ev/vid/\$1/start_time /ev/vid/\$1/start_time
+empty 0 -8 0 9 -262144 -1 -1 0 256;
+#X obj 186 8 nbx 9 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/lengthNEW
+length/NEW 0 -5 0 10 -1 -4034 -1 0 256;
+#X obj 287 120 nbx 8 15 0 351 0 0 /ev/vid/\$1/end_time /ev/vid/\$1/end_time
+empty 0 -8 0 9 -262144 -1 -1 0 256;
+#X obj 5 8 nbx 9 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/elapsed elapsed
+0 -5 0 10 -1 -4034 -33289 0 256;
+#X obj 302 8 nbx 5 14 -1e+37 1e+37 0 0 empty /ev/vid/\$1/seconds sec:
+-25 8 0 10 -33289 -4034 -262144 0 256;
+#X obj 190 139 vradio 14 1 0 2 /ev/vid/\$1/timebase /ev/vid/\$1/timebase
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X obj 88 153 tgl 14 0 /ev/vid/\$1/loop /ev/vid/\$1/loop loop_on/off
+17 7 0 10 -4160 -262144 -262144 0 1;
+#X text 205 138 frame acc.;
+#X text 205 151 time acc.;
+#X obj 8 120 hsl 276 15 0 351 0 0 /ev/vid/\$1/end_time /ev/vid/\$1/end_time
+end_time 15 8 0 12 -66577 -258113 -262144 0 1;
+#X obj 281 152 nbx 8 12 0 100 0 0 /ev/vid/\$1/form /ev/vid/\$1/form
+form 49 7 0 10 -99865 -262144 -262144 0 256;
+#X obj 281 167 nbx 8 12 0 100 0 0 /ev/vid/\$1/weight /ev/vid/\$1/weight
+weight 39 7 0 10 -99865 -262144 -262144 0 256;
+#X obj 288 30 nbx 5 23 0 100 0 0 /ev/vid/\$1/gain /ev/vid/\$1/gain
+LVL 45 12 0 13 -99865 -257985 -262144 0 256;
+#X obj 8 30 hsl 276 23 0 100 0 0 /ev/vid/\$1/gain /ev/vid/\$1/gain
+Level 15 11 0 13 -99865 -257985 -262144 0 1;
+#X obj 281 136 cnv 15 70 13 empty empty Fadecurve 0 8 0 12 -128992
+-66577 0;
+#X obj 282 182 bng 15 250 50 0 /ev/vid/\$1/curve/vis /ev/vid/\$1/curve/vis
+show_curve 17 7 0 10 -128992 -1 -262144;
+#X obj 88 177 tgl 15 0 /ev/vid/\$1/flip/horizontal /ev/vid/\$1/flip/horizontal
+<-> 17 7 0 10 -204786 -1 -1 0 1;
+#X obj 124 177 tgl 15 0 /ev/vid/\$1/flip/vertical /ev/vid/\$1/flip/vertical
+^v 17 7 0 10 -204786 -1 -1 0 1;
+#X text 55 177 flip:;
+#X obj 321 -30 tgl 35 0 /ev/vid/\$1/start /ev/vid/\$1/startbutton play
+1 16 0 14 -24198 -24198 -66577 0 1;
+#X restore 88 149 pd vid_\$1;
+#X msg 15 128 vis 1;
+#X obj 15 149 s pd-vid_\$1;
+#X obj 15 106 r /ev/vid/\$1/settings;
+#N canvas 822 132 450 300 playbutton 0;
+#X obj 81 93 sel 0 1;
+#X obj 181 98 sel 0 1;
+#X msg 181 172 label play;
+#X msg 251 172 label stop;
+#X msg 81 173 color \$1 \$1 \$2;
+#X obj 31 221 s /ev/vid/\$1/startbutton;
+#X obj 31 241 r /ev/vid/\$1/stop;
+#X msg 31 261 0;
+#X obj 31 281 s /ev/vid/\$1/start;
+#X obj 31 51 r /ev/vid/\$1/start;
+#X obj 31 150 change;
+#X msg 81 145 16 2;
+#X msg 113 145 13 0;
+#X connect 0 0 11 0;
+#X connect 0 1 12 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 5 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 0 0;
+#X connect 9 0 1 0;
+#X connect 9 0 10 0;
+#X connect 10 0 5 0;
+#X connect 11 0 4 0;
+#X connect 12 0 4 0;
+#X restore 163 105 pd playbutton;
+#N canvas 359 211 530 292 frame-to-seconds_converter 0;
+#X obj 130 236 s /ev/vid/\$1/seconds;
+#X obj 343 41 r /ev/vid/\$1/fadeOut_time;
+#X obj 189 41 r /ev/vid/\$1/fadeIn_time;
+#X obj 189 87 t f;
+#X obj 34 87 r /ev/vid/\$1/framerate;
+#X obj 137 154 f;
+#X obj 189 112 t f b;
+#X obj 189 194 /;
+#X obj 337 108 f;
+#X obj 298 81 t f b;
+#X obj 298 131 *;
+#X floatatom 301 184 5 0 0 0 - - -, f 5;
+#X obj 337 16 r /ev/vid/\$1/length;
+#X obj 40 40 r /ev/vid/\$1/lengthNEW;
+#X connect 1 0 9 0;
+#X connect 2 0 9 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 1;
+#X connect 5 0 7 1;
+#X connect 6 0 7 0;
+#X connect 6 1 5 0;
+#X connect 7 0 0 0;
+#X connect 8 0 10 1;
+#X connect 9 0 10 0;
+#X connect 9 1 8 0;
+#X connect 10 0 3 0;
+#X connect 10 0 11 0;
+#X connect 12 0 8 0;
+#X connect 13 0 3 0;
+#X restore 163 125 pd frame-to-seconds_converter;
+#X connect 16 0 17 0;
+#X connect 18 0 16 0;
+#X coords 0 -1 1 1 360 84 1 15 15;

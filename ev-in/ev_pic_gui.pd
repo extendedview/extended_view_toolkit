@@ -1,29 +1,20 @@
-#N canvas 220 90 709 369 10;
-#X text 127 284 creation argument: id;
-#X obj 100 18 cnv 15 600 16 empty empty EXTENDED_VIEW_IMAGE_MODULE
+#N canvas 218 88 709 369 10;
+#X obj 100 18 cnv 15 360 16 empty empty EXTENDED_VIEW_IMAGE_GUI_MODULE
 2 8 0 14 -233017 -66577 0;
 #X obj 100 39 cnv 15 360 60 empty empty creation_arguments: 5 12 0
 12 -162280 -1 0;
-#X obj 101 269 cnv 15 360 40 empty empty inlets/outlets 5 12 0 12 -233017
--66577 0;
-#X text 106 289 Inlet 1: GEMlist;
 #X obj 311 118 cnv 15 150 145 empty empty GUI_controls 5 8 0 12 -204800
 -66577 0;
 #X text 313 194 on/off: toggles state;
 #X text 313 222 open / reload:;
 #X text 351 232 load/reload image;
 #X text 313 135 flip: flip image;
-#X obj 471 101 outlet gemlist;
 #X text 350 150 <-> horizontal;
 #X text 350 163 ^v vertical;
-#X obj 471 39 inlet gemlist;
-#X text 236 289 Outlet 1: GEMlist;
 #X text 103 61 1st: unique module ID;
 #X text 103 77 2nd: save domain;
 #X obj 100 132 abs/ev_pic_rcu \$1 \$2;
-#X text 99 322 (c)2016 Peter Venus & Marian Weger \; /part of EXTENDED
+#X text 95 266 (c)2016 Peter Venus & Marian Weger \; /part of EXTENDED
 VIEW toolkit/ gpl v3;
-#X obj 471 70 ev_pic_dsp \$1 \$2;
-#X connect 13 0 19 0;
-#X connect 19 0 10 0;
+#X obj 100 192 abs/ev_pic_osc \$1 \$2;
 #X coords 0 -1 1 1 180 67 1 100 118;
